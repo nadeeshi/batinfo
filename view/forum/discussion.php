@@ -84,7 +84,7 @@ require_once ("../../database/connection.php");
 
 	<div class=".container-fluid">
 	    <div class="col-sm-10 col-sm-push-2 col-xs-12">
-	      <?php include "../IncludedFiles/footer.php" ?>
+	      <?php include "../../assets/includedFiles/footer.php" ?>
 	    </div>
   	</div>
 	<!-- end of footer -->
@@ -92,4 +92,4 @@ require_once ("../../database/connection.php");
 </html>
 
 
-<script src="../assets/js/forum.discussion.js"></script>
+<script src="../../assets/js/forum.discussion.js"></script>
