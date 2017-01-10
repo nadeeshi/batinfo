@@ -33,7 +33,7 @@ include_once '../../database/dbconnect.php';
 			                <li><a class="navbar-head-list" href="register.php">Sign Up</a></li>
 			                <?php } ?>
 			            </ul>
-			            <form class="navbar-form  navbar-right" action="../search/testing.php" method="post">
+			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
 	      					<div class="form-group">
 	        					<input type="text" class="form-control input-area" name='address' placeholder="Enter name here">
 	      					</div>
@@ -53,7 +53,7 @@ include_once '../../database/dbconnect.php';
 		            <li class="min-link"><a href="../nadee/listOfBats.php">Bats Info</a></li>
 		            <li class="min-link"><a href="../nadee/listOfResearch.php">Research Info</a></li>
 		            <li class="min-link"><a href="../../view/forum/forumTopics.php">Forum</a></li>
-		            <li class="min-link"><a href="../batnews/grid31.php">News</a></li>
+		            <li class="min-link"><a href="../../view/news/newst.php">News</a></li>
 		            <li class="min-link"><a href="../help/index.php">Help</a></li>
 		            <li class="min-link"><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
 		            <li class="min-link"><a href="logout.php">Log Out</a></li>
@@ -75,7 +75,7 @@ include_once '../../database/dbconnect.php';
         		<li><a href="../nadee/listOfBats.php">Bats Info</a></li>
         		<li><a href="../nadee/listOfResearch.php">Research Info</a></li>
 				<li><a href="../../view/forum/forumTopics.php">Forum</a></li>
-				<li><a href="../batnews/grid31.php">News</a></li>
+				<li><a href="../../view/news/newst.php">News</a></li>
         		<li><a href="../help/index.php">Help</a></li>
 				<li><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
 			</ul>
