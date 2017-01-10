@@ -167,7 +167,9 @@
                 <li>
                     <a href="../mapDetails/map_and_det.php"><i class="fa fa-yelp "></i>Map Details</a>
                 </li>
-
+                <li>
+                    <a href="../../view/forum/forumTopics.php"><i class="fa fa-yelp "></i>Forum</a>
+                </li>
 
             </ul>
 
