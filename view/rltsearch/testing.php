@@ -65,13 +65,14 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 				}
 	
 				include ("vm.php");
-				$query = "SELECT * FROM photos;";
-				$result = mysqli_query($con, $query);
+				//$query = "SELECT * FROM photos;";
+				//$result = mysqli_query($con, $query);
 				
-				//$query = mysql_query("SELECT * FROM photos;");
+				$query = mysql_query("SELECT * FROM photos;");
 	
 	//$result = mysql_query("SELECT * FROM photos");
-				$num_rows = mysqli_num_rows($result);
+				//if($result ){
+					$num_rows = mysql_num_rows($query);
 //echo $num_rows;	
 	
 				$dat = "zi";
@@ -79,7 +80,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 				$d =array();
 				$xx =array();
 				$head =array();
-				while($row = mysqli_fetch_assoc($result)){
+				while($row = mysql_fetch_array($query)){
 					$cap = $row['caption'];
 					$ds = $row['desc'];
 					$idn = $row['id'];
@@ -110,7 +111,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 						$r = count($xx);		
 					}		
 				}//echo $r;
-			}
+			}//}
 		}
 	}
 ?>
@@ -138,7 +139,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 							for($s=0;$s<$r;$s++){
 				//echo $xx[$s];
 						?>
-						<li><a href=<?php echo "'../batnews/news.php?photoid=".$xx[$s]."'";?>><?php echo $head[$xx[$s]-1];?></a></li>
+						<li><a href=<?php echo "'../news/news_child.php?photoid=".$xx[$s]."'";?>><?php echo $head[$xx[$s]-1];?></a></li>
 						<?php echo substr( $ab[$xx[$s]-1],0,150)."..."; 
 							}
 						}?>

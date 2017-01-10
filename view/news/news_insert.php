@@ -54,7 +54,7 @@
 
 					<div class="wow fadeInLeft" data-wow-delay="0.4s">
 						<span>Select Image<label>*</label></span>
-						<input type="file" name="image" onchange="readURL(this);"><br />
+						<input type="file" name="image" required onchange="readURL(this);"><br />
 						<img id="blah" src="#" alt=""/>
 						
 					</div>
