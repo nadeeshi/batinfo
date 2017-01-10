@@ -47,13 +47,23 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
+
 
 
 
     </style>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+ <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -62,13 +72,14 @@
 
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -79,7 +90,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on<br> Account Settings </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Deleting an Account </font></h1>
 
@@ -91,7 +102,7 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -109,7 +120,8 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
-                                    after login to ur account> u can find delete my account button in ur account settings
+                                        1. You cannot delete your account by yourself<br>
+                                        2. Contact admin Panel for the process
                                 </div>
                             </div>
                         </div>
@@ -126,7 +138,8 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
-                                    after login to ur account> u can find deactivate my account button in ur account settings
+                                    1. You cannot deactivate your account by yourself<br>
+                                    2. Contact admin panel for the process
                                 </div>
                             </div>
                         </div>
@@ -134,7 +147,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                        Can i get back my deleted account?
+                                        Can I get back my deleted account?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -143,7 +156,8 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                   yeah u can get ur account back but there are so many process to do .. 1st contact admin panel and stay tuned to the process they recommend.
+                                   1. You can!<br>
+                                   2. Contact admin panel for the process
                                 </div>
                             </div>
                         </div>
@@ -151,7 +165,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefour" class="panel-heading" role="tab" id="headingfour">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
-                                        How can i reactivate my account which was deactivated by me?
+                                        How can I reactivate my account?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -160,7 +174,8 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">
-                                    You can login to ur account and there will be a button to reactivate. so click it and reactivate ur account.
+                                    1. You can!<br>
+                                    2. Contact admin panel for the process
                                 </div>
                             </div>
                         </div>
@@ -177,7 +192,9 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                    yeah there are processes. u cant delete as you wish. u have to 1st inform to admin and go on.
+                                    1. Yeah there are procedures to follow<br>
+                                    2. You cannot delete, deactivate, reactivate by yourself<br>
+                                    3. You have to go through admin panel
                                 </div>
                             </div>
                         </div>
@@ -187,6 +204,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

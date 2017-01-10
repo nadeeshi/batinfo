@@ -47,12 +47,22 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
+
 
 
 
     </style>
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+ <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -61,13 +71,14 @@
 
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -78,7 +89,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on <br> Privacy and Security </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Copyright Issues </font></h1>
 
@@ -90,7 +101,7 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -126,7 +137,7 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
-                                    No u cant post any article which is copiesd from somewhere or from someone without the permission given by them.
+                                   1. No. You cannot post copied article without the original author's permission
                                 </div>
                             </div>
                         </div>
@@ -143,7 +154,7 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                   U will receive notification request  to remove the article.
+                                   1. Copied article won't be published in the system
                                 </div>
                             </div>
                         </div>
@@ -160,7 +171,8 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">
-                                    request admin to remove the specific article.
+                                    1. Inform to admin panel<br>
+                                    2. Request to remove
                                 </div>
                             </div>
                         </div>
@@ -177,7 +189,8 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                    yes u can post an copied article with the permission of the author. and for the proper procedure u have to send the permission letter to admin.
+                                    1. Yes You can<br>
+                                    2. You have to send proper permission letter from the author to admin panel
                                 </div>
                             </div>
                         </div>
@@ -188,6 +201,7 @@
         </div>
 
     </div>
+</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

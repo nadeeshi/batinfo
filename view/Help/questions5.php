@@ -47,12 +47,22 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
+
 
 
 
     </style>
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+ <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -61,13 +71,14 @@
 
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -78,7 +89,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on <br> Privacy and Security </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Privacy Violation </font></h1>
 
@@ -90,33 +101,17 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
            <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Why I need to report an article?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    if an aricle misleads or makes the public to mislead, user can reportan article 
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                        How can I report an article?
+                                        Can I report an article?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -125,7 +120,7 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
-                                    by clicking on the article, u can find the option to report. so ucan report by giving the reporting reason 
+                                    1. User cannot report an posted article as the articles are checked by admin panel before it published.  
                                 </div>
                             </div>
                         </div>
@@ -133,7 +128,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                        What would happen if someone reports my article?
+                                        What can i do even i see some wrong information in others articles
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -142,7 +137,9 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                    if someone report ur article, u would receive a notification to remove the article. so u have to remove on time
+                                    1. You cannot report it<br>
+                                    2. But You can inform to admin panel
+
                                 </div>
                             </div>
                         </div>
@@ -150,7 +147,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefour" class="panel-heading" role="tab" id="headingfour">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
-                                        What should I do if anyone reports my article?
+                                        What should I do if i saw some wrong information in the article which i posted?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -159,7 +156,7 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">
-                                    u have to remove the article if someone  report for the proper reason
+                                    1. Delete the article by letting know to admin panel
                                 </div>
                             </div>
                         </div>
@@ -167,7 +164,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefive" class="panel-heading" role="tab" id="headingfive">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                                        Can I block someone?
+                                        Can I block some other researcher?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -176,7 +173,7 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                    yeah u can block a person if someones who post unusual or improper posts in the system. or even if someone put unusual discussion topic can be blocked too..
+                                   1. No. You cannot block other user yourself
                                 </div>
                             </div>
                         </div>
@@ -187,6 +184,7 @@
         </div>
         
     </div>
+</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -49,12 +49,22 @@
 
         }
 
+        #maindiv{
+        	position: absolute;
+		    margin-left: 15%;
+		    z-index: -1;
+        }
+
+        #slt{
+        	margin-left: -6%;
+        }
+
 
 
     </style>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+  <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -62,13 +72,14 @@
 </head>
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -81,7 +92,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on<br> Account Settings </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Creating an Account </font></h1>
 
@@ -91,11 +102,11 @@
 </head>
 
 <hr />
-<div class="container">
+<div class="container" >
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
-            <div class="panel panel-default">
+            <div class="panel panel-default" >
                 <div class="panel-body">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
@@ -232,6 +243,7 @@
                 </div>
             </div>
     </div>
+</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

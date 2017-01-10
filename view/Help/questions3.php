@@ -47,12 +47,22 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
+
 
 
 
     </style>
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+ <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -61,13 +71,14 @@
 
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -78,7 +89,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on Managing Accounts </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Login and Password </font></h1>
 
@@ -90,7 +101,7 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -108,7 +119,9 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
-                                    If u sign up for an account u will receive username and password via mail. co u can use to login to ur account
+                                    1. It Differs according to the type of your account(Public/researcher)<br>
+                                    2. Login system is only for the researchers<br>
+                                    3. Researcher can login to the reseacher homepage by his username and password
                                 </div>
                             </div>
                         </div>
@@ -116,7 +129,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                       How do i logout from my account
+                                       How do I logout from my account
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -125,7 +138,8 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
-                                    In homepage u can find log out button
+                                    1. In researcher homepage, researcher can find logout button.<br>
+                                    2. By clicking it, researcher can logout from the system
                                 </div>
                             </div>
                         </div>
@@ -142,7 +156,7 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                    u can request a new username through admin panel and u will receive new usernam. so u can use new name instead
+                                    1. You have to contact admin panel for the new username
                                 </div>
                             </div>
                         </div>
@@ -150,7 +164,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefour" class="panel-heading" role="tab" id="headingfour">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
-                                        How can I change my password?
+                                         Can I change my password?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -159,7 +173,7 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">
-                                    go to settings>> password settings>> change password
+                                     1. You have to contact admin panel for the new Password
                                 </div>
                             </div>
                         </div>
@@ -167,7 +181,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefive" class="panel-heading" role="tab" id="headingfive">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                                        What should i do if i forget the username?
+                                        What should i do if i forget the username/ Password?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -176,27 +190,12 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                    contant admin panel and request for the new username
+                                    1. You have to contact admin panel<br>
+                                    2. Request New username/password
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsesix" class="panel-heading" role="tab" id="headingsix">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
-                                        What should I do if i forget the password?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
-                                <div class="panel-body">
-                                    contant admin panel and request for the new username
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseseven" class="panel-heading" role="tab" id="headingseven">
                                 <h4 class="panel-title">
@@ -210,7 +209,8 @@
                             </div>
                             <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseven">
                                 <div class="panel-body">
-                                    password must contain numbers, letters and @ symbol.. must altleast contain  charecters
+                                    1. Your password must contain case sensitive letters, numbers and symbols<br>
+                                    2. Avoid unrecognized charecters
                                 </div>
                             </div>
                         </div>
@@ -221,6 +221,7 @@
         </div>
 
     </div>
+</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

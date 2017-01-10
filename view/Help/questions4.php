@@ -47,12 +47,22 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
+
 
 
 
     </style>
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+ <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -61,13 +71,14 @@
 
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -78,7 +89,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on<br> Managing Accounts </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Your Profile and Settings </font></h1>
 
@@ -90,33 +101,17 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        How can I add information to my profile
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    1st u have to login to ur account>> profile settings>> edit info>> add info
-                                </div>
-                            </div>
-                        </div>
+                       
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                        How can I edit or remove information in my profile
+                                        How can I add,edit or remove information in my profile
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -125,27 +120,13 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
-                                    1st u have to login to ur account>> profile settings>> edit info>> remove info
+                                    1. Click the name which is appeared on top<br>
+                                    2. You will get Your informations<br>
+                                    3. Not all information can be changed
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                        How can I change back my username?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body">
-
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefour" class="panel-heading" role="tab" id="headingfour">
                                 <h4 class="panel-title">
@@ -159,7 +140,10 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">*
-                                    1st u have to login to ur account>> profile settings>> edit info>> click your profile>> change photo
+                                    1. Click the name which is appeared on top<br>
+                                    2. You will get Your informations<br>
+                                    3. Click your profile picture<br>
+                                    4. Change
                                 </div>
                             </div>
                         </div>
@@ -177,7 +161,10 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                    1st u have to login to ur account>> profile settings>> edit info>> click your profile>> remove photo
+                                     1. Click the name which is appeared on top<br>
+                                     2. You will get Your informations<br>
+                                     3. Click your profile picture<br>
+                                     4. Change
                                 </div>
                             </div>
                         </div>
@@ -194,7 +181,8 @@
                             </div>
                             <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
                                 <div class="panel-body">
-                                    1st u have to login to ur account>> click  add post> post an article
+                                    1. Research can go to Publish article section<br>
+                                    2. Post an article
                                 </div>
                             </div>
                         </div>
@@ -211,7 +199,9 @@
                             </div>
                             <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseven">
                                 <div class="panel-body">
-                                    1st u have to login to ur account>> click  add post> post an article> click add photos> select the directory and post
+                                    1. Research can go to Publish article section<br>
+                                    2. Post an article<br>
+                                    3. By clicking Add files, user can add media files
                                 </div>
                             </div>
                         </div>
@@ -219,7 +209,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseeight" class="panel-heading" role="tab" id="headingeight">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeight" aria-expanded="true" aria-controls="collapseeight">
-                                        Who can see my articles? can I change it?
+                                        Who can see my articles?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -228,7 +218,7 @@
                             </div>
                             <div id="collapseeight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeight">
                                 <div class="panel-body">
-                                    first u have to login >>> when u post an article , u gcan change the audience who can see the post 
+                                    1.Public users and  other researchers can see articles posted.
                                 </div>
                             </div>
                         </div>
@@ -245,27 +235,11 @@
                             </div>
                             <div id="collapsenine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingnine">
                                 <div class="panel-body">
-                                    click on the article which u have posted, then click share, then u can choose where do u wanna share it? 
+                                    1. By Clicking the share button, users can share own articles and as well as other's articles too
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapseten" class="panel-heading" role="tab" id="headingten">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseten" aria-expanded="true" aria-controls="collapseten">
-                                        Can I share an article of an other user?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapseten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingten">
-                                <div class="panel-body">
-                                    same as sharing ur article .. just click it on their post and share it
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseeleven" class="panel-heading" role="tab" id="headingeleven">
                                 <h4 class="panel-title">
@@ -279,7 +253,7 @@
                             </div>
                             <div id="collapseeleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeleven">
                                 <div class="panel-body">
-                                    its an discussion post. researcher can start an discussion otheres can comment theri discussion on a specific topic . 
+                                 1. Mainly used for the related discussions on the specific topic
                                 </div>
                             </div>
                         </div>
@@ -296,7 +270,11 @@
                             </div>
                             <div id="collapsetwl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwl">
                                 <div class="panel-body">
-                                    1st u have to login to ur account>> click  add discussion> post a discussion topic
+                                    1. Go to Forum section<br>
+                                    2. Click "Add new discussion topic"<br>
+                                    3. type the Subject, message <br>
+                                    4. User can add media files ny clicking "Choose File" if necessary<br>
+                                    5. Post it to forum
                                 </div>
                             </div>
                         </div>
@@ -313,7 +291,7 @@
                             </div>
                             <div id="collapsethrtn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingthrtn">
                                 <div class="panel-body">
-                                    you can delete an discussion  with the permission of an admin 
+                                    1. You have to go through admin panel. 
                                 </div>
                             </div>
                         </div>
@@ -330,7 +308,9 @@
                             </div>
                             <div id="collapsefrtn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfrtn">
                                 <div class="panel-body">
-                                    under the discussion, ther u can find a reply discussion button. so u can reply by clicking there
+                                    1. Go to Forum section<br>
+                                    2. Select the discussion <br>
+                                    3. By Clicking the reply button, User can reply to the discussion
                                 </div>
                             </div>
                         </div>
@@ -347,50 +327,19 @@
                             </div>
                             <div id="collapsefftn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfftn">
                                 <div class="panel-body">
-                                   you can add medias in while you commenting under the discussion by add media button
+                                    1. Go to Forum section<br>
+                                    2. Select the discussion <br>
+                                    3. By Clicking the reply button, User can reply to the discussion
                                 </div>
                             </div>
                         </div>
 
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsesxtn" class="panel-heading" role="tab" id="headingsxtn">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesxtn" aria-expanded="true" aria-controls="collapsesxtn">
-                                        How can I chat with other users privately?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsesxtn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsxtn">
-                                <div class="panel-body">
-                                    first u have to login to ur account. click messages. select compose message. select recepient. send message
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsesvntn" class="panel-heading" role="tab" id="headingsvntn">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetsvntn" aria-expanded="true" aria-controls="collapsesvntn">
-                                        Can I send multi media files to other users via chat?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsesvntn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsvntn">
-                                <div class="panel-body">
-                                    first u have to login to ur account. click messages. select compose message. select recepient. add files.. select files u have to add>> send message
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseetn" class="panel-heading" role="tab" id="headingetn">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetetn" aria-expanded="true" aria-controls="collapseetn">
-                                        How can I search specific mammals through google maps?
+                                        How can I search specific mammals details?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -399,7 +348,9 @@
                             </div>
                             <div id="collapseetn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingetn">
                                 <div class="panel-body">
-                                    first u have to login to ur account. go to search mammals through maps>> type the name of the mammal> click search
+                                    1. Go to profile section <br>
+                                    2. Select the specific bat<br>
+                                    3. You can get entire details there
                                 </div>
                             </div>
                         </div>
@@ -417,28 +368,10 @@
                             </div>
                             <div id="collapsenntn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingnntn">
                                 <div class="panel-body">
-                                    go to settings>> change language>> select the language ** but there are limited languages
+                                    We are sorry. This system is only developed in English
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsetwnty" class="panel-heading" role="tab" id="headingtwnty">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwnty" aria-expanded="true" aria-controls="collapsetwnty">
-                                        Where can I find settings for other purposes?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsetwnty" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwnty">
-                                <div class="panel-body">
-                                    after u login to ur account, u can find settings in menu option. there u can see the settings bar
-                                </div>
-                            </div>
-                        </div>
-
 
                     </div>
                 </div>
@@ -449,6 +382,8 @@
         
     </div>
 </div>
+</div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

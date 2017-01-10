@@ -47,12 +47,22 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
+
 
 
 
     </style>
     <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/navnew.css" rel="stylesheet">
+ <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
   <link href="css/footer.css" rel="stylesheet">
   <script src="js/jquary.js"></script>
   <script src="js/bootstrapjs.js"></script>
@@ -61,13 +71,14 @@
 
 <body>
 <div>
-<?php include '../IncludedFiles/navbarTemplate.php'; ?>
+<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
 
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -78,7 +89,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Frequently Asked Questions on <br> Privacy and Security </font></h1>
             <h1 class="text-center"><font size="6px" color="#483d8b"> Hacked and Fake accounts </font></h1>
 
@@ -90,7 +101,7 @@
 <hr />
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="slt">
 
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -108,27 +119,11 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
-                                    1st login to ur account and deactivate it. then contact admin panel suddently
+                                    1. Contact admin panel urgently
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                        What should I do if someone hack my account?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    contact admin panel soon
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
@@ -142,27 +137,10 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                    report those accounts and block it. and also contact admin panel
-                                </div>
+                                    1. Inform to admin panel if you suspects someone
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsefour" class="panel-heading" role="tab" id="headingfour">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
-                                        What can I do if there is any fake accounts?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
-                                <div class="panel-body">
-                                    block it and report those accounts
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapsefive" class="panel-heading" role="tab" id="headingfive">
                                 <h4 class="panel-title">
@@ -176,7 +154,8 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                    yes u can block if there is any suspected account by clicking the user account 
+                                   1. No. You cannot block other users
+                                   2. And you cannot be blocked
                                 </div>
                             </div>
                         </div>
@@ -187,6 +166,7 @@
         </div>
 
     </div>
+</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
