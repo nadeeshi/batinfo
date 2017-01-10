@@ -168,9 +168,11 @@ div.profile-picture {
 
 
 .insert-form{
-	margin-top: 140px;
-	/padding-top: 1.5%;
+	margin-top: 5%;
+	padding-top: 1.5%;
 	z-index: -1;
+	min-height: 100%;
+	margin-bottom: 5%;
 }
 
 @media(max-width:768px){
@@ -203,9 +205,11 @@ div.profile-picture {
     background-color: #4c4743;
     font-family: 'Varela Round', sans-serif;
     margin-top: 50px;
+    position: fixed;
+    bottom: 0;
 }
 .footcon-col-1 {
-    margin-top: 1.5%;
+    margin-top: 0.5%;
 }
 
 .body{

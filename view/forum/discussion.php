@@ -1,5 +1,5 @@
 <?php
-require_once ("../../assets/includedFiles/connection.php");
+require_once ("../../database/connection.php");
 ?>
 
 <!DOCTYPE html>

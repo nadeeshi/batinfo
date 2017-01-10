@@ -1,6 +1,6 @@
 <?php 
 $msg ='';
-require_once ('../../assets/includedFiles/connection.php');
+require_once ('../../database/connection.php');
 if (!empty($_POST)) {
   $topic = $_POST['topic'];
   $message =$_POST['message'];

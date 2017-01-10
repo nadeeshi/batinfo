@@ -1,5 +1,5 @@
 <?php
-require_once ('../../view/forum/connection.php');
+require_once ('../../database/connection.php');
 
 
 if(isset($_POST) && count($_POST)){

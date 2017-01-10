@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'dbconnect.php';
+include_once '../../database/dbconnect.php';
 
 ?>
 <!-- start of the heading naavigation bar -->
@@ -55,7 +55,7 @@ include_once 'dbconnect.php';
 		            <li class="min-link"><a href="../../view/forum/forumTopics.php">Forum</a></li>
 		            <li class="min-link"><a href="../batnews/grid31.php">News</a></li>
 		            <li class="min-link"><a href="../help/index.php">Help</a></li>
-		            <li class="min-link"><a href="../phpPages/aboutUs.php">About Us</a></li>
+		            <li class="min-link"><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
 		            <li class="min-link"><a href="logout.php">Log Out</a></li>
 		   		</ul>
 	  		</div> <!-- /.navbar-collapse -->
@@ -77,7 +77,7 @@ include_once 'dbconnect.php';
 				<li><a href="../../view/forum/forumTopics.php">Forum</a></li>
 				<li><a href="../batnews/grid31.php">News</a></li>
         		<li><a href="../help/index.php">Help</a></li>
-				<li><a href="../phpPages/aboutUs.php">About Us</a></li>
+				<li><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
 			</ul>
 		</div>
     <!-- end of the side navigation bar -->
