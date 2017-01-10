@@ -16,15 +16,15 @@ function ajaxReply(parent_id) {
 
 //model Post to forum button
 replyModel.on("click", "." + submitModel, function() {
-    var formData = replayform.serialize() + "&parentId=" + parentId +
-        "&topicId=" + topicId + "&action=postToForum";
-    console.log("formdata", formData);
+    console.log("onclick clicked");
+    var formData = replayform.serialize() + "&parentId=" + parentId + "&topicId=" + topicId + "&action=postToForum";
     $.ajax({
         type: "POST",
         url: "../../controller/insert/form.controller.php",
         data: formData,
         dataType: "json",
         success: function(response) {
+            console.log(response);
             if (response.status == "success") {
                 replyModel.modal('toggle');
                 load_reply();

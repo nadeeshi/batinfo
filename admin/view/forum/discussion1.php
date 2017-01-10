@@ -1,32 +1,61 @@
 <?php
-require_once ("../../database/connection.php");
+require_once ("../../assets/includedFiles/connect.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>discussion</title>
-	<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="../../assets/css/forum.css" rel="stylesheet" type="text/css">
-	<link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
-	<script src="../../assets/js/jquery.js"></script>
-    <script src="../../assets/js/bootstrap.js"></script>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BatFacts.com</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+
+    <!--CUSTOM BASIC STYLES-->
+    <link href="../../assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="../../assets/css/forum.css" rel="stylesheet" type="text/css">
+
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../../assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../../assets/js/bootstrapjs.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../../assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="../../assets/js/custom.js"></script>
+    <!-- text editor -->
+    <!-- <script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script> -->
+
 	<!--moment.js-->
 	<script src="../../assets/js/moment.js"></script>
+
 </head>
 <body>
 	<div>
-		<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
+		<?php include '../../assets/includedFiles/template.php' ?>
 	</div>
 	<div>
-		<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form" style="padding: 2%;">
+		<div class="col-sm-10 col-sm-push-2 col-xs-12" style="padding: 4.5%; margin-left: 0.2%;">
 			<div class="row">
 				<?php
 					$sql="SELECT topic_id, topic_subject, topic_content,topic_date FROM topics
-					WHERE topics.topic_id = " . mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
-					$result= mysqli_query($db, $sql);
+					WHERE topics.topic_id = " . mysqli_real_escape_string($bd, isset($_GET['id']) ? $_GET['id'] : null);
+					$result= mysqli_query($bd, $sql);
 					$row = mysqli_fetch_assoc($result);
-					$id=mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
+					$id=mysqli_real_escape_string($bd, isset($_GET['id']) ? $_GET['id'] : null);
 					// echo($id);
 				?>
 				<div  id = "topicId" style="display:none"> <?php echo $id; ?> </div>
@@ -55,7 +84,8 @@ require_once ("../../database/connection.php");
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+					</button>
 					<h4 class="modal-title">Your Reply</h4>
 				</div>
 				<div class="modal-body">
@@ -75,13 +105,11 @@ require_once ("../../database/connection.php");
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
-	
 	<!-- start footer -->
-	<div class=".container-fluid">
-	    <div class="col-sm-10 col-sm-push-2 col-xs-12">
-	      <?php include "../../assets/includedFiles/footer.php" ?>
-	    </div>
-  	</div>
+
+	<div id="footer-sec" class="col-sm-push-2 col-sm-10 col-xs-12" style="position: fixed; bottom: 0; padding-left: 2%;">
+        <b>Group 23-UCSC Group Project</b>
+    </div>
 	<!-- end of footer -->
 </body>
 </html>
