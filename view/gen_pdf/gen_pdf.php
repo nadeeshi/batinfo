@@ -5,7 +5,7 @@ include ('../../database/cnm_db_con.php');/*
 @mysql_connect("localhost","root","") or die("could not connect");
 
 @mysql_select_db("test2") or die("could not find");*/
-require('../fpdf/fpdf.php');
+require('../../assets/fpdf/fpdf.php');
 	
 $count = 0;
 		//if($_GET['batid']>=0){
