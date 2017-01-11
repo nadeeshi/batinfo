@@ -9,8 +9,12 @@
     <link href="../../assets/CSS/footer.css" rel="stylesheet">
     <script src="../../assets/JS/jquery.js"></script> 
     <script src="../../assets/JS/bootstrap.js"></script>
-
+	<script >
+		$('ul.products-slideshow-thumbs li a').click(function() {
+		$(this).toggleClass("current");
+		});
 	
+	</script >
 	
 </head>
 <body>
@@ -195,15 +199,16 @@
   
   <ul class="pagination">
     <li><a href="#"><b> &#x226A</b></a></li>
-    <li><a  href=<?php echo "'newst.php'"; ?>>1</a></li>
-	<?php  
-		
+    <li><a  <?php $color = "style='background-color:#eabcf9'";
+					echo (!(isset($_GET['page']))) ? $color : "";
+	echo "href='newst.php'"; ?>>1</a></li>
+	<?php 
 		$r=floor($x/4);
 		for($i=2;$i<=$r;$i++){
 		$f=$i-1;
 		//echo $f;
 	?>
-    <li><a href=<?php echo "'newst.php?page=$f'"; ?>><?php echo $i;?></a></li><?php }?>
+    <li><a <?php echo "href='newst.php?page=$f'"; if(isset($_GET['page'])) echo ($_GET['page']==$f) ? $color : "";?>><?php echo $i;?></a></li><?php }?>
 
     <li><a href="#"><b> &#x226B</b></a></li>
   </ul>
