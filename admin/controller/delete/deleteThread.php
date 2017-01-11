@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include("../../assets/includeFiles/connect.php");
+include("../../assets/includedFiles/connect.php");
 
 if(isset($_GET['id'])!="")
 {
@@ -8,7 +8,7 @@ if(isset($_GET['id'])!="")
     $delete=mysqli_query($bd,"DELETE FROM topics WHERE topic_id='$sql'");
     if($delete)
     {
-        header("Location:forumTopics.php");
+        header("Location:".$_SERVER['HTTP_HOST']."/batinfo/admin/view/forum/forumTopics.php");
     }
     else
     {

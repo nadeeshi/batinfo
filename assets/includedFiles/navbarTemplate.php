@@ -49,7 +49,7 @@ include_once '../../database/dbconnect.php';
 			            </ul>
 		        	</div>
 		        	<li class="min-link"><a href= "#" class="navbar-head-list"><?php echo $_SESSION['usr_name']; ?></a></li>
-		            <li class="min-link"><a href="../phpPages/researcherHomePage.php">Home</a></li>
+		            <li class="min-link"><a href="../../controller/graph/graph.php">Home</a></li>
 		            <li class="min-link"><a href="../nadee/listOfBats.php">Bats Info</a></li>
 		            <li class="min-link"><a href="../nadee/listOfResearch.php">Research Info</a></li>
 		            <li class="min-link"><a href="../../view/forum/forumTopics.php">Forum</a></li>
@@ -71,7 +71,7 @@ include_once '../../database/dbconnect.php';
  				<!-- <img src="../img/proPic.png"> -->
  			</div>
 			<ul class="nav nav-pills nav-stacked list-of-content">
-				<li><a href="../phpPages/researcherHomePage.php">Home</a></li>
+				<li><a href="../../controller/graph/graph.php">Home</a></li>
         		<li><a href="../nadee/listOfBats.php">Bats Info</a></li>
         		<li><a href="../nadee/listOfResearch.php">Research Info</a></li>
 				<li><a href="../../view/forum/forumTopics.php">Forum</a></li>

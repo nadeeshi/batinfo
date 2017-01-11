@@ -82,8 +82,9 @@ require_once ("../../assets/includedFiles/connect.php");
 			                  echo $user['topic_date']." "."</td>";
 			                  echo "<td class='col-sm-2 col-xs-2'>";
 			                  echo "<a href=#>siguisgiwugiu</a>"." "."</td>";
-			                  echo "<td class='col-sm-2 col-xs-2'>";
-			                  echo "<a href='../../controller/delete/deleteThread.php?topic_id= ".$user['topic_id']."; ?>' onclick='return confirm('Are you sure you wish to delete this Thread?');'>Delete</a>"." "."</td>";
+			                  echo "<td class='col-sm-2 col-xs-2'>";?>
+			                  <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
+			                  <?php
 			              echo "</tr>";   
 			          } 
 			          echo "</table>";
