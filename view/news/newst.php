@@ -199,7 +199,7 @@
   
   <ul class="pagination">
     <li><a href="#"><b> &#x226A</b></a></li>
-    <li><a  <?php $color = "style='background-color:#eabcf9'";
+    <li><a  <?php $color = "style='background-color:#5a5452'";
 					echo (!(isset($_GET['page']))) ? $color : "";
 	echo "href='newst.php'"; ?>>1</a></li>
 	<?php 
