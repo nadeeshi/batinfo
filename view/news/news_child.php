@@ -45,7 +45,8 @@
 
                         var webpage= location.href;
 
-                        position= webpage.lastIndexOf("/"); 
+                       // position= webpage.lastIndexOf("/"); 
+                        position= webpage.lastIndexOf("="); 
 
                         var lastpart= webpage.substring(position + 1);
 
@@ -66,7 +67,7 @@
 //complete= complete1.replace(/?/g, "_");
 //window.alert(complete);
 
-                        var url= "usercomments.php";
+                        var url= "usercomments1.php";
                         var username= document.getElementById("name_entered").value;
                         document.getElementById("name_entered").value='';
 

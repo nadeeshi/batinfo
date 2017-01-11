@@ -9,12 +9,7 @@
     <link href="../../assets/CSS/footer.css" rel="stylesheet">
     <script src="../../assets/JS/jquery.js"></script> 
     <script src="../../assets/JS/bootstrap.js"></script>
-	<script >
-		$('ul.products-slideshow-thumbs li a').click(function() {
-		$(this).toggleClass("current");
-		});
 	
-	</script >
 	
 </head>
 <body>
@@ -110,7 +105,7 @@
 								<span class="aidanews2_text">
 									<?php echo substr($desc[1+(4*$page)],0,150)."..."; ?>
 								</span>					
-								<a href=<?php echo "'news_child.php?photoid=".$id[1+(4*$page)]."'"; ?> class="readon">
+								<a href=<?php echo "'news_child.php?photoid=".$id[1+(4*$page)]."'"; ?> class = "readon">
 									<span class="aidanews2_readmore">Read More</span>
 								</a>
 							</div>
@@ -198,7 +193,7 @@
   
   
   <ul class="pagination">
-    <li><a href="#"><b> &#x226A</b></a></li>
+    <li><a href="#"><b> &#x226A </b></a></li>
     <li><a  <?php $color = "style='background-color:#5a5452'";
 					echo (!(isset($_GET['page']))) ? $color : "";
 	echo "href='newst.php'"; ?>>1</a></li>
@@ -210,7 +205,7 @@
 	?>
     <li><a <?php echo "href='newst.php?page=$f'"; if(isset($_GET['page'])) echo ($_GET['page']==$f) ? $color : "";?>><?php echo $i;?></a></li><?php }?>
 
-    <li><a href="#"><b> &#x226B</b></a></li>
+    <li><a href="#"><b> &#x226B </b></a></li>
   </ul>
 </div>
 				</div>
