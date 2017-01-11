@@ -1,6 +1,9 @@
+
 <?php
 require_once('../../assets/includedFiles/auth.php');
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -14,12 +17,10 @@ require_once('../../assets/includedFiles/auth.php');
 
 
 
-<!--<link rel="stylesheet" href="researchDetails.css" type="text/css" />-->
+    <!--<link rel="stylesheet" href="researchDetails.css" type="text/css" />-->
 
 
 </head>
-
-
 <body>
 <?php include("../../assets/includedFiles/template.php")?>
 
@@ -35,7 +36,7 @@ require_once('../../assets/includedFiles/auth.php');
 
 
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-11">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Insert Research Paper to the Database
@@ -48,39 +49,42 @@ require_once('../../assets/includedFiles/auth.php');
 
 
 
+
+
+
+
 <div id="body">
-
-	<form action="researchFileUpload.php" method="post" enctype="multipart/form-data">
-	<input type="file" name="file" />
-	<button type="submit" name="btn-upload">upload</button>
-	</form>
-
-
-    <br /><br />
+	<table width="100%" border="1">
+    <tr>
+    <th colspan="4">your uploads...<label><a href="../../controller/insert/researchDetails.php">upload new files...</a></label></th>
+    </tr>
+    <tr>
+    <td>File Name</td>
+    <td>File Type</td>
+    <td>File Size(KB)</td>
+    <td>View</td>
+    </tr>
     <?php
-	if(isset($_GET['success']))
+    ob_start();
+    include("../../assets/includedFiles/connect.php");
+    $sql="SELECT * FROM tbl_uploads";
+
+	$result_set=mysqli_query($bd,$sql);
+	while($row=mysqli_fetch_array($result_set))
 	{
 		?>
-        <label>File Uploaded Successfully...  <a href="../../view/researchDetails/researchUploadedFileView.php">click here to view file.</a></label>
-        <?php
-	}
-	else if(isset($_GET['fail']))
-	{
-		?>
-        <label>Problem While File Uploading !</label>
-        <?php
-	}
-	else
-	{
-		?>
-        <label>Try to upload any files(PDF, DOC, EXE, VIDEO, MP3, ZIP,etc...)</label>
+        <tr>
+        <td><?php echo $row['file'] ?></td>
+        <td><?php echo $row['type'] ?></td>
+        <td><?php echo $row['size'] ?></td>
+        <td><a href="../../controller/insert/uploads/<?php echo $row['file'] ?>" target="_blank">view file</a></td>
+        </tr>
         <?php
 	}
 	?>
-</div>
-
-
-                            </div>
+    </table>
+    
+</div></div>
                         </div>
                     </div>
                 </div>
@@ -88,10 +92,8 @@ require_once('../../assets/includedFiles/auth.php');
         </div>
     </div>
 
-
-
-<div id="footer-sec"><b>Group 23-UCSC Group Project</b>
-</div>
+                            <div id="footer-sec"><b>Group 23-UCSC Group Project</b>
+                            </div>
 
 </body>
 </html>

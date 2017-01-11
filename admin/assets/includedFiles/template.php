@@ -121,7 +121,7 @@
                     <a href="#"><i class="fa fa-yelp "></i>Reaserch Details <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="../../view/researchDetails/listOfResearch.php">list of Research</a>
+                            <a href="../../view/researchDetails/researchUploadedFileView.php">list of Research</a>
                         </li>
 
                         <li>
@@ -135,7 +135,7 @@
 
 
                 <li>
-                    <a href="../graph/graph.php"><i class="fa fa-yelp "></i>Graph Details </a>
+                    <a href="../../controller/insert/bar_graph.php"><i class="fa fa-yelp "></i>Graph Details </a>
 
                 </li>
 

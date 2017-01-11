@@ -53,7 +53,7 @@ require_once('auth.php');
                             <?php
                             ob_start();
                             include("connect.php");
-                                $query = mysqli_query($bd,"select count(*) as total from bats_details");
+                                $query = mysqli_query($bd,"select count(*) as total from bat_info");
                                 $result = mysqli_fetch_array($query);
                                 echo $result['total'];
                             ob_end_flush();

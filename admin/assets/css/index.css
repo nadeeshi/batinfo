@@ -29,7 +29,7 @@ img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
 body{
-    background:url(../images/002.jpg)  no-repeat center fixed;
+    background:url(../../assets/images/002.jpg)  no-repeat center fixed;
     background-size: cover;
     position:relative;
     font-family: 'Open Sans', sans-serif;
