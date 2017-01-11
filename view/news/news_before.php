@@ -39,7 +39,7 @@
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="inblock">
+                                <div class="com">
 
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -60,14 +60,14 @@
                                   
                                     <div class="row">
                                         <div class="col-sm-12">
-											<a href=<?php echo "'edit_news.php?ed_id=".$record['nid']."'"; ?> class="readon">                                                                                     
-											<button type="button" value="x" onclick="alert('back to edit')">edit</button><br>
+											<a href=<?php echo "'edit_news.php?ed_id=".$record['nid']."'"; ?> >                                                                                     
+											<button type="button" class="btn btn-primary" value="x" onclick="alert('back to edit')"> edit</button><br>
 											</a>
-                                            <a href=<?php echo "'../../controller/insert/to_db.php?to_id=".$record['nid']."'"; ?> class="readon">                                                                                     
-											<button type="button" value="y" onclick="alert('your news will be published')">publish</button><br>
+                                            <a href=<?php echo "'../../controller/insert/to_db.php?to_id=".$record['nid']."'"; ?> >                                                                                     
+											<button type="button" class="btn btn-primary" value="y" onclick="alert('your news will be published')">publish</button><br>
 											</a>
-											<a href=<?php echo "'to_db.php?to_id=".$record['nid']."'"; ?> class="readon">                                                                                     
-											<button type="button" value="y" onclick="alert('your news will be published')">cancel</button><br>
+											<a href=<?php echo "'../../controller/delete/del_news.php?to_id=".$record['nid']."'"; ?> >                                                                                     
+											<button type="button" class="btn btn-primary" value="y" onclick="alert('cancel the procedure')">cancel</button><br>
 											</a>
 											
 											<a href="news_insert.php" class="readon">

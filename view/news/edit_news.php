@@ -82,11 +82,15 @@ $row = mysqli_fetch_assoc($result);
 						<input type="file" name="image" required onchange="readURL(this);"><br />
 						<img id="blah" src="#" alt=""/>						
 					</div>
-					
-					<div class="wow fadeInLeft" data-wow-delay="0.4s">
+					</div>
+					    <div class="form-group">
+						<label for="inputEmail">title of the news</label>
+						<input type="text" class="form-control" name="title" required value="<?php echo $row['title'];?>">
+					</div>
+					<!--<div class="wow fadeInLeft" data-wow-delay="0.4s">
 						<span>Title<label>*</label></span>
 						<input type="text" name="title" required value="<?php echo $row['title'];?>"> 
-					</div>
+					</div>-->
 					 
 					 
 					<textarea type="text" name="body" required value=""><?php echo $row['body'];?></textarea>

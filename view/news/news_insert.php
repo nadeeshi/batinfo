@@ -58,10 +58,15 @@
 						<img id="blah" src="#" alt=""/>
 						
 					</div>
-					<div class="wow fadeInLeft" data-wow-delay="0.4s">
+					    <div class="form-group">
+						<label for="inputEmail">enter title of the news</label>
+						<input type="text" class="form-control" name="title" required placeholder="title">
+					</div>
+					<!--
+					<div class="form-group" data-wow-delay="0.4s">
 						<span>Title<label>*</label></span>
 						<input type="text" name="title" required> 
-					</div>
+					</div>-->
 					 					 
 					<textarea type="text" name="body"></textarea>
 					<p><?php //echo $status; ?></p>
