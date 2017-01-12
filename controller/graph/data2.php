@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT scientific_name,population,id FROM bats_details ORDER BY id");
+$query = sprintf("SELECT scientific_name,population,bat_id FROM bat_info ORDER BY bat_id");
 
 //execute query
 $result = $mysqli->query($query);
