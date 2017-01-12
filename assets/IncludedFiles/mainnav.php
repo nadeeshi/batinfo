@@ -1,18 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../CSS/bootstrap.min.css" rel="stylesheet" media="screen">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../JS/bootstrap.min.js"></script>
-  	<link href="../CSS/bootstrap.min.css">
-    <link href="../CSS/navbar1n2.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
 
-<body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #4c4743;">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -54,6 +43,6 @@
 	</nav>
 
 
-</body>
+
 </html>
 	
