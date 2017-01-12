@@ -46,7 +46,7 @@
             <ul class="nav navbar-nav navbar-right" style="font-size: 18px; padding-top: 1px; padding-bottom: 8px;">
            
         			<li><a href="../../controller/login/page1_form.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-              <li><a href="../../controller/login/login.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a href="controller/login/login.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               
       			</ul>
     		</div>
