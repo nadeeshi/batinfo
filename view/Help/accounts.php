@@ -48,6 +48,15 @@
             size: 60px;
 
         }
+        #maindiv{
+            position: absolute;
+            margin-left: 15%;
+            z-index: -1;
+        }
+
+        #slt{
+            margin-left: -6%;
+        }
 
 
 
@@ -69,11 +78,11 @@
 <?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 </div>
     
-
+<div id="maindiv">
 <section class="main_image org">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-sm-push-2 col-xs-12 ">
+            <div class="col-sm-8 col-sm-push-2 col-xs-12 " id="slt">
                 <h1 class="text-center">Hi, We Are Here To Help You!</h1>
 
             </div>
@@ -83,10 +92,11 @@
     </div>
 
 </section>
+<hr>
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slt">
             <h1 class="text-center"><font size="8px" color="#00bfff"> Account Settings </font></h1>
 
         </div>
@@ -100,7 +110,7 @@
         <div class="col-md-8 col-md-offset-4">
             <div class="row">
 
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="slt">
                     <a href="questions1.php">
                     <button type="button" class="btn btn-primary pdd">
                         <i class="fa fa-pencil-square fa-4x"style="margin-top: 15px"></i>
@@ -114,7 +124,7 @@
                     </span>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="slt">
                     <a href="questions2">
                     <button type="button" class="btn btn-danger pdd">
                         <i class="fa fa-trash fa-4x"style="margin-top: 15px"></i>
@@ -130,6 +140,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
