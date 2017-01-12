@@ -27,10 +27,16 @@ if(isset($_POST['new']) && $_POST['new']==1){
 	mysqli_query($con,$ins_query) or die(mysql_error());
 	
 	$result = "SELECT * FROM news_before;";
-	$result = mysqli_query($con, $result) or die();
-	$x=mysqli_num_rows($result);
+	//$result = mysqli_query($con, $result) or die();
+	//$x=mysqli_num_rows($result);
+	$v="SELECT * FROM news_before WHERE nid=(SELECT MAX(nid) FROM news_before);";
+	
+	$rs = mysqli_query($con, $v) or die();
+	$v_ar=mysqli_fetch_assoc($rs);
+	$l_id=$v_ar['nid'];
+	
 	$status = "New Record Inserted Successfully.</br></br><a href='view.php'>View Inserted Record</a>";
-	header('Location:news_before.php?id='.$x);
+	header('Location:news_before.php?id='.$l_id);
 }
 	
 	
