@@ -1,6 +1,6 @@
 
 <?php include("../../controller/insert/news_db_insert.php");
-//echo $fid;
+//dbconnect.php;
 ?>
 
 <!DOCTYPE html>

@@ -2,6 +2,7 @@
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/cnm_db_con.php');
 /*
+dbconnect.php
 $con = mysqli_connect("localhost","user","","test2");
 
 if (mysqli_connect_errno()){

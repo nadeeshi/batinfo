@@ -1,3 +1,14 @@
+ div.s{
+
+    padding: 25px;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+
 div.x {
     border: 1px solid #ccc;
 	padding:0px;
@@ -51,6 +62,10 @@ div.desc {
     padding: 0 6px;
     float: left;
     width: 24.99999%;
+}
+.aidanews2_title{
+    text-align:center;
+    
 }
 
 @media only screen and (max-width: 700px){

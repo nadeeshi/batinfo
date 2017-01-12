@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/cnm_db_con.php');/*
-
+dbconnect.php
 @mysql_connect("localhost","root","") or die("could not connect");
 
 @mysql_select_db("test2") or die("could not find");*/
@@ -20,7 +20,7 @@ while($row = mysqli_fetch_assoc($result)){
 	$id = $row['id'];
 	$img = $row['location'];
 	$des = $row['description'];
-	$count = 1;
+	//$count = 1;
 		
 		//echo '<p><img src="'.$row['location'].'"></p>';
 	$output = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des;

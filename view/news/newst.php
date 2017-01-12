@@ -21,7 +21,7 @@
 	<div class="container">
 	
 	<?php 
-					include ('../../database/cnm_db_con.php');
+					include ('../../database/cnm_db_con.php');//dbconnect.php
 					$qry = "SELECT * FROM photos ORDER BY id DESC;";
 					$imgList =array();
 					$desc = array();

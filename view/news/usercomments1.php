@@ -8,10 +8,10 @@ $neid= $_POST['webpage'];
 
 $date= date("m-d-Y");
 
-$user = "user"; 
+$user = "user"; //root
 $password = ""; 
 $host = "localhost"; 
-$dbase = "test2"; 
+$dbase = "test2";//project 
 
 
 

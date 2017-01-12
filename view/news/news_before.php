@@ -15,7 +15,7 @@
         <?php
 		
 		include ('../../database/cnm_db_con.php');
-/*
+/*      dbconnect.php
         $mysql_hostname = "localhost";
         $mysql_user = "root";
         $mysql_password = "";
@@ -74,7 +74,7 @@
 							<a class="button bt1" href=<?php echo "'edit_news.php?ed_id=".$record['nid']."'"; ?> onclick="alert('back to edit')" >edit</a>
 						
 							<a class="button bt1" href=<?php echo "'../../controller/insert/to_db.php?to_id=".$record['nid']."'"; ?>  onclick="alert('your news will be published')">publish</a>                                                                                     
-							<a class="button bt1" href=<?php echo "'../../controller/delete/del_news.php?to_id=".$record['nid']."'"; ?> onclick = "alert('cancel the procedure')"> cancel</a>                                           
+							<a class="button bt1" href=<?php echo "'../../controller/delete/del_news.php?to_id=".$record['nid']."'"; ?> onclick = "alert('cancel the procedure')" > cancel</a>                                           
 											
 							<a href="news_insert.php" class="readon1">back to news</a>
 						</div>
