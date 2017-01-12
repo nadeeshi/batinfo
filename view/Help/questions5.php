@@ -128,7 +128,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                        What can i do even i see some wrong information in others articles
+                                        What can I do even I see some wrong information in others articles
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -173,7 +173,8 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                   1. No. You cannot block other user yourself
+                                   1. No. You cannot block other user yourself<br>
+                                   2. You can complain to admin panel if any issues with other researcher
                                 </div>
                             </div>
                         </div>

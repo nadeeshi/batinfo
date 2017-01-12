@@ -41,7 +41,7 @@ include_once '../../database/dbconnect.php';
 						</form> 
 			            <ul class="nav navbar-nav navbar-right">
 			                <?php if (isset($_SESSION['usr_id'])) { ?>
-			                <li><a href= "#" class="navbar-head-list"><?php echo $_SESSION['usr_name']; ?></a></li>
+			                <li><a href= "../../view/UserProfile/profile.php?id=<?php echo $_SESSION['usr_id'];?>" class="navbar-head-list" <?php echo $_SESSION['usr_name']; ?></a></li>
 			                <?php } else { ?>
 			                <!-- <li><a href="login.php">Login</a></li>
 			                <li><a href="register.php">Sign Up</a></li> -->
