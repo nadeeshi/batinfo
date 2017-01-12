@@ -46,7 +46,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 				//$query = "SELECT * FROM fulldemo WHERE name = '$searchq';";
 				//$result = mysqli_query($con, $query);
 				//$record = mysqli_fetch_assoc($result);
-        
+        //---SELECT title FROM pages WHERE my_col LIKE %$param1% OR another_col LIKE %$param2%;
 				$query = mysql_query("SELECT * FROM fulldemo WHERE name = '$searchq';") or die("could not search");
 				while($row = mysql_fetch_array($query)){
 					$fname = $row['name'];
