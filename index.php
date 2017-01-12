@@ -54,14 +54,13 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
         <a class="navbar-brand" href="#"><span style="font-family: 'Chewy', cursive;
-              font-size: 50px; color:#ffffff;" >Bats</span><span style="font-family: 'Shadows Into Light', cursive;
-              font-size: 50px; color:#ffffff;">Info</span></a>
-                <ul class="nav navbar-nav" style="font-size: 18px; padding-top: 1px; padding-bottom: 13px;">
+              font-size: 45px; color:#ffffff;" >Bats</span><span style="font-size: 40px; color:#ffffff;">Info</span></a>
+                <ul class="nav navbar-nav" style="font-size: 16px; padding-top: 1px; ">
 
-                    <li><a href="myhome.php">Home</a></li>
+                    <li><a href="">Home</a></li>
                     <li><a href="#">News</a></li>
                     <li><a href="myhome.php#articles">Articles</a></li>
-                    <!-- <li><a href="#">Gallery</a></li> -->
+                    <li><a href="view/forum/publicTopics.php">Forum</a></li>
                     <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                 </ul>
@@ -71,10 +70,10 @@
               <button type="submit" class="btn btn-default">Search</button>
               </div>
             </form>
-            <ul class="nav navbar-nav navbar-right" style="font-size: 18px; padding-top: 1px; padding-bottom: 8px;">
+            <ul class="nav navbar-nav navbar-right" style="font-size: 16px; padding-top: 1px; padding-bottom: 8px;">
            
-                    <li><a href="controller/login/page1_form.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-                    <li><a href="controller/login/login.php"  style="font-size: 18px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="controller/login/page1_form.php" id="myBtn" style="font-size: 16px;"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a href="controller/login/login.php"  style="font-size: 16px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               
             </ul>
             </div>
