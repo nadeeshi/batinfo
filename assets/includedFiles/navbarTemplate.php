@@ -27,7 +27,7 @@ include_once '../../database/dbconnect.php';
 		            <div class="collapse navbar-collapse" id="navbar1">
 			            <ul class="nav navbar-nav navbar-right">
 			                <?php if (isset($_SESSION['usr_id'])) { ?>
-			                <li><a href="logout.php" class="navbar-head-list">Log Out</a></li>
+			                <li><a href="../../controller/login/logout.php" class="navbar-head-list">Log Out</a></li>
 			                <?php } else { ?>
 			                <li><a class="navbar-head-list" href="login.php">Login</a></li>
 			                <li><a class="navbar-head-list" href="register.php">Sign Up</a></li>
@@ -56,7 +56,7 @@ include_once '../../database/dbconnect.php';
 		            <li class="min-link"><a href="../../view/news/newst.php">News</a></li>
 		            <li class="min-link"><a href="../help/index.php">Help</a></li>
 		            <li class="min-link"><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
-		            <li class="min-link"><a href="logout.php">Log Out</a></li>
+		            <li class="min-link"><a href="../../controller/login/logout.php">Log Out</a></li>
 		   		</ul>
 	  		</div> <!-- /.navbar-collapse -->
     	</div>
