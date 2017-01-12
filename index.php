@@ -72,103 +72,6 @@
         });
     </script>
 
-    <style>
-
-        /* jssor slider arrow navigator skin 02 css */
-        /*
-        .jssora02l                  (normal)
-        .jssora02r                  (normal)
-        .jssora02l:hover            (normal mouseover)
-        .jssora02r:hover            (normal mouseover)
-        .jssora02l.jssora02ldn      (mousedown)
-        .jssora02r.jssora02rdn      (mousedown)
-        */
-        .jssora02l, .jssora02r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 55px;
-            height: 55px;
-            cursor: pointer;
-            background: url('../images/img/a02.png') no-repeat;
-            overflow: hidden;
-        }
-        .jssora02l { background-position: -3px -33px; }
-        .jssora02r { background-position: -63px -33px; }
-        .jssora02l:hover { background-position: -123px -33px; }
-        .jssora02r:hover { background-position: -183px -33px; }
-        .jssora02l.jssora02ldn { background-position: -3px -33px; }
-        .jssora02r.jssora02rdn { background-position: -63px -33px; }
-
-        /* jssor slider thumbnail navigator skin 03 css */
-        /*
-        .jssort03 .p            (normal)
-        .jssort03 .p:hover      (normal mouseover)
-        .jssort03 .pav          (active)
-        .jssort03 .pdn          (mousedown)
-        */
-
-        .jssort03 .p {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 62px;
-            height: 32px;
-        }
-
-        .jssort03 .t {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .jssort03 .w, .jssort03 .pav:hover .w {
-            position: absolute;
-            width: 60px;
-            height: 30px;
-            border: white 1px dashed;
-            box-sizing: content-box;
-        }
-
-        .jssort03 .pdn .w, .jssort03 .pav .w {
-            border-style: solid;
-        }
-
-        .jssort03 .c {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 62px;
-            height: 32px;
-            background-color: #000;
-
-            filter: alpha(opacity=45);
-            opacity: .45;
-            transition: opacity .6s;
-            -moz-transition: opacity .6s;
-            -webkit-transition: opacity .6s;
-            -o-transition: opacity .6s;
-        }
-
-        .jssort03 .p:hover .c, .jssort03 .pav .c {
-            filter: alpha(opacity=0);
-            opacity: 0;
-        }
-
-        .jssort03 .p:hover .c {
-            transition: none;
-            -moz-transition: none;
-            -webkit-transition: none;
-            -o-transition: none;
-        }
-
-        * html .jssort03 .w {
-            width /**/: 62px;
-            height /**/: 32px;
-        }
 
     </style>
 </head>
@@ -177,79 +80,49 @@
 
     <a name="home"></a>
     <div class="container-fluid" >
-        <?php include("assets/IncludedFiles/mainnav.php") ?>
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #4c4743;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+        </button>
+      </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <a class="navbar-brand" href="#"><span style="font-family: 'Chewy', cursive;
+              font-size: 50px; color:#ffffff;" >Bats</span><span style="font-family: 'Shadows Into Light', cursive;
+              font-size: 50px; color:#ffffff;">Info</span></a>
+                <ul class="nav navbar-nav" style="font-size: 18px; padding-top: 1px; padding-bottom: 13px;">
+
+                    <li><a href="myhome.php">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="myhome.php#articles">Articles</a></li>
+                    <!-- <li><a href="#">Gallery</a></li> -->
+                    <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            <form class="navbar-form  navbar-right">
+              <div class="form-group" style="padding-top:1px;">
+                  <input type="text" class="form-control input-area" placeholder="Enter name here">
+              <button type="submit" class="btn btn-default">Search</button>
+              </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right" style="font-size: 18px; padding-top: 1px; padding-bottom: 8px;">
+           
+                    <li><a href="controller/login/page1_form.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a href="controller/login/login.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              
+            </ul>
+            </div>
+        
+    </nav>
+
     </div>
     <div class="container" style="padding-top:100px;">
-        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-            <!-- Loading Screen -->
-            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                <div style="position:absolute;display:block;background:url('../images/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-            </div>
-            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/batspic/001.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-002.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/batspic/002.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-003.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/batspic/003.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-004.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/batspic/004.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-005.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/batspic/005.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-006.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/007.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-007.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/008.jpg" />
-                    <img data-u="thumb" src="assets/images/img/008.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/009.jpg" />
-                    <img data-u="thumb" src="assets/images/img/009.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/010.jpg" />
-                    <img data-u="thumb" src="assets/images/img/010.jpg" />
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="assets/images/img/011.jpg" />
-                    <img data-u="thumb" src="assets/images/img/thumb-011.jpg" />
-                </div>
-                <a data-u="add" href="http://www.jssor.com" style="display:none">Jssor Slider</a>
-
-            </div>
-            <!-- Thumbnail Navigator -->
-            <div u="thumbnavigator" class="jssort03" style="position:absolute;left:0px;bottom:0px;width:600px;height:60px;" data-autocenter="1">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=30.0); opacity:0.3;"></div>
-                <!-- Thumbnail Item Skin Begin -->
-                <div u="slides" style="cursor: default;">
-                    <div u="prototype" class="p">
-                        <div class="w">
-                            <div u="thumbnailtemplate" class="t"></div>
-                        </div>
-                        <div class="c"></div>
-                    </div>
-                </div>
-                <!-- Thumbnail Item Skin End -->
-            </div>
-            <!-- Arrow Navigator -->
-            <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
-            <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
-        </div>
-
-        <!-- #endregion Jssor Slider End -->
+        <?php include ("assets/IncludedFiles/headerImage.php") ?>
     </div>
 
     <div class="container-fluid" style="padding-top:30px; padding-bottom:200px;">
