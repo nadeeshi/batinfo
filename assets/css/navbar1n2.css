@@ -35,7 +35,7 @@
 	font-size: 45px;
 }
 .header2 {
-	f/*ont-family: 'Shadows Into Light', cursive;*/
+	/*ont-family: 'Shadows Into Light', cursive;*/
 	font-size: 40px;
 }
 
@@ -254,6 +254,11 @@ div.profile-picture {
 .mainmenu a:hover {
     background-color: #c16d28!important;
 }
+
+.mainmenu a:active {
+    background-color: #c16d28!important;
+}
+
 .mainmenu li:hover .submenu {
   display: block;
   max-height: 200px;
@@ -273,3 +278,23 @@ div.profile-picture {
   max-height: 0;
   -webkit-transition: all 0.5s ease-out;
 }
+
+
+
+
+
+/*body*/
+/*
+.body-content{
+	background-color: #259654;
+	z-index: -2;
+	height: 100%;
+}*/
+
+.form-public{
+	margin-left: 4.35%;
+}
+
+/*html, body {
+	height: 100%;
+}*/
