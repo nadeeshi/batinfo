@@ -79,7 +79,7 @@ include_once '../../database/dbconnect.php';
 				        <li><a href="">Insert</a></li>
 				        <li><a href="">Delete</a></li>
 				        <li><a href="">Update</a></li>
-				        <li><a href="">Bat Profile</a></li>
+				        <li><a href="../../view/profiles/profiles.php">Bat Profile</a></li>
 			      	</ul>
 			    </li>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
