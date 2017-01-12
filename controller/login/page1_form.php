@@ -7,21 +7,21 @@ session_start(); // Session starts here.
     <title></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
           <!-- Bootstrap -->
-        <link href="../../assets/css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" media="screen">
         <!--JS-->
-        <link href="../../assets/js/bootstrap.min.js" rel="stylesheet" media="screen">
+        <link href="../../assets/JS/bootstrap.min.js" rel="stylesheet" media="screen">
           <!--Google Fonts-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <!-- Fontawesome core CSS -->
-        <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" >
+        <link href="../../assets/CSS/font-awesome.min.css" rel="stylesheet" >
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="css/footer3.css">
-        <script src="js//jquary.js"></script>
-        <script src="js//bootstrapjs.js"></script>
+
+        <script src="../../assets/JS/jquery.js"></script>
+        <script src="../../assets/JS/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link href="../../assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
-        <script src="../../assets/CSS/js/bootstrap.min.js"></script>
-       <script src="../../assets/CSS/js/bootstrap.min.js"></script>
+        <script src="../../assets/JS/bootstrap.min.js"></script>
+       <script src="../../assets/JS/bootstrap.min.js"></script>
        <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet">
 </head>
  
