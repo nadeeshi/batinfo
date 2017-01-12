@@ -33,45 +33,6 @@
     <script type="text/javascript" src="assets/JS/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="assets/JS/jssor.slider.mini.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
-    <script>
-        jQuery(document).ready(function ($) {
-
-            var jssor_1_options = {
-                $AutoPlay: true,
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$
-                },
-                $ThumbnailNavigatorOptions: {
-                    $Class: $JssorThumbnailNavigator$,
-                    $Cols: 9,
-                    $SpacingX: 3,
-                    $SpacingY: 3,
-                    $Align: 460
-                }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizing
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 950);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 10);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
-        });
-    </script>
-
 
     </style>
 </head>
@@ -113,7 +74,7 @@
             <ul class="nav navbar-nav navbar-right" style="font-size: 18px; padding-top: 1px; padding-bottom: 8px;">
            
                     <li><a href="controller/login/page1_form.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-                    <li><a href="controller/login/login.php" id="myBtn" style="font-size: 18px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="controller/login/login.php"  style="font-size: 18px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               
             </ul>
             </div>
