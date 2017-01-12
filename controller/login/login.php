@@ -1,8 +1,13 @@
 <?php
 session_start();
+/*echo '<pre>';
+        var_dump($_SESSION);
+        var_dump($_SESSION['usr_id']);
+        echo '</pre>';
+        die();*/
 
 if(isset($_SESSION['usr_id'])!="") {
-    header("Location: index.php");
+    header("Location: ../graph/graph.php");
 }
 
 include_once '../../database/dbconnect.php';
@@ -17,7 +22,7 @@ if (isset($_POST['login'])) {
     if ($row = mysqli_fetch_array($result)) {
         $_SESSION['usr_id'] = $row['id'];
         $_SESSION['usr_name'] = $row['fname'];
-        header("Location: ../phpPages/researcherHomepage.php");
+        header("Location: ../graph/graph.php");
     } else {
         $errormsg = "Incorrect Email or Password!!!";
     }
