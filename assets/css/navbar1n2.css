@@ -35,7 +35,7 @@
 	font-size: 45px;
 }
 .header2 {
-	/*font-family: 'Shadows Into Light', cursive;*/
+	f/*ont-family: 'Shadows Into Light', cursive;*/
 	font-size: 40px;
 }
 
@@ -235,6 +235,7 @@ div.profile-picture {
 }
 
 
+
 /*side menu*/
 
 .mainmenu, .submenu {
@@ -253,9 +254,6 @@ div.profile-picture {
 .mainmenu a:hover {
     background-color: #c16d28!important;
 }
-
-
-
 .mainmenu li:hover .submenu {
   display: block;
   max-height: 200px;
@@ -269,7 +267,6 @@ div.profile-picture {
 .submenu a:hover {
   background-color: #c16d28;
 }
-
 
 .submenu {
   overflow: hidden;

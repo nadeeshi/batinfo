@@ -35,13 +35,13 @@ include_once '../../database/dbconnect.php';
 			            </ul>
 			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
 	      					<div class="form-group">
-	        					<input type="text" class="form-control input-area form-control-custom" name='address' placeholder="Enter name here">
+	        					<input type="text" class="form-control form-control-custom input-area" name='address' placeholder="Enter name here">
 	      					</div>
 	  						<button type="submit" class="btn btn-default btn-search">Search</button>
 						</form> 
 			            <ul class="nav navbar-nav navbar-right">
 			                <?php if (isset($_SESSION['usr_id'])) { ?>
-			                <li><a href= "#" class="navbar-head-list"><?php echo $_SESSION['usr_name']; ?></a></li>
+			                <li><a href= "../../view/UserProfile/profile.php?id=<?php echo $_SESSION['usr_id'];?>" class="navbar-head-list" <?php echo $_SESSION['usr_name']; ?></a></li>
 			                <?php } else { ?>
 			                <!-- <li><a href="login.php">Login</a></li>
 			                <li><a href="register.php">Sign Up</a></li> -->
@@ -79,7 +79,7 @@ include_once '../../database/dbconnect.php';
 				        <li><a href="">Insert</a></li>
 				        <li><a href="">Delete</a></li>
 				        <li><a href="">Update</a></li>
-				        <li><a href="">Bat Profile</a></li>
+				        <li><a href="../../view/profiles/profiles.php">Bat Profile</a></li>
 			      	</ul>
 			    </li>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>

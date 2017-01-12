@@ -58,23 +58,7 @@
                                             </p>
                                         </div></div>
                                   
-                                    <div class="row">
-                                        <div class="col-sm-12">
-											<a href=<?php echo "'edit_news.php?ed_id=".$record['nid']."'"; ?> >                                                                                     
-											<button type="button" class="btn btn-primary" value="x" onclick="alert('back to edit')"> edit</button><br>
-											</a>
-                                            <a href=<?php echo "'../../controller/insert/to_db.php?to_id=".$record['nid']."'"; ?> >                                                                                     
-											<button type="button" class="btn btn-primary" value="y" onclick="alert('your news will be published')">publish</button><br>
-											</a>
-											<a href=<?php echo "'../../controller/delete/del_news.php?to_id=".$record['nid']."'"; ?> >                                                                                     
-											<button type="button" class="btn btn-primary" value="y" onclick="alert('cancel the procedure')">cancel</button><br>
-											</a>
-											
-											<a href="news_insert.php" class="readon">
-                                                back to news
-                                            </a>
-                                        </div>
-									</div>
+                                    
 
                                 </div>
 
@@ -84,6 +68,19 @@
                         </div>
                     </div>
                 </div>
+				<div class="row">
+                    <div class="col-sm-12"  >
+						<div class="com">				
+							<a class="button bt1" href=<?php echo "'edit_news.php?ed_id=".$record['nid']."'"; ?> onclick="alert('back to edit')" >edit</a>
+						
+							<a class="button bt1" href=<?php echo "'../../controller/insert/to_db.php?to_id=".$record['nid']."'"; ?>  onclick="alert('your news will be published')">publish</a>                                                                                     
+							<a class="button bt1" href=<?php echo "'../../controller/delete/del_news.php?to_id=".$record['nid']."'"; ?> onclick = "alert('cancel the procedure')"> cancel</a>                                           
+											
+							<a href="news_insert.php" class="readon1">back to news</a>
+						</div>
+					</div>
+				</div>
+				
             </div>
         </div>
         <!-- start footer -->
