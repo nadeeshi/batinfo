@@ -1,3 +1,7 @@
+<?php
+require_once('../../assets/includedFiles/auth.php');
+?>
+
 <!DOCTYPE html>
 <html>
 

@@ -1,3 +1,7 @@
+<?php
+require_once('../../assets/includedFiles/auth.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +42,7 @@
     <link rel="stylesheet" href="../../assets/css/in_up_del_css/insert_form_css.css">
     <link rel="stylesheet" href="../../assets/css/in_up_del_css/insert_form.css">
 
-    <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
+
 
     <script src="../../assets/js/jquery-1.10.2.js"></script>
     <script src="../../assets/js/bootstrapjs.js"></script>

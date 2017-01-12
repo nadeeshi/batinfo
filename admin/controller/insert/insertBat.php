@@ -1,7 +1,10 @@
+<?php
+require_once('../../assets/includedFiles/auth.php');
+?>
 
 <?php
 ob_start();
-include("../include_files/connect.php");
+include("../../assets/includedFiles/connect.php");
 
 //if(isset($_POST['send'])!=""){
 
