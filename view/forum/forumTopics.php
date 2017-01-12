@@ -6,11 +6,11 @@ require_once ("../../database/connection.php");
 <html>
 <head>
 	<title>addThread</title>
-	<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="../../assets/css/forum.css" rel="stylesheet" type="text/css">
-	<link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
-	<script src="../../assets/js/jquery.js"></script>
-    <script src="../../assets/js/bootstrap.js"></script>
+	<link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="../../assets/CSS/forum.css" rel="stylesheet" type="text/css">
+	<link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
+	<script src="../../assets/JS/jquery.js"></script>
+    <script src="../../assets/JS/bootstrap.js"></script>
   	<style type="text/css">
 	    table tr:nth-child(even) {
 	        background-color: #e1e1d0;
