@@ -6,7 +6,7 @@
         <title>Home | BatsInfo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	  <!-- Bootstrap -->
-    	  <link href="assets/CSS/bootstrap.css" rel="stylesheet" media="screen">
+    	  <link href="assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
         <!--JS-->
         <link href="assets/JS/bootstrap.min.js" rel="stylesheet" media="screen">
     	  <!--Google Fonts-->
@@ -14,72 +14,291 @@
         <!-- Fontawesome core CSS -->
         <link href="assets/CSS/font-awesome.min.css" rel="stylesheet" >
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="css/footer3.css">
-        <script src="assets/js/jquary.js"></script>
-        <script src="assets/js/bootstrapjs.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="css/footer3.css">-->
+        <script src="assets/JS/jquery.js"></script>
+        <script src="assets/JS/bootstrap.js"></script>
+        <script src=""https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js""></script>
 
-
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 
         <link href="assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
-        <script src="assets/CSS/js/bootstrap.min.js"></script>
-       <script src="assets/CSS/js/bootstrap.min.js"></script>
+        <script src="assets/JS/bootstrap.min.js"></script>
+       <script src="assets/JS/bootstrap.min.js"></script>
        <link href="assets/CSS/navbar1n2.css" rel="stylesheet">
+
+    <script type="text/javascript" src="assets/JS/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="assets/JS/jssor.slider.mini.js"></script>
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 9,
+                    $SpacingX: 3,
+                    $SpacingY: 3,
+                    $Align: 460
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 950);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 10);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+    <style>
+
+        /* jssor slider arrow navigator skin 02 css */
+        /*
+        .jssora02l                  (normal)
+        .jssora02r                  (normal)
+        .jssora02l:hover            (normal mouseover)
+        .jssora02r:hover            (normal mouseover)
+        .jssora02l.jssora02ldn      (mousedown)
+        .jssora02r.jssora02rdn      (mousedown)
+        */
+        .jssora02l, .jssora02r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('../images/img/a02.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora02l { background-position: -3px -33px; }
+        .jssora02r { background-position: -63px -33px; }
+        .jssora02l:hover { background-position: -123px -33px; }
+        .jssora02r:hover { background-position: -183px -33px; }
+        .jssora02l.jssora02ldn { background-position: -3px -33px; }
+        .jssora02r.jssora02rdn { background-position: -63px -33px; }
+
+        /* jssor slider thumbnail navigator skin 03 css */
+        /*
+        .jssort03 .p            (normal)
+        .jssort03 .p:hover      (normal mouseover)
+        .jssort03 .pav          (active)
+        .jssort03 .pdn          (mousedown)
+        */
+
+        .jssort03 .p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 62px;
+            height: 32px;
+        }
+
+        .jssort03 .t {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .jssort03 .w, .jssort03 .pav:hover .w {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            border: white 1px dashed;
+            box-sizing: content-box;
+        }
+
+        .jssort03 .pdn .w, .jssort03 .pav .w {
+            border-style: solid;
+        }
+
+        .jssort03 .c {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 62px;
+            height: 32px;
+            background-color: #000;
+
+            filter: alpha(opacity=45);
+            opacity: .45;
+            transition: opacity .6s;
+            -moz-transition: opacity .6s;
+            -webkit-transition: opacity .6s;
+            -o-transition: opacity .6s;
+        }
+
+        .jssort03 .p:hover .c, .jssort03 .pav .c {
+            filter: alpha(opacity=0);
+            opacity: 0;
+        }
+
+        .jssort03 .p:hover .c {
+            transition: none;
+            -moz-transition: none;
+            -webkit-transition: none;
+            -o-transition: none;
+        }
+
+        * html .jssort03 .w {
+            width /**/: 62px;
+            height /**/: 32px;
+        }
+
+    </style>
 </head>
 
 <body>
+
     <a name="home"></a>
     <div class="container-fluid" >
         <?php include("assets/IncludedFiles/mainnav.php") ?>
     </div>
     <div class="container" style="padding-top:100px;">
-        <?php include ("assets/IncludedFiles/headerImage.php") ?>
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../images/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+            </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/batspic/001.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-002.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/batspic/002.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-003.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/batspic/003.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-004.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/batspic/004.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-005.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/batspic/005.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-006.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/007.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-007.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/008.jpg" />
+                    <img data-u="thumb" src="assets/images/img/008.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/009.jpg" />
+                    <img data-u="thumb" src="assets/images/img/009.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/010.jpg" />
+                    <img data-u="thumb" src="assets/images/img/010.jpg" />
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="assets/images/img/011.jpg" />
+                    <img data-u="thumb" src="assets/images/img/thumb-011.jpg" />
+                </div>
+                <a data-u="add" href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+
+            </div>
+            <!-- Thumbnail Navigator -->
+            <div u="thumbnavigator" class="jssort03" style="position:absolute;left:0px;bottom:0px;width:600px;height:60px;" data-autocenter="1">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=30.0); opacity:0.3;"></div>
+                <!-- Thumbnail Item Skin Begin -->
+                <div u="slides" style="cursor: default;">
+                    <div u="prototype" class="p">
+                        <div class="w">
+                            <div u="thumbnailtemplate" class="t"></div>
+                        </div>
+                        <div class="c"></div>
+                    </div>
+                </div>
+                <!-- Thumbnail Item Skin End -->
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+            <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        </div>
+
+        <!-- #endregion Jssor Slider End -->
     </div>
 
     <div class="container-fluid" style="padding-top:30px; padding-bottom:200px;">
       
         <h2><a name="articles" style="text-decoration:none;" href="../articles/article.php">Recent Articles</a></h2>
-        <div class="row">
-        <div class="col-xs-4">
-          <h3>Article 1</h3>
-          <p>Bats are mammals of the order Chiroptera (/kaɪˈrɒptərə/; from the Ancient Greek: χείρ - cheir, "hand"[1] 
-            and Ancient Greek: πτερόν - pteron, "wing"[2])[3] whose forelimbs form webbed wings, making them the only 
-            mammals naturally capable of true and sustained flight.[3] By contrast, other mammals said to fly, such as
-             flying squirrels, gliding possums, and colugos, can only glide for short distances. Bats do not flap their
-              entire forelimbs, as birds do, but instead flap their spread-out digits,[4] which are very long and covered
-               with a thin membrane or patagium.<a href="">Read more</a></p>
-        </div>
-        <div class="col-xs-4">
-            <h3>Article 2</h3>
+        
+        <?php 
+include_once 'database/dbconnect.php';
+$sql = "SELECT title, content, pubdate FROM articles ORDER BY pubdate DESC LIMIT 3";
+$result = $con->query($sql);
 
-          <p>Bats are the second largest order of mammals (after the rodents), representing about 20% of all classified
-           mammal species worldwide, with about 1,240 bat species divided into two suborders: the less specialized and 
-           largely fruit-eating megabats, or flying foxes, and the highly specialized and echolocating microbats.[5] About
-            70% of bat species are insectivores. Most of the rest are frugivores, or fruit eaters. A few species, such as the
-             fish-eating bat, feed from animals other than insects, with the vampire bats being hematophagous, or feeding on
-              blood.<a href="">Read more</a></p>
-        </div>
-        <div class="col-xs-4">
-          <h3>Article 3</h3>
-          <p>Bats are present throughout most of the world, with the exception of extremely cold regions. They perform 
-            the vital ecological roles of pollinating flowers and dispersing fruit seeds; many tropical plant species
-             depend entirely on bats for the distribution of their seeds. Bats are economically important, as they 
-             consume insect pests, reducing the need for pesticides. The smallest bat is the Kitti's hog-nosed bat, 
-             measuring 29–34 mm (1.14–1.34 in) in length, 15 cm (5.91 in) across the wings and 2–2.6 g (0.07–0.09 oz)
-              in mass.[6][7] It is also arguably the smallest extant species of mammal, with the Etruscan shrew being
-               the other contender.<a href="">Read more</a></p>
-               <a href="">Read previous articles</a>
-        </div>
-      </div>
+if ($result->num_rows > 0) {
+     //echo "<table><tr><th>ID</th><th>Name</th></tr>";
+     // output data of each row
+  echo "<div class='row'>";
+     while($row = $result->fetch_assoc()) {
+        
+        echo "<div class='col-xs-4'>";
+        echo "<h3>".$row['title']."</h3>";
+        //echo "<p>".$row['content']."</p>";
+        // strip tags to avoid breaking any html
+        $string = strip_tags($row['content']);
+
+        if (strlen($row['content']) > 500) {
+
+        // truncate string
+         $stringCut = substr($row['content'], 0, 5000);
+
+        // make sure it ends in a word so assassinate doesn't become ass...
+        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="/this/story">Read More</a>'; 
+        }
+        echo $string;
+        echo "</div>";
+         //echo "<tr><td>" . $row["id"]. "</td><td>" . $row["firstname"]. " " . $row["lastname"]. "</td></tr>";
+     }
+     //echo "</table>";
+} else {
+     echo "0 results";
+}
+
+?>
+
     
     <div class="push"></div>
     <!--get footer -->
-    <div id="footer" class="container=fluid">
+    <div id="footer" class="container=fluid" >
         <a name="contact"> <?php include ("assets/IncludedFiles/footer.php") ?> </a>
     </div>
- </div>
+
   
   
 </body>

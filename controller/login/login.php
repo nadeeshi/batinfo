@@ -5,7 +5,7 @@ if(isset($_SESSION['usr_id'])!="") {
     header("Location: index.php");
 }
 
-include_once 'dbconnect.php';
+include_once '../../database/dbconnect.php';
 
 //check if form is submitted
 if (isset($_POST['login'])) {
@@ -29,25 +29,31 @@ if (isset($_POST['login'])) {
 <head>
     <title>PHP Login Script</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../../assets/JS/bootstrap.min.js"></script>
+    <link href="../../assets/CSS/bootstrap.min.css">
+    <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet">
           <!-- Bootstrap -->
-          <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+          <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" media="screen">
         <!--JS-->
-        <link href="js/bootstrap.min.js" rel="stylesheet" media="screen">
+        <link href="../../assets/JS/bootstrap.min.js" rel="stylesheet" media="screen">
           <!--Google Fonts-->
           <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <!-- Fontawesome core CSS -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" >
+        <link href="../../assts/CSS/font-awesome.min.css" rel="stylesheet" >
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="css/footer3.css">
-        <script src="js//jquary.js"></script>
-        <script src="js//bootstrapjs.js"></script>
+
+        <script src="../../assets/JS/jquery.js"></script>
+        <script src="../../assets/JS/bootstrap.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
         <div>
-        <?php include("../mainhome/mainnav.php")?>
+        <?php include("../../assets/IncludedFiles/mainnav.php")?>
         </div>
 
 <div class="container" style="padding-top:100px; padding-bottom:100px;"">
@@ -84,11 +90,11 @@ if (isset($_POST['login'])) {
 </div>
     <!--get footer -->
     <div id="footer" class="container=fluid">
-        <a name="contact"> <?php include ("../mainhome/footer3.php") ?> </a>
+        <a name="contact"> <?php include ("../../assets/IncludedFiles/footer.php") ?> </a>
     </div>
 
 
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../../assets/JS/jquery.js"></script>
+<script src="../../assets/JS/bootstrap.min.js"></script>
 </body>
 </html>
