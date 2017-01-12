@@ -78,7 +78,7 @@
             <ul class="nav" id="main-menu">
                 <li>
                     <div class="user-img-div">
-                        <img src="../images/2.jpg" class="img-thumbnail" />
+                        <img src="../../assets/images/2.jpg" class="img-thumbnail" />
 
                         <div class="inner-text">
                             Nadee Sansari
@@ -105,7 +105,7 @@
                             <a href="../../controller/insert/adminDetailsValidate.php">Admin Details</a>
                         </li>
                         <li>
-                            <a href="../../controller/insert/researcherDetailsValidate.php">Researchers Details</a>
+                            <a href="../../controller/insert/researcherDetails.php">Researchers Details</a>
                         </li>
 
 
@@ -165,7 +165,7 @@
 
 
                 <li>
-                    <a href="../mapDetails/map_and_det.php"><i class="fa fa-yelp "></i>Map Details</a>
+                    <a href="../../view/mapDetails/map.php"><i class="fa fa-yelp "></i>Map Details</a>
                 </li>
                 <li>
                     <a href="../../view/forum/forumTopics.php"><i class="fa fa-yelp "></i>Forum</a>
