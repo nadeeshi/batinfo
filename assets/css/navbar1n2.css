@@ -32,11 +32,11 @@
 }
 .header1 {
 	font-family: 'Chewy', cursive;
-	font-size: 50px;
+	font-size: 45px;
 }
 .header2 {
-	font-family: 'Shadows Into Light', cursive;
-	font-size: 50px;
+	/*font-family: 'Shadows Into Light', cursive;*/
+	font-size: 40px;
 }
 
 .input-area:focus {
@@ -54,7 +54,21 @@
 
 .navbar-head-list{
 	color: #ffffff !important;
+	margin-top: -3.5px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 14px!important;
 }
+
+.form-control-custom{
+	padding: 6px 7px!important;
+	height: 27px!important;
+	font-size: 14px!important;
+}
+
+.btn-search{
+	padding: 2.1px 8px!important;
+}
+
 
 
 /*overrides*/
@@ -72,8 +86,7 @@
 	color: #a79e9e;
 }
 .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{
-	margin-top: 6px;
-	margin-bottom: 5px;
+	margin-top: 3px;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
@@ -135,10 +148,11 @@
 .list-of-content {
 	margin-top: 40px;
 	font-family: 'Varela Round', sans-serif;
+	font-size: 14px!important;
 }
 .list-container{
 	background-color: #4c4743;
-	margin-top: 67px;
+	margin-top: 52px;
 	height: 100%;
 	position: fixed;
 
@@ -218,4 +232,47 @@ div.profile-picture {
 
 .graph-content{
 	margin-top: 3%;
+}
+
+
+/*side menu*/
+
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.mainmenu a:hover {
+    background-color: #c16d28!important;
+}
+
+
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+  padding-left: 10px;
+}
+
+.submenu a {
+  background-color: none;
+}
+
+.submenu a:hover {
+  background-color: #c16d28;
+}
+
+
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
 }

@@ -35,9 +35,9 @@ include_once '../../database/dbconnect.php';
 			            </ul>
 			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
 	      					<div class="form-group">
-	        					<input type="text" class="form-control input-area" name='address' placeholder="Enter name here">
+	        					<input type="text" class="form-control input-area form-control-custom" name='address' placeholder="Enter name here">
 	      					</div>
-	  						<button type="submit" class="btn btn-default">Search</button>
+	  						<button type="submit" class="btn btn-default btn-search">Search</button>
 						</form> 
 			            <ul class="nav navbar-nav navbar-right">
 			                <?php if (isset($_SESSION['usr_id'])) { ?>
@@ -70,15 +70,25 @@ include_once '../../database/dbconnect.php';
  			<div class="profile-picture">
  				<!-- <img src="../img/proPic.png"> -->
  			</div>
-			<ul class="nav nav-pills nav-stacked list-of-content">
-				<li><a href="../../controller/graph/graph.php">Home</a></li>
-        		<li><a href="../nadee/listOfBats.php">Bats Info</a></li>
-        		<li><a href="../nadee/listOfResearch.php">Research Info</a></li>
-				<li><a href="../../view/forum/forumTopics.php">Forum</a></li>
-				<li><a href="../../view/news/newst.php">News</a></li>
-        		<li><a href="../help/index.php">Help</a></li>
-				<li><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
-			</ul>
+			<nav class="list-of-content">
+			  <ul class="mainmenu nav nav-pills nav-stacked">
+			    <li><a href="../../controller/graph/graph.php">Home</a></li>
+			    <li><a href="">Bats Information</a>
+			    	<ul class="submenu nav-pills nav-stacked">
+				        <li><a href="">View</a></li>
+				        <li><a href="">Insert</a></li>
+				        <li><a href="">Delete</a></li>
+				        <li><a href="">Update</a></li>
+				        <li><a href="">Bat Profile</a></li>
+			      	</ul>
+			    </li>
+			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
+			    </li>
+			    <li><a href="../../view/news/newst.php">News</a></li>
+			    <li><a href="../../view/help/index.php">Help</a></li>
+			    <li><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
+			  </ul>
+			</nav>
 		</div>
     <!-- end of the side navigation bar -->
 	</div>

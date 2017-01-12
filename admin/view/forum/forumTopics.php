@@ -44,6 +44,11 @@ require_once ("../../assets/includedFiles/connect.php");
 	        background-color: white;
 	    }
 	</style>
+	<script>
+		function reload() {
+			location.reload();
+		}
+	</script>
 </head>
 <body>
 	<div>
@@ -83,7 +88,7 @@ require_once ("../../assets/includedFiles/connect.php");
 			                  echo "<td class='col-sm-2 col-xs-2'>";
 			                  echo "<a href=#>siguisgiwugiu</a>"." "."</td>";
 			                  echo "<td class='col-sm-2 col-xs-2'>";?>
-			                  <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
+			                  <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');" "reload()" >Delete</a></td>
 			                  <?php
 			              echo "</tr>";   
 			          } 
