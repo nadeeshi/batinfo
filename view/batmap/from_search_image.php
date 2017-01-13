@@ -45,7 +45,11 @@ while($row = mysqli_fetch_assoc($result)){
     $count = 1;
 		
 		//echo '<p><img src="'.$row['location'].'"></p>';
-	$output = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des;
+	$output = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des.'</br>';
+    /*
+    $output1 = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des.'</br>';
+    
+    $output2 = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des.'</br>';*/
 		//echo $output;
 	/*
     $output = '<div> '.'sciencetific name :  '.$sc_name.'</br> </br> 
@@ -67,9 +71,9 @@ while($row = mysqli_fetch_assoc($result)){
     threats :  '.$threat.'</br></br>
     country occurences :  '.$coun_occ.'</br></br>
     measurements :  '.$measure.'</br></br>
-    discription :  '.$des.'</br></br> ;
-    */
-    	
+    discription :  '.$des.'</br></br>' ;
+    
+    	*/
 		//echo '<p><img src="'.$row['description'].'"></p>';
 		
 }//}

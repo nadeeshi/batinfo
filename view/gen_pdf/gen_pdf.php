@@ -118,43 +118,43 @@ $pdf->SetFont('Times','',12);
 
 $pdf->Cell(0,10,'Printing line number : '.$lplace1,0,1);
 $pdf->Cell(0,10,'Printing line number : '.$des,0,1);
-$pdf->Cell(0,10,'Printing line number : '.$bat_or,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$bat_or,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$kin,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$kin,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$gene,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$gene,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$phylum,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$phylum,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$family,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$family,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$subfamily,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$subfamily,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$bat_cl,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$bat_cl,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$com_name,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$com_name,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$syns,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$syns,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$rst,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$rst,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$lplace1,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$lplace1,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$conv_st,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$conv_st,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$conv_at,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$conv_at,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$feed,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$feed,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$breed,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$breed,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$threa,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$threa,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$coun_occ,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$coun_occ,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$measure,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$measure,0,1);
 
-$pdf->Cell(0,10,'Printing line number : '.$del,0,1);
+//$pdf->Cell(0,10,'Printing line number : '.$del,0,1);
 
 
 $pdf->Output();

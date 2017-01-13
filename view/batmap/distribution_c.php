@@ -51,7 +51,7 @@
 												</a>
 												<div class="des" style="color: #2D343E; font: bold 15px/30px 'Alike Angular', serif; !important;">
 												<?php echo $output;?> </br>
-												<?php $des;?></br>
+												
 												</div>
 											</p>
 										</div>
