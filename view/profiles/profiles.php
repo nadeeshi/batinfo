@@ -30,10 +30,10 @@ dbconnect.php
 			$mysql_hostname = "localhost";
 			$mysql_user = "root";
 			$mysql_password = "";
-			$mysql_database = "test2";
+			$mysql_database = "project";
 			$con = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password, $mysql_database );
 			//bat_info
-			$qry = "SELECT * FROM fulldemo ;";
+			$qry = "SELECT * FROM bat_info ;";
 			$imgList =array(1,2,3,4);
 			$desc = array(1,2,3,4);
 			$caption =array(1,2,3,4);
@@ -44,10 +44,10 @@ dbconnect.php
 				for($i = 0 ; $i < 3;$i++){
 					mysqli_data_seek($result,$i);
 					$record = mysqli_fetch_assoc($result);
-					$imgList[$i] ='../../assets/images/'.$record['location'];
+					$imgList[$i] ='../../assets/images/'.$record['pic'];
 							//$desc[$i] = $record['desc'];
-					$caption[$i] =$record['name'];
-					$id[$i] =$record['id'];
+					$caption[$i] =$record['scientific_name'];
+					$id[$i] =$record['bat_id'];
 					//$id[$i] =$record['bat_id'];
                     //$caption[$i] =$record['sciencetific_name'];
 				}

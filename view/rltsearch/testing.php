@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-//include ('../../database/cnm_db_con.php');project
+include ('../../database/cnm_db_con.php');/*project
 @mysql_connect("localhost","root","") or die("could not connect");
-@mysql_select_db("test2") or die("could not find");
+@mysql_select_db("project") or die("could not find");*/
 ?>
 
 <!DOCTYPE html>
@@ -48,14 +48,16 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 				//$record = mysqli_fetch_assoc($result);
         //---SELECT title FROM pages WHERE my_col LIKE %$param1% OR another_col LIKE %$param2%;
                 //bat_info
-				$query = mysql_query("SELECT * FROM fulldemo WHERE name = '$searchq';") or die("could not search");
-				while($row = mysql_fetch_array($query)){
-					$fname = $row['name'];
+                $query = mysqli_query($con,"SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' OR common_name Like '%$searchq%' OR synonyms LIKE '%$searchq%';") or die("could can not search");
+                /*$query = mysql_query("SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' OR common_name Like '%$searchq%' OR synonyms LIKE '%$searchq%';") or die("could can not search");*/
+				/*$query = mysql_query("SELECT * FROM fulldemo WHERE name = '$searchq';") or die("could not search");*/
+				while($row = mysql_fetch_assoc($query)){
+					$fname = $row['scientific_name'];
 					//$lplace1 = $row['city'];
-					$id = $row['id'];
+					//$id = $row['id'];//--
                     //$id = $row['bat_id'];
 					//$img = $row['location'];
-					$des = $row['description'];
+					$des = $row['other_details'];
 					$count = 1;
 		
 				}

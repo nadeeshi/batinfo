@@ -17,16 +17,17 @@
     			<ul class="nav navbar-nav" style="font-size: 16px; padding-top: 1px;">
 
      				<li><a href="../../index.php">Home</a></li>
-      			<li><a href="#">News</a></li>
+      			<li><a href="../../view/news/u_newst.php">News</a></li>
       			<li><a href="myhome.php#articles">Articles</a></li>
       			<li><a href="../../view/forum/publicTopics.php">Forum</a></li>
       			<li><a href="aboutus.php">About Us</a></li>
 				    <li><a href="#contact">Contact Us</a></li>
 
     			</ul>
-          <form class="navbar-form  navbar-right">
+          <form class="navbar-form  navbar-right"
+                action="../../view/rltsearch/u_testing.php" method="post">
             <div class="form-group" style="padding-top:1px;">
-                <input type="text" class="form-control input-area" placeholder="Enter name here">
+                <input type="text" class="form-control input-area"   name='address' placeholder="Enter name here">
             <button type="submit" class="btn btn-default">Search</button>
             </div>
           </form>

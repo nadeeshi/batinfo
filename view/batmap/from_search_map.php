@@ -42,7 +42,7 @@ dbconnect.php
  
 <?php
 //bat_info
-		$query = "SELECT * FROM fulldemo WHERE id = '".$_GET['batid']."';";
+		$query = "SELECT * FROM bat_info WHERE bat_id = '".$_GET['batid']."';";
 		$result = mysqli_query($con, $query);
 
 		//$query = mysql_query("SELECT * FROM fulldemo WHERE id = '".$_GET['batid']."';") or die("could not search");
@@ -52,9 +52,9 @@ dbconnect.php
 				$output = 'there is no search results!!';
 			}else{
 				while($row = mysqli_fetch_assoc($result)){
-					$fname = $row['name'];
-					$lplace1 = $row['city'];
-					$id = $row['id'];
+					$fname = $row['scientific_name'];
+					$lplace1 = $row['locations'];
+					$id = $row['bat_id'];
 					//$img = $row['location'];
 					//$des = $row['description'];
 		          //$id=row['bat_id'];

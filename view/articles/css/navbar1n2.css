@@ -1,0 +1,75 @@
+
+/*navbar1*/
+
+
+.navbar1{
+    background-color: #4c4743;
+    margin-top: -0.75%;
+    margin-left: -0.75%;
+    margin-right: -0.75%;
+    font-size: 15px;
+}
+.navbar-li > li > a{
+    color: #ffffff !important;
+}
+
+/*overrides*/
+.navbar-default .navbar-brand {
+    color: #ffffff;
+    padding-left: 60px;
+    font-size: 30px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #a79e9e;
+}
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+/*/overrides*/
+
+
+
+
+/*navbar2*/
+
+.navbar2{
+    background-color:#ffffff;
+    border-color: #ffffff;
+    font-size: 20px;
+    color: #000000;
+}
+.dropdwncustom{
+    background-color: #ffffff;
+}
+
+.list > li {
+    padding-left: 86px;
+    color: #000000;
+}
+.list > li > a {
+    font-style: italic;
+    font-weight: bold;
+    color: #000000 !important;
+}
+.list{
+    padding-left: 95px;
+}
+.menu > li > a{
+    padding-top: 15px;
+}
+.menu{
+    position: inherit;
+    border-radius: 9px;
+    position: absolute;
+    left: 100px;
+}
+
+/*Overrides*/
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #ffffff;
+}
+
+
+/* /Overrides*/
