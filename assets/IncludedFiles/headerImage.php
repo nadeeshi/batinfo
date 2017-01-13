@@ -165,44 +165,44 @@
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/001.jpg" />
-                <img data-u="thumb" src="assets/images/img/001.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/001.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/001.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/002.jpg" />
-                <img data-u="thumb" src="assets/images/img/002.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/002.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/002.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/011.jpg" />
-                <img data-u="thumb" src="assets/images/img/011.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/003.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/003.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/004.jpg" />
-                <img data-u="thumb" src="assets/images/img/004.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/004.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/004.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/005.jpg" />
-                <img data-u="thumb" src="assets/images/img/005.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/005.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/005.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/003.jpg" />
-                <img data-u="thumb" src="assets/images/img/003.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/006.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/006.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/007.jpg" />
-                <img data-u="thumb" src="assets/images/img/007.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/007.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/007.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/011.jpg" />
-                <img data-u="thumb" src="assets/images/img/011.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/008.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/008.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/009.jpg" />
-                <img data-u="thumb" src="assets/images/img/009.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/009.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/009.jpg" />
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="assets/images/img/010.jpg" />
-                <img data-u="thumb" src="assets/images/img/010.jpg" />
+                <img data-u="image" src="assets/images/img/batspic/010.jpg" />
+                <img data-u="thumb" src="assets/images/img/batspic/010.jpg" />
             </div>
             <a data-u="add" href="http://www.jssor.com" style="display:none">Jssor Slider</a>
         
