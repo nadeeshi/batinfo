@@ -6,10 +6,10 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link href="assets/css/navbar1n2.css" rel="stylesheet">
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <link href="../../assets/css/navbar1n2.css" rel="stylesheet">
 <script type="text/javascript">
 var oDoc, sDefTxt;
 
@@ -85,8 +85,7 @@ img.intLink { border: 0; }
 <body onload="initDoc();">
 <div>
 <?php include "../../assets/IncludedFiles/mainnav.php"; ?> </div>
-<div>
-<?php include "../../assets/IncludedFiles/footer.php" ; ?> </div>
+
 
 <div class="container-fluid" style="padding-top:120px; padding-bottom:120px;">
     <?php
@@ -273,5 +272,7 @@ mysql_query($insert_image);
          }
       ?>
 </div>
+<div>
+<?php include "../../assets/IncludedFiles/footer.php" ; ?> </div>
 </body>
 </html>

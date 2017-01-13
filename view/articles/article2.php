@@ -9,8 +9,8 @@
 	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
-    <link href="assets/css/navbar1n2.css" rel="stylesheet">
+  	<script src="../../assets/JS/bootstrap.min.js"></script>
+    <link href="../../assets/css/navbar1n2.css" rel="stylesheet">
 
     <style>
 
@@ -36,7 +36,7 @@ li a:hover:not(.active) {
 </head>
 <body>
 <?php include "../../assets/IncludedFiles/mainnav.php" ;
-//include "../mainhome/footer3.php" ;
+include "../../assets/IncludedFiles/footer.php" ;
 ?>
 
 
@@ -68,12 +68,12 @@ $result = $con->query($sql);
 
 echo '<label style="font-size: 17px ;">Recent Articles</label>';
 while($row = $result->fetch_assoc()) {
-    	$title=$row['title'];
-    	$content=$row['content'];
-    	$link=$row['link'];
+      $title=$row['title'];
+      $content=$row['content'];
+      $link=$row['link'];
       echo '<ul style="list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #f1f1f1;">';
       
-    	echo '<li>'.'<a target= "ifrm" href='. $link.'>'. $title.'</a>'.'</li>';
+      echo '<li>'.'<a target= "ifrm" href='. $link.'>'. $title.'</a>'.'</li>';
       echo '<div class="col-md-9" id="rest">';
       
       //echo  $row['content']; 
@@ -86,7 +86,7 @@ while($row = $result->fetch_assoc()) {
 </ul>
  
 
-	</div>
+  </div>
   <div id="top" class="col-md-9">
   <?php 
       $link=$_SESSION['lnk'];
