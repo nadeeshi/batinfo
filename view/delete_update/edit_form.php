@@ -141,7 +141,12 @@
                     <input type="hidden"  id="sname" name="scientific_name" value="<?php echo $details['scientific_name'] ?>" required />
                     <div class="image"> 
                         
-                <?php echo '<img src="' . $details['pic'] . '">';?>
+                <?php 
+                   $path = $details['pic'];
+                   $path ="../../assets/images/".$path;
+                   
+                   ?>
+                <img src="<?php echo $path;?>"/>
                 </div>
 
                 </div>

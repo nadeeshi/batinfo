@@ -48,9 +48,9 @@
                
 
 
-                move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bat_prof_pic/" . $_FILES["image"]["name"]);
+                move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
 
-                $pic_path = "../../assets/images/bat_prof_pic/" . $_FILES["image"]["name"];
+                $pic_path = "bphotos/" . $_FILES["image"]["name"];
                 
             }
             $path= $pic_path;
