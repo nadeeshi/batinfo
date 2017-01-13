@@ -22,7 +22,8 @@ dbconnect.php
 		WHERE nid = '" . $_GET['to_id'] . "';";
 		$r1=mysqli_query($con,$ins_query) or die(mysql_error());
         
-        $sql = "CREATE TRIGGER MysqlTrigger AFTER INSERT ON photos DELETE  FROM news_before WHERE nid = NEW.'" . $_GET['to_id'] . "';";
+       /* $sql = "CREATE TRIGGER MysqlTrigger AFTER INSERT ON photos DELETE  FROM news_before WHERE nid = NEW.'" . $_GET['to_id'] . "';";*/
+         $sql = "DELETE  FROM news_before WHERE nid = '" . $_GET['to_id'] . "';";
 
         mysqli_query($con,$sql); 
 		
