@@ -15,8 +15,7 @@
 	<div>
 		<?php include ("../../assets/IncludedFiles/mainnav.php"); ?>
 	</div>
-	<div class="col-sm-8 col-sm-push-2 col-xs-12 insert-form">
-
+	<div class="col-sm-12 col-xs-12 insert-form">
 		<?php
 			
 			include ('from_search_image.php');	
@@ -137,8 +136,8 @@
 	<!-- start footer -->
 
 	
-	    <div class="col-sm-10 col-sm-push-2 col-xs-12">
-		  <?php include ("../../assets/IncludedFiles/footer.php"); ?>
+	    <div class="col-sm-12 col-xs-12">
+	      <?php include ("../../assets/IncludedFiles/footer.php"); ?>
 	    </div>  
   	
 
