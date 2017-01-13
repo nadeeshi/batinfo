@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <title>nav1</title>
@@ -24,6 +25,7 @@
 	   <h2> Your Profile</h2>
        <br>
        <?php
+       
         include_once '../../database/dbconnect.php';
         $id= $_GET['id'];
         $sql = "select * from researchers where id= $id";
@@ -34,13 +36,14 @@
          <div id = "info">
          <form method="POST" action="update.php">
             <table border="0" class="table table-hover">
-                <tr>
-                    <td>Profile ID</td>
-                    <td><input type="text" name="profileid" value="<?php echo $row['id'];?>" disabled=""></td>
-                </tr>
+               
                 <tr>
                     <td>First Name</td>
                     <td><input type="text" name="fname" value="<?php echo $row['fname'];?>"></td>
+                </tr>
+                <tr>
+                    <td>Middle Name</td>
+                    <td><input type="text" name="mname" value="<?php echo $row['mname'];?>"></td>
                 </tr>
                 <tr>
                     <td>Last Name</td>
