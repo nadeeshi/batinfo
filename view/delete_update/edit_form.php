@@ -141,7 +141,12 @@
                     <input type="hidden"  id="sname" name="scientific_name" value="<?php echo $details['scientific_name'] ?>" required />
                     <div class="image"> 
                         
-                <?php echo '<img src="' . $details['pic'] . '">';?>
+                <?php 
+                   $path = $details['pic'];
+                   $path ="../../assets/images/".$path;
+                   
+                   ?>
+                <img src="<?php echo $path;?>"/>
                 </div>
 
                 </div>
@@ -386,7 +391,7 @@
 
             </script>
         </div>
-            <div class="col-xs-10 col-xs-push-2">
+            <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
                 <?php include "../../assets/IncludedFiles/footer.php" ?>
             </div>
     </body>

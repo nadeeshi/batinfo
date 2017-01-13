@@ -48,9 +48,9 @@
                
 
 
-                move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bat_prof_pic/" . $_FILES["image"]["name"]);
+                move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
 
-                $pic_path = "../../assets/images/bat_prof_pic/" . $_FILES["image"]["name"];
+                $pic_path = "bphotos/" . $_FILES["image"]["name"];
                 
             }
             $path= $pic_path;
@@ -126,7 +126,7 @@
         
         </div>
         </div>
-            <div class="col-xs-10 col-xs-push-2">
+            <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
                 <?php include "../../assets/IncludedFiles/footer.php" ?>
             </div>
     </body>
