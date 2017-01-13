@@ -33,7 +33,9 @@
             .my-buttons{
                 margin-top: 40px;
             }
-
+            td{
+                width: 75px;
+            }
 
             </style>
 
@@ -52,16 +54,16 @@
 
 
                     <?php
-                   require_once('../../database/mysqli_connect.php');
+                   require_once('../../database/dbconnect.php');
                     if (mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
 
-                    $result = mysqli_query($dbc, "SELECT scientific_name FROM bat_info WHERE del_bit='0'");
+                    $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0'");
 
 
 
-                    mysqli_close($dbc);
+                    mysqli_close($con);
                     ?>
                     <table >
                         <thead>
@@ -70,8 +72,8 @@
                                 <td class='td th_sname lbl head'>Scientific Name</td>
                                 
 
-                                <td class='td th_option lbl head'>Edit</td>
-                                <td class='td th_option lbl head'>Remove</td>
+                                <td class='td th_option lbl head'>Action</td>
+                                <td class='td th_option lbl head'>Action</td>
 
                             </tr>
                         </thead>
@@ -86,9 +88,9 @@
                                 echo '<td class="td_data lbl">' . $row['scientific_name'] . '</td>';
                                 $i = $i + 1;
 
-                                echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_edit();"><span class="glyphicon_my glyphicon glyphicon-pencil"></span></a></td>';
+                                echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_edit();">edit</a></td>';
 
-                                echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?scientific_name=' . $row['scientific_name'] . '"onclick="return myFunction_del();"><span class="glyphicon_my glyphicon glyphicon-trash" ></span></a></td>';
+                                echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?scientific_name=' . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
 
                                 echo '</tr>';
                             }
@@ -99,7 +101,7 @@
                     
                     
                     <div class="col-xs-8">
-                <button onclick="window.location.href = 'bats_view.php'" class="my-button submit_btn_edit my-buttons" id ="myBtn">Back</button>
+                <button onclick="window.location.href = '../bats_view/bats_view.php'" class="my-button submit_btn_edit my-buttons" id ="myBtn">Back</button>
 
 
             </div>

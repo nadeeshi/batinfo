@@ -38,6 +38,16 @@
                     <h2>Upload Reasearch Papers</h2>
                 </div>
                 <form action="../../controller/research_papers/paper_upload.php" method="post" enctype="multipart/form-data" name="addroom">
+                     <div>
+
+                        <a class="link" onclick="return myFunction();" >
+
+                            <!-- button, make disabled text fields editable -->
+
+                            <span class="glyphicon_my glyphicon glyphicon-pencil " ><span class="edit">Edit</span></span>
+
+                        </a>
+                    </div>
 
                     <div class="form-group ">
                         <label class= "lbl">Select Paper<span class="red-star" >(.pdf)*</span></label>
@@ -57,11 +67,6 @@
                         <label class= "lbl">Researcher ID<span class="red-star" >*</span></label>
                         <input type="text" class="form-control my-text " name="rid" id="rid"  required>
                     </div>
-                      <div class="form-group ">
-                        <label class= "lbl">Description<span class="red-star" >*</span></label>
-                      
-                            <textarea class="form-control my-text" name="description" id="description" rows="4" cols="50"  > </textarea>
-                    </div>
                     <div class="form-group ">
                         <label class= "lbl">Research Paper Area<span class="red-star" >*</span></label>
                         <input type="text" class="form-control my-text " name="area" id="area"  required>
@@ -69,16 +74,7 @@
 
                     <div class="form-group ">
                         <label class= "lbl">Category<span class="red-star" >*</span></label>
-                        <select id="category" name="category">
-                          <option value="Diet & Feeding">Diet & Feed</option>
-                          <option value="Habitats">Habitats</option>
-                          <option value="Anatomy">Anatomy</option>
-                          <option value="Echolocation">Echolocation</option>
-                          <option value="Behaviour">Behaviour</option>
-                          <option value="Anatomy">Anatomy</option>
-                          <option value="Conservation">Conservation</option>
-                          <option value="Others">Others</option>
-                        </select>
+                        <input type="text" class="form-control my-text " name="category" id="category" required>
                     </div>
 
                     
@@ -111,5 +107,31 @@
     </body>
 
   
-    <script></script>
+    <script>
+                //make disabled text fields editable
+                
+                function myFunction() {
+                    document.getElementById("title").disabled = false;
+
+                  
+                   
+                    document.getElementById("author").disabled = false;
+
+
+                    document.getElementById("rid").disabled = false;
+
+
+                    document.getElementById("area").disabled = false;
+
+
+                    document.getElementById("category").disabled = false;
+
+
+                
+
+                }
+
+
+
+            </script>
 </html>

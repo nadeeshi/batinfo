@@ -13,13 +13,15 @@
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/footer.css" rel="stylesheet">
-        <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/bootstrapjs.js"></script>
+       
+        <script src="../../assets/JS/bootstrap.js"></script>
         <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
+        <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/validate_text_fields.js"></script>
+       
         <style>
-          
+        
         </style>
 
     </head>
@@ -201,6 +203,12 @@
                         <label class= "lbl">Conservation Actions </label>
                         <textarea class="form-control my-text" name="conservation_action" id="conseravtion" rows="4" cols="20" ></textarea>
                     </div>
+                    <div class="form-group">
+                        <label class= "lbl">Population</label> 
+                        <input type="text" class="form-control my-text" name= "population" id="population" aria-describedby="species" required>
+                      
+                    </div>
+                    
 
 
                     <div class="form-group">
@@ -215,7 +223,7 @@
                         <label class= "lbl">Other Details</label>
                         <textarea class="form-control my-text" name="other_details" id="otherDetails" rows="4" cols="20" ></textarea>
                     </div>
-                    
+                
 
                     <div class=" col-xs-8">
                         <input type="button" id="pre_btn2" class="prev-btn-3 my-button" value="< Previous" onclick="prev_step2()"/>
@@ -235,7 +243,7 @@
 
 
         <!-- start footer -->
-            <div class="col-xs-10 col-xs-push-2">
+            <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form">
                 <?php include "../../assets/IncludedFiles/footer.php"?>
             </div>
 

@@ -53,9 +53,9 @@
                
 
 
-                move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bat_prof_pic/" . $_FILES["image"]["name"]);
+                move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
 
-                $pic_path = "../../assets/images/bat_prof_pic/" . $_FILES["image"]["name"];
+                $pic_path = "bphotos/" . $_FILES["image"]["name"];
                 }
 
 
@@ -68,7 +68,7 @@
                 $sub_family = mysqli_real_escape_string($con, $_POST['sub_family']);
                 $bat_class = mysqli_real_escape_string($con, $_POST['bat_class']);
                 $species = mysqli_real_escape_string($con, $_POST['species']);
-          
+                $population = mysqli_real_escape_string($con, $_POST['population']);
                 $common_names = mysqli_real_escape_string($con, $_POST['common_names']);
                 $synonyms = mysqli_real_escape_string($con, $_POST['synonyms']);
                 $roost = mysqli_real_escape_string($con, $_POST['roost']);
@@ -84,9 +84,9 @@
 
 
                 $query = "INSERT INTO bat_info(scientific_name, bat_order, kingdom, genus, phylum, family, sub_family, bat_class,species,pic,common_names,synonyms,roost,locations,conservation_status,country_occurence,feeding,breeding,threats,
-                conservation_action,measurements,other_details)
+                conservation_action,measurements,other_details,population)
               
-                VALUES ('$scientific_name', '$bat_order','$kingdom', '$genus', '$phylum', '$family', '$sub_family', '$bat_class', '$species','$pic_path', '$common_names', '$synonyms', '$roost', '$locations', '$conservation_status', '$country_occurence', '$feeding', '$breeding', '$threats', '$conservation_action', '$measurements', '$other_details' )";
+                VALUES ('$scientific_name', '$bat_order','$kingdom', '$genus', '$phylum', '$family', '$sub_family', '$bat_class', '$species','$pic_path', '$common_names', '$synonyms', '$roost', '$locations', '$conservation_status', '$country_occurence', '$feeding', '$breeding', '$threats', '$conservation_action', '$measurements', '$other_details','$population' )";
 
 
 

@@ -50,9 +50,8 @@ include_once '../../database/dbconnect.php';
 		        	</div>
 		        	<li class="min-link"><a href= "#" class="navbar-head-list"><?php echo $_SESSION['usr_name']; ?></a></li>
 		            <li class="min-link"><a href="../../controller/graph/graph.php">Home</a></li>
-		            <li class="min-link"><a href="../view/bats_view/bats_view.php">Bats Info</a></li>
+		            <li class="min-link"><a href="../nadee/listOfBats.php">Bats Info</a></li>
 		            <li class="min-link"><a href="../nadee/listOfResearch.php">Research Info</a></li>
-                     <li class="min-link"><a href="../../view/research_papers/research_papers_view.php">Research Papers</a></li>
 		            <li class="min-link"><a href="../../view/forum/forumTopics.php">Forum</a></li>
 		            <li class="min-link"><a href="../../view/news/newst.php">News</a></li>
 		            <li class="min-link"><a href="../help/index.php">Help</a></li>
@@ -76,24 +75,16 @@ include_once '../../database/dbconnect.php';
 			    <li><a href="../../controller/graph/graph.php">Home</a></li>
 			    <li><a href="">Bats Information</a>
 			    	<ul class="submenu nav-pills nav-stacked">
-				        <li><a href="../../view/bats_view/bats_view.php">View</a></li>
-				        <li><a href="../../view/insert/insert_form.php">Insert</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Delete</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Update</a></li>
+				        <li><a href="">View</a></li>
+				        <li><a href="">Insert</a></li>
+				        <li><a href="">Delete</a></li>
+				        <li><a href="">Update</a></li>
 				        <li><a href="../../view/profiles/profiles.php">Bat Profile</a></li>
 			      	</ul>
 			    </li>
-                 <li><a href="">Research Papers</a> 
-                     <ul class="submenu nav-pills nav-stacked">
-				        <li><a href="../../view/research_papers/research_papers_view.php">View</a></li>
-				        <li><a href="../../view/research_papers/research_papers.php">Upload</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Delete</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Update</a></li>
-				        <li><a href="../../view/profiles/profiles.php">Bat Profile</a></li>
-			      	</ul>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
 			    </li>
-			    <li><a href="">News</a>
+			    <li><a href="../../view/news/newst.php">News</a>
 			    	<ul class="submenu nav-pills nav-stacked">
 			    		<li><a href="../../view/news/newst.php">Recent News</a></li>
 			    		<li><a href="../../view/news/news_insert.php">Add News</a></li>

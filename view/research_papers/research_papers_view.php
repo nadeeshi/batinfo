@@ -30,16 +30,12 @@
 
 
         <style> 
+            td{
+                width: 75px;
+            }
             body{
-                font-size: 16px;
-                font-weight: bold;
+                font-size: 17px;
             }
-            .th_sname, .th_option{
-                font-size: 20px;
-                
-            }
-
-            
 
         </style>
 
@@ -53,8 +49,7 @@
         </div>
 
         <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
-
-            <div class="table" >
+<div class="table" >
 
 
                 <?php
@@ -63,7 +58,8 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                 }
 
-                $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0'");
+                $sql="SELECT * FROM research_papers WHERE del_bit='0'";
+                $result=mysqli_query($con,$sql);
 
 
 
@@ -73,10 +69,8 @@
                     <thead>
                         <tr>
                             <td class='td th_option lbl head'></td>
-                            <td class='td th_sname lbl head'>Scientific Name</td>
-
-
-
+                            
+                            <td class='td th_sname lbl head'>Title</td>
                             <td class='td th_option lbl head'>Action</td>
 
                         </tr>
@@ -89,19 +83,18 @@
                         while ($row = mysqli_fetch_array($result)) {
                             echo '<tr id="tr_data">';
                             echo '<td class="td_data num lbl">' . $i . '</td>';
-                            echo '<td class="td_data lbl">' . $row['scientific_name'] . '</td>';
+                            echo '<td class="td_data lbl">' . $row['title'] . '</td>';
                             $i = $i + 1;
 
 
 
-                            echo '<td class="td_data td_data_op lbl"><a class="link" href="view.php?id=' . $row['scientific_name'] . '" ">view</a></td>';
+                            echo '<td class="td_data td_data_op lbl"><a class="link" href="research_paper_details.php?id='.$row['paper_id'] .'" ">view</a></td>';
 
                             echo '</tr>';
                         }
                         ?>
                     </tbody>
                 </table>
-              
             </div>
 
 

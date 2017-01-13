@@ -119,12 +119,13 @@
 
                 <div class="form-group clearfix">
                     <div>
-
+                        
                         <a class="link" onclick="return myFunction();" >
+                            <span class="glyphicon_my glyphicon glyphicon-pencil " ><span class="edit">Edit</span></span>
 
                             <!-- button, make disabled text fields editable -->
 
-                            <span class="glyphicon_my glyphicon glyphicon-pencil " ><span class="edit">Edit</span></span>
+                           
 
                         </a>
                     </div>
@@ -132,12 +133,14 @@
 
                         <!--print curretnt bat`s name -->
 
-  
+   
                     <p class="lbl sname_control">  <?php echo $details['scientific_name'] ?></p>
-
+                    
+                    
                     <!-- hidden text field to send the scientific_name to update form-->
                     <input type="hidden"  id="sname" name="scientific_name" value="<?php echo $details['scientific_name'] ?>" required />
                     <div class="image"> 
+                        
                 <?php echo '<img src="' . $details['pic'] . '">';?>
                 </div>
 

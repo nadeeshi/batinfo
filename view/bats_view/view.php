@@ -71,11 +71,16 @@
             <div class="head-form">
                 <h2><?php echo $details['scientific_name'] ?></h2>
                <div class="image"> 
-                <?php echo '<img src="' . $details['pic'] . '">';?>
+                   <?php 
+                    $path = $details['pic'];
+                   $path ="../../assets/images/".$path;
+                   
+                   ?>
+                <img src="<?php echo $path;?>"/>
                 </div>
             </div>
-
-
+ 
+ 
 
 
             <form id="form" method="post" action="">
@@ -250,7 +255,7 @@
 
 
         </div>
-        <div class="col-xs-10 col-xs-push-2">
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form edit-form">
             <?php include "../../assets/IncludedFiles/footer.php" ?>
         </div>
     </body>
