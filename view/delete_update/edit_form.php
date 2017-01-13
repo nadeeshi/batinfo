@@ -69,7 +69,7 @@
 
 
             }
- img{
+            img{
                 
                     width: 100%;
                     height: 100%;;
@@ -168,14 +168,14 @@
 
                 </div>
                 <div class="form-group clearfix">
-                    <label class="lbl " for="emp_id">Genus</label>
+                    <label class="lbl " for="">Genus<span class="red-star" >*</span></label>
 
                     <input class="required form-control " id="genus" name="genus" type="text" value="<?php echo $details['genus'] ?>" required disabled/>
 
                 </div>
 
                 <div class="form-group clearfix">
-                    <label class="lbl" for="name">Phylum<span class="red-star" >*</span></label>
+                    <label class="lbl" for="">Phylum<span class="red-star" >*</span></label>
 
                     <input id="phylum" name="phylum" type="text" class="form-control " value="<?php echo $details['phylum'] ?>" disabled/>
 
@@ -183,20 +183,20 @@
 
 
                 <div class="form-group clearfix">
-                    <label class="lbl " for="email">Family<span class="red-star" >*</span> </label>
+                    <label class="lbl " for="">Family<span class="red-star" >*</span> </label>
 
                     <input id="family" name="family" type="text" class="form-control " value="<?php echo $details['family'] ?>" required disabled/>
 
                 </div>
                 <div class="form-group clearfix">
-                    <label class="lbl " for="emp_id">Sub Family<span class="red-star" >*</span></label>
+                    <label class="lbl " for="">Sub Family<span class="red-star" >*</span></label>
 
                     <input class=" form-control " id="sbfamily" name="sub_family" type="text" value="<?php echo $details['sub_family'] ?>" required disabled/>
 
                 </div>
 
                 <div c lass="form-group clearfix">
-                    <label class="lbl" for="name">Class<span class="red-star" >*</span></label>
+                    <label class="lbl" for="ame">Class<span class="red-star" >*</span></label>
 
                     <input id="bat_class" name="bat_class" type="text" class="form-control " value="<?php echo $details['bat_class'] ?>" required disabled/>
 
@@ -204,7 +204,7 @@
 
 
                 <div class="form-group clearfix">
-                    <label class="lbl " for="email">Species<span class="red-star" >*</span></label>
+                    <label class="lbl " for="">Species<span class="red-star" >*</span></label>
 
                     <input id="species" name="species" type="text" class="form-control " value="<?php echo $details['species'] ?>" required disabled/>
 
@@ -215,7 +215,7 @@
                             <input type="file" name="image" id= "image" class="my-text" required><br />
                 </div>  
                 <div class="form-group clearfix">
-                    <label class="lbl " for="emp_id">Common Name(s)<span class="red-star" >*</span></label>
+                    <label class="lbl " for="">Common Name(s)<span class="red-star" >*</span></label>
 
                     <textarea class="form-control my-text " id="common_names" name="common_names" rows="5" cols="50" required disabled><?php echo $details['common_names'] ?></textarea>
 
@@ -223,7 +223,7 @@
                 </div>
 
                 <div class="form-group clearfix">
-                    <label class="lbl" for="name">Synonyms</label>
+                    <label class="lbl" for="">Synonyms</label>
 
                     <textarea class="form-control my-text" id="synonyms" name="synonyms" rows="5" cols="50" required disabled><?php echo $details['synonyms'] ?></textarea>
 
@@ -232,13 +232,13 @@
 
 
                 <div class="form-group clearfix">
-                    <label class="lbl " for="email">Roosts Types<span class="red-star" >*</span></label>
-                    <textarea class="form-control my-text " id="roost" name="roost" rows="5" cols="50" required disabled><?php echo $details['roost'] ?></textarea>
+                    <label class="lbl " for="">Roosts Types<span class="red-star" >*</span></label>
+                    <textarea class="form-control my-text " id="roost" name="roost" rows="5" cols="50" required disabled><?php echo $details['roost']?></textarea>
 
 
                 </div>
                 <div class="form-group clearfix">
-                    <label class="lbl" for="emp_id">Conservation Status<span class="red-star" >*</span></label>
+                    <label class="lbl" for="">Conservation Status<span class="red-star" >*</span></label>
 
                     <input id="conservation_status" name="conservation_status" type="text" class=" form-control" value="<?php echo $details['conservation_status'] ?>" required disabled/>
 
@@ -248,7 +248,7 @@
                 </div>
 
                 <div class="form-group clearfix">
-                    <label class="lbl" for="name">Countries Occurrence<span class="red-star" >*</span></label>
+                    <label class="lbl" for="">Countries Occurrence<span class="red-star" >*</span></label>
 
                     <textarea class="form-control my-text " id="country_occurence" name="country_occurence" rows="5" cols="50" required disabled><?php echo $details['country_occurence'] ?></textarea>
 
@@ -256,7 +256,7 @@
                 </div>
                 
                 <div class="form-group clearfix">
-                    <label class="lbl" for="name">Locations <span class="red-star" >*</span></label>
+                    <label class="lbl" for="">Locations <span class="red-star" >*</span></label>
 
                     <textarea class="form-control my-text " id="locations" name="locations" rows="5" cols="50" required disabled><?php echo $details['locations'] ?></textarea>
 
@@ -265,12 +265,12 @@
 
 
                 <div class="form-group clearfix">
-                    <label class="lbl" for="email">Diet & Feeding<span class="red-star" >*</span></label>
+                    <label class="lbl" for="">Diet & Feeding<span class="red-star" >*</span></label>
 
                     <textarea class="form-control my-text " id="feeding" name="feeding" rows="5" cols="50" required disabled> <?php echo $details['feeding'] ?> </textarea>
                 </div>
                 <div class="form-group clearfix">
-                    <label class="lbl " for="emp_id">Breeding & Habbits<span class="red-star" >*</span></label>
+                    <label class="lbl " for="">Breeding & Habbits<span class="red-star" >*</span></label>
 
                     <textarea class="form-control my-text " id="breeding" name="breeding" rows="5" cols="50" required disabled> <?php echo $details['breeding'] ?> </textarea>
 
@@ -280,7 +280,7 @@
                 </div>
 
                 <div class="form-group clearfix">
-                    <label class=" lbl" for="name">Major Threats<span class="red-star" >*</span>  </label>
+                    <label class=" lbl" for="">Major Threats<span class="red-star" >*</span>  </label>
 
                     <textarea class="form-control my-text " id="threats" name="threats" rows="5" cols="50" required disabled> <?php echo $details['threats'] ?> </textarea>
 
@@ -289,7 +289,7 @@
 
                 </div> 
                 <div class="form-group clearfix">
-                    <label class=" lbl" for="name">Conservation Actions</label>
+                    <label class=" lbl" for="">Conservation Actions</label>
 
                     <textarea class="form-control my-text " id="conservation_action" name="conservation_action" rows="5" cols="50" disabled> <?php echo $details['conservation_action'] ?> </textarea>
 
@@ -299,7 +299,7 @@
 
 
                 <div class="form-group clearfix">
-                    <label class="lbl " for="email">Measurements<span class="red-star" >*</span></label>
+                    <label class="lbl " for="">Measurements<span class="red-star" >*</span></label>
 
                     <textarea class="form-control my-text " id="measurements" name="measurements" rows="5" cols="50" required disabled> <?php echo $details['measurements'] ?> </textarea>
 
@@ -308,7 +308,7 @@
 
                 </div>
                 <div class="form-group clearfix">
-                    <label class=" lbl " for="email">Other Details</label>
+                    <label class=" lbl " for="">Other Details</label>
 
                     <textarea class="form-control my-text " id="other_details" name="other_details" rows="5" cols="50" disabled> <?php echo $details['other_details'] ?> </textarea>
 
@@ -333,8 +333,19 @@
                   
                    
                     document.getElementById("bat_order").disabled = false;
-
-
+                    document.getElementById("threats").disabled = false;
+                    
+                    document.getElementById("synonyms").disabled = false;
+                     document.getElementById("roost").disabled = false;
+                     document.getElementById("conservation_status").disabled = false;
+                     document.getElementById("country_occurence").disabled = false;
+                     document.getElementById("locations").disabled = false;
+                     document.getElementById("feeding").disabled = false;
+                     document.getElementById("breeding").disabled = false;
+                     document.getElementById("conservation_action").disabled = false;
+                     document.getElementById("measurements").disabled = false;
+                     document.getElementById("other_details").disabled = false;
+                    
                     document.getElementById("kingdom").disabled = false;
 
 
@@ -356,37 +367,10 @@
 
 
                     document.getElementById("common_names").disabled = false;
-                    document.getElementById("population").disabled = false;
-
-
-
-                    document.getElementById("synonyms").disabled = false;
-
-                    document.getElementById("roost").disabled = false;
-
-
-                    document.getElementById("conservation_status").disabled = false;
-
-                    document.getElementById("country_occurence").disabled = false;
                     
-                    document.getElementById("locations").disabled = false;
-
-
-                    document.getElementById("feeding").disabled = false;
-
-
-                    document.getElementById("breeding").disabled = false;
-
-
-                    document.getElementById("threats").disabled = false;
-
-                    document.getElementById("conservation_action").disabled = false;
-
-
-                    document.getElementById("measurements").disabled = false;
-
-                    document.getElementById("other_details").disabled = false;
-
+                    document.getElementById("population").disabled = false;
+                    
+                    
                 }
 
 
