@@ -64,7 +64,7 @@
                     <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                 </ul>
-            <form class="navbar-form  navbar-right" action="../../view/rltsearch/u_testing.php" method="post">
+            <form class="navbar-form  navbar-right" action="view/rltsearch/u_testing.php" method="post">
               <div class="form-group" style="padding-top:1px;">
                   <input type="text" class="form-control input-area" name='address' placeholder="Enter name here">
               <button type="submit" class="btn btn-default">Search</button>

@@ -13,9 +13,9 @@
 </head>
 <body>
 	<div>
-		<?php include ("../../assets/IncludedFiles/mainnav.php"); ?>
+		<?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
 	</div>
-	<div class="col-sm-8 col-sm-push-2 col-xs-12 insert-form">
+	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
 
 		<?php
 			
