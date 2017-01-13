@@ -48,8 +48,6 @@ if (isset($_POST['login'])) {
         <link href="../../assets/JS/bootstrap.min.js" rel="stylesheet" media="screen">
           <!--Google Fonts-->
           <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <!-- Fontawesome core CSS -->
-        <link href="../../assts/CSS/font-awesome.min.css" rel="stylesheet" >
         <!--CSS-->
 
         <script src="../../assets/JS/jquery.js"></script>
@@ -100,7 +98,7 @@ if (isset($_POST['login'])) {
         <div class="col-xs-12 ">
           <?php include "../../assets/includedFiles/footer.php" ?>
         </div>  
-    </div>
+    </div> 
 
 
 <script src="../../assets/JS/jquery.js"></script>
