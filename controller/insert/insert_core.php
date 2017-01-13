@@ -107,13 +107,7 @@
 
                         echo '<br><br><a href="../../view/insert/insert_form.php"><button class="my-button">Try Again</button></a>';
                     }
-                  /*
-                ,
-                    
-                    , 
-                    
-                    
-                */
+                 
                 ?>
 
 

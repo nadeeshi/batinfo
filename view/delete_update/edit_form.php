@@ -356,6 +356,8 @@
 
 
                     document.getElementById("common_names").disabled = false;
+                    document.getElementById("population").disabled = false;
+
 
 
                     document.getElementById("synonyms").disabled = false;
