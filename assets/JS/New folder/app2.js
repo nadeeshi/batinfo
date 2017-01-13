@@ -3,7 +3,7 @@ $(document).ready(function(){
     $.ajax({
 
     // http://localhost/batinfo/admin/controller/insert/graph_data.php
-    url: "http://localhost/batinfo/controller/graph/data2.php",
+    url: "http://localhost:8080/batinfo/controller/graph/data2.php",
 
 
     method: "GET",
