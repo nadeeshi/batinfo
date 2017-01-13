@@ -84,7 +84,7 @@ include_once '../../database/dbconnect.php';
 			    </li>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
 			    </li>
-			    <li><a href="">News</a>
+			    <li><a href="../../view/news/newst.php">News</a>
 			    	<ul class="submenu nav-pills nav-stacked">
 			    		<li><a href="../../view/news/newst.php">Recent News</a></li>
 			    		<li><a href="../../view/news/news_insert.php">Add News</a></li>
