@@ -66,7 +66,6 @@
                 $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0'");
 
 
-
                 mysqli_close($con);
                 ?>
                 <table >

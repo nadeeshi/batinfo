@@ -15,38 +15,43 @@ require_once ("../../database/connection.php");
 	<script src="../../assets/js/moment.js"></script>
 </head>
 <body>
+	<div class="public-background">
+		<img src="../../assets/images/bat.jpg" width="100%" height="100%" >
+	</div>
 	<div>
 		<?php include '../../assets/includedFiles/mainnav.php' ?>
 	</div>
-	<div class="body-content">
-		<div class="col-xs-12 insert-form" style="padding: 2%;">
-			<div class="row">
-				<?php
-					$sql="SELECT topic_id, topic_subject, topic_content,topic_date FROM topics
-					WHERE topics.topic_id = " . mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
-					$result= mysqli_query($db, $sql);
-					$row = mysqli_fetch_assoc($result);
-					$id=mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
-					// echo($id);
-				?>
-				<div  id = "topicId" style="display:none"> <?php echo $id; ?> </div>
+	<div class="col-xs-12 body-content">
+		<div class="public-thread-content public-div-content col-xs-10">
+			<div class="col-xs-10 insert-form" style="padding: 2%; margin-left: 8%;">
+				<div class="row">
+					<?php
+						$sql="SELECT topic_id, topic_subject, topic_content,topic_date FROM topics
+						WHERE topics.topic_id = " . mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
+						$result= mysqli_query($db, $sql);
+						$row = mysqli_fetch_assoc($result);
+						$id=mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
+						// echo($id);
+					?>
+					<div  id = "topicId" style="display:none"> <?php echo $id; ?> </div>
 
-    			<div class="col-xs-12 thread-topic-content" id = "-1">
-                    <p class="topic-subject"><?php echo $row['topic_subject']; ?></p>
-                    <p class="topic-date"><?php echo $row['topic_date'] ?></p>
-                    <div class="row">
-                    	<div class="col-xs-push-1 col-xs-11">
-                    		<p><?php echo $row['topic_content']; ?></p>
-                    	</div>
-                    </div>
-                    <div>
-                    	<div class="col-xs-push-11 col-xs-1">
-        					<a class="btn btn-default btn-xs" onclick = "ajaxReply(-1)"> Reply </a>
-                    	</div>
-            		</div>
-        		</div>
+	    			<div class="col-xs-12 thread-topic-content" id = "-1">
+	                    <p class="topic-subject"><?php echo $row['topic_subject']; ?></p>
+	                    <p class="topic-date"><?php echo $row['topic_date'] ?></p>
+	                    <div class="row">
+	                    	<div class="col-xs-push-1 col-xs-11">
+	                    		<p><?php echo $row['topic_content']; ?></p>
+	                    	</div>
+	                    </div>
+	                    <div>
+	                    	<div class="col-xs-push-11 col-xs-1">
+	        					<a class="btn btn-default btn-xs" onclick = "ajaxReply(-1)"> Reply </a>
+	                    	</div>
+	            		</div>
+	        		</div>
+				</div>
+				<div style="margin-left:15px;" id = "replytopLevel"> </div>
 			</div>
-			<div style="margin-left:15px;" id = "replytopLevel"> </div>
 		</div>
 	</div>
 

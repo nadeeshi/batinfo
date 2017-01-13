@@ -57,13 +57,16 @@ if (isset($_POST['login'])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-        <div>
-        <?php include("../../assets/IncludedFiles/mainnav.php")?>
-        </div>
+    <div class="public-background">
+        <img src="../../assets/images/bat.jpg" width="100%" height="100%" >
+    </div>
+    <div>
+    <?php include("../../assets/IncludedFiles/mainnav.php")?>
+    <div>
 
-<div class="container" style="padding-top:100px; padding-bottom:100px;"">
+<div class="container" style="padding-top:10%;>
     <div class="row">
-        <div class="col-md-4 col-md-offset-4 well">
+        <div class="col-md-4 col-md-offset-4 well" style="opacity:0.925;">
             <form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
                 <fieldset>
                     <legend>Login</legend>
@@ -81,21 +84,22 @@ if (isset($_POST['login'])) {
                     <div class="form-group">
                         <input type="submit" name="login" value="Login" class="btn btn-primary" />
                     </div>
+                    <div class="form-group" style="text-align: center;">    
+                    New User? <a href="page1_form.php">Sign Up Here</a>
+                    </div>
+                    <span class="text-danger"><?php if (isset($errormsg)) { echo $errormsg; } ?></span>
                 </fieldset>
             </form>
-            <span class="text-danger"><?php if (isset($errormsg)) { echo $errormsg; } ?></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4 text-center">    
-        New User? <a href="page1_form.php">Sign Up Here</a>
+            
         </div>
     </div>
     <div class="push"></div>
 </div>
     <!--get footer -->
-    <div id="footer" class="container=fluid">
-        <a name="contact"> <?php include ("../../assets/IncludedFiles/footer.php") ?> </a>
+    <div>
+        <div class="col-xs-12 ">
+          <?php include "../../assets/includedFiles/footer.php" ?>
+        </div>  
     </div>
 
 

@@ -21,11 +21,15 @@ require_once ("../../database/connection.php");
 	</style>
 </head>
 <body>
-	<div>
-		<?php include '../../assets/includedFiles/mainnav.php' ?>
+	<div class="public-background">
+		<img src="../../assets/images/bat.jpg" width="100%" height="100%" >
 	</div>
+	<div>
+		<div>
+			<?php include '../../assets/includedFiles/mainnav.php' ?>
+		</div>
 		<div class="col-xs-12 body-content">
-			<div>
+			<div class="public-thread-content public-div-content col-xs-10">
 				<div class="col-xs-11 insert-form form-public">
 					<div class="row" style="padding: 1.5%">
 						<?php
@@ -58,6 +62,8 @@ require_once ("../../database/connection.php");
 				</div>
 			</div>
 		</div>
+	</div>
+
 	
 
 
