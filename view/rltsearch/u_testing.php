@@ -25,7 +25,7 @@ include ('../../database/cnm_db_con.php');/*project
 	<div>
 	<?php include('../../assets/IncludedFiles/mainnav.php');?>
 	</div>
-	<div class="col-sm-12  col-xs-12 insert-form">
+	<div class="col-sm-12 col-xs-12 insert-form">
 		<div class="container">
 
 	<?php
@@ -48,10 +48,14 @@ include ('../../database/cnm_db_con.php');/*project
 				//$record = mysqli_fetch_assoc($result);
         //---SELECT title FROM pages WHERE my_col LIKE %$param1% OR another_col LIKE %$param2%;
                 //bat_info
-                $query = mysqli_query($con,"SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' OR common_names Like '%$searchq%' OR synonyms LIKE '%$searchq%';") or die("could  not search");
+                $query = mysqli_query($con,"SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' 
+				OR common_names Like '%$searchq%' OR
+				synonyms LIKE '%$searchq%';") or die("could  not search");
+                //echo mysqli_error($con);
+                //die(1);
                 /*$query = mysql_query("SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' OR common_name Like '%$searchq%' OR synonyms LIKE '%$searchq%';") or die("could can not search");*/
 				/*$query = mysql_query("SELECT * FROM fulldemo WHERE name = '$searchq';") or die("could not search");*/
-				while($row = mysql_fetch_assoc($query)){
+				while($row = mysqli_fetch_assoc($query)){
 					$fname = $row['scientific_name'];
 					//$lplace1 = $row['city'];
 					//$id = $row['id'];//--
@@ -150,7 +154,7 @@ include ('../../database/cnm_db_con.php');/*project
 		</div>
 	</div>  
 	
-		<div class="col-sm-12  col-xs-12">
+		<div class="col-sm-12 col-xs-12">
 		<?php include ("../../assets/IncludedFiles/footer.php"); ?>
 		</div>  
 	
