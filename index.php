@@ -59,7 +59,7 @@
 
                     <li><a href="">Home</a></li>
                     <li><a href="#">News</a></li>
-                    <li><a href="myhome.php#articles">Articles</a></li>
+                    <li><a href="view/articles/article2.php">Articles</a></li>
                     <li><a href="view/forum/publicTopics.php">News</a></li>
                     <li><a href="view/forum/publicTopics.php">Forum</a></li>
                     <li><a href="aboutus.php">About Us</a></li>
