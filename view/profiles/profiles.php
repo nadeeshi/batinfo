@@ -41,7 +41,7 @@ dbconnect.php
 			//echo "lsdhk";
 			$result = mysqli_query($con, $qry) or die();
 			if (mysqli_num_rows($result) >= 3){
-				for($i = 0 ; $i < 8;$i++){
+				for($i = 0 ; $i < 9;$i++){
 					mysqli_data_seek($result,$i);
 					$record = mysqli_fetch_assoc($result);
 					$imgList[$i] ='../../assets/images/'.$record['pic'];
@@ -80,7 +80,8 @@ dbconnect.php
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ;    min-height:14em; width: 100%; height:auto;"/>
+
 										</a>
 						
 										<p class="aidanews2_title">

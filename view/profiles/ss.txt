@@ -1,0 +1,1 @@
+<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; height:14e;width:14e; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
