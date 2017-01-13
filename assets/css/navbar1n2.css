@@ -3,6 +3,7 @@
 @import 'https://fonts.googleapis.com/css?family=Shadows+Into+Light';
 @import 'https://fonts.googleapis.com/css?family=Varela+Round';
 @import 'https://fonts.googleapis.com/css?family=Varela+Round';
+@import url('https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script');
 
 .body {
 	font-family:  'Oxygen', sans-serif;
@@ -189,6 +190,11 @@ div.profile-picture {
 	margin-bottom: 5%;
 }
 
+.insert-form-graph{
+	margin-left: 6.5%;
+
+}
+
 @media(max-width:768px){
 	.mini-bar{
 		display:none;
@@ -262,7 +268,7 @@ div.profile-picture {
 .mainmenu li:hover .submenu {
   display: block;
   max-height: 200px;
-  padding-left: 10px;
+  padding-left: 25px;
 }
 
 .submenu a {
@@ -298,3 +304,37 @@ div.profile-picture {
 /*html, body {
 	height: 100%;
 }*/
+
+
+
+/*graph*/
+
+.page-head-graph{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: -2.5%;
+}
+
+.graph-content{
+	text-align: center;
+	font-family: 'Courgette', cursive;
+}
+
+.graph{
+	margin-top: 2%;
+}
+
+
+
+/*public-background*/
+
+.public-background{
+	/*background-image: url( "background.JPG");*/
+	z-index: -5;
+	height: 100%;
+}
+.img {
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+}
