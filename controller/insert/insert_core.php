@@ -58,7 +58,8 @@
                 $pic_path = "bphotos/" . $_FILES["image"]["name"];
                 }
 
-
+                //$researcher_id = $_SESSION['usr_id'];
+                    $researcher_id =10;  
                 $scientific_name = mysqli_real_escape_string($con, $_POST['scientific_name']);
                 $bat_order = mysqli_real_escape_string($con, $_POST['bat_order']);
                 $kingdom = mysqli_real_escape_string($con, $_POST['kingdom']);
@@ -84,9 +85,9 @@
 
 
                 $query = "INSERT INTO bat_info(scientific_name, bat_order, kingdom, genus, phylum, family, sub_family, bat_class,species,pic,common_names,synonyms,roost,locations,conservation_status,country_occurence,feeding,breeding,threats,
-                conservation_action,measurements,other_details,population)
+                conservation_action,measurements,other_details,population,researcher_id)
               
-                VALUES ('$scientific_name', '$bat_order','$kingdom', '$genus', '$phylum', '$family', '$sub_family', '$bat_class', '$species','$pic_path', '$common_names', '$synonyms', '$roost', '$locations', '$conservation_status', '$country_occurence', '$feeding', '$breeding', '$threats', '$conservation_action', '$measurements', '$other_details','$population' )";
+                VALUES ('$scientific_name', '$bat_order','$kingdom', '$genus', '$phylum', '$family', '$sub_family', '$bat_class', '$species','$pic_path', '$common_names', '$synonyms', '$roost', '$locations', '$conservation_status', '$country_occurence', '$feeding', '$breeding', '$threats', '$conservation_action', '$measurements', '$other_details','$population','$researcher_id' )";
 
 
 
