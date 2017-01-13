@@ -1,3 +1,4 @@
+
 <?php 
 $msg ='';
 require_once ('../../database/connection.php');
@@ -5,12 +6,13 @@ if (!empty($_POST)) {
   $topic = $_POST['topic'];
   $message =$_POST['message'];
   $date= date('Y-m-d');
+  /*$topicby= $_SESSION['id'];*/
 
   $query= "INSERT INTO topics (topic_subject, topic_content, topic_date) VALUES ('$topic' ,'$message', '$date' )";
   $result= mysqli_query($db, $query);
 
   if ($result){
-    $msg ='<a href=forumTopics.php>View your topics</a>';
+    $msg ='<a href=../../view/forum/forumTopics.php>View your topics</a>';
   }
   else{
     $msg= "Error" .'<br>'. mysqli_error($db);
@@ -49,12 +51,6 @@ if (!empty($_POST)) {
                 <label class="control-label col-xs-2">Massage:</label>
                 <div class="col-xs-8">
                   <textarea class="massage form-row form-control" rows="6" cols="8" name="message"></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-xs-2">Attachment:</label>
-                <div class="col-xs-8">
-                  <input type="file" name="files" >
                 </div>
               </div>
               <div class="form-group form-group-custom">

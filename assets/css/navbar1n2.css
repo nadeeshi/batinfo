@@ -227,6 +227,7 @@ div.profile-picture {
     margin-top: 50px;
     position: fixed;
     bottom: 0;
+    text-align: center;
 }
 .footcon-col-1 {
     margin-top: 0.5%;
@@ -290,15 +291,28 @@ div.profile-picture {
 
 
 /*body*/
-/*
+
 .body-content{
-	background-color: #259654;
+	position: absolute;
 	z-index: -2;
 	height: 100%;
-}*/
+	opacity: 0.925;
+}
+
+.public-thread-content{
+	background-color: #ffffff;
+	z-index: -1;
+	margin-left: 7%;
+	margin-top: 8%;
+	margin-bottom: 6%
+}
 
 .form-public{
 	margin-left: 4.35%;
+}
+
+.public-div-content{
+	border-radius: 10px;
 }
 
 /*html, body {
@@ -333,8 +347,10 @@ div.profile-picture {
 	/*background-image: url( "background.JPG");*/
 	z-index: -5;
 	height: 100%;
+	width: 100%;
+	position: fixed;
 }
 .img {
-    opacity: 0.8;
+    opacity: 0.3;
     filter: alpha(opacity=50);
 }

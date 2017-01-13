@@ -99,6 +99,11 @@
 		
     </head>
     <body onload="submitcomment();">
+    <div class="public-background">
+        <img src="../../assets/images/bat.jpg" width="100%" height="100%" >
+    </div>
+    <div class="col-xs-12 body-content">
+        <div class="public-thread-content public-div-content col-xs-10">
         <div>
         <?php include ("../../assets/IncludedFiles/mainnav.php"); ?>
         </div>
@@ -223,6 +228,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 		
         <!-- start footer -->
 

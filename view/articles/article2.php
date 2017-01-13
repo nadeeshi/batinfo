@@ -35,13 +35,17 @@ li a:hover:not(.active) {
 
 </head>
 <body>
+<div class="public-background">
+  <img src="../../assets/images/bat.jpg" width="100%" height="100%" >
+</div>
 <?php include "../../assets/IncludedFiles/mainnav.php" ;
 include "../../assets/IncludedFiles/footer.php" ;
 ?>
 
 
 
-
+<div class="col-xs-12 body-content">
+<div class="public-thread-content public-div-content col-xs-10">
 <div class="container" style="padding-top:120px; padding-bottom:120px;">
   <div class="row">
     <div class="col-md-3">
@@ -102,6 +106,8 @@ while($row = $result->fetch_assoc()) {
 <?php 
 //echo "title". $row['content']; ?>
 
+</div>
+</div>
 </div>
 </div>
 
