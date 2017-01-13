@@ -7,7 +7,7 @@ session_start(); // Session starts here.
     <title></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
           <!-- Bootstrap -->
-        <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="../../assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
         <!--JS-->
         <link href="../../assets/JS/bootstrap.min.js" rel="stylesheet" media="screen">
           <!--Google Fonts-->

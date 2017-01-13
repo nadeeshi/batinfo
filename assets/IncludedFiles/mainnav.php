@@ -20,9 +20,8 @@
       			<li><a href="../../view/news/u_newst.php">News</a></li>
       			<li><a href="../../view/articles/article2.php">Articles</a></li>
       			<li><a href="../../view/forum/publicTopics.php">Forum</a></li>
-      			<li><a href="aboutus.php">About Us</a></li>
-				    <li><a href="#contact">Contact Us</a></li>
-
+      			<li><a href="../../view/aboutus/aboutus.php">About Us</a></li>
+				    
     			</ul>
           <form class="navbar-form  navbar-right"
                 action="../../view/rltsearch/u_testing.php" method="post">
