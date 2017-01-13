@@ -49,14 +49,12 @@
                     <td>Last Name</td>
                     <td><input type="text" name="lname" value="<?php echo $row['lname'];?>"></td>
                 </tr>
+             
                 <tr>
                     <td>NIC Number</td>
                     <td><input type="text" name="profileid" value="<?php echo $row['nic'];?>" disabled=""></td>
                 </tr>
-                <tr>
-                    <td>Gender</td>
-                    <td><input type="text" name="profileid" value="<?php echo $row['gender'];?>" disabled=""></td>
-                </tr>
+                
                 <tr>
                     <td>Country</td>
                     <td><input type="text" name="profileid" value="<?php echo $row['country'];?>" disabled=""></td>
