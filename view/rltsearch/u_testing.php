@@ -23,9 +23,9 @@ include ('../../database/cnm_db_con.php');/*project
 <body>
 
 	<div>
-	<?php include('../../assets/IncludedFiles/navbarTemplate.php');?>
+	<?php include('../../assets/IncludedFiles/mainnav.php');?>
 	</div>
-	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+	<div class="col-sm-12  col-xs-12 insert-form">
 		<div class="container">
 
 	<?php
@@ -130,14 +130,14 @@ include ('../../database/cnm_db_con.php');/*project
 	
 					<ul style="list-style-type:circle">
 						<?php if($count ==1){?>
-						<li><a  href=<?php echo "'../batmap/distribution_c.php?batid=".$id."'";?>><?php echo $fname;?></a></li>
+						<li><a  href=<?php echo "'../batmap/u_distribution_c.php?batid=".$id."'";?>><?php echo $fname;?></a></li>
 						<?php echo $des;
 						}		
 						if(($count1 ==1)||($count2==1)){
 							for($s=0;$s<$r;$s++){
 				//echo $xx[$s];
 						?>
-						<li><a href=<?php echo "'../news/news_child.php?photoid=".$xx[$s]."'";?>><?php echo $head[$xx[$s]-1];?></a></li>
+						<li><a href=<?php echo "'../news/u_news_child.php?photoid=".$xx[$s]."'";?>><?php echo $head[$xx[$s]-1];?></a></li>
 						<?php echo substr( $ab[$xx[$s]-1],0,150)."..."; 
 							}
 						}?>
@@ -150,7 +150,7 @@ include ('../../database/cnm_db_con.php');/*project
 		</div>
 	</div>  
 	
-		<div class="col-sm-10 col-sm-push-2 col-xs-12">
+		<div class="col-sm-12  col-xs-12">
 		<?php include ("../../assets/IncludedFiles/footer.php"); ?>
 		</div>  
 	

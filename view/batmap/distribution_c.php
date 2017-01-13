@@ -13,9 +13,9 @@
 </head>
 <body>
 	<div>
-		<?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
+		<?php include ("../../assets/IncludedFiles/mainnav.php"); ?>
 	</div>
-	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+	<div class="col-sm-12 col-xs-12 insert-form">
 		<?php
 			
 			include ('from_search_image.php');	
@@ -47,7 +47,7 @@
 										<div class="col-sm-12">
 											<p>                            
 												<a class="aidanews2_img1" href="">
-													<img src="<?php echo $img;?>" alt="Img" style = "float: left ;margin: 0px 15px 15px 20px; max-height: 20em ; min-height:14em; width: 20%; height:auto;"/>
+													<img src="<?php echo $img;?>" alt="Img" style = "float: right ;margin: 0px 15px 15px 20px; max-height: 20em ; min-height:14em; width: 20%; height:auto;"/>
 												</a>
 												<div class="des" style="color: #2D343E; font: bold 15px/30px 'Alike Angular', serif; !important;">
 												<?php echo $output;?> </br>
@@ -136,7 +136,7 @@
 	<!-- start footer -->
 
 	
-	    <div class="col-sm-10 col-sm-push-2 col-xs-12">
+	    <div class="col-sm-12 col-xs-12">
 	      <?php include ("../../assets/IncludedFiles/footer.php"); ?>
 	    </div>  
   	
