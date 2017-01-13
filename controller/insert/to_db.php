@@ -5,6 +5,7 @@ include ('../../database/cnm_db_con.php');
 
 $status = "";
 /*
+dbconnect.php
  $mysql_hostname = "localhost";
         $mysql_user = "root";
         $mysql_password = "";

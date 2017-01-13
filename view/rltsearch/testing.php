@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-//include ('../../database/cnm_db_con.php');
+//include ('../../database/cnm_db_con.php');project
 @mysql_connect("localhost","root","") or die("could not connect");
 @mysql_select_db("test2") or die("could not find");
 ?>
@@ -47,20 +47,16 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 				//$result = mysqli_query($con, $query);
 				//$record = mysqli_fetch_assoc($result);
         //---SELECT title FROM pages WHERE my_col LIKE %$param1% OR another_col LIKE %$param2%;
+                //bat_info
 				$query = mysql_query("SELECT * FROM fulldemo WHERE name = '$searchq';") or die("could not search");
 				while($row = mysql_fetch_array($query)){
 					$fname = $row['name'];
-					$lplace1 = $row['city'];
+					//$lplace1 = $row['city'];
 					$id = $row['id'];
-					$img = $row['location'];
+                    //$id = $row['bat_id'];
+					//$img = $row['location'];
 					$des = $row['description'];
 					$count = 1;
-		
-		//echo '<p><img src="'.$row['location'].'"></p>';
-					$output = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des;
-		//echo $output;
-		
-		//echo '<p><img src="'.$row['description'].'"></p>';
 		
 				}
 	

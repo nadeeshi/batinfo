@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/cnm_db_con.php');/*
-
+dbconnect.php
 @mysql_connect("localhost","root","") or die("could not connect");
 @mysql_select_db("test2") or die("could not find");*/
 ?>
@@ -32,7 +32,7 @@ include ('../../database/cnm_db_con.php');/*
 			$mysql_password = "";
 			$mysql_database = "test2";
 			$con = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password, $mysql_database );
-			
+			//bat_info
 			$qry = "SELECT * FROM fulldemo ;";
 			$imgList =array(1,2,3,4);
 			$desc = array(1,2,3,4);
@@ -48,7 +48,8 @@ include ('../../database/cnm_db_con.php');/*
 							//$desc[$i] = $record['desc'];
 					$caption[$i] =$record['name'];
 					$id[$i] =$record['id'];
-					//echo $id[1];
+					//$id[$i] =$record['bat_id'];
+                    //$caption[$i] =$record['sciencetific_name'];
 				}
 			}					
 		?>
@@ -67,7 +68,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -79,7 +80,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -92,7 +93,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -105,7 +106,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -132,7 +133,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -145,7 +146,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -158,7 +159,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -171,7 +172,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -198,7 +199,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -211,7 +212,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -224,7 +225,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -237,7 +238,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -263,7 +264,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -276,7 +277,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -289,7 +290,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -302,7 +303,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -329,7 +330,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -342,7 +343,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -355,7 +356,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -368,7 +369,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -394,7 +395,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -407,7 +408,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -420,7 +421,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -433,7 +434,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -459,7 +460,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -472,7 +473,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[1]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[1];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[1];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -485,7 +486,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -498,7 +499,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -524,7 +525,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[2]."'"; ?>>
-											<img class="x" src="<?php echo $imgList[2];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[2];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">
@@ -537,7 +538,7 @@ include ('../../database/cnm_db_con.php');/*
 								<div class="col-md-3">
 									<div class="x">
 										<a class="aidanews2_img1" href=<?php echo "'../batmap/distribution_c.php?batid=".$id[0]."'";  ?>>
-											<img class="x" src="<?php echo $imgList[0];?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "display: block; max-height: 25em ; min-height:14em; width: 100%; height:auto;"/>
+											<img class="x" src="<?php echo $imgList[0];?>" alt="" style = "display: block; max-height: 20em ; min-height:14em; width: 100%; height:auto;"/>
 										</a>
 						
 										<p class="aidanews2_title">

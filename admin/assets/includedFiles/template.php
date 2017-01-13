@@ -59,8 +59,25 @@
 
         <div class="header-right">
 
-            <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
-            <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
+            <a href="../../controller/insert/researcherDetails.php" class="btn btn-info" title="Researcher Request">
+               <b> <?php
+                ob_start();
+                include("connect.php");
+                $query = mysqli_query($bd,"SELECT count(*) as total FROM researchers WHERE password is  NULL ") ;
+                $result = mysqli_fetch_array($query);
+                echo $result['total'];
+                ob_end_flush();
+                ?></b><i class="fa fa-envelope-o fa-2x"></i></a>
+            <a href="../../view/researchDetails/researchUploadedFileView.php" class="btn btn-primary" title="Research Details">
+                <b><?php
+                    ob_start();
+                    include("connect.php");
+                    $query = mysqli_query($bd,"select count(*) as total from tbl_uploads");
+                    $result = mysqli_fetch_array($query);
+                    echo $result['total'];
+                    ob_end_flush();
+                    ?>
+                </b><i class="fa fa-bars fa-2x"></i></a>
             <!-- <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a> -->
             <a href="../../index.php" class="logout">logout</a></p>
 
@@ -81,7 +98,14 @@
                         <img src="../../assets/images/2.jpg" class="img-thumbnail" />
 
                         <div class="inner-text">
-                            Nadee Sansari
+                            <?php
+                            ob_start();
+                            include("connect.php");
+
+                            echo $_SESSION['SESS_FIRST_NAME'];
+
+                            ?>
+
                             <br />
                             <small>online</small>
                         </div>

@@ -41,14 +41,16 @@ if($password == '') {
 if($errflag) {
     $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
     session_write_close();
-    header("location: ../index.php");
+    header("location: ../../index.php");
     exit();
 }
 
 
 
 //Create query
-$qry="SELECT * FROM admin_details WHERE username='$username' AND password='$password'";
+$encrpt_password = md5($password);
+
+$qry="SELECT * FROM admin_details WHERE username='$username' AND password='$encrpt_password'";
 $result=mysqli_query($bd, $qry);
 
 //Check whether the query was successful or not
@@ -70,7 +72,7 @@ if($result) {
         if($errflag) {
             $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
             session_write_close();
-            header("location: ../index.php");
+            header("location: ../../index.php");
             exit();
         }
     }

@@ -233,18 +233,6 @@ function validatePassword($pword){
                                 <input type = "submit" value="Submit" name="submit">
                             </form>
 
-                            <?php
-                            echo "<h2>New Input:</h2>";
-                            echo "username:" . $username;
-                            echo "<br>";
-                            echo "emailid:" . $emailid;
-                            echo '<br>';
-                            echo "mobilno:" . $mobileno;
-                            echo '<br>';
-                            echo "Password:" . $password;
-                            echo '<br>';
-
-                            ?>
 
 
 
@@ -253,14 +241,17 @@ function validatePassword($pword){
                             ob_start();
                             include("../../assets/includedFiles/connect.php");
                             if(($username != '' )&& ($password != '') && ($emailid != '') && ($mobileno != '')){
+                                $encrpt_password = md5($password);
                                 $update=mysqli_query($bd,"INSERT INTO admin_details(username,emailid,mobileno,created,password)VALUES
-                                      ('$username','$emailid','$mobileno',now(),'$password')");
+                                      ('$username','$emailid','$mobileno',now(),'$encrpt_password')");
 
                                 if($update)
                                 {
                                     $msg="Successfully Updated!!";
                                     echo "<script type='text/javascript'>alert('$msg');</script>";
-                                    //header('Location:.php');
+                                    //header('Location:adminDetailsValidate.php');
+
+                                    echo "<meta http-equiv='refresh' content='0'>";
 
                                 }
                                 else

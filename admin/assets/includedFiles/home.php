@@ -40,6 +40,7 @@ require_once('auth.php');
 
 
 <body>
+
 <div id="page-wrapper">
     <div id="page-inner">
         <div class="row">
@@ -58,6 +59,7 @@ require_once('auth.php');
                         <a href="#">
                             <h3> Admin Count:
                                 <?php
+
                                 ob_start();
                                 include("connect.php");
                                 $query = mysqli_query($bd,"select count(*) as total from admin_details");

@@ -1,3 +1,7 @@
+<?php
+require_once('../../assets/includedFiles/auth.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,21 +29,7 @@
         tr:nth-child(even){background-color: #f2f2f2}
 
     </style>
-
-    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="../../assets/css/basic.css" rel="stylesheet" />
-    <!--CUSTOM MAIN STYLES-->
-    <link href="../../assets/css/custom.css" rel="stylesheet" />
-    <script src="../../assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="../../assets/js/bootstrapjs.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="../../assets/js/jquery.metisMenu.js"></script>
-    <!-- CUSTOM SCRIPTS -->
-    <script src="../../assets/js/custom.js"></script>
-    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
-
-
+    <script src="../../assets/js/edit_del_confimtions.js"></script>
 
 </head>
 
@@ -62,7 +52,7 @@
 
 
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         View data from the database
@@ -70,6 +60,7 @@
 
                     <div class="panel-body">
                         <h4>view  Details of Bats</h4>
+
                         <div style="margin-top: 20px;">
 
                             <?php
@@ -82,8 +73,10 @@
                                 <table>
                                     <tr>
                                         <th>BATS  NAME : </th>
-                                        <th>CREATED ON : : </th>
-                                        <th>VIEW : </th>
+                                        <th>BAT ORDER : </th>
+                                        <th>KINGDOM</th>
+
+                                        <th>View</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
 
@@ -95,47 +88,50 @@
 
 
 
-                            while($userrow=mysqli_fetch_array($select))
-                            {
-                                $id=$userrow['bat_id'];
-                                $scientificName=$userrow['scientific_name'];
-                                $kingdom=$userrow['kingdom'];
-                                $phylum=$userrow['phylum'];
-                                $created=$userrow['created']
-                                ?>
+                                    while($userrow=mysqli_fetch_array($select))
+                                    {
+                                        $id=$userrow['bat_id'];
+                                        $scientificName=$userrow['scientific_name'];
+                                        $bat_order = $userrow['bat_order'];
+                                        $kingdom=$userrow['kingdom'];
 
-                                    <tr>
-                                        <td><?php echo $scientificName; ?></td>
 
-                                        <td><?php echo $created; ?></td>
+                                        ?>
 
-                                        <td><a href="viewBats.php?id=<?php echo $id; ?>">
-                                            <span class="view" title="View"> View </span></a></td>
+                                        <tr>
+                                            <td><?php echo $scientificName; ?></td>
+                                            <td><?php echo $bat_order; ?></td>
+                                            <td><?php echo $kingdom; ?></td>
 
-                                        <td><a href="../../controller/update/editBats.php?id=<?php echo $id; ?>"><span class="edit" title="Edit"> Edit </span></a></td>
+                                            <td><a href="viewBats.php?id=<?php echo $id; ?>">
+                                                    <span class="view" title="View"> View </span></a></td>
 
-                                        <td><a href="../../controller/delete/deleteBats.php?id=<?php echo $id; ?>"
-                                           onclick="return confirm('Are you sure you wish to delete this Record?');">
-                                            <span class="delete" title="Delete"> Delete </span></a></td>
+
+
+                                            <td><a href="../../controller/update/editBats.php?id=<?php echo $id; ?>"><span class="edit" title="Edit"> Edit </span></a></td>
+
+                                            <td><a href="../../controller/delete/deleteBats.php?id=<?php echo $id; ?>"
+                                                   onclick="return confirm('Are you sure you wish to delete this Record?');">
+                                                    <span class="delete" title="Delete"> Delete </span></a></td>
                                         </tr>
-                            <?php } ?>
+                                    <?php } ?>
 
-                                    </table>
-
-
+                                </table>
 
 
 
 
 
+
+
+                            </div>
                         </div>
+
                     </div>
-
                 </div>
+
+
             </div>
-
-
-</div>
 
         </div>
 
@@ -143,10 +139,40 @@
 
     </div>
 </div>
-    <div id="footer-sec"><b>Group 23-UCSC Group Project</b></div>
+<div id="footer-sec"><b>Group 23-UCSC Group Project</b></div>
 
 
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

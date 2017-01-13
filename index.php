@@ -6,7 +6,7 @@
         <title>Home | BatsInfo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	  <!-- Bootstrap -->
-    	  <link href="assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!--JS-->
         <link href="assets/JS/bootstrap.min.js" rel="stylesheet" media="screen">
     	  <!--Google Fonts-->
@@ -60,6 +60,7 @@
                     <li><a href="">Home</a></li>
                     <li><a href="#">News</a></li>
                     <li><a href="myhome.php#articles">Articles</a></li>
+                    <li><a href="view/forum/publicTopics.php">News</a></li>
                     <li><a href="view/forum/publicTopics.php">Forum</a></li>
                     <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="#contact">Contact Us</a></li>

@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/cnm_db_con.php');/*
-
+dbconnect.php
 @mysql_connect("localhost","root","") or die("could not connect");
 
 @mysql_select_db("test2") or die("could not find");*/
@@ -41,7 +41,7 @@ include ('../../database/cnm_db_con.php');/*
 <body>
  
 <?php
-
+//bat_info
 		$query = "SELECT * FROM fulldemo WHERE id = '".$_GET['batid']."';";
 		$result = mysqli_query($con, $query);
 
@@ -57,7 +57,8 @@ include ('../../database/cnm_db_con.php');/*
 					$id = $row['id'];
 					//$img = $row['location'];
 					//$des = $row['description'];
-		
+		          //$id=row['bat_id'];
+                    //$lplace1=$row['locations'];
 		
 		$places_ar = explode(",",$lplace1);
 		$length = count($places_ar);

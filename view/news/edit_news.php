@@ -1,10 +1,11 @@
-﻿
+
 <?php
 ob_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 include ('../../database/cnm_db_con.php');
 /*
+dbconnect.php
 $con = mysqli_connect("localhost","root","","test2");
 
 if (mysqli_connect_errno()){
@@ -110,7 +111,7 @@ $row = mysqli_fetch_assoc($result);
 				
 				error_reporting(0);
 				include ('../../database/cnm_db_con.php');
-/*
+/*              dbconnect.php
 				$con = mysqli_connect("localhost","root","","test2");
 
 				if (mysqli_connect_errno()){

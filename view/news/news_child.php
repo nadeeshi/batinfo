@@ -103,7 +103,7 @@
         <?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
         </div>
         <?php
-		include ('../../database/cnm_db_con.php');
+		include ('../../database/cnm_db_con.php');//dbconnect.php
 		$qry = "SELECT * FROM photos WHERE id = '" . $_GET['photoid'] . "' ;";
         $result = mysqli_query($con, $qry);
         $record = mysqli_fetch_assoc($result);

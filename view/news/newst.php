@@ -21,7 +21,7 @@
 	<div class="container">
 	
 	<?php 
-					include ('../../database/cnm_db_con.php');
+					include ('../../database/cnm_db_con.php');//dbconnect.php
 					$qry = "SELECT * FROM photos ORDER BY id DESC;";
 					$imgList =array();
 					$desc = array();
@@ -193,7 +193,8 @@
   
   
   <ul class="pagination">
-    <li><a href="#"><b> &#x226A </b></a></li>
+    
+      <li><a href="#"><b> &#x226A </b></a></li>
     <li><a  <?php $color = "style='background-color:#5a5452'";
 					echo (!(isset($_GET['page']))) ? $color : "";
 	echo "href='newst.php'"; ?>>1</a></li>
@@ -205,7 +206,8 @@
 	?>
     <li><a <?php echo "href='newst.php?page=$f'"; if(isset($_GET['page'])) echo ($_GET['page']==$f) ? $color : "";?>><?php echo $i;?></a></li><?php }?>
 
-    <li><a href="#"><b> &#x226B </b></a></li>
+    <li><a href=""><b> &#x226B </b></a></li>
+      
   </ul>
 </div>
 				</div>

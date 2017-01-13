@@ -6,7 +6,7 @@ include ('../../database/cnm_db_con.php');
 
         
           
-    //$id =  $_GET['id'];
+    //$id =  $_GET['id'];dbconnect.php
 
     $sql = "DELETE  FROM news_before WHERE nid = '" . $_GET['to_id'] . "';";
     $dl=mysqli_query($con, $sql);

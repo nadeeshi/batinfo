@@ -1,0 +1,36 @@
+.insert-link:hover {
+                color: red !important;
+            }
+            .edit-del-button{
+                margin-top: 40px;
+            }
+
+            .my-buttons{
+
+                width: 72px !important;
+                height: 32px !important;
+
+
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-weight: bold;
+                font-size: 16px;
+
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                cursor: pointer;
+
+
+                border: 2px solid white;
+
+
+            }
+            .my-buttons:hover{
+                background-color: white;
+                color: black ;
+                border: 2px solid black;
+            }
