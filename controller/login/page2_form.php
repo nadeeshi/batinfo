@@ -82,7 +82,7 @@ if (isset($_POST['fname'])){
                 </div>
                 <div class="form-group">
                   <label>Other :</label>
-                  <input name="other" id="other" type="text" size="30" required class="form-control" />
+                  <input name="other" id="other" type="text" size="30"  class="form-control" />
                 </div>
                 <input type="reset" value="Reset" />
                 <input name="submit" type="submit" value="Submit" />
