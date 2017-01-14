@@ -53,11 +53,8 @@
                         <label class= "lbl">Author<span class="red-star" >*</span></label>
                         <input type="text" class="form-control my-text " name="author" id="author"  required>
                     </div>
+                   
                     <div class="form-group ">
-                        <label class= "lbl">Researcher ID<span class="red-star" >*</span></label>
-                        <input type="text" class="form-control my-text " name="rid" id="rid"  required>
-                    </div>
-                      <div class="form-group ">
                         <label class= "lbl">Description<span class="red-star" >*</span></label>
                       
                             <textarea class="form-control my-text" name="description" id="description" rows="4" cols="50"  > </textarea>

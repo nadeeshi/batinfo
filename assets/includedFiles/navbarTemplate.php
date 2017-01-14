@@ -87,9 +87,9 @@ include_once '../../database/dbconnect.php';
                      <ul class="submenu nav-pills nav-stacked">
 				        <li><a href="../../view/research_papers/research_papers_view.php">View</a></li>
 				        <li><a href="../../view/research_papers/research_papers.php">Upload</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Delete</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Update</a></li>
-				        <li><a href="../../view/profiles/profiles.php">Bat Profile</a></li>
+				        <li><a href="../../view/research_papers/research_papers_update_del.php">Delete</a></li>
+				        <li><a href="../../view/research_papers/research_papers_update_del.php">Update</a></li>
+				        
 			      	</ul>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
 			    </li>

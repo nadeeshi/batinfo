@@ -59,7 +59,7 @@
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
                     $researcher_id = $_SESSION['usr_id'];
-                    $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0' AND researcher_id= '$researcher_id'");
+                    $result = mysqli_query($con, "SELECT * FROM research_papers WHERE del_bit='0' AND researcher_id= '$researcher_id'");
 
 
 
@@ -69,7 +69,7 @@
                         <thead>
                             <tr>
                                 <td class='td th_option lbl head'></td>
-                                <td class='td th_sname lbl head'>Scientific Name</td>
+                                <td class='td th_sname lbl head'>Title</td>
                                 
 
                                 <td class='td th_option lbl head'>Action</td>
@@ -85,12 +85,12 @@
                             while ($row = mysqli_fetch_array($result)) {
                                 echo '<tr id="tr_data">';
                                 echo '<td class="td_data num lbl">' . $i . '</td>';
-                                echo '<td class="td_data lbl">' . $row['scientific_name'] . '</td>';
+                                echo '<td class="td_data lbl">' . $row['title'] . '</td>';
                                 $i = $i + 1;
 
-                                echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_edit();">edit</a></td>';
+                                echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['paper_id'] . '" onclick="return myFunction_edit();">edit</a></td>';
 
-                                echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?scientific_name=' . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
+                                echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/research_papers/research_papers_del_core.php?paper_id=' . $row['paper_id'] . '"onclick="return myFunction_del();">delete</a></td>';
 
                                 echo '</tr>';
                             }
