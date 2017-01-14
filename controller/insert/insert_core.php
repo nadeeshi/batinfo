@@ -58,8 +58,8 @@
                 $pic_path = "bphotos/" . $_FILES["image"]["name"];
                 }
 
-                //$researcher_id = $_SESSION['usr_id'];
-                    $researcher_id =10;  
+                $researcher_id = mysqli_real_escape_string($con, $_SESSION['usr_id']);
+                   
                 $scientific_name = mysqli_real_escape_string($con, $_POST['scientific_name']);
                 $bat_order = mysqli_real_escape_string($con, $_POST['bat_order']);
                 $kingdom = mysqli_real_escape_string($con, $_POST['kingdom']);
@@ -94,6 +94,7 @@
                 }
 
 
+            
                   
                     if (mysqli_query($con, $query)) {
                         mysqli_close($con);
