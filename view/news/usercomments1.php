@@ -11,7 +11,7 @@ $date= date("m-d-Y");
 $user = "user"; //root
 $password = ""; 
 $host = "localhost"; 
-$dbase = "test2";//project 
+$dbase = "project";//project 
 
 
 

@@ -1,10 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/cnm_db_con.php');/*
-dbconnect.php
-@mysql_connect("localhost","root","") or die("could not connect");
-
-@mysql_select_db("test2") or die("could not find");*/
+include ('../../database/dbconnect.php');
 
 
 ?>

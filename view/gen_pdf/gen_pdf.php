@@ -1,19 +1,14 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/cnm_db_con.php');/*
-dbconnect.php
-@mysql_connect("localhost","root","") or die("could not connect");
-
-@mysql_select_db("test2") or die("could not find");*/
+include ('../../database/dbconnect.php');
 require('../../assets/fpdf/fpdf.php');
 	
 $count = 0;
-		//if($_GET['batid']>=0){
-//bat_info
+
 $query = "SELECT * FROM bat_info WHERE bat_id = '".$_GET['id']."';";
 $result = mysqli_query($con, $query);
 				
-//$query = mysql_query("SELECT * FROM fulldemo WHERE id = '".$_GET['id']."';") or die("could not search");
+
 while($row = mysqli_fetch_assoc($result)){
 	$fname = $row['scientific_name'];
 	$lplace1 = $row['locations'];
@@ -83,37 +78,15 @@ function Footer()
     $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
 }
 }
-global $lplace1;
-global $des;
-global $sc_name;
-	 //global $img;
-     //global $bat_or;
-     //global $kin;
-     //global $gene;
-     //global $phylum;
-    //global $family;
-    //global $subfamily;
-    //global $bat_cl;
-    //global  $com_name;
-    //global $syns;
-    //global $rst;
-    //global $lplace1;
-    //global $conv_st;
-    //global $conv_at;
-    //global $feed;
-    //global $breed;
-    //global $threa;
-    //global $coun_occ;
-    //global $measure;
-    //global $des;
-    //global $del;
-// Instanciation of inherited class
+
+	
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);
 
 $pdf->Cell(0,10,'common names : '.$com_name,0,1);
+$pdf->Cell(0,10,'scientific name : '.$fname,0,1);
 
 $pdf->Cell(0,10,'synonyms : '.$syns,0,1);
 

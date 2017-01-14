@@ -2,8 +2,6 @@
 require_once('../../assets/includedFiles/auth.php');
 ?>
 
-
-
 <?php
 // define variables and set to empty values
 $usernameErr = $emailidErr = $mobilenoErr = $passwordErr  = "";
@@ -12,7 +10,6 @@ $course = array();
 //var_dump($_POST['gender']);
 //exit;
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-
     $variables = array();
     $variables = initialize();
     $errors = array();
@@ -39,13 +36,11 @@ function initialize(){
     $var['mobileno'] = clean($_POST['mobileno']);
     $var['password'] = clean($_POST['password']);
 
-
     return $var;
 }
 
 function validate_errors($var) {    //is an array being passed into this function??have a look at arg of validateFirstName.
     $errors = array();
-
     $errors['username'] = validateUserName($var['username']);//should return error string or ''
     $errors['emailid'] = validateEmailId($var['emailid']);
     $errors['mobileno'] = validateMobileNo($var['mobileno']);
@@ -55,7 +50,6 @@ function validate_errors($var) {    //is an array being passed into this functio
 }
 
 function validateUserName($uname){
-
     if(empty($uname)){
         global $usernameErr;
         $usernameErr = "First name is required";
@@ -72,7 +66,6 @@ function validateUserName($uname){
 }
 
 function validateEmailId($umail){
-
     if(empty($umail)){
         return '';
     } else if (!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", $umail)) { // check if name only contains letters and whitespace,performs a regular expression match
@@ -87,7 +80,6 @@ function validateEmailId($umail){
 }
 
 function validateMobileNo($umobile) {
-
     if(empty($umobile)) {
         global $mobilenoErr;
         $mobilenoErr = "Username is required";
@@ -104,7 +96,6 @@ function validateMobileNo($umobile) {
 }
 
 function validatePassword($pword){
-
     if(empty($pword)) {
         global $passwordErr;
         $passwordErr = "Password is required";
@@ -119,28 +110,15 @@ function validatePassword($pword){
         return '';
     }
 }
-
-
-
-
-
-
-
-//renderform();
-
-
-
+//renderform()
 ?>
 
 
 <!DOCTYPE html>
 <html>
-
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>BatFacts.com</title>
     <style>
         .error {color: #FF0000;}
@@ -163,9 +141,6 @@ function validatePassword($pword){
         tr:nth-child(even){background-color: #f2f2f2}
 
     </style>
-
-
-
     <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
     <link href="../../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
@@ -179,15 +154,10 @@ function validatePassword($pword){
     <script src="../../assets/js/custom.js"></script>
     <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
 
-
 </head>
-
-
 
 <body>
 <?php include("../../assets/includedFiles/template.php")?>
-
-
 
 <div id="page-wrapper">
 <div id="page-inner">
@@ -195,26 +165,19 @@ function validatePassword($pword){
         <div class="col-md-12">
             <h1 class="page-head-line" style="color: #500a6f"><b>Admin Details</b></h1>
             <h1 class="page-subhead-line">All administrators details </h1>
-
         </div>
     </div>
-
-
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Insert data to the Database
                 </div>
-
                 <div class="panel-body">
                     <h4 style="color: #cc006a">Add New Admin</h4>
                     <div style="margin-top: 20px;">
-
-
                         <!--add new Admin--------------------------------------------------------->
                         <div class="display">
-
                             <p><span class="error">* required field.</span></p>
                             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                                 <div class="col-xs-12">
@@ -232,11 +195,6 @@ function validatePassword($pword){
                                 <br/>
                                 <input type = "submit" value="Submit" name="submit">
                             </form>
-
-
-
-
-
                             <?php
                             ob_start();
                             include("../../assets/includedFiles/connect.php");
@@ -250,9 +208,7 @@ function validatePassword($pword){
                                     $msg="Successfully Updated!!";
                                     echo "<script type='text/javascript'>alert('$msg');</script>";
                                     //header('Location:adminDetailsValidate.php');
-
                                     echo "<meta http-equiv='refresh' content='0'>";
-
                                 }
                                 else
                                 {
@@ -260,117 +216,59 @@ function validatePassword($pword){
                                     echo "<script type='text/javascript'>alert('$errormsg');</script>";
                                 }
                             }
-
                             ob_end_flush();
                             ?>
-
-
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
-
-
-
-
-
         </div>
-
         <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Details of Admin
                 </div>
-
                 <div class="panel-body">
-
-
                     <!--start  viewAdmin---------------------------------------------------------------------->
-
                     <?php
                     include('../../assets/includedFiles/connect.php');
                     $select=mysqli_query($bd,"SELECT * FROM admin_details order by id desc");
                     $i=1;
                     ?>
-
                     <div class="display">
-
                         <table>
                             <tr>
                                 <th>ADMIN  NAME : </th>
                                 <th>EMAIL : </th>
                                 <th>MOBILE : </th>
                                 <th>CREATED ON : </th>
-
                                 <th>Edit</th>
                                 <th>Delete</th>
-
-
                             </tr>
-
-
-                             <?php
-                            while($userrow=mysqli_fetch_array($select))
-                    {
-                        $id=$userrow['id'];
-                        $username=$userrow['username'];
-                        $usermail=$userrow['emailid'];
-                        $usermobile=$userrow['mobileno'];
-                        $created=$userrow['created']
-                        ?>
-
-
-
-
-                        <tr>
-                            <td><?php echo $username; ?></td>
-
-                            <td><?php echo $usermail;?></td>
-
-                            <td><?php echo  $usermobile;?></td>
-
-                            <td><?php echo $created; ?></td>
-
-
-                            <td> <a href="../update/editAdmin.php?id=<?php echo $id; ?>"><span class="edit" title="Edit"> Edit </span></a></td>
-
-                            <td> <a href="../delete/deleteAdmin.php?id=<?php echo $id; ?>"
+                            <?php
+                            while($userrow=mysqli_fetch_array($select)) {
+                                $id=$userrow['id'];
+                                $username=$userrow['username'];
+                                $usermail=$userrow['emailid'];
+                                $usermobile=$userrow['mobileno'];
+                                $created=$userrow['created']
+                                ?>
+                                <tr>
+                                    <td><?php echo $username; ?></td>
+                                    <td><?php echo $usermail;?></td>
+                                    <td><?php echo  $usermobile;?></td>
+                                    <td><?php echo $created; ?></td>
+                                    <td> <a href="../update/editAdmin.php?id=<?php echo $id; ?>"><span class="edit" title="Edit"> Edit </span></a></td>
+                                    <td> <a href="../delete/deleteAdmin.php?id=<?php echo $id; ?>"
                                     onclick="return confirm('Are you sure you wish to delete this Record?');">
                                     <span class="delete" title="Delete"> Delete </span></a></td>
-
-
-
-
-                        </tr>
-
-
-
-
-                    <?php } ?>
-
+                                </tr>
+                            <?php } ?>
                         </table>
-
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </div>
 </div>
@@ -379,9 +277,6 @@ function validatePassword($pword){
 
 <div id="footer-sec"><b>Group 23-UCSC Group Project</b>
 </div>
-
-
-
 </body>
 </html>
 

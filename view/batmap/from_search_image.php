@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/cnm_db_con.php');/*
+include ('../../database/dbconnect.php');/*
 dbconnect.php
 @mysql_connect("localhost","root","") or die("could not connect");
 @mysql_select_db("test2") or die("could not find");*/
@@ -43,14 +43,6 @@ while($row = mysqli_fetch_assoc($result)){
     //$des=$row['other_details'];
     //$del=$row['del_bit'];
     $count = 1;
-		
-		//echo '<p><img src="'.$row['location'].'"></p>';
-	/*$output = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des.'</br>';
-   */ /*
-    $output1 = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des.'</br>';
-    
-    $output2 = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des.'</br>';*/
-		//echo $output;
 	
     $output = '<div> '.'sciencetific name :  '.$fname.'</br> </br> 
     place :  '. $lplace1.'</div></br> 

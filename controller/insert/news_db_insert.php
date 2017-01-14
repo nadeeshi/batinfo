@@ -1,15 +1,8 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/cnm_db_con.php');
-/*
-dbconnect.php
-$con = mysqli_connect("localhost","user","","test2");
+include ('../../database/dbconnect.php');
 
-if (mysqli_connect_errno()){
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}*/
 
-$status = "";
 if(isset($_POST['new']) && $_POST['new']==1){
 
 	$file=$_FILES['image']['tmp_name'];
@@ -36,7 +29,7 @@ if(isset($_POST['new']) && $_POST['new']==1){
 	$v_ar=mysqli_fetch_assoc($rs);
 	$l_id=$v_ar['nid'];
 	
-	$status = "New Record Inserted Successfully.</br></br><a href='view.php'>View Inserted Record</a>";
+	
 	header('Location:news_before.php?id='.$l_id);
 }
 	

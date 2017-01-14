@@ -63,6 +63,7 @@
                     <td>Email</td>
                     <td><input type="text" name="email" value="<?php echo $row['email'];?>"></td>
                 </tr>
+                
                 <tr>
                   <td colspan="2"><input type="submit" name="submit" value="Update Profile"></td>
                 </tr>

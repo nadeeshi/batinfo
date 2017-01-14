@@ -1,4 +1,21 @@
 <?php
+$n =30;
+for ($i=0;$i<(($n/4)+1);$i++){
+    $f=$i;
+    
+    for($j=0;$j<4;$j++){
+        if((($f*4)+$j)<$n){
+            echo (($f*4)+$j);
+        }
+        
+    }
+    
+    
+}
+
+?>
+
+<?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 ?>
@@ -33,6 +50,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 			$id = array(1,2,3,4);
 			//echo "lsdhk";
 			$result = mysqli_query($con, $qry) or die();
+            $n=mysqli_num_rows($result);
 			if (mysqli_num_rows($result) >= 3){
 				for($i = 0 ; $i < 9;$i++){
 					mysqli_data_seek($result,$i);

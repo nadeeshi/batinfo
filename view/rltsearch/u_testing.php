@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/cnm_db_con.php');/*project
+include ('../../database/dbconnect.php');/*project
 @mysql_connect("localhost","root","") or die("could not connect");
 @mysql_select_db("project") or die("could not find");*/
 ?>

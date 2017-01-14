@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/cnm_db_con.php');/*project
+include ('../../database/dbconnect.php');/*project
 @mysql_connect("localhost","root","") or die("could not connect");
 @mysql_select_db("project") or die("could not find");*/
 ?>
@@ -70,11 +70,11 @@ include ('../../database/cnm_db_con.php');/*project
 				//$query = "SELECT * FROM photos;";
 				//$result = mysqli_query($con, $query);
 				
-				$query = mysql_query("SELECT * FROM photos;");
+				$query = mysqli_query($con,"SELECT * FROM photos;") or die("could  not search");
 	
 	//$result = mysql_query("SELECT * FROM photos");
 				//if($result ){
-					$num_rows = mysql_num_rows($query);
+					$num_rows = mysqli_num_rows($query);
 //echo $num_rows;	
 	
 				$dat = "zi";
@@ -82,7 +82,7 @@ include ('../../database/cnm_db_con.php');/*project
 				$d =array();
 				$xx =array();
 				$head =array();
-				while($row = mysql_fetch_array($query)){
+				while($row = mysqli_fetch_assoc($query)){
 					$cap = $row['caption'];
 					$ds = $row['desc'];
 					$idn = $row['id'];
