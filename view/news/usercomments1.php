@@ -15,8 +15,8 @@ $dbase = "project";//project
 
 
 
-//include ('../../database/cnm_db_con.php');
-
+include ('../../database/dbconnect.php');
+/*
 $connection= mysql_connect ($host, $user, $password);//
 if (!$connection)//
 {
@@ -26,10 +26,12 @@ mysql_select_db($dbase, $connection);//
 /*
 $qry = "SELECT 1 from $table;";
 $result = mysqli_query($con, $qry);
-if($result1== FALSE)        
+
+$x=mysqli_num_rows($result);
+if($x==0){
 */
 
-$val = mysql_query("SELECT 1 FROM comment ORDER BY ID DESC where neid =25");
+$val = mysqli_query($con,"SELECT 1 FROM comment ORDER BY ID DESC where neid ='$neid'");
 
 if($val == FALSE){
    
@@ -41,24 +43,24 @@ VALUES ('$name_entered', '$date', '$comment_entered')");
 $result = mysqli_query($con, $qry);
         
 */
-mysql_query("INSERT INTO comment (name, date, comments,neid)
+mysqli_query($con,"INSERT INTO comment (name, date, comments,neid)
 VALUES ('$name_entered', '$date', '$comment_entered','$neid')");
 }
 /*
 $result="SELECT * FROM $table ORDER BY ID DESC";
 $result1 = mysqli_query($con, $result);
 */
- $g = mysql_query("SELECT * FROM comment"); 
-$f=mysql_num_rows($g);
+ $g = mysqli_query($con,"SELECT * FROM comment"); 
+$f=mysqli_num_rows($g);
     if($f!=0){
-$result= mysql_query( "SELECT * FROM comment  WHERE neid ='$neid' ORDER BY ID DESC" ) 
-or die("SELECT Error: ".mysql_error());// 
+$result= mysqli_query( $con,"SELECT * FROM comment  WHERE neid ='$neid' ORDER BY ID DESC" ) 
+or die("SELECT Error: ".mysqli_error());// 
 
 
 /*
 $row = mysqli_fetch_assoc($result1);
 */
-while ($row = mysql_fetch_array($result)){ 
+while ($row = mysqli_fetch_assoc($result)){ 
 $name_field= $row['name'];
 $date_field= $row['date'];
 $comment_field= $row['comments'];
