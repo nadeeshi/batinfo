@@ -7,7 +7,6 @@ ob_start();
 include("../../assets/includedFiles/connect.php");
 
 //if(isset($_POST['send'])!=""){
-
     $scientific_name=mysql_real_escape_string($_POST['scientific_name']);
     $bat_order=mysql_real_escape_string($_POST['bat_order']);
     $kingdom=mysql_real_escape_string($_POST['kingdom']);
@@ -30,8 +29,7 @@ include("../../assets/includedFiles/connect.php");
     $measurements=mysql_real_escape_string($_POST['measurements']);
     $other_details=mysql_real_escape_string($_POST['other_details']);
 
-
-    $update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,genus,phylum,family,sub_family,
+$update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,genus,phylum,family,sub_family,
 bat_class,species,common_names,synonyms,roost,conservation_status,country_occurence,feeding,breeding,threats,conservation_action,population,measurements,other_details,created)VALUES
                                       ('$scientific_name','$bat_order','$kingdom','$genus','$phylum','$family','$sub_family','$bat_class','$species','$common_names','$synonyms','$roost','$conservation_status','$country_occurence',
                                       '$feeding','$breeding','$threats','$conservation_action','$population','$measurements','$other_details',now())");
@@ -48,6 +46,6 @@ bat_class,species,common_names,synonyms,roost,conservation_status,country_occure
         echo "<script type='text/javascript'>alert('$errormsg');</script>";
 
     //}
-}
+    }
 ob_end_flush();
 ?>

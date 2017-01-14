@@ -1,9 +1,9 @@
 <?php
-$mysql_hostname = "localhost";
-$mysql_user = "root";
-$mysql_password = "";
-$mysql_database = "project";
+$mysqli_hostname = "localhost";
+$mysqli_user = "root";
+$mysqli_password = "";
+$mysqli_database = "project";
 $prefix = "";
-$bd = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");
-mysqli_select_db($bd ,$mysql_database) or die("Could not select database");
+$bd = mysqli_connect($mysqli_hostname, $mysqli_user, $mysqli_password) or die("Could not connect database");
+mysqli_select_db($bd ,$mysqli_database) or die("Could not select database");
 ?>

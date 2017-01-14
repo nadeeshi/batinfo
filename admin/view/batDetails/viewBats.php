@@ -4,23 +4,15 @@ require_once('../../assets/includedFiles/auth.php');
 
 <!DOCTYPE html>
 <html>
-
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>BatFacts.com</title>
-
-
 </head>
-
-
 
 <body>
 <?php include "../../assets/includedFiles/template.php" ?>
-
-
 
 <div id="page-wrapper">
     <div id="page-inner">
@@ -30,10 +22,7 @@ require_once('../../assets/includedFiles/auth.php');
                 <h1 class="page-subhead-line">All bats details </h1>
 
             </div>
-
         </div>
-
-
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
@@ -41,13 +30,9 @@ require_once('../../assets/includedFiles/auth.php');
                         View data from the database
                     </div>
                     <!-- <a href="test.php">get pdf</a>-->
-
-
                     <div class="panel-body">
                         <h4 style="color: #00CA79">View  Details of Bats</h4>
                         <div style="margin-top: 20px;">
-
-
                             <?php
                             if(isset($_GET['id']))
                             {
@@ -69,36 +54,22 @@ require_once('../../assets/includedFiles/auth.php');
                                     $speciesAuthority=$profile['species'];
                                     $commonNames=$profile['common_names'];
                                     $synonyms=$profile['synonyms'];
-
-
                                     $country_occurence=$profile['country_occurence'];
                                     $population=$profile['population'];
                                     $roost=$profile['roost'];
-
                                     $conservation=$profile['conservation_status'];
-
                                     $created=$profile['created'];
-
-
-                                    ?>
-
+                                   ?>
 
 
                                     <p style="margin-left: 500px"><a target="_blank" href="pdfView.php?id=<?php echo $id; ?>">
                                             <span class="view" title="View" > Get PDF version </span></a></p>
 
                                     <div class="display">
-
-
-
-
-
                                         <p> SCIENTIFIC NAME : <span style="color: #cc006a"><?php echo  $scientificName; ?></span>
-
                                         </p>
                                         <br />
                                         <p> KINGDOM : <span style="color: #cc006a"><?php echo  $kingdom; ?></span>
-
                                         </p>
                                         <br />
                                         <p> PHYLUM : <span style="color: #cc006a"><?php echo  $phylum; ?></span>
@@ -119,7 +90,7 @@ require_once('../../assets/includedFiles/auth.php');
                                         <p> SUB FAMILY : <span style="color: #cc006a"><?php echo  $subFamily; ?></span>
                                         </p>
                                         <br />
-                                        <p> SPECIES AUTHORITY : <span style="color: #cc006a"><?php echo  $speciesAuthority; ?></span>
+                                        <p> SPECIES AUTHORITY : <span style="color: #cc006a"><?php echo  $speciesAuthority; ?></span> 
                                         </p>
                                         <br />
                                         <p> COMMON NAMES : <span style="color: #cc006a"><?php echo  $commonNames; ?></span>
@@ -128,8 +99,6 @@ require_once('../../assets/includedFiles/auth.php');
                                         <p> SYNONYMS : <span style="color: #cc006a"><?php echo  $synonyms; ?></span>
                                         </p>
                                         <br />
-
-
                                         <p> COUNTRY OCCURENCE : <span style="color: #cc006a"><?php echo  $country_occurence; ?></span>
                                         </p>
                                         <br />
@@ -139,34 +108,19 @@ require_once('../../assets/includedFiles/auth.php');
                                         <p> ROOST : <span style="color: #cc006a"><?php echo  $roost; ?></span>
                                         </p>
                                         <br />
-
                                         <p> CONSERVATION : <span style="color: #cc006a"><?php echo  $conservation; ?></span>
                                         </p>
                                         <br />
-
-
-
                                         <p> CREATED ON : <span><?php echo $created; ?></span>
                                         </p>
                                         <br />
                                     </div>
-                                <?php } }?>
-
-
-
+                            <?php } }?>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
-
-
         </div>
-
-
-
     </div>
 </div>
 

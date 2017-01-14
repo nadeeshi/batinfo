@@ -63,7 +63,7 @@
 
 
 
-                mysqli_close($con);
+                
                 ?>
                 <table >
                     <thead>
@@ -92,6 +92,7 @@
 
                             echo '</tr>';
                         }
+						mysqli_close($con);
                         ?>
                     </tbody>
                 </table>
