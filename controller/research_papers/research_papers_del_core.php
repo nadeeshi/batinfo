@@ -52,7 +52,7 @@
             mysqli_query($con, $query) or die("Something Went Wrong!!!");
 
             if ($con->query($query) === TRUE) {
-                echo "<p class='msg'>Bat Succesfully Deleted<p>";
+                echo "<p class='msg'>Paper Succesfully Deleted<p>";
                 echo '<br><br><a href="../../view/research_papers/research_papers_update_del.php"><button class="my-button">Back</button></a>';
             } else {
                 echo "<p class='msg'>Something Went Wrong!!!</p>";

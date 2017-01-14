@@ -31,8 +31,7 @@
 
         <style> 
             body{
-                font-size: 16px;
-                font-weight: bold;
+               
             }
             .th_sname, .th_option{
                 font-size: 20px;
