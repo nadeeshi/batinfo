@@ -5,7 +5,7 @@ require_once ("../../database/connection.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>discussion</title>
+	<title>Discussion | BatsInfo</title>
 	<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="../../assets/css/forum.css" rel="stylesheet" type="text/css">
 	<link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
