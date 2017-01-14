@@ -92,10 +92,22 @@ if (isset($_POST['login'])) {
             
         </div>
     </div>
-    
-        <div id="footer" class="container=fluid">
-        <a name="contact"> <?php include ("../../assets/IncludedFiles/footer.php") ?> </a>
-    </div> 
-       
+ 
+    <div class="push"></div>
+</div>
+
+    <!--get footer -->
+
+    <div>
+        <div class="col-xs-12 ">
+          <?php include "../../assets/includedFiles/footer.php" ?>
+        </div>  
+    </div>
+
+
+
+<script src="../../assets/JS/jquery.js"></script>
+<script src="../../assets/JS/bootstrap.min.js"></script>
+
 </body>
 </html>
