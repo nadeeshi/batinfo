@@ -72,14 +72,16 @@
 					<p><?php //echo $status; ?></p>
 					<div class="clearfix"> </div>
 					<div class="register-but">
-					<input type="submit" name="submit" value="submit" onclick="alert('view of your submission')"></br>				   
+                    <label>to get a view of when your submission is published hit 'view' button here</label>    
+					</br><input type="submit" name="submit" value="view" onclick="alert('view of your submission')"></br>				   
 					 
 					<div class="clearfix"> </div>
 				   
 					</div>
 				</div>	 
 			</form>
-			     
+		<label>to cancel your submission hit 'cancel' button</label>    
+					</br>	     
         <a class="btn btn-default btn-sm" href="" onclick="alert('cancel the procedure')">cancel</a>
              
 		</div>

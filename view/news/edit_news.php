@@ -3,7 +3,7 @@
 ob_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 
-include ('../../database/cnm_db_con.php');
+include ('../../database/dbconnect.php');
 /*
 dbconnect.php
 $con = mysqli_connect("localhost","root","","test2");
@@ -110,7 +110,7 @@ $row = mysqli_fetch_assoc($result);
 			<?php 
 				
 				error_reporting(0);
-				include ('../../database/cnm_db_con.php');
+				include ('../../database/dbconnect.php');
 /*              dbconnect.php
 				$con = mysqli_connect("localhost","root","","test2");
 
