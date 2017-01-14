@@ -93,12 +93,15 @@ if (isset($_POST['login'])) {
     </div>
     <div class="push"></div>
 </div>
+
     <!--get footer -->
+
     <div>
         <div class="col-xs-12 ">
           <?php include "../../assets/includedFiles/footer.php" ?>
         </div>  
-    </div> 
+    </div>
+
 
 
 <script src="../../assets/JS/jquery.js"></script>
