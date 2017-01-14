@@ -20,7 +20,7 @@
       			<li><a href="../../view/news/u_newst.php">News</a></li>
       			<li><a href="../../view/articles/article2.php">Articles</a></li>
       			<li><a href="../../view/forum/publicTopics.php">Forum</a></li>
-            <li><a href="../../view/forum/publicTopics.php">Gallery</a></li>
+            <li><a href="../../view/profiles/u_profiles.php">Gallery</a></li>
       			<li><a href="../../view/aboutus/aboutus.php">About Us</a></li>
 				    
     			</ul>
