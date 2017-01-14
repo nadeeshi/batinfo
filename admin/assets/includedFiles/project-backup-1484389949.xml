@@ -89,258 +89,6 @@
 		</columns>
 		<records>
 			<record>
-				<bat_id>19</bat_id>
-				<scientific_name>Scotophilus heath</scientific_name>
-				<pic>bphotos/54.JPG</pic>
-				<bat_order>fgfg</bat_order>
-				<kingdom>fgf</kingdom>
-				<genus>ffgdf</genus>
-				<phylum>f</phylum>
-				<family>f</family>
-				<sub_family>f</sub_family>
-				<bat_class>f</bat_class>
-				<species>f</species>
-				<common_names>f</common_names>
-				<synonyms>f</synonyms>
-				<roost>f</roost>
-				<locations>f</locations>
-				<conservation_status>f</conservation_status>
-				<conservation_action>  f</conservation_action>
-				<feeding>  f</feeding>
-				<breeding>  f</breeding>
-				<threats>  f</threats>
-				<country_occurence>f</country_occurence>
-				<measurements>  f</measurements>
-				<other_details>  f</other_details>
-				<population>25</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>27</bat_id>
-				<scientific_name>aaaaaaaaaaaaa</scientific_name>
-				<pic>bphotos/33.JPG</pic>
-				<bat_order>a</bat_order>
-				<kingdom>a</kingdom>
-				<genus>a</genus>
-				<phylum>a</phylum>
-				<family>a</family>
-				<sub_family>aa</sub_family>
-				<bat_class>a</bat_class>
-				<species>a</species>
-				<common_names>a</common_names>
-				<synonyms>a</synonyms>
-				<roost>a</roost>
-				<locations>xdg</locations>
-				<conservation_status>a</conservation_status>
-				<conservation_action>   a   </conservation_action>
-				<feeding>   a   </feeding>
-				<breeding>   a   </breeding>
-				<threats>   a   </threats>
-				<country_occurence>a</country_occurence>
-				<measurements>   a   </measurements>
-				<other_details>   a   </other_details>
-				<population>69</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>33</bat_id>
-				<scientific_name>gggg</scientific_name>
-				<pic>bphotos/67900_608759869142890_763123267_n.jpg</pic>
-				<bat_order>gfh</bat_order>
-				<kingdom>gfh</kingdom>
-				<genus>fgh</genus>
-				<phylum>gfh</phylum>
-				<family>gfh</family>
-				<sub_family>fgh</sub_family>
-				<bat_class>fgh</bat_class>
-				<species>fgh</species>
-				<common_names>fgh</common_names>
-				<synonyms>fgh</synonyms>
-				<roost>gfh</roost>
-				<locations>ghf</locations>
-				<conservation_status>fh</conservation_status>
-				<conservation_action>  fhf  </conservation_action>
-				<feeding>  fhgfh  </feeding>
-				<breeding>  g  </breeding>
-				<threats>  fhfhgf  </threats>
-				<country_occurence>fgjg</country_occurence>
-				<measurements>  fgh  </measurements>
-				<other_details>  fghfg  </other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>34</bat_id>
-				<scientific_name>cvcvcvc</scientific_name>
-				<pic>bphotos/10399010_548094762010408_5296311621900609155_n.jpg</pic>
-				<bat_order>vcvcs</bat_order>
-				<kingdom>fgfbfgb</kingdom>
-				<genus>cbcfb</genus>
-				<phylum>b</phylum>
-				<family>f</family>
-				<sub_family>fc</sub_family>
-				<bat_class>fcb</bat_class>
-				<species>cfb</species>
-				<common_names>fc</common_names>
-				<synonyms>b</synonyms>
-				<roost>f</roost>
-				<locations>fc</locations>
-				<conservation_status>b</conservation_status>
-				<conservation_action>  cb</conservation_action>
-				<feeding>  fcb</feeding>
-				<breeding>  fc</breeding>
-				<threats>  cb</threats>
-				<country_occurence>fc</country_occurence>
-				<measurements>  cb</measurements>
-				<other_details>  cb</other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>36</bat_id>
-				<scientific_name>jgtrdrtfyuhui</scientific_name>
-				<pic>bphotos/240648_361052033983526_360919270_o.jpg</pic>
-				<bat_order>cv</bat_order>
-				<kingdom>cv</kingdom>
-				<genus>c</genus>
-				<phylum>c</phylum>
-				<family>c</family>
-				<sub_family>c</sub_family>
-				<bat_class>c</bat_class>
-				<species>c</species>
-				<common_names> c</common_names>
-				<synonyms> c</synonyms>
-				<roost> c</roost>
-				<locations> c</locations>
-				<conservation_status>c</conservation_status>
-				<conservation_action>  c  </conservation_action>
-				<feeding>  c  </feeding>
-				<breeding>  c  </breeding>
-				<threats>  c  </threats>
-				<country_occurence> c</country_occurence>
-				<measurements>  c  </measurements>
-				<other_details>  c  </other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>40</bat_id>
-				<scientific_name>cccccc</scientific_name>
-				<pic>bphotos/548640_359655627456500_915815382_n.jpg</pic>
-				<bat_order>chhhhhhhhhhhhh</bat_order>
-				<kingdom>c</kingdom>
-				<genus>c</genus>
-				<phylum>c</phylum>
-				<family>c</family>
-				<sub_family>c</sub_family>
-				<bat_class>c</bat_class>
-				<species>c</species>
-				<common_names> c</common_names>
-				<synonyms> c</synonyms>
-				<roost> c</roost>
-				<locations> c</locations>
-				<conservation_status>c</conservation_status>
-				<conservation_action>  c  </conservation_action>
-				<feeding>  c  </feeding>
-				<breeding>  c  </breeding>
-				<threats>  c  </threats>
-				<country_occurence> c</country_occurence>
-				<measurements>  c  </measurements>
-				<other_details>  c  </other_details>
-				<population>10</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>127</bat_id>
-				<scientific_name>aaa aaaaaa aaaa</scientific_name>
-				<pic>bphotos/131.jpg</pic>
-				<bat_order>a</bat_order>
-				<kingdom>a</kingdom>
-				<genus>a</genus>
-				<phylum>a</phylum>
-				<family>a</family>
-				<sub_family>aa</sub_family>
-				<bat_class>a</bat_class>
-				<species>a</species>
-				<common_names>a</common_names>
-				<synonyms>a</synonyms>
-				<roost>a</roost>
-				<locations>moratuwa,panadura</locations>
-				<conservation_status>a</conservation_status>
-				<conservation_action>  a  </conservation_action>
-				<feeding>  a  </feeding>
-				<breeding>  a  </breeding>
-				<threats>  a  </threats>
-				<country_occurence>a</country_occurence>
-				<measurements>  a  </measurements>
-				<other_details>  a  </other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>362</bat_id>
-				<scientific_name>ghy hbh kb</scientific_name>
-				<pic>bphotos/12.jpg</pic>
-				<bat_order>cv</bat_order>
-				<kingdom>cv</kingdom>
-				<genus>c</genus>
-				<phylum>c</phylum>
-				<family>c</family>
-				<sub_family>c</sub_family>
-				<bat_class>c</bat_class>
-				<species>c</species>
-				<common_names> c</common_names>
-				<synonyms> c</synonyms>
-				<roost> c</roost>
-				<locations>Dambulla,Kurunegala,Talawakele,Sigiriya</locations>
-				<conservation_status>c</conservation_status>
-				<conservation_action>c</conservation_action>
-				<feeding>c</feeding>
-				<breeding>c</breeding>
-				<threats>c</threats>
-				<country_occurence> c</country_occurence>
-				<measurements>c</measurements>
-				<other_details>c</other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<bat_id>393</bat_id>
-				<scientific_name>gggg jdhjs</scientific_name>
-				<pic>bphotos/14.jpg</pic>
-				<bat_order>gfh</bat_order>
-				<kingdom>gfh</kingdom>
-				<genus>fgh</genus>
-				<phylum>gfh</phylum>
-				<family>gfh</family>
-				<sub_family>fgh</sub_family>
-				<bat_class>fgh</bat_class>
-				<species>fgh</species>
-				<common_names>fgh</common_names>
-				<synonyms>fgh</synonyms>
-				<roost>gfh</roost>
-				<locations>galle,kandy,Vavuniya</locations>
-				<conservation_status>fh</conservation_status>
-				<conservation_action> fhf </conservation_action>
-				<feeding> fhgfh </feeding>
-				<breeding> g </breeding>
-				<threats> fhfhgf </threats>
-				<country_occurence>fgjg</country_occurence>
-				<measurements> fgh </measurements>
-				<other_details> fghfg </other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
 				<bat_id>440</bat_id>
 				<scientific_name>JSDH SKD </scientific_name>
 				<pic>bphotos/1.jpg</pic>
@@ -420,7 +168,7 @@
 				<country_occurence> k</country_occurence>
 				<measurements>k</measurements>
 				<other_details>k</other_details>
-				<population>0</population>
+				<population>30</population>
 				<created>0</created>
 				<del_bit>1</del_bit>
 			</record>
@@ -448,7 +196,7 @@
 				<country_occurence> g</country_occurence>
 				<measurements>g</measurements>
 				<other_details>g</other_details>
-				<population>0</population>
+				<population>20</population>
 				<created>0</created>
 				<del_bit>1</del_bit>
 			</record>
@@ -482,7 +230,7 @@
 			</record>
 			<record>
 				<bat_id>645</bat_id>
-				<scientific_name>aHJA sjhs hshj</scientific_name>
+				<scientific_name>aHJA sjhs hsh</scientific_name>
 				<pic>bphotos/5.jpg</pic>
 				<bat_order>tttt</bat_order>
 				<kingdom>t</kingdom>
@@ -497,13 +245,13 @@
 				<roost> t</roost>
 				<locations>Minuwangoda,Kadugannawa</locations>
 				<conservation_status>t</conservation_status>
-				<conservation_action>t</conservation_action>
-				<feeding>t</feeding>
-				<breeding>t</breeding>
-				<threats>t</threats>
+				<conservation_action>    t    </conservation_action>
+				<feeding>    t    </feeding>
+				<breeding>    t    </breeding>
+				<threats>    t    </threats>
 				<country_occurence> t</country_occurence>
-				<measurements>t</measurements>
-				<other_details>t</other_details>
+				<measurements>    t    </measurements>
+				<other_details>    t klkl jkjk lkll </other_details>
 				<population>0</population>
 				<created>0</created>
 				<del_bit>0</del_bit>
@@ -1021,13 +769,6 @@ There was time for one more breakthrough before lunch, as Adil Rashid top-edged 
 				<topic_id>27</topic_id>
 				<topic_subject>sewmi rupasinghe</topic_subject>
 				<topic_content>ljgfeouqfguoqgfuqgfuoq[dyq9</topic_content>
-				<topic_date>2017-01-12</topic_date>
-				<topic_by>0</topic_by>
-			</record>
-			<record>
-				<topic_id>28</topic_id>
-				<topic_subject>lkhfwlg</topic_subject>
-				<topic_content>eihfpi</topic_content>
 				<topic_date>2017-01-12</topic_date>
 				<topic_by>0</topic_by>
 			</record>
