@@ -1,4 +1,9 @@
 <?php
+require_once('../../assets/includedFiles/auth.php');
+?>
+
+
+<?php
 ob_start();
 include('../../assets/includedFiles/connect.php');
 if(isset($_GET['id']))
@@ -30,7 +35,8 @@ if(isset($_GET['id']))
 
 
         $updated=mysqli_query($bd,"UPDATE researchers SET
-         password='$epassword' WHERE id='$id'")or die();
+         password='$epassword' WHERE researcher_id='$id'")or die();
+
         if($updated)
         {
             $msg="Successfully Updated!!";
@@ -95,7 +101,9 @@ ob_end_flush();
                             if(isset($_GET['id']))
                             {
                                 $id=$_GET['id'];
-                                $getselect=mysqli_query($bd,"SELECT * FROM researchers WHERE id='$id'");
+                                $getselect=mysqli_query($bd,"SELECT * FROM researchers WHERE researcher_id='$id'");
+                                $getselect=mysqli_query($bd,"SELECT * FROM qualifications WHERE researcher_id='$id'");
+
                                 while($profile=mysqli_fetch_array($getselect))
                                 {
 

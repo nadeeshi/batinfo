@@ -67,7 +67,7 @@ require_once('../../assets/includedFiles/auth.php');
                         <div style="margin-top: 20px;">
                             <?php
                             include('../../assets/includedFiles/connect.php');
-                            $select=mysqli_query($bd,"SELECT * FROM researchers WHERE password is  NULL order by id desc");
+                            $select=mysqli_query($bd,"SELECT * FROM researchers WHERE password is  NULL order by researcher_id desc");
                             //$select=mysql_query("SELECT * FROM researcher_details order by id desc");
                             $i=1;
                             ?>
@@ -83,7 +83,7 @@ require_once('../../assets/includedFiles/auth.php');
                                     <?php
                                     while($userrow=mysqli_fetch_array($select))
                                     {
-                                        $id=$userrow['id'];
+                                        $id=$userrow['researcher_id'];
                                         $fname=$userrow['fname'];
                                         $lname=$userrow['lname'];
                                         $usermail=$userrow['email'];
@@ -115,7 +115,7 @@ require_once('../../assets/includedFiles/auth.php');
                             <!-----view Researchers details------------------------------------------>
                             <?php
                             include('../../assets/includedFiles/connect.php');
-                            $select=mysqli_query($bd,"SELECT * FROM researchers WHERE password is not NULL order by id desc");
+                            $select=mysqli_query($bd,"SELECT * FROM researchers WHERE password is not NULL order by researcher_id desc");
                             //$select=mysql_query("SELECT * FROM researcher_details order by id desc");
                             $i=1;
                             ?>
@@ -131,7 +131,7 @@ require_once('../../assets/includedFiles/auth.php');
                                     <?php
                                     while($userrow=mysqli_fetch_array($select))
                                     {
-                                        $id=$userrow['id'];
+                                        $id=$userrow['researcher_id'];
                                         $fname=$userrow['fname'];
                                         $lname=$userrow['lname'];
                                         $usermail=$userrow['email'];

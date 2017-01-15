@@ -68,12 +68,15 @@ require_once('../../assets/includedFiles/auth.php');
                                     ob_start();
                                     include("../../assets/includedFiles/connect.php");
                                     $sql="SELECT * FROM tbl_uploads";
+                                   // $sql="SELECT * FROM tbl_uploads";
+                                    //$sql="SELECT * FROM research_papers AND tbl_uploads";
 
                                     $result_set=mysqli_query($bd,$sql);
                                     while($row=mysqli_fetch_array($result_set))
                                     {
                                         ?>
                                         <tr>
+
                                             <td><?php echo $row['file'] ?></td>
                                             <td><?php echo $row['type'] ?></td>
                                             <td><?php echo $row['size'] ?></td>

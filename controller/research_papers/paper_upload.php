@@ -31,13 +31,13 @@
 
                 echo '<br><br><a href="../../view/research_papers/research_papers.php"><button class="my-button">Try Again</button></a>';
             } else {
-                // $researcher_id =  $_SESSION['usr_id'];
+                $researcher_id =  $_SESSION['usr_id'];
 
-                $researcher_id = 6;
+               
 
                 $var = $researcher_id;
 
-                $structure = "/wamp/www/batinfo/assets/research_papers/$var";
+                $structure = "/xwampp/htdocs/batinfo/assets/research_papers/$var";
 
                 //create a directory for each researcher id if not exist
                 if (!is_dir($structure)) {
