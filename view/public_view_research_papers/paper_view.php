@@ -92,7 +92,7 @@ require_once ("../../database/connection.php");
 
 
 
-                    echo '<td class="td_data td_data_op lbl"><a class="link" href="research_paper_details.php?category=' . $row['category'] . '" ">view</a></td>';
+                    echo '<td class="td_data td_data_op lbl"><a class="link" href="category_view.php?category=' . $row['category'] . '" ">view</a></td>';
 
                     echo '</tr>';
                 }

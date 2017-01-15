@@ -86,13 +86,13 @@ require_once ("../../database/connection.php");
                 while ($row = mysqli_fetch_array($result)) {
                     echo '<tr id="tr_data">';
                     echo '<td class="td_data num lbl">' . $i . '</td>';
-                    echo '<td class="td_data lbl"><a target = "_blank" href="../../assets/'.$row['paper'].'">' . $row['category'] . '</a></td>'; 
+                    echo '<td class="td_data lbl">'.$row['category'] . '</td>'; 
                    
                     $i = $i + 1;
 
 
 
-                    echo '<td class="td_data td_data_op lbl"><a class="link" href="research_paper_details.php?id=' . $row['paper_id'] . '" ">view</a></td>';
+                    echo '<td class="td_data td_data_op lbl"><a class="link" href="category_view.php?category=' . $row['category'] . '" ">view</a></td>';
 
                     echo '</tr>';
                 }
