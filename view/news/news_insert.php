@@ -68,6 +68,7 @@
 	<div>
 		<?php //
 		include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
+        if(isset($_SESSION['usr_id'])){echo $_SESSION['usr_id'];}
 	</div>
 	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
 	

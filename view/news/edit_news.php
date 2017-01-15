@@ -135,12 +135,13 @@ $row = mysqli_fetch_assoc($result);
 					move_uploaded_file($_FILES["image"]["tmp_name"],"../../assets/images/photos/" . $_FILES["image"]["name"]);
 			
 					$location=$_FILES["image"]["name"];
-
+                   // $r_id=$_SESSION['usr_id'];//<---
 					$id=$_REQUEST['ed_id'];
 					$tt =$_REQUEST['title'];
 					$des = $_REQUEST['body'];
 					
-
+                    //sess
+                    
 					$update="update news_before set title='".$tt."',image='".$location."', body='".$des."' where nid='".$id."'";
 
 					
