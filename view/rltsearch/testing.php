@@ -7,7 +7,7 @@ include ('../../database/dbconnect.php');
 <html>
 	
 	<head>
-	<title>thread</title>
+	<title>bat search</title>
 	<link href="https://fonts.googleapis.com/css?family=Alike+Angular" rel="stylesheet"> 
     <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../assets/CSS/testing.css">	

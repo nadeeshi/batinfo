@@ -7,7 +7,7 @@ include ('../../database/dbconnect.php');
 <html>
 	
 	<head>
-	<title>thread</title>
+	<title>bat search</title>
 	<link href="https://fonts.googleapis.com/css?family=Alike+Angular" rel="stylesheet"> 
     <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../assets/CSS/testing.css">	
@@ -58,9 +58,9 @@ include ('../../database/dbconnect.php');
 	
 				include ("vm.php");
 				
-				$query = mysql_query("SELECT * FROM photos;");
+				$query = mysqli_query($con,"SELECT * FROM photos;");
 	
-				$num_rows = mysql_num_rows($query);
+				$num_rows = mysqli_num_rows($query);
 //echo $num_rows;	
 	
 				$dat = "zi";
@@ -68,7 +68,7 @@ include ('../../database/dbconnect.php');
 				$d =array();
 				$xx =array();
 				$head =array();
-				while($row = mysql_fetch_array($query)){
+				while($row = mysqli_fetch_assoc($query)){
 					$cap = $row['caption'];
 					$ds = $row['desc'];
 					$idn = $row['id'];
