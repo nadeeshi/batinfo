@@ -33,11 +33,12 @@ $fname = $_POST['fname'];
 $mname = $_POST['mname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
+$password = $_POST['password'];
 
 $id = $_SESSION['usr_id'];
 
 
-$sql = "UPDATE researchers SET fname='$fname', mname='$mname', lname='$lname', email='$email' WHERE id=$id ";
+$sql = "UPDATE researchers SET fname='$fname', mname='$mname', lname='$lname', email='$email',password='$password' WHERE researcher_id='$id'";
 
 if ($con->query($sql) === TRUE) {
     echo "<script>";

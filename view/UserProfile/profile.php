@@ -28,7 +28,7 @@
        
         include_once '../../database/dbconnect.php';
         $id= $_GET['id'];
-        $sql = "select * from researchers where id= $id";
+        $sql = "select * from researchers where researcher_id= $id";
         $res = $con->query($sql);
 
         while ($row = $res->fetch_assoc()) {
@@ -62,6 +62,10 @@
                 <tr>
                     <td>Email</td>
                     <td><input type="text" name="email" value="<?php echo $row['email'];?>"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="text" name="password" value="<?php echo $row['password'];?>"></td>
                 </tr>
                 
                 <tr>
