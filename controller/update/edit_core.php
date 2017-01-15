@@ -110,10 +110,10 @@
 
             if ($con->query($query) === TRUE) {
                 echo "<p class='msg'>Bat Succesfully Updated<p>";
-                echo '<br><br><a href="../../view/delete_update/edit_delete_home.php"><button class="my-button">Back</button></a>';
+                echo '<br><br><a href="../../view/delete_update/edit_home.php"><button class="my-button">Back</button></a>';
             } else {
                 echo "<p class='msg'>Something Went Wrong!!!</p>";
-                echo '<br><br><a href="../../view/delete_update/edit_delete_home.php"><button class="my-button">Try Again</button></a>';
+                echo '<br><br><a href="../../view/delete_update/edit_home.php"><button class="my-button">Try Again</button></a>';
 
             }
 
