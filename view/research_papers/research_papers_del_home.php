@@ -19,13 +19,7 @@
          <script src="../../assets/JS/edit_del_confimtions.js"></script>
         
        <script src="../../assets/JS/bootstrap.js"></script>
-        
-   <style> 
-        
-            </style>
-
-
-
+  
     </head>
     <body>
 
@@ -43,11 +37,10 @@
                     if (mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
-                    //$researcher_id = $_SESSION['usr_id'];
-                    $researcher_id= 6;
-             
-     $result1 = mysqli_query($con, "SELECT * FROM research_papers WHERE  del_bit='0'  AND researcher_id= '$researcher_id'");
-     $result2 = mysqli_query($con, "SELECT * FROM research_papers WHERE  del_bit='1' AND researcher_id= '$researcher_id'");
+                    $researcher_id = $_SESSION['usr_id'];
+                    
+                     $result1 = mysqli_query($con, "SELECT * FROM research_papers WHERE  del_bit='0'  AND researcher_id= '$researcher_id'");
+                     $result2 = mysqli_query($con, "SELECT * FROM research_papers WHERE  del_bit='1' AND researcher_id= '$researcher_id'");
 
 
                     mysqli_close($con);

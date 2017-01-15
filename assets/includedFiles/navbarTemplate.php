@@ -56,7 +56,7 @@ ob_end_flush();
 		        	</div>
 		        	<li class="min-link"><a href= "#" class="navbar-head-list"><?php echo $_SESSION['usr_name']; ?></a></li>
 		            <li class="min-link"><a href="../../controller/graph/graph.php">Home</a></li>
-		            <li class="min-link"><a href="../view/bats_view/bats_view.php">Bats Info</a></li>
+		            <li class="min-link"><a href="../../view/profiles/profiles.php">Bats Info</a></li>
 		            <li class="min-link"><a href="../nadee/listOfResearch.php">Research Info</a></li>
                     <li class="min-link"><a href="../../view/research_papers/research_papers_view.php">Research Papers</a></li>
 		            <li class="min-link"><a href="../../view/forum/forumTopics.php">Forum</a></li>
@@ -82,7 +82,7 @@ ob_end_flush();
 			    <li><a href="../../controller/graph/graph.php">Home</a></li>
 			    <li><a href="">Bats Information</a>
 			    	<ul class="submenu nav-pills nav-stacked">
-                            <li><a href="../../view/bats_view/bats_view.php">View</a></li>
+                           
                             <li><a href="../../view/insert/insert_form.php">Insert</a></li>
                             <li><a href="../../view/delete_update/delete_home.php">Delete</a></li>
                             <li><a href="../../view/delete_update/edit_home.php">Update</a></li>
