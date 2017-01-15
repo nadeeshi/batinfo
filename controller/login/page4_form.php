@@ -49,10 +49,19 @@
  } 
  extract($_SESSION['post']); // Function to extract array.
  $connection = mysqli_connect("localhost", "root", "");
+
  $db = mysqli_select_db($connection,"project" ); // Storing values in database.
+     //$reseacher_id = "SELECT reseacher_id FROM reseachers WHERE reseacher_id = ";
  $query = "INSERT INTO researchers (title,fname,mname,lname,gender,nic,add1,add2,city,country,major,email) VALUES('$title','$fname','$mname','$lname','$gender','$nic','$add1','$add2','$city','$country','$major','$email');";
-  $query .= "INSERT INTO qualifications (q1name,q1ins,q1year,q2name,q2ins,q2year,other) values('$q1name','$q1ins','$q1year','$q2name','$q2ins','$q2year','$other');";
- if (mysqli_multi_query($connection,$query)) {
+
+ if (mysqli_query($connection,$query) ) {
+     $res=mysqli_query($connection,"SELECT researcher_id FROM researchers WHERE nic='$nic'");
+     if($row = mysqli_fetch_assoc($res)) {
+
+         $query2 = "INSERT INTO qualifications (researcher_id,q1name,q1ins,q1year,q2name,q2ins,q2year,other) values('$row[0]','$q1name','$q1ins','$q1year','$q2name','$q2ins','$q2year','$other');";
+     }
+
+
  echo '<p><span id="success"><center><b style="font-size:16px;">Request Submitted successfully !</b></center></span></p>';
  echo '<p style="font-size:16px;"> Your qualifications are being evaluated. You will recieve a password to your email provided soon. </p>';
 
