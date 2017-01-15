@@ -48,7 +48,7 @@
 
                
                 $var = $researcher_id;
-                $structure = "/wamp/www/batinfo/assets/images/$pic_path";
+                $structure = "../../assets/images/$pic_path";
 
                 $file = $structure;
 
@@ -68,7 +68,7 @@
 
 
                     if ($con->query($query) === TRUE) {
-                        echo "<p class='msg'>Paper Succesfully Deleted<p>";
+                        echo "<p class='msg'>Bat Succesfully Deleted<p>";
                         echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Back</button></a>';
                     } else {
                         echo "<p class='msg'>Something Went Wrong!!!</p>";

@@ -33,9 +33,20 @@
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
             }
             $size = $_FILES['image']['size'];
-                
-
+       
+  
             if($size>0){
+                $pic_path = mysqli_real_escape_string($con, $_POST['pic_path']);
+                $structure = "../../assets/images/$pic_path";
+
+                $file = $structure;
+
+                // delete the image from relavant folder/ directory before insert new image
+                if (!unlink($file)) {
+                    echo "<p class='msg'>Something Went Wrong!!!</p>";
+                    echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
+                } else {
+                
                 
                 $file = $_FILES['image']['tmp_name'];
                 $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
@@ -46,6 +57,9 @@
                 move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
 
                 $pic_path = "bphotos/" . $_FILES["image"]["name"];
+                    
+                    
+                }
             }elseif ($size<=0){
                 
                 
