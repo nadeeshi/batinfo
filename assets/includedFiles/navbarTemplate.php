@@ -1,8 +1,9 @@
 <?php
+ob_start(); 
 session_start();
 
 include_once '../../database/dbconnect.php';
-
+ob_end_flush();
 ?>
 <!-- start of the heading naavigation bar -->
 <!-- <div class="nav-header"> -->
@@ -26,11 +27,12 @@ include_once '../../database/dbconnect.php';
 	    		<ul class="nav navbar-nav  navbar-right navbar-li">
 		            <div class="collapse navbar-collapse" id="navbar1">
 			            <ul class="nav navbar-nav navbar-right">
-			                <?php if (isset($_SESSION['usr_id'])) { ?>
+			                <?php
+			                 if (isset($_SESSION['usr_id'])) { ?>
 			                <li><a href="../../controller/login/logout.php" class="navbar-head-list">Log Out</a></li>
 			                <?php } else { ?>
 			                <li><a class="navbar-head-list" href="login.php">Login</a></li>
-			                <li><a class="navbar-head-list" href="register.php">Sign Up</a></li>
+			                <li><a class="navbar-head-list" href="../../controller/login/logout.php">Sign Up</a></li>
 			                <?php } ?>
 			            </ul>
 			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
@@ -52,7 +54,7 @@ include_once '../../database/dbconnect.php';
 		            <li class="min-link"><a href="../../controller/graph/graph.php">Home</a></li>
 		            <li class="min-link"><a href="../view/bats_view/bats_view.php">Bats Info</a></li>
 		            <li class="min-link"><a href="../nadee/listOfResearch.php">Research Info</a></li>
-                     <li class="min-link"><a href="../../view/research_papers/research_papers_view.php">Research Papers</a></li>
+                    <li class="min-link"><a href="../../view/research_papers/research_papers_view.php">Research Papers</a></li>
 		            <li class="min-link"><a href="../../view/forum/forumTopics.php">Forum</a></li>
 		            <li class="min-link"><a href="../../view/news/newst.php">News</a></li>
 		            <li class="min-link"><a href="../help/index.php">Help</a></li>
@@ -89,7 +91,6 @@ include_once '../../database/dbconnect.php';
 				        <li><a href="../../view/research_papers/research_papers.php">Upload</a></li>
 				        <li><a href="../../view/delete_update/edit_delete_home.php">Delete</a></li>
 				        <li><a href="../../view/delete_update/edit_delete_home.php">Update</a></li>
-				        <li><a href="../../view/profiles/profiles.php">Bat Profile</a></li>
 			      	</ul>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
 			    </li>
@@ -99,7 +100,11 @@ include_once '../../database/dbconnect.php';
 			    		<li><a href="../../view/news/news_insert.php">Add News</a></li>
 			    	</ul>
 			    </li>
-			    <li><a href="../../view/help/index.php">Help</a></li>
+			    <li><a href="../../view/help/index.php">Help</a>
+			    	<ul class="submenu nav-pills nav-stacked">
+			    		<li><a href="../../view/news/newst.php">User Manual</a></li>
+			    	</ul>
+			    </li>
 			    <li><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>
 			  </ul>
 			</nav>

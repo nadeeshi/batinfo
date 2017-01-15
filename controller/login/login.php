@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
     $result = mysqli_query($con, "SELECT * FROM researchers WHERE email = '" . $email. "' and password = '" . $password . "'");
 
     if ($row = mysqli_fetch_array($result)) {
-        $_SESSION['usr_id'] = $row['id'];
+        $_SESSION['usr_id'] = $row['researcher_id'];
         $_SESSION['usr_name'] = $row['fname'];
         header("Location: ../graph/graph.php");
     } else {
