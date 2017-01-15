@@ -39,10 +39,14 @@
                         $file = $_FILES['image']['tmp_name'];
                         $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
                         $image_name = addslashes($_FILES['image']['name']);
+                        
+                        $image_default_name =  $_FILES["image"]["name"];
+                        $new_image_name = rand(1000,100000000).$_FILES["image"]["name"];
+                        @rename($image_default_name, $new_image_name);
 
-                        move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
+                        move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $new_image_name);
 
-                        $pic_path = "bphotos/" . $_FILES["image"]["name"];
+                        $pic_path = "bphotos/" . $new_image_name;
                     }
 
                     $researcher_id = mysqli_real_escape_string($con, $_SESSION['usr_id']);
