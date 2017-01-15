@@ -17,7 +17,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/footer3.css">-->
         <script src="assets/JS/jquery.js"></script>
         <script src="assets/JS/bootstrap.js"></script>
-        <script src=""https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js""></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="assets/JS/jssor.slider.mini.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
 
-    </style>
+    
 </head>
 
 <body>
@@ -78,10 +78,10 @@
               
             </ul>
             </div>
-        
+          </div>
     </nav>
 
-    </div>
+  
     <div class="container" style="padding-top:100px;">
         <?php include ("assets/IncludedFiles/headerImage.php") ?>
     </div>
