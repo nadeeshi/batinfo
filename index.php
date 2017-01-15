@@ -86,7 +86,7 @@
         <?php include ("assets/IncludedFiles/headerImage.php") ?>
     </div>
 
-    <div class="container-fluid" style="padding-top:30px; padding-bottom:200px;">
+        <div class="container-fluid" style="padding-top:30px; padding-bottom:200px;">
       
         <h2><a name="articles" style="text-decoration:none;" href="../articles/article.php">Recent Articles</a></h2>
         
@@ -125,6 +125,7 @@ if ($result->num_rows > 0) {
 }
 
 ?>
+        
 
     
     <div class="push"></div>
@@ -133,7 +134,7 @@ if ($result->num_rows > 0) {
         <a name="contact"> <?php include ("assets/IncludedFiles/footer.php") ?> </a>
     </div>
 
-  
+        
   
 </body>
 </html>

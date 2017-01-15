@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/bats_view_css.css"/>
+         
         <link rel="stylesheet" href="../../assets/CSS/bats_view.css"/>
         <link rel="stylesheet" href="../../assets/CSS/edit_del_page.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
@@ -22,8 +23,7 @@
         <script src="../../assets/JS/validate_text_fields.js"></script>
         <script src="../../assets/JS/edit_del_confimtions.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-
-
+        <style>body{background-color: beige;}</style>
 
     </head>
     <body>

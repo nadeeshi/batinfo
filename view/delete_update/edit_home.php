@@ -9,7 +9,8 @@
 
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
-          <link rel="stylesheet" href="../../assets/CSS/edit_home_css.css"/>
+        <link rel="stylesheet" href="../../assets/CSS/edit_home_css.css"/>
+        
         <link rel="stylesheet" href="../../assets/CSS/edit_del_page.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
@@ -18,8 +19,8 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-
-       
+        <style>body{background-color: beige;}</style>
+        
 
 
     </head>
@@ -30,9 +31,9 @@
         </div>
 
         <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
-                <div class="head-up-del">
-                   <h2>Upadte Delete Bats Details</h2>
-                </div>
+            <div class="head-up-del">
+                <h2>Upadte Delete Bats Details</h2>
+            </div>
             <div class="table" >
 
 
@@ -43,7 +44,7 @@
                 }
                 $researcher_id = $_SESSION['usr_id'];
 
-                
+
                 $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0' AND researcher_id= '$researcher_id'");
 
 
@@ -58,7 +59,7 @@
 
 
                             <td class='td th_option lbl head'>Action</td>
-                          
+
                         </tr>
                     </thead>
 
@@ -74,7 +75,7 @@
 
                             echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_update();">edit</a></td>';
 
-                         
+
 
                             echo '</tr>';
                         }

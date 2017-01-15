@@ -10,15 +10,16 @@
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/edit_del_page.css"/>
-          <link rel="stylesheet" href="../../assets/CSS/deletehome.css"/>
+        <link rel="stylesheet" href="../../assets/CSS/deletehome.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
+        
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
         <script src="../../assets/JS/edit_del_confimtions.js"></script>
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-     
+        <style>body{background-color: beige;}</style>
     </head>
     <body>
 
@@ -27,7 +28,7 @@
         </div>
 
         <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
-                
+
             <div class="table" >
 
 
@@ -69,8 +70,8 @@
                             $i = $i + 1;
 
                             echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/bat _hide.php?scientific_name=' . $row['scientific_name'] . '"onclick="return myFunction_hide();">hide</a></td>';
-                            
-                            echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?bat_sn_path='.$row['pic']."^" . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
+
+                            echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?bat_sn_path=' . $row['pic'] . "^" . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
 
                             echo '</tr>';
                         }
@@ -78,8 +79,8 @@
                     </tbody>
 
                 </table><br><br><br><br>
-                 <h3>Unide or delete a Bat </h3>
-                  <table >
+                <h3>Unide or delete a Bat </h3>
+                <table >
                     <thead>
                         <tr>
                             <td class='td th_option lbl head'></td>
@@ -103,8 +104,8 @@
                             $i = $i + 1;
 
                             echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/bat_unhide.php?scientific_name=' . $row['scientific_name'] . '"onclick="return myFunction_unhide();">unhide</a></td>';
-                            
-                            echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?bat_sn_path='.$row['pic']."^" . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
+
+                            echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?bat_sn_path=' . $row['pic'] . "^" . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
 
 
                             echo '</tr>';

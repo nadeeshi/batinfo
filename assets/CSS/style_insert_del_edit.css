@@ -148,7 +148,10 @@
 
                 height: 480px;
 
-            } 
+            }    
+            body{
+                background-color: beige;
+            }
              
 
  

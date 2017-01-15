@@ -7,6 +7,7 @@
 
         <title>upload new research papers</title>
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
+       
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
@@ -14,7 +15,7 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        
+        <style>body{background-color: beige;}</style>
     </head>
     <body>
         <!-- include header file-->

@@ -16,7 +16,11 @@
        
         <script src="../../assets/JS/validation_check.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-     
+    <style>
+        body{
+                background-color: beige;
+            }
+        </style>
     </head>
     <body>
         <!-- include header file-->

@@ -9,7 +9,7 @@
         <title>edit bats</title>
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
-         <link rel="stylesheet" href="../../assets/CSS/edit_form_css.css"/>
+        <link rel="stylesheet" href="../../assets/CSS/edit_form_css.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/validate_text_fields.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-
+        <style>body{background-color: beige;}</style>
     </head>
 
     <body >
