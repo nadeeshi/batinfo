@@ -106,7 +106,7 @@ ob_end_flush();
 			    </li>
 			    <li><a href="../../view/help/index.php">Help</a>
 			    	<ul class="submenu nav-pills nav-stacked">
-			    		<li><a href="../../view/news/newst.php">User Manual</a></li>
+			    		<li><a href="../../view/user_manual/display_manual.php">User Manual</a></li>
 			    	</ul>
 			    </li>
 			    <li><a href="../../view/aboutUs/aboutUs.php">About Us</a></li>

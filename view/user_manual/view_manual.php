@@ -24,7 +24,7 @@
 		</div>
 		</br>
 		<div>
-			<input type="button" style="width:20%;color: blue;" id="btnshow" value="user-manual.pdf">
+			<input type="button" style="width:20%;color: black;" id="btnshow" value="Click To View PDF version">
 			 
 			</br></br>
 			<iframe id="show_pdf" style="width: 850px; height: 550px;">
