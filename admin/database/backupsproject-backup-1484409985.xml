@@ -258,109 +258,59 @@
 			</record>
 		</records>
 	</table>
-	<table name="deleted_bat_details">
+	<table name="comment">
 		<columns>
-			<column name="bat_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="deleted_bat_details" type="int" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="scientific_name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="bat_order" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="kingdom" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="genus" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="phylum" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="family" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="sub_family" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="bat_class" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="species" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="common_names" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="synonyms" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="roost" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="conservation_status" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="conservation_action" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="feeding" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="breeding" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="threats" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="country_occurence" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="measurements" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="other_details" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="deleted_bat_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="ID" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="comment" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="comment" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="date" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="comment" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="comments" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="comment" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="neid" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="comment" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="r_id" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="comment" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<bat_id>2</bat_id>
-				<scientific_name>Pteropus giganteus</scientific_name>
-				<bat_order>test data test data test data test data test data</bat_order>
-				<kingdom>test data test data test data test data test data</kingdom>
-				<genus>test data test data test data test data test data</genus>
-				<phylum>test data test data test data test data test data</phylum>
-				<family>test data test data test data test data test data</family>
-				<sub_family>test data test data test data test data test data</sub_family>
-				<bat_class>test data test data test data test data test data</bat_class>
-				<species>test data test data test data test data test data</species>
-				<common_names>test data test data test data test data test data</common_names>
-				<synonyms>test data test data test data test data test data</synonyms>
-				<roost>test data test data test data test data test data</roost>
-				<conservation_status>test data test data test data test data test data</conservation_status>
-				<conservation_action> test data test data test data test data test data </conservation_action>
-				<feeding> test data test data test data test data test data </feeding>
-				<breeding> test data test data test data test data test data </breeding>
-				<threats> test data test data test data test data test data </threats>
-				<country_occurence>test data test data test data test data test data</country_occurence>
-				<measurements> test data test data test data test data test data </measurements>
-				<other_details> test data test data test data test data test data </other_details>
+				<ID>1</ID>
+				<name>hello</name>
+				<date>01-14-2017</date>
+				<comments>hello world</comments>
+				<neid>4</neid>
+				<r_id></r_id>
 			</record>
 			<record>
-				<bat_id>6</bat_id>
-				<scientific_name>Pipistrellus ceylonicus </scientific_name>
-				<bat_order>test data test data test data test data test data</bat_order>
-				<kingdom>test data test data test data test data test data</kingdom>
-				<genus>test data test data test data test data test data</genus>
-				<phylum>test data test data test data test data test data</phylum>
-				<family>test data test data test data test data test data</family>
-				<sub_family>test data test data test data test data test data</sub_family>
-				<bat_class>test data test data test data test data test data</bat_class>
-				<species>test data test data test data test data test data</species>
-				<common_names>test data test data test data test data test data</common_names>
-				<synonyms>test data test data test data test data test data</synonyms>
-				<roost>test data test data test data test data test data</roost>
-				<conservation_status>test data test data test data test data test data</conservation_status>
-				<conservation_action>test data test data test data test data test data</conservation_action>
-				<feeding>test data test data test data test data test data</feeding>
-				<breeding>test data test data test data test data test data</breeding>
-				<threats>test data test data test data test data test data</threats>
-				<country_occurence>test data test data test data test data test data</country_occurence>
-				<measurements>test data test data test data test data test data</measurements>
-				<other_details>test data test data test data test data test data</other_details>
+				<ID>2</ID>
+				<name>chamara</name>
+				<date>01-14-2017</date>
+				<comments>hello chamara this is awesome</comments>
+				<neid>3</neid>
+				<r_id></r_id>
+			</record>
+			<record>
+				<ID>3</ID>
+				<name>nuwan</name>
+				<date>01-14-2017</date>
+				<comments>yep budy this is awesome</comments>
+				<neid>2</neid>
+				<r_id></r_id>
+			</record>
+			<record>
+				<ID>4</ID>
+				<name>munasinghe</name>
+				<date>01-14-2017</date>
+				<comments>well done bro</comments>
+				<neid>1</neid>
+				<r_id></r_id>
 			</record>
 		</records>
 	</table>
-	<table name="fulldemo">
+	<table name="news_before">
 		<columns>
-			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="fulldemo" type="int" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="fulldemo" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="city" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="fulldemo" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="location" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="fulldemo" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="description" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="fulldemo" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="nid" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="news_before" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="news_before" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="image" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="news_before" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="body" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="news_before" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="r_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="news_before" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
-			<record>
-				<id>7</id>
-				<name>cn</name>
-				<city>moratuwa,mirissa</city>
-				<location>photos/131.jpg</location>
-				<description>asjkdsa askjdsak sajkdjs akjd dajd</description>
-			</record>
-			<record>
-				<id>8</id>
-				<name>cnm</name>
-				<city>kandy,kalutara</city>
-				<location>photos/14.jpg</location>
-				<description>ghjhj jhjkh ytg ui g iuhjhk iuyhkjh uiio 98ij jhjgh </description>
-			</record>
-			<record>
-				<id>9</id>
-				<name>name</name>
-				<city>bandarawela,dambagalla,bibile,lunugala,talalla</city>
-				<location>photos/12.jpg</location>
-				<description>alkds skjjsnf sf;ksf ;fskjsf s;kjfjfjf fsiuf fsf suiffjf fjfaf fajfnf</description>
-			</record>
 		</records>
 	</table>
 	<table name="photos">
@@ -369,65 +319,44 @@
 			<column name="location" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="photos" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="caption" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="photos" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="desc" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="photos" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="r_id" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="photos" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
 				<id>1</id>
-				<location>2.jpg</location>
-				<caption>nmn</caption>
-				<desc>These image description guidelines were developed by the Carl and Ruth Shapiro Family National Center for Accessible Media at WGBH (NCAM) in conjunction with the DIAGRAM Center (Digital Image And Graphic Resources for Accessible Materials) at Benetech. The DIAGRAM Center is a research and development center whose goal is to make it easier, cheaper, and faster to create and use accessible digital images. Established in 2010, the DIAGRAM Center is a Benetech Global Literacy initiative supported by the U.S. Department of Education, Office of Special Education Programs.zea.</desc>
+				<location>1200-51194532-male-fruit-bat.jpg</location>
+				<caption>Getting up close with Grey-headed flying foxes</caption>
+				<desc>&lt;p&gt;Bats are a familiar sight in many regions of Australia, including many of our major cities. We are lucky to have several species of flying fox across Australia, bats of the genus &lt;em&gt;Pteropus&lt;/em&gt;, which are some of the largest bats in the world. These bats feed exclusively on nectar, blossoms, pollen and fruit, providing invaluable pollination and seed dispersal services to many native trees, including commercially important hardwood and rainforest species, such as native figs.&lt;/p&gt;
+&lt;p&gt;I have been lucky enough to work with grey-headed flying foxes in the past and couldn&amp;rsquo;t resist a trip to a local colony when I returned to Melbourne last December. In summer, Melbourne is home to a colony of more than 30,000 located near the center of the city. They love to camp near water, such as lakes or, in this case, the local Yarra River. The mothers give birth usually to a single pup in October and nurse them for three to four months. Once they are three weeks old the young are left at a cr&amp;egrave;che in the center of the camp at night while their mothers fly out to feed. The mothers were still nursing young when I visited the camp, cradling them in their wings. Grey-headed flying foxes can travel up to 30 miles (a 60 mile round trip) each night in search of native nectar, blossom and fruit.&lt;/p&gt;</desc>
+				<r_id></r_id>
 			</record>
 			<record>
 				<id>2</id>
-				<location>1.jpg</location>
-				<caption>ss</caption>
-				<desc>Through a series of grants funded by the National Science Foundation and the US Department of Education, NCAM has been researching and developing methods for creating effective and efficient text alternatives to images so that kids and adults, students and professionals, who are blind or have low vision can have equal access to image-rich digital texts cn.</desc>
+				<location>0001-livingston-fruit-bat-of-the-comoros.jpg</location>
+				<caption>Messy Eater a Boon for Cactus Fruit</caption>
+				<desc>&lt;p&gt;When it comes to bats, flexibility in foraging behavior is typically unidirectional &amp;ndash; frugivorous (fruit-eating) bats will sometimes incorporate arthropods into their diets. The converse is rarely seen.&lt;/p&gt;
+&lt;p&gt;Enter the pallid bat.&lt;/p&gt;
+&lt;p&gt;With its large ears and pig-like nose, the pallid bat (&lt;em&gt;Antrozous pallidus&lt;/em&gt;) may look a bit goofy, but these adaptations are key to the pollination services this unique bat provides. Known for preying on large beetles, Jerusalem crickets, and scorpions, the pallid bat has also been observed enjoying cactus fruit and nectar.&amp;nbsp; &lt;/p&gt;
+&lt;p&gt;This is good news for the cactus, as the pallid bat does not possess any morphological adaptions for nectar eating (long tongue, long muzzle, etc.), it must plunge its whole head and torso into the flower to obtain the nectar. This results in more pollen attaching to its fur. Consequently, the bat will deliver more pollen to the stigmas per visit, making it a more effective pollinator per flower visit than the lesser-nosed bat (the primary pollinator of the cardon cactus).&lt;/p&gt;
+&lt;p&gt;New research published in the &lt;em&gt;Journal of Mammalogy&lt;/em&gt; by Jaclyn R. Aliperti &lt;em&gt;et al.&lt;/em&gt; found that the pallid bat also visited the fruit of cardon cactus just as frequently as the lesser long-nosed bat and removed the same amount of fruit.&lt;/p&gt;</desc>
+				<r_id></r_id>
 			</record>
 			<record>
 				<id>3</id>
-				<location>4.jpg</location>
-				<caption>cn</caption>
-				<desc>Beginning in 2004, under a grant from the National Science Foundation, NCAM began research into refining description approaches for images found in science, technology, engineering, and mathematics (STEM) texts. NCAM and its project partners reviewed hundreds of by descriptions and numerous image types, eventually narrowing their focus to the most commonly used images in STEM. This research included rounds of surveys with blind and low vision STEM professionals (scientists, mathematicians, etc.) and user-testing with higher education students with visual impairments. The result was a set of guidelines and training materials for image description that encourage recommended practices such as brevity, focus on data, clarity and consistency in language, navigation control via accessible lists, tables, and the proper use of headers.</desc>
+				<location>1200-51194532-male-fruit-bat.jpg</location>
+				<caption>Young Conservationists Tackle Big Issues </caption>
+				<desc>&lt;p&gt;&lt;em&gt; &lt;em&gt;BCI has had the opportunity to work with many creative FIRST LEGO League teams who had chosen bats as the topic of their &amp;ldquo;Animal Allies&amp;rdquo; challenge. BCI is delighted to see so many young conservationists interested in finding solutions to the many issues bats face today.&amp;nbsp;&lt;/em&gt;Today we highlight the&lt;/em&gt; &lt;em&gt;Sharon Robo Knights robotics team of Suwanee, GA and their idea for deterring bats from wind turbines. Coach Wendy Wing shares with us their solution:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The Bat Drone Shield would be a deterrent system designed to keep bats away from wind turbines. It would consist of one drone for each 3 turbines. The drones would have a speaker that would emit the sound of the natural predator of the bat that was indigenous to that area. The drones would be charged on an induction pad and would be deployed at twilight and when the winds were between 4-7 m/s. The drones would be deployed when bats were detected using the bat acoustic detectors. The sound of the natural predator would be set at the actual frequency of the predator, so as to not be annoying to humans who might live in the area. The students have created a website explaining their solution&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</desc>
+				<r_id></r_id>
 			</record>
 			<record>
 				<id>4</id>
-				<location>5.jpg</location>
-				<caption>kdkd</caption>
-				<desc></desc>
-			</record>
-			<record>
-				<id>5</id>
-				<location>3.jpg</location>
-				<caption>jkdsd kjd kjAJS Kjs </caption>
-				<desc> India's bowlers required just 38.1 overs to wrap up a 246-run victory on the final day of the second Test in Visakhapatnam, as England's resolve - fatally weakened by the loss of two wickets late on the fourth evening - was finally cracked with nothing but pride left to play for. The damage had been done in a frantic morning session in which they slumped from 87 for 2 to 142 for 7, and the tail succumbed meekly after lunch, with only Jonny Bairstow showing any real resistance with 34 not out.
-
-The margin of victory perhaps overstated the gulf between the sides - the key difference, in every sense, was India's captain and Man of the Match Virat Kohli, whose aggregate of 248 runs single-handedly accounted for the deficit in England's balance. But, having fought so hard for so long, especially in the second half of the contest, the speed of their final-day demise was dispiriting for England, with the third Test in Mohali looming large next week. </desc>
-			</record>
-			<record>
-				<id>6</id>
-				<location>1.jpg</location>
-				<caption>Spinners wrap up India's</caption>
-				<desc> Contrary to all pre-match predictions, the pitch still wasn't spinning dramatically by the final day, but it was skidding through at a hustling pace to match India's turbo-charged over-rate - they bowled 33.4 in the morning session, including an extraordinary ten in the first half-hour alone as Ravindra Jadeja and R Ashwin tied England in knots at a rate of knots.
-
-The devastating dismissal of Alastair Cook, in the last over of the fourth day, had left England fearing the worst when play resumed, and there was an inevitability about the identity of the first victim of the morning. Ben Duckett's rich strokeplay and inventive attitude will doubtless serve him well as his England career progresses, but in this situation - and particularly against his nemesis, Ashwin - those attributes had roughly the same value as an INR 500 note. </desc>
-			</record>
-			<record>
-				<id>7</id>
-				<location>2.jpg</location>
-				<caption>news jff kfj</caption>
-				<desc> Moeen Ali was the next to go, his technique against the spinners looking solid right up until the moment Jadeja got one to grip in the rough outside off, and accelerate onto his inside edge for Kohli to complete a lobbed catch at leg gully. From 75 for 0 after 50 overs, England were now in freefall at 101 for 4 after 74 - the flip-side of their siege mentality being that India were now camping as many as five close catchers under every new batsman's nose.
-
-Such close attention didn't bother Ben Stokes at first. He had been so solid in defence in the first innings, and continued his tried-and-trusted methods in a 33-ball stay. But, when India turned to the second new ball - and in the process, gave Jadeja's fingers a rest after 25 overs on the trot had left him with the outstanding figures of 34-14-35-2 - the lankier offspin of Jayant Yadav conjured the ball of the match. </desc>
-			</record>
-			<record>
-				<id>8</id>
-				<location>3.jpg</location>
-				<caption>root m,xmf ,mc</caption>
-				<desc> A faster, flatter offbreak from around the wicket drifted as Stokes played back, then spat past his edge to clip the outside of his off stump. Stokes nodded his appreciation as the bowler hurtled past in celebration, and when Root was nailed by Mohammed Shami nine balls later, the teams might as well have shaken hands there and then.
-
-Root had once again been England's most accomplished technician on the day. But, having survived an early reprieve when Kohli spilled a sharp chance at leg slip, he was pinned on the crease by a zippy nipbacker from Shami and sent on his way for 25 from 107 balls.
-
-There was time for one more breakthrough before lunch, as Adil Rashid top-edged an attempted ramp over the slips, to give Shami his second wicket of the innings, and the denouement came in a resigned procession after the resumption. </desc>
+				<location>Pteropus_poliocephalus_colony.JPG</location>
+				<caption>Prevent Extinctions </caption>
+				<desc>&lt;p&gt;The Christmas Island pipistrelle went extinct despite having a recovery plan, being listed Critically Endangered, and having a valiant recovery effort that included a moderate amount of research and knowledge of the species, a substantial reserve system, and some management of the threats to the species.&lt;/p&gt;
+&lt;p&gt;It is time for Bat Conservation International and all individuals, private and governmental organizations, corporations, and all interested parties to proactively take action for the conservation of the most endangered bats in the world. It is time for all of us to stand together and say through our words and deeds, &amp;ldquo;Not on our watch!&amp;rdquo; For many of these endangered bats it is not too late if we take action now!&lt;/p&gt;</desc>
+				<r_id></r_id>
 			</record>
 		</records>
 	</table>
@@ -480,6 +409,120 @@ There was time for one more breakthrough before lunch, as Adil Rashid top-edged 
 				<post_topic>27</post_topic>
 				<post_by>0</post_by>
 				<parent_post>-1</parent_post>
+			</record>
+		</records>
+	</table>
+	<table name="qualifications">
+		<columns>
+			<column name="researcher_id" blob="0" multiple_key="0" not_null="0" numeric="1" primary_key="0" table="qualifications" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2name" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2ins" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2year" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="other" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>jfl;sssa</q1name>
+				<q1ins>adaar</q1ins>
+				<q1year>616</q1year>
+				<q2name>lohu</q2name>
+				<q2ins>mm</q2ins>
+				<q2year>522</q2year>
+				<other>ppob bj</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>wwwww</q1name>
+				<q1ins>wwwwwwww</q1ins>
+				<q1year>458</q1year>
+				<q2name>wwww</q2name>
+				<q2ins>wwww</q2ins>
+				<q2year>2323</q2year>
+				<other>dada</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>lalala</q1name>
+				<q1ins>lalala</q1ins>
+				<q1year>45</q1year>
+				<q2name>lalala</q2name>
+				<q2ins>lalala</q2ins>
+				<q2year>12</q2year>
+				<other>sa</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>lalalalal</q1name>
+				<q1ins>lalalal</q1ins>
+				<q1year>15</q1year>
+				<q2name>lalala</q2name>
+				<q2ins>lalalala</q2ins>
+				<q2year>4</q2year>
+				<other>lalala</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>daad</q1name>
+				<q1ins>f</q1ins>
+				<q1year>12</q1year>
+				<q2name>kmda</q2name>
+				<q2ins>pdk</q2ins>
+				<q2year>1</q2year>
+				<other>,l,jko</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>jodal</q1name>
+				<q1ins>sa</q1ins>
+				<q1year>eea</q1year>
+				<q2name>dda</q2name>
+				<q2ins>sa</q2ins>
+				<q2year>5</q2year>
+				<other>jplda</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>m</q1name>
+				<q1ins>o</q1ins>
+				<q1year>b</q1year>
+				<q2name>k</q2name>
+				<q2ins>m</q2ins>
+				<q2year>m</q2year>
+				<other>m</other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>sa</q1name>
+				<q1ins>sa</q1ins>
+				<q1year>2014</q1year>
+				<q2name>d</q2name>
+				<q2ins>sa</q2ins>
+				<q2year>56</q2year>
+				<other></other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>asa</q1name>
+				<q1ins>sasa</q1ins>
+				<q1year>416</q1year>
+				<q2name>sasa</q2name>
+				<q2ins>sasa</q2ins>
+				<q2year>da</q2year>
+				<other></other>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<q1name>sa</q1name>
+				<q1ins>sa</q1ins>
+				<q1year>22</q1year>
+				<q2name>sa</q2name>
+				<q2ins>sa</q2ins>
+				<q2year></q2year>
+				<other></other>
 			</record>
 		</records>
 	</table>
@@ -599,119 +642,276 @@ There was time for one more breakthrough before lunch, as Adil Rashid top-edged 
 	</table>
 	<table name="researchers">
 		<columns>
-			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="0" not_null="0" numeric="1" primary_key="0" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="title" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="fname" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="mname" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="lname" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="gender" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="nic" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="1" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="nic" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="add1" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="add2" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="city" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="country" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="major" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="email" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q1name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q1ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q1year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q2name" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q2ins" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q2year" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="other" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="password" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<id>1</id>
-				<title>m</title>
-				<fname>d</fname>
-				<mname>ad</mname>
-				<lname>d</lname>
-				<gender>f</gender>
-				<nic>x</nic>
-				<add1>v</add1>
-				<add2>d</add2>
-				<city>da</city>
-				<country>ad</country>
-				<major>d</major>
-				<email>a@g.com</email>
-				<q1name>sa</q1name>
-				<q1ins>d</q1ins>
-				<q1year>d</q1year>
-				<q2name>z</q2name>
-				<q2ins>d</q2ins>
-				<q2year>c</q2year>
-				<other>c</other>
-				<password>mkkk</password>
+				<researcher_id>0</researcher_id>
+				<title>mrs</title>
+				<fname>rushan</fname>
+				<mname>al</mname>
+				<lname>ahmed</lname>
+				<gender>m</gender>
+				<nic>0</nic>
+				<add1>sasa</add1>
+				<add2></add2>
+				<city>daa</city>
+				<country>ddf</country>
+				<major>asa</major>
+				<email>ru@gmail.com</email>
+				<password>rushan</password>
 			</record>
 			<record>
-				<id>2</id>
+				<researcher_id>0</researcher_id>
+				<title>rfe</title>
+				<fname>ew</fname>
+				<mname>r</mname>
+				<lname>e</lname>
+				<gender>f</gender>
+				<nic>0</nic>
+				<add1>ew</add1>
+				<add2>frf</add2>
+				<city>e</city>
+				<country>e</country>
+				<major>dada</major>
+				<email>p@gmail.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id>0</researcher_id>
+				<title>Mrs</title>
+				<fname>narthana</fname>
+				<mname>satsara</mname>
+				<lname>manamperi</lname>
+				<gender>m</gender>
+				<nic>0</nic>
+				<add1>da</add1>
+				<add2>da</add2>
+				<city>563</city>
+				<country>dada</country>
+				<major>SASA</major>
+				<email>a@g.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id>0</researcher_id>
+				<title>s</title>
+				<fname>d</fname>
+				<mname>c</mname>
+				<lname>d</lname>
+				<gender>f</gender>
+				<nic>0</nic>
+				<add1>d</add1>
+				<add2>d</add2>
+				<city>cd</city>
+				<country>d</country>
+				<major>a</major>
+				<email>a@hmail.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id>0</researcher_id>
 				<title>Mrs</title>
 				<fname>Anjalee</fname>
 				<mname>Pramuditha</mname>
 				<lname>Abeysekera</lname>
 				<gender>f</gender>
-				<nic>946910309v</nic>
+				<nic>0</nic>
 				<add1>161</add1>
 				<add2>st</add2>
 				<city>s</city>
 				<country>gampaha</country>
 				<major>is</major>
 				<email>anji@gmail.com</email>
-				<q1name>asad</q1name>
-				<q1ins>dad</q1ins>
-				<q1year>6</q1year>
-				<q2name>sa</q2name>
-				<q2ins>da</q2ins>
-				<q2year>55</q2year>
-				<other>fsf</other>
 				<password></password>
 			</record>
 			<record>
-				<id>4</id>
-				<title>g</title>
+				<researcher_id>0</researcher_id>
+				<title>anjalee</title>
 				<fname>anjalee</fname>
-				<mname>ff</mname>
+				<mname>abey</mname>
+				<lname>sadad</lname>
+				<gender>f</gender>
+				<nic>0</nic>
+				<add1>dss</add1>
+				<add2></add2>
+				<city>dsdaf</city>
+				<country>sasa</country>
+				<major>fsfsf</major>
+				<email>anji.abeysekera@gmail.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id>0</researcher_id>
+				<title>g</title>
+				<fname>e</fname>
+				<mname>f</mname>
 				<lname>e</lname>
 				<gender>f</gender>
-				<nic>s</nic>
+				<nic>0</nic>
 				<add1>d</add1>
 				<add2>f</add2>
 				<city>b</city>
 				<country>x</country>
 				<major>x</major>
 				<email>a@t.com</email>
-				<q1name>z</q1name>
-				<q1ins>x</q1ins>
-				<q1year>s</q1year>
-				<q2name>x</q2name>
-				<q2ins>fsf</q2ins>
-				<q2year>f</q2year>
-				<other>v</other>
 				<password>anjalee</password>
 			</record>
 			<record>
-				<id>6</id>
-				<title></title>
-				<fname>new research</fname>
+				<researcher_id>0</researcher_id>
+				<title>m</title>
+				<fname>d</fname>
+				<mname>ad</mname>
+				<lname>d</lname>
+				<gender>f</gender>
+				<nic>0</nic>
+				<add1>v</add1>
+				<add2>d</add2>
+				<city>da</city>
+				<country>ad</country>
+				<major>d</major>
+				<email>a@g.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>miss</title>
+				<fname>anjalee</fname>
+				<mname>pramuditha</mname>
+				<lname>aeysekera</lname>
+				<gender>f</gender>
+				<nic>1245783659</nic>
+				<add1>as</add1>
+				<add2>d</add2>
+				<city>s</city>
+				<country>sr</country>
+				<major>is</major>
+				<email>a@t.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>misisisis</title>
+				<fname>m</fname>
+				<mname>s</mname>
+				<lname>s</lname>
+				<gender>f</gender>
+				<nic>145</nic>
+				<add1>sa</add1>
+				<add2>dsd</add2>
+				<city>s</city>
+				<country>sri lanka</country>
+				<major>sa</major>
+				<email>a@g.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>miss</title>
+				<fname>Anjalee</fname>
+				<mname>Pramuditha</mname>
+				<lname>Abeysekera</lname>
+				<gender>f</gender>
+				<nic>1245120125</nic>
+				<add1>sada</add1>
+				<add2>a</add2>
+				<city>x</city>
+				<country>c</country>
+				<major>x</major>
+				<email>a@t.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>misi</title>
+				<fname>sewmiii</fname>
+				<mname>sa</mname>
+				<lname>rupa</lname>
+				<gender>f</gender>
+				<nic>4587</nic>
+				<add1>nsak</add1>
+				<add2>sas</add2>
+				<city>czz</city>
+				<country>sri lanka</country>
+				<major>da</major>
+				<email>amaya@gmail.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>d</title>
+				<fname>s</fname>
+				<mname>s</mname>
+				<lname>s</lname>
+				<gender>f</gender>
+				<nic>662</nic>
+				<add1>t</add1>
+				<add2>u</add2>
+				<city>j</city>
+				<country>y</country>
+				<major>d</major>
+				<email>nisal@gmail.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>mr</title>
+				<fname>Chamara</fname>
 				<mname></mname>
-				<lname></lname>
-				<gender></gender>
-				<nic></nic>
-				<add1></add1>
+				<lname>Munasinghe</lname>
+				<gender>m</gender>
+				<nic>4578</nic>
+				<add1>a</add1>
 				<add2></add2>
-				<city></city>
-				<country></country>
+				<city>s</city>
+				<country>sri lanka</country>
 				<major></major>
-				<email>nadee@gmail.com</email>
-				<q1name></q1name>
-				<q1ins></q1ins>
-				<q1year></q1year>
-				<q2name></q2name>
-				<q2ins></q2ins>
-				<q2year></q2year>
-				<other></other>
+				<email>anji@gmail.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>miss</title>
+				<fname>safsf</fname>
+				<mname>sasa</mname>
+				<lname>ddaa</lname>
+				<gender>f</gender>
+				<nic>6526236</nic>
+				<add1>nkml</add1>
+				<add2>nlkml</add2>
+				<city>ml</city>
+				<country>nlm</country>
+				<major>ml</major>
+				<email>c@h.com</email>
+				<password></password>
+			</record>
+			<record>
+				<researcher_id></researcher_id>
+				<title>miss</title>
+				<fname>Anjalee</fname>
+				<mname>d</mname>
+				<lname>d</lname>
+				<gender>m</gender>
+				<nic>1548</nic>
+				<add1>d</add1>
+				<add2>d</add2>
+				<city>dada</city>
+				<country>d</country>
+				<major>d</major>
+				<email>v@m.com</email>
 				<password></password>
 			</record>
 		</records>

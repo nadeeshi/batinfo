@@ -82,17 +82,19 @@ img.intLink { border: 0; }
 #editMode label { cursor: pointer; }
 </style>
 </head>
-<div class="public-background">
-        <img src="../../assets/images/bat.jpg" width="100%" height="100%" style="opacity: 0.9;" >
-</div>
 <body onload="initDoc();">
-<div>
-<?php include "../../assets/IncludedFiles/mainnav.php"; ?> 
-</div>
+  <div class="public-background">
+        <img src="../../assets/images/bat.jpg" width="100%" height="100%" style="opacity: 0.9;" >
+  </div>
 
+  <div>
+    <?php include "../../assets/IncludedFiles/mainnav.php"; ?> 
+  </div>
+<div class="col-xs-12 body-content">
+    <div class="public-thread-content public-div-content col-xs-10">
 
-<div class="container-fluid" style="padding-top:120px; padding-bottom:120px;">
-<div class="col-md-4 col-md-offset-4 well" style="opacity: 0.935;">
+      <div class="container-fluid " style="padding-top:100px; padding-bottom:100px;">
+        <div class="col-md-8 col-md-offset-2 well" style="opacity: 0.935;">
 
     <?php
          if(isset($_POST['add'])) {
@@ -144,8 +146,8 @@ img.intLink { border: 0; }
             mysqli_close($conn);
          }else {
             ?>
-<div class="row">
-        <div class="col-md-6 col-md-offset-4 well" style="align-content: center;">
+<!--<div class="row">-->
+        <!--<div class="col-md-8 col-md-offset-2 well" style="align-content: center;">-->
             <form name="compForm" method="post" action = "<?php $_PHP_SELF ?>" onsubmit="if(validateMode()){this.content.value=oDoc.innerHTML;return true;}return false;">
                 <fieldset>
                     <legend>Post your article</legend>
@@ -230,6 +232,7 @@ img.intLink { border: 0; }
 <img class="intLink" title="Copy" onclick="formatDoc('copy');" src="data:image/gif;base64,R0lGODlhFgAWAIQcAB1ChBFNsTRLYyJYwjljwl9vj1iE31iGzF6MnHWX9HOdz5GjuYCl2YKl8ZOt4qezxqK63aK/9KPD+7DI3b/I17LM/MrL1MLY9NHa7OPs++bx/Pv8/f///////////////yH5BAEAAB8ALAAAAAAWABYAAAWG4CeOZGmeaKqubOum1SQ/kPVOW749BeVSus2CgrCxHptLBbOQxCSNCCaF1GUqwQbBd0JGJAyGJJiobE+LnCaDcXAaEoxhQACgNw0FQx9kP+wmaRgYFBQNeAoGihCAJQsCkJAKOhgXEw8BLQYciooHf5o7EA+kC40qBKkAAAGrpy+wsbKzIiEAOw==" />
 <img class="intLink" title="Paste" onclick="formatDoc('paste');" src="data:image/gif;base64,R0lGODlhFgAWAIQUAD04KTRLY2tXQF9vj414WZWIbXmOrpqbmpGjudClFaezxsa0cb/I1+3YitHa7PrkIPHvbuPs+/fvrvv8/f///////////////////////////////////////////////yH5BAEAAB8ALAAAAAAWABYAAAWN4CeOZGmeaKqubGsusPvBSyFJjVDs6nJLB0khR4AkBCmfsCGBQAoCwjF5gwquVykSFbwZE+AwIBV0GhFog2EwIDchjwRiQo9E2Fx4XD5R+B0DDAEnBXBhBhN2DgwDAQFjJYVhCQYRfgoIDGiQJAWTCQMRiwwMfgicnVcAAAMOaK+bLAOrtLUyt7i5uiUhADs=" />
 </div>
+<!--<div class="col-md-8 col-md-offset-2 well" style="align-content: center;">-->
 <div id="textBox" contenteditable="true" name="content"></div>
 <p id="editMode"><input type="checkbox" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" /> <label for="switchBox">Show HTML</label></p>
 
@@ -272,6 +275,9 @@ mysql_query($insert_image);
          }
       ?>
   </div>
+</div>
+</fieldset>
+</form>
 </div>
 <div>
   <?php include "../../assets/IncludedFiles/footer.php" ; ?> 
