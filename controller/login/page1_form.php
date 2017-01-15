@@ -4,7 +4,7 @@ session_start(); // Session starts here.
 <!DOCTYPE HTML>
 <html>
  <head>
-    <title></title>
+    <title>Register | BatsInfo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
           <!-- Bootstrap -->
         <link href="../../assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">

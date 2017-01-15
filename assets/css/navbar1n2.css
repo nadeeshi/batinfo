@@ -5,7 +5,9 @@
 @import 'https://fonts.googleapis.com/css?family=Varela+Round';
 @import url('https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script');
 
-.body {
+
+
+body {
 	font-family:  'Oxygen', sans-serif;
 }
 
@@ -171,13 +173,19 @@
 div.profile-picture {
 	border-style: solid;
 	border-color: #c16d28;
-	border-radius: 6px;
-	width: 100px;
-	height: 100px;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
 	margin: auto;
 	margin-top: 15px;
-	background-image: url('../../assets/images/propic.png');
+	background-image: url('../../assets/images/bubble.png');
 	background-position: center;
+}
+
+.profile-picture img{
+	min-width: 100%;
+	min-height: 100%;
+	display: block;
 }
 
 
@@ -308,7 +316,11 @@ div.profile-picture {
 }
 
 .form-public{
-	margin-left: 4.35%;
+	margin-left: 5.35%;
+}
+
+.forum-research{
+	margin-left: 7%;
 }
 
 .public-div-content{

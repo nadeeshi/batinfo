@@ -4,13 +4,7 @@ ob_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 include ('../../database/dbconnect.php');
-/*
-dbconnect.php
-$con = mysqli_connect("localhost","root","","test2");
 
-if (mysqli_connect_errno()){
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}*/
 $id=$_REQUEST['ed_id'];
 
 $query = "SELECT * from news_before where nid = '".$_REQUEST['ed_id']."'"; 
@@ -37,7 +31,33 @@ $row = mysqli_fetch_assoc($result);
 	<!--<link rel="stylesheet" type="text/css" href="../css/editnewsmain.css">-->	
 	
 	<script type="text/javascript">
-
+        
+           
+            
+            function validation1(){
+                var vimage = document.forms["news"]["image"].value;
+                if (vimage == null || vimage == "") {
+                    alert("you must have selected a image file before proceed");
+                    return false;
+                }
+                
+                var vtitle = document.forms["news"]["title"].value;
+                if (vtitle == null || vtitle == "") {
+                    alert("you must have filled out this 'title' field before proceed");
+                    return false;
+                }
+                var content = tinymce.get('body').getContent({format: 'text'});
+               
+                if($.trim(content) == '')
+                {
+                    alert("'description' field is empty can not proceed");
+                    return false;                 
+                }
+                
+                
+                
+            }
+            
 			function readURL(input) {
 				if (input.files && input.files[0]) {
 					var reader = new FileReader();
@@ -55,10 +75,6 @@ $row = mysqli_fetch_assoc($result);
 			
 	</script>		
 	
-<style>
-
-</style>	
-	
 	
 	
 </head>
@@ -72,34 +88,32 @@ $row = mysqli_fetch_assoc($result);
 	
 		<div class="s">
 		
-			<form  method="post" enctype="multipart/form-data" action=""> 
+			<form  method="post" enctype="multipart/form-data" action="" onsubmit="return validation1()"> 
 				<div class="register-top-grid">
-					<h3>INSERT NEWS</h3>
+					<h3>EDIT NEWS</h3>
 					<input type="hidden" name="new" value="1" />
 					<input name="id" type="hidden" value="<?php echo $row['nid'];?>" />
 					
-					<div class="wow fadeInLeft" data-wow-delay="0.4s">
+					<div class="wow fadeInLeft" >
 						<span>Select Image<label>*</label></span>
 						<input type="file" name="image" required onchange="readURL(this);"><br />
-						<img id="blah" src="#" alt=""/>						
+						<img id="blah" src="" alt="your image"/>						
 					</div>
-					</div>
+					
 					    <div class="form-group">
 						<label for="inputEmail">title of the news</label>
 						<input type="text" class="form-control" name="title" required value="<?php echo $row['title'];?>">
 					</div>
-					<!--<div class="wow fadeInLeft" data-wow-delay="0.4s">
-						<span>Title<label>*</label></span>
-						<input type="text" name="title" required value="<?php echo $row['title'];?>"> 
-					</div>-->
-					 
-					 
-					<textarea type="text" name="body" required value=""><?php echo $row['body'];?></textarea>
-					<p><?php //echo $status; ?></p>
+					<div class="form-group">
+						<label for="inputnew_body">Enter enter your description for the above title </label>			 
+					    <textarea type="text" name="body"  class="form-control" value=""><?php echo $row['body'];?></textarea>
+                    </div>
+					
 					<div class="clearfix"> </div>
 					<div class="register-but">
-								   
-						<input type="submit" name="submit" value="view"></br> 
+						<label>to get a view before your news is published hit 'view' button here</label>    
+					    </br>		   
+						<input type="submit" name="submit" value="view" onclick="alert('view of your edited submission')"></br> 
 						<div class="clearfix"> </div>
 				   
 					</div>
@@ -111,12 +125,7 @@ $row = mysqli_fetch_assoc($result);
 				
 				error_reporting(0);
 				include ('../../database/dbconnect.php');
-/*              dbconnect.php
-				$con = mysqli_connect("localhost","root","","test2");
-
-				if (mysqli_connect_errno()){
-					echo "Failed to connect to MySQL: " . mysqli_connect_error();
-				}*/
+             
   
 				if (isset($_POST['submit'])) {
 					$file=$_FILES['image']['tmp_name'];
@@ -130,14 +139,14 @@ $row = mysqli_fetch_assoc($result);
 					$id=$_REQUEST['ed_id'];
 					$tt =$_REQUEST['title'];
 					$des = $_REQUEST['body'];
-					//$update="update news_insert set news_id='".$ns_id."',title='".$tt."',image='".$location."', body='".$des."' where nid='".$id."'";
+					
 
 					$update="update news_before set title='".$tt."',image='".$location."', body='".$des."' where nid='".$id."'";
 
 					
 					$r=mysqli_query($con, $update) or die(mysqli_error());
 					if (mysqli_query($con, $update)) {
-				//echo $ns_id;
+				
 						header('Location:news_before.php?id='.$id);
 						exit();   
 					}else {

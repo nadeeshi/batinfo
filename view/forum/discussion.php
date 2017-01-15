@@ -19,10 +19,10 @@ require_once ("../../database/connection.php");
 		<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 	</div>
 	<div>
-		<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form" style="padding: 2%;">
+		<div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form" style="padding: 2%; margin-left:4%;">
 			<div class="row">
 				<?php
-					$sql="SELECT topic_id, topic_subject, topic_content,topic_date FROM topics
+					$sql="SELECT topics.topic_id, topics.topic_subject, topics.topic_content,topics.topic_date, researchers.fname FROM topics, researchers
 					WHERE topics.topic_id = " . mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
 					$result= mysqli_query($db, $sql);
 					$row = mysqli_fetch_assoc($result);
@@ -34,6 +34,7 @@ require_once ("../../database/connection.php");
     			<div class="col-xs-12 thread-topic-content" id = "-1">
                     <p class="topic-subject"><?php echo $row['topic_subject']; ?></p>
                     <p class="topic-date"><?php echo $row['topic_date'] ?></p>
+                    <p class="topic-date"><?php echo $row['fname']?></p>
                     <div class="row">
                     	<div class="col-xs-push-1 col-xs-11">
                     		<p><?php echo $row['topic_content']; ?></p>

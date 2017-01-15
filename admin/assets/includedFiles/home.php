@@ -1,8 +1,4 @@
 <?php
-require_once('auth.php');
-?>
-
-<?php
 require_once('../../database/db_backup.php');
 ?>
 
@@ -38,6 +34,10 @@ require_once('../../database/db_backup.php');
 </head>
 
 
+<?php
+require_once('auth.php');
+?>
+
 <?php include("template.php")?>
 
 
@@ -66,17 +66,16 @@ require_once('../../database/db_backup.php');
                         <?php
                         try {
 
-                            //ob_start();
+                            ob_start();
                             include("connect.php");
                             $query = mysqli_query($bd, "select count(*) as total from admin_details");
                             $result = mysqli_fetch_array($query);
                             echo $result['total'];
                             ob_end_flush();
                         }catch(Exception $e){
-                         include('../../view/errorPages/error.php');
+
                         }
                         ?>
-                    </h3>
                 </a>
 
             </div>
@@ -269,6 +268,41 @@ require_once('../../database/db_backup.php');
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

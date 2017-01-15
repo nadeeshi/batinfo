@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-		<script src="jst.js"></script>
+		<script src="../../assets/JS/jquery-1.11.3.min.js"></script>
 		 <script type="text/javascript">
 		$(function() {
 			$('#btnshow').off().on({
@@ -19,15 +19,15 @@
 	<body>
 		<center>
 		<div>
-			<h1 style="color: blue;" >Help</h1></br>
-			<img src="help.png" alt="help" style="width:304px;height:228px;">
+			<h1 style="color: blue;" >User Manual</h1></br>
+
 		</div>
 		</br>
 		<div>
 			<input type="button" style="width:20%;color: blue;" id="btnshow" value="user-manual.pdf">
 			 
 			</br></br>
-			<iframe id="show_pdf" style="width: 800px; height: 550px;">
+			<iframe id="show_pdf" style="width: 850px; height: 550px;">
 		</div>
 		</center>
 	</body>

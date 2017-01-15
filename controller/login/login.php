@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
     $result = mysqli_query($con, "SELECT * FROM researchers WHERE email = '" . $email. "' and password = '" . $password . "'");
 
     if ($row = mysqli_fetch_array($result)) {
-        $_SESSION['usr_id'] = $row['id'];
+        $_SESSION['usr_id'] = $row['researcher_id'];
         $_SESSION['usr_name'] = $row['fname'];
         header("Location: ../graph/graph.php");
     } else {
@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHP Login Script</title>
+    <title>Login | BatsInfo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
 
     <meta charset="UTF-8">
@@ -92,7 +92,7 @@ if (isset($_POST['login'])) {
             
         </div>
     </div>
- 
+
     <div class="push"></div>
 </div>
 
@@ -108,6 +108,7 @@ if (isset($_POST['login'])) {
 
 <script src="../../assets/JS/jquery.js"></script>
 <script src="../../assets/JS/bootstrap.min.js"></script>
+
 
 </body>
 </html>

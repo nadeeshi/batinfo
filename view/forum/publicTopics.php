@@ -33,7 +33,7 @@ require_once ("../../database/connection.php");
 				<div class="col-xs-11 insert-form form-public">
 					<div class="row" style="padding: 1.5%">
 						<?php
-							$sql= "SELECT topic_id, topic_subject, topic_date, topic_by FROM topics";
+							$sql= "SELECT topics.topic_id, topics.topic_subject, topics.topic_date, topics.topic_by, researchers.fname,researchers.lname FROM topics,researchers";
 							$result= mysqli_query($db, $sql);
 
 							echo "<table>";
@@ -45,12 +45,12 @@ require_once ("../../database/connection.php");
 
 					    	echo "<tr>";
 					        foreach ($result as $user) {
-					          	echo  "<td class='col-sm-9 col-xs-9' height='50'>";
-					          	echo "<a href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
-					          	echo  "<td height='50' class='col-sm-2 col-xs-2'>";
+					          	echo  "<td class='col-sm-8 col-xs-8' height='50'>";
+					          	echo "<a style='color:black!important;' href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+					          	echo  "<td height='50' class='col-sm-1 col-xs-1'>";
 					            echo $user['topic_date']." "."</td>";
-					            echo "<td class='col-sm-2 col-xs-2'>";
-					            echo "<a href=#>siguisgiwugiu</a>"." "."</td>";
+					            echo "<td class='col-sm-3 col-xs-3'>";					   
+					            echo $user['fname']." ".$user['lname']." "."</td>";
 					        echo "</tr>";   
 							}	
 							echo "</table>";
