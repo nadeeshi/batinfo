@@ -1,7 +1,8 @@
 <?php
+session_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/dbconnect.php');
-if(isset($_SESSION['usr_id'])){
+//if(isset($_SESSION['usr_id'])){
 
 if(isset($_POST['new']) && $_POST['new']==1){
 
@@ -34,9 +35,9 @@ if(isset($_POST['new']) && $_POST['new']==1){
 	
 	header('Location:news_before.php?id='.$l_id);
 }
-}else{
-    
-    echo "jk";
-}	
+//}else{
+    //$r_id=$_SESSION['usr_id'];
+    //echo $r_id;
+//}	
 	
 ?>

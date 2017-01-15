@@ -56,7 +56,7 @@
 
  if (mysqli_query($connection,$query) ) {
      $res=mysqli_query($connection,"SELECT researcher_id FROM researchers WHERE nic='$nic'");
-     while($row = mysqli_fetch_array($res)) {
+     if($row = mysqli_fetch_assoc($res)) {
 
          $query2 = "INSERT INTO qualifications (researcher_id,q1name,q1ins,q1year,q2name,q2ins,q2year,other) values('$row[0]','$q1name','$q1ins','$q1year','$q2name','$q2ins','$q2year','$other');";
      }

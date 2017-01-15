@@ -37,6 +37,7 @@ if (!empty($_POST)) {
 
   }
   else{
+    
     $msg= "Error in adding thread";
   }
 

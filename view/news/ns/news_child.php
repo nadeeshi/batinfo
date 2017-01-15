@@ -12,7 +12,88 @@
 		<script src="../../assets/JS/jquery.js"></script> 
 		<script src="../../assets/JS/bootstrap.js"></script>
 		
+		<script>
+			function submitcomment() {
+
+                            var request;
+
+                            try {
+
+                            request= new XMLHttpRequest();
+
+							}
+
+                        catch (tryMicrosoft) {
+
+                            try {
+
+                                request= new ActiveXObject("Msxml2.XMLHTTP");
+                            }
+
+                            catch (otherMicrosoft) 
+                            {
+                                try {
+                                    request= new ActiveXObject("Microsoft.XMLHTTP");
+                                }
+
+                                catch (failed) {
+                                    request= null;
+                                }
+                            }
+                        }
+
+                        var ar = <?php //echo json_encode($ar) ?>;
+                        var webpage= location.href;
+
+                       // position= webpage.lastIndexOf("/"); 
+                        position= webpage.lastIndexOf("="); 
+
+                        var lastpart= webpage.substring(position + 1);
+
+//var period= lastpart.indexOf(".");
+
+//var complete= lastpart.substring(0, period);
+
+//var id = "ctl03_Tabs1";
+//var lastChar = lastpart[lastpart.length - 1];
+
+//var period= lastpart.indexOf(lastChar);
+
+//var complete= lastpart.substring(0, period+1);
+//window.alert(lastpart);
+                        var complete=lastpart;
+
+                        complete= complete.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&\=])/g, "_");
+//complete= complete1.replace(/?/g, "_");
+//window.alert(complete);
+
+                        var url= "usercomments1.php";
+                        var username= document.getElementById("name_entered").value;
+                        document.getElementById("name_entered").value='';
+
+                        var usercomment= document.getElementById("comment_entered").value;
+                        document.getElementById("comment_entered").value='';
+
+                        var vars= "name="+username+"&comment="+usercomment+"&webpage="+complete;
+                        request.open("POST", url, true);
+
+                        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                        request.onreadystatechange= function() {
+                            if (request.readyState == 4 && request.status == 200) {
+                                var return_data=  request.responseText;
+                                document.getElementById("showcomments").innerHTML= return_data;
+                            }
+                        }
+
+                        request.send(vars);
+
+
+                        }
+
+                        document.getElementById('numquest').value='';
 		
+		</script>
 		
 		
 		
@@ -22,14 +103,24 @@
         <?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
         </div>
         <?php
-		include ('../../database/dbconnect.php');
+		include ('../../database/dbconnect.php');//dbconnect.php
+        
+        //$r_id= $_SESSION['usr_id'];
+        
+        //echo $r_id;
+        //$ar = array($r_id);
+        //echo json_encode($ar);
+        
 		$qry = "SELECT * FROM photos WHERE id = '" . $_GET['photoid'] . "' ;";
         $result = mysqli_query($con, $qry);
         $record = mysqli_fetch_assoc($result);
         ?>
+
         
-        
-       
+</script>
+		
+		
+		
         <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
             <div class="container">
                 <div class="row">
@@ -40,6 +131,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <? //echo $r_id;?>
                                             <p><h1 class="ax"><?php echo $record['caption']; ?></h1></br></p>
                                         </div>
                                     </div>
@@ -51,12 +143,24 @@
                                                     <img src="<?php echo "../../assets/images/photos/" . $record['location']; ?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "float: right ;margin: 0px 0px 15px 20px; max-height: 20em ; min-height:14em; width: 30%; height:auto;"/>
                                                 </a>
                                             <div class="des">
-                                                <?php echo $record['desc']; ?>
+                                                <?php echo $record['desc']; 
+                                                //echo $r_id;?>
                                             </div>
                                             </p>
                                         </div>
                                     </div>
-                                    
+                                    <!--
+        <a class="aidanews2_img1" href="">
+            <img src="<?php //echo "photos/" . $record['location'];  ?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "margin:auto; max-height: 32em ; min-height:14em; width: 45%; height:auto;"/>
+        </a>
+        <div class="des">
+            <h1 class="ax">
+                                    <?php //echo $record['caption']; ?></br>
+
+            </h1>
+                                            <p><?php //echo $record['desc']; ?></p>
+
+        </div>-->
                                     <div class="row">
                                         <div class="col-md-12">
                                             <a href="newst.php" class="readon">
@@ -68,10 +172,8 @@
                                 </div>
                             <!---comment goes here-->
                     <div class="com">
-                        <table>
+                            <table>
                                 <p>add comments</p>
-                                
-                                <input type="hidden" name="new" id="sessionVariable" value="1" />
                                 <tr>
                                 <td></td>
                                 <td>Name:</td>
@@ -101,83 +203,12 @@
                                 <tr>
                                 <td></td>
                                 <td>
-                                    <input type="submit"  value="Post" onclick="submitcomment();" />
+                                    <input type="submit" value="Post" onclick="submitcomment();" />
                                 </td>
                                 </tr>
 
                             </table>
-                        <script>
-			function submitcomment() {
-                            
-                            var request;
 
-                            try {
-
-                            request= new XMLHttpRequest();
-
-							}
-
-                        catch (tryMicrosoft) {
-
-                            try {
-
-                                request= new ActiveXObject("Msxml2.XMLHTTP");
-                            }
-
-                            catch (otherMicrosoft) 
-                            {
-                                try {
-                                    request= new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-
-                                catch (failed) {
-                                    request= null;
-                                }
-                            }
-                        }
-
-                        var sessionVariable;
-                        
-                        var webpage= location.href;
-
-                        
-                        position= webpage.lastIndexOf("="); 
-
-                        var lastpart= webpage.substring(position + 1);
-
-                        var complete=lastpart;
-
-                        complete= complete.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&\=])/g, "_");
-
-
-                        var url= "usercomments1.php";
-                        var username= document.getElementById("name_entered").value;
-                        document.getElementById("name_entered").value='';
-
-                        var usercomment= document.getElementById("comment_entered").value;
-                        document.getElementById("comment_entered").value='';
-
-                        var vars = "name="+username+"&comment="+usercomment+"&webpage="+complete;
-                        request.open("POST", url, true);
-
-                        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-                        request.onreadystatechange= function() {
-                            if (request.readyState == 4 && request.status == 200) {
-                                var return_data=  request.responseText;
-                                document.getElementById("showcomments").innerHTML= return_data;
-                            }
-                        }
-
-                        request.send(vars);
-
-
-                        }
-
-                        document.getElementById('numquest').value='';
-		
-		</script>
-                        
                             <br><br>
                             <div id="showcomments"></div>
                     </div>

@@ -1,6 +1,6 @@
 <?php
 ob_start(); 
-session_start();
+@session_start();
 
 include_once '../../database/dbconnect.php';
 
@@ -104,8 +104,9 @@ ob_end_flush();
 			    		<li><a href="../../view/news/news_insert.php">Add News</a></li>
 			    	</ul>
 			    </li>
-			    <li><a href="../../view/help/index.php">Help</a>
+			    <li><a href="">Help</a>
 			    	<ul class="submenu nav-pills nav-stacked">
+			    		<li><a href="../../view/help/index.php">FAQs</a></li>
 			    		<li><a href="../../view/user_manual/display_manual.php">User Manual</a></li>
 			    	</ul>
 			    </li>

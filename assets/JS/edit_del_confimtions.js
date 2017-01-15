@@ -1,6 +1,6 @@
 function myFunction_del () {
        
-    var confirm_msg = confirm('Are you sure you want to delete this bat?');
+    var confirm_msg = confirm('Are you sure you want to delete this bat? This action can not be undone');
     if (confirm_msg == true) {
         return true;
     }if(confirm_msg == false){

@@ -33,16 +33,18 @@
             } else {
                 $researcher_id =  $_SESSION['usr_id'];
 
-               
 
+              
                 $var = $researcher_id;
 
-                $structure = "/xwampp/htdocs/batinfo/assets/research_papers/$var";
+
+                $structure = "../../assets/research_papers/$var";
+
 
                 //create a directory for each researcher id if not exist
                 if (!is_dir($structure)) {
                     
-                    mkdir($structure, 0777); // create dir
+                    @mkdir($structure, 0777); // create dir
                     $file = $_FILES['pdf']['tmp_name'];
                     $paper_cont = addslashes(file_get_contents($_FILES['pdf']['tmp_name']));
                     $paper_name = addslashes($_FILES['pdf']['name']);

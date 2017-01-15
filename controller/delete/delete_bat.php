@@ -10,16 +10,11 @@
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-      
-        <script src="../../assets/JS/jquary.js"></script>
-      
-      
-        <script src="../../assets/JS/jquery.js"></script>
-      
-         <script src="../../assets/JS/bootstrap.js"></script>
+       <script src="../../assets/JS/jquary.js"></script>
+       <script src="../../assets/JS/jquery.js"></script>
+        <script src="../../assets/JS/bootstrap.js"></script>
         <style></style>
        
 
@@ -48,12 +43,12 @@
 
                 $pic_path= $explodes[0]; // get the image path
                 $scientific_name = $explodes[1]; // get the bat scientific name
-                //$researcher_id = $_SESSION['usr_id'];
+                $researcher_id = $_SESSION['usr_id'];
 
 
-                $researcher_id = 6;
+               
                 $var = $researcher_id;
-                $structure = "/wamp/www/batinfo/assets/images/$pic_path";
+                $structure = "../../assets/images/$pic_path";
 
                 $file = $structure;
 
@@ -73,7 +68,7 @@
 
 
                     if ($con->query($query) === TRUE) {
-                        echo "<p class='msg'>Paper Succesfully Deleted<p>";
+                        echo "<p class='msg'>Bat Succesfully Deleted<p>";
                         echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Back</button></a>';
                     } else {
                         echo "<p class='msg'>Something Went Wrong!!!</p>";

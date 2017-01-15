@@ -14,10 +14,7 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>
-           
-        </style>
-
+        
     </head>
     <body>
         <!-- include header file-->
@@ -34,7 +31,7 @@
                 <form action="../../controller/research_papers/paper_upload.php" method="post" enctype="multipart/form-data" name="addroom">
 
                     <div class="form-group ">
-                        <label class= "lbl">Select Paper<span class="red-star" >(.pdf)*</span></label>
+                        <label class= "lbl">Select Paper<span class="red-star" >(.pdf)*  2MB max</span></label>
                         <input type="file" name="pdf" class="my-text" required><br />
                     </div>       
 

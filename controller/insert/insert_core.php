@@ -29,8 +29,7 @@
             <div class="height_default">
 
                 <?php
-                // include php check for missing data file
-                // insert form data in to the bat_info table pass by insert.php form
+                
                 require_once('../../database/dbconnect.php');
                 if (mysqli_connect_errno()) {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -40,14 +39,18 @@
                         $file = $_FILES['image']['tmp_name'];
                         $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
                         $image_name = addslashes($_FILES['image']['name']);
+                        
+                        $image_default_name =  $_FILES["image"]["name"];
+                        $new_image_name = rand(1000,100000000).$_FILES["image"]["name"];
+                        @rename($image_default_name, $new_image_name);
 
-                        move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
+                        move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $new_image_name);
 
-                        $pic_path = "bphotos/" . $_FILES["image"]["name"];
+                        $pic_path = "bphotos/" . $new_image_name;
                     }
 
                     $researcher_id = mysqli_real_escape_string($con, $_SESSION['usr_id']);
-                    //$researcher_id = 5;
+                   
                     $scientific_name = mysqli_real_escape_string($con, $_POST['scientific_name']);
                     $bat_order = mysqli_real_escape_string($con, $_POST['bat_order']);
                     $kingdom = mysqli_real_escape_string($con, $_POST['kingdom']);
@@ -71,11 +74,15 @@
                     $measurements = mysqli_real_escape_string($con, $_POST['measurements']);
                     $other_details = mysqli_real_escape_string($con, $_POST['other_details']);
 
-
+                    $query = "INSERT INTO bat_info(scientific_name, bat_order,researcher_id)
+              
+                    VALUES ('$scientific_name', '$bat_order','$researcher_id' )";
+                    
                     $query = "INSERT INTO bat_info(scientific_name, bat_order, kingdom, genus, phylum, family, sub_family, bat_class,species,pic,common_names,synonyms,roost,locations,conservation_status,country_occurence,feeding,breeding,
                     threats,conservation_action,measurements,other_details,population,researcher_id)
               
                 VALUES ('$scientific_name', '$bat_order','$kingdom', '$genus', '$phylum', '$family', '$sub_family', '$bat_class', '$species','$pic_path', '$common_names', '$synonyms', '$roost', '$locations', '$conservation_status', '$country_occurence', '$feeding', '$breeding', '$threats', '$conservation_action', '$measurements', '$other_details','$population','$researcher_id' )";
+                
                 }
                 if (mysqli_query($con, $query)) {
                     mysqli_close($con);
@@ -84,11 +91,12 @@
 
                     echo '<br><br><a href="../../view/insert/insert_form.php"><button class="my-button">Back</button></a>';
                 } else {
-
+                    
                     //try again if unsuccessful
                     echo "<p class='msg'>Error Occur! <p>";
 
                     echo '<br><br><a href="../../view/insert/insert_form.php"><button class="my-button">Try Again</button></a>';
+                
                 }
                 ?>
 
