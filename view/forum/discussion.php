@@ -1,5 +1,5 @@
 <?php
-require_once ("../../database/connection.php");
+require_once ("../../database/dbconnect.php");
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +23,10 @@ require_once ("../../database/connection.php");
 			<div class="row">
 				<?php
 					$sql="SELECT topics.topic_id, topics.topic_subject, topics.topic_content,topics.topic_date, researchers.fname FROM topics, researchers
-					WHERE topics.topic_id = " . mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
-					$result= mysqli_query($db, $sql);
+					WHERE topics.topic_id = " . mysqli_real_escape_string($con, isset($_GET['id']) ? $_GET['id'] : null);
+					$result= mysqli_query($con, $sql);
 					$row = mysqli_fetch_assoc($result);
-					$id=mysqli_real_escape_string($db, isset($_GET['id']) ? $_GET['id'] : null);
+					$id=mysqli_real_escape_string($con, isset($_GET['id']) ? $_GET['id'] : null);
 					// echo($id);
 				?>
 				<div  id = "topicId" style="display:none"> <?php echo $id; ?> </div>

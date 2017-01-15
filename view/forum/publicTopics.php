@@ -1,5 +1,5 @@
 <?php 
-require_once ("../../database/connection.php");
+require_once ("../../database/dbconnect.php");
 ?>
 
 <!DOCTYPE html>
@@ -33,31 +33,51 @@ require_once ("../../database/connection.php");
 				<div class="col-xs-11 insert-form form-public">
 					<div class="row" style="padding: 1.5%">
 						<?php
-							$sql= "SELECT topics.topic_id, topics.topic_subject, topics.topic_date, topics.topic_by, researchers.fname,researchers.lname FROM topics,researchers";
-							$result= mysqli_query($db, $sql);
-
-							echo "<table>";
-					   		echo "<tr height='50'>";
-					        echo "<th class='col-sm-8'> Topic </th>";
-					        echo "<th class='col-sm-2'> Posted Date </th>";
-					        echo "<th class='col-sm-2'> Posted by </th>";
-					    	echo "</tr>";
-
-					    	echo "<tr>";
-					        foreach ($result as $user) {
-					          	echo  "<td class='col-sm-8 col-xs-8' height='50'>";
-					          	echo "<a style='color:black!important;' href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
-					          	echo  "<td height='50' class='col-sm-1 col-xs-1'>";
-					            echo $user['topic_date']." "."</td>";
-					            echo "<td class='col-sm-3 col-xs-3'>";					   
-					            echo $user['fname']." ".$user['lname']." "."</td>";
-					        echo "</tr>";   
-							}	
-							echo "</table>";
-						?>
-						
+			                $sql= "SELECT topics.topic_id, topics.topic_subject, topics.topic_date, topics.topic_by, researchers.fname, researchers.lname FROM topics join researchers on topic_by = researchers.researcher_id order by topic_date DESC";
+			                
+			                $sql_to_get_data = mysqli_query($con,"SELECT * FROM topics where admin_by>''");
 
 
+			                $result= mysqli_query($con, $sql);
+
+			                echo "<table>";
+			                echo "<tr height='50'>";
+			                echo "<th class='col-sm-6'> Topic </th>";
+			                echo "<th class='col-sm-2'> Posted Date </th>";
+			                echo "<th class='col-sm-2'> Posted by </th>";
+			                echo "<th class='col-sm-2'> </th>";
+			                echo "</tr>";
+
+			                echo "<tr>";
+			                foreach ($result as $user) {
+			                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
+			                    echo "<a href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+			                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
+			                    echo $user['topic_date']." "."</td>";
+			                    echo "<td class='col-sm-2 col-xs-2'>";
+			                    echo ((trim($user['topic_by'])=='') ? "Admin" : ($user['fname']." ".$user['lname']." "))."</td>";
+			                    echo "<td class='col-sm-2 col-xs-2'>";?>
+			                    <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
+			                    <?php
+			                    echo "</tr>";
+			                }
+
+			                echo "<tr>";
+			                foreach ($sql_to_get_data as $user) {
+			                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
+			                    echo "<a href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+			                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
+			                    echo $user['topic_date']." "."</td>";
+			                    echo "<td class='col-sm-2 col-xs-2'>";
+			                    echo "Admin </td>";
+			                    echo "<td class='col-sm-2 col-xs-2'>";?>
+			                    <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
+			                    <?php
+			                    echo "</tr>";   
+			                }
+
+			                echo "</table>";
+                		?>
 					</div>
 				</div>
 			</div>

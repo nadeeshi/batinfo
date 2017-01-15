@@ -1,11 +1,7 @@
 
 <?php
 require_once('../../assets/includedFiles/auth.php');
-?>
 
-
-
-<?php
 require_once ("../../assets/includedFiles/connect.php");
 ?>
 
@@ -56,7 +52,11 @@ require_once ("../../assets/includedFiles/connect.php");
             </div>
             <div class="row" style="padding: 4.5%; margin-left: 0.2%;">
                 <?php
-                $sql= "SELECT topic_id, topic_subject, topic_date, topic_by FROM topics";
+                $sql= "SELECT topics.topic_id, topics.topic_subject, topics.topic_date, topics.topic_by, researchers.fname, researchers.lname FROM topics join researchers on topic_by = researchers.researcher_id order by topic_date DESC";
+                
+                $sql_to_get_data = mysqli_query($bd,"SELECT * FROM topics where admin_by>''");
+
+
                 $result= mysqli_query($bd, $sql);
 
                 echo "<table>";
@@ -74,12 +74,27 @@ require_once ("../../assets/includedFiles/connect.php");
                     echo  "<td height='50' class='col-sm-2 col-xs-2'>";
                     echo $user['topic_date']." "."</td>";
                     echo "<td class='col-sm-2 col-xs-2'>";
-                    echo "<a href=#>siguisgiwugiu</a>"." "."</td>";
+                    echo ((trim($user['topic_by'])=='') ? "Admin" : ($user['fname']." ".$user['lname']." "))."</td>";
                     echo "<td class='col-sm-2 col-xs-2'>";?>
                     <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
                     <?php
                     echo "</tr>";
                 }
+
+                echo "<tr>";
+                foreach ($sql_to_get_data as $user) {
+                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
+                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
+                    echo $user['topic_date']." "."</td>";
+                    echo "<td class='col-sm-2 col-xs-2'>";
+                    echo "Admin </td>";
+                    echo "<td class='col-sm-2 col-xs-2'>";?>
+                    <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
+                    <?php
+                    echo "</tr>";   
+                }
+
                 echo "</table>";
                 ?>
             </div>
