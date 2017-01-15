@@ -27,6 +27,7 @@ ob_end_flush();
 	    		<ul class="nav navbar-nav  navbar-right navbar-li">
 		            <div class="collapse navbar-collapse" id="navbar1">
 			            <ul class="nav navbar-nav navbar-right">
+
 			                <?php
 			                 if (isset($_SESSION['usr_id'])) { ?>
 			                <li><a href="../../controller/login/logout.php" class="navbar-head-list">Log Out</a></li>
@@ -34,7 +35,12 @@ ob_end_flush();
 			                <li><a class="navbar-head-list" href="login.php">Login</a></li>
 			                <li><a class="navbar-head-list" href="../../controller/login/logout.php">Sign Up</a></li>
 			                <?php } ?>
-			            </ul>
+			              
+
+			              
+
+
+			            
 			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
 	      					<div class="form-group">
 	        					<input type="text" class="form-control form-control-custom input-area" name='address' placeholder="Enter name here">
@@ -89,8 +95,12 @@ ob_end_flush();
                      <ul class="submenu nav-pills nav-stacked">
 				        <li><a href="../../view/research_papers/research_papers_view.php">View</a></li>
 				        <li><a href="../../view/research_papers/research_papers.php">Upload</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Delete</a></li>
-				        <li><a href="../../view/delete_update/edit_delete_home.php">Update</a></li>
+
+				        
+
+				        <li><a href="../../view/research_papers/research_papers_update_del.php">Delete</a></li>
+				        <li><a href="../../view/research_papers/research_papers_update_del.php">Update</a></li>
+
 			      	</ul>
 			    <li><a href="../../view/forum/forumTopics.php">Forum</a>
 			    </li>

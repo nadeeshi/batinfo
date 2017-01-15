@@ -14,7 +14,6 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if(!$mysqli){
     die("Connection failed: " . $mysqli->error);
 }
-
 //query to get data from the table
 $query = sprintf("SELECT scientific_name,population,bat_id FROM bat_info ORDER BY bat_id");
 

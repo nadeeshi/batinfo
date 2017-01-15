@@ -14,7 +14,7 @@
     <body>
         <?php
 		
-		include ('../../database/cnm_db_con.php');
+		include ('../../database/dbconnect.php');
 /*      dbconnect.php
         $mysql_hostname = "localhost";
         $mysql_user = "root";

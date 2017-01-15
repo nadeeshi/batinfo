@@ -4,7 +4,7 @@ session_start(); // Session starts here.
 <!DOCTYPE HTML>
 <html>
  <head>
-    <title></title>
+    <title>Register | BatsInfo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
           <!-- Bootstrap -->
         <link href="../../assets/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -72,9 +72,15 @@ session_start(); // Session starts here.
      <fieldset>
      <legend>Sign Up</legend>
      <div class="form-group">
-     <label>Title </label>
-     <input name="title" type="text"  required required>
 
+     <label>Title </label>
+     <select name="title">
+     <option value="miss">Miss</option>
+     <option value="mrs">Mrs</option>
+     <option value="mr">Mr</option>
+     <option value="prof">Prof</option>
+     </select>
+     
      </div>
      <div class="form-group">
      <label>First Name </label>
@@ -83,7 +89,7 @@ session_start(); // Session starts here.
      </div>
     <div class="form-group">
      <label>Middle Name </label>
-     <input name="mname" type="text" required placeholder="Middle Name" class="form-control" />
+     <input name="mname" type="text"  placeholder="Middle Name" class="form-control" />
      <!--<span class="text-danger"><?php if (isset($name_error)) echo $name_error; ?></span>-->
      </div>
      <div class="form-group">
@@ -113,7 +119,7 @@ session_start(); // Session starts here.
      </div>
      <div class="form-group">
      <label>Major In </label>
-     <input name="major" type="text"  required placeholder="Majoring In" class="form-control" />
+     <input name="major" type="text"   placeholder="Majoring In" class="form-control" />
      </div>
      <div class="form-group">
      <label>Email </label>

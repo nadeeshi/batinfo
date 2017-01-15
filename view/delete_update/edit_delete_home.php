@@ -58,8 +58,8 @@
                     if (mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
-
-                    $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0'");
+                    $researcher_id = $_SESSION['usr_id'];
+                    $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0' AND researcher_id= '$researcher_id'");
 
 
 
@@ -101,20 +101,13 @@
                     
                     
                     <div class="col-xs-8">
-                <button onclick="window.location.href = '../bats_view/bats_view.php'" class="my-button submit_btn_edit my-buttons" id ="myBtn">Back</button>
+        <button onclick="window.location.href = '../bats_view/bats_view.php'" class="my-button submit_btn_edit my-buttons" id ="myBtn">Back</button>
 
 
             </div>
                 </div>
                     
-                    
-            
-                
-                
-                
-
-
-            </div>
+             </div>
      
         
          <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">

@@ -2,7 +2,7 @@
 
 <?php 
 
-include ('../../database/cnm_db_con.php');
+include ('../../database/dbconnect.php');
 
         
           

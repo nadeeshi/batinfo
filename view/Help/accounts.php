@@ -125,7 +125,7 @@
 
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="slt">
-                    <a href="questions2">
+                    <a href="questions2.php">
                     <button type="button" class="btn btn-danger pdd">
                         <i class="fa fa-trash fa-4x"style="margin-top: 15px"></i>
                         <br>

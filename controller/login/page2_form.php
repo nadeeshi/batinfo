@@ -23,6 +23,7 @@ if (isset($_POST['fname'])){
 ?>
 <!DOCTYPE HTML>
 <html>
+<title> Register | BatsInfo </title>
  <head>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" >
           <!-- Bootstrap -->
@@ -48,11 +49,12 @@ if (isset($_POST['fname'])){
   <div class="col-xs-12 body-content"> 
     <div class="container-fluid" >
       <?php include ("../../assets/IncludedFiles/mainnav.php") ?> 
+    </div>
       <div class="container" style="padding-top:100px; padding-bottom:150px;">
         <div class="row">
           <div class="col-md-4 col-md-offset-4 well" style="opacity: 0.935;">
             <div class="main">
-            <h2></h2><hr/>
+              <h2></h2><hr/>
               <span id="error">
               <?php
               if (!empty($_SESSION['error_page2'])) {
@@ -70,7 +72,7 @@ if (isset($_POST['fname'])){
                   <input name="q1ins" id="q1ins" type="text" size="50" required class="form-control" />
                   <label>Year Obtained :</label>
                   <input name="q1year" id="q1year" type="text" size="25" required class="form-control" />
-                  </div>
+                </div>
                 <div class="form-group">
                   <b>Qualification 2 :</b><br>
                   <label>Qualification Name :</label>
@@ -82,7 +84,7 @@ if (isset($_POST['fname'])){
                 </div>
                 <div class="form-group">
                   <label>Other :</label>
-                  <input name="other" id="other" type="text" size="30" required class="form-control" />
+                  <input name="other" id="other" type="text" size="30"  class="form-control" />
                 </div>
                 <input type="reset" value="Reset" />
                 <input name="submit" type="submit" value="Submit" />
@@ -90,10 +92,10 @@ if (isset($_POST['fname'])){
             </div> 
           </div>
         </div>
+      </div>
       <div id="footer" class="container=fluid">
             <a name="contact"> <?php include("../../assets/IncludedFiles/footer.php") ?> </a>
       </div>
-    </div>
   </div>
  </body>
 </html>

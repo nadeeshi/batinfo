@@ -1,6 +1,6 @@
 
 <?php include("../../controller/insert/news_db_insert.php");
-//dbconnect.php;
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,33 @@
 	<script>tinymce.init({ selector:'textarea' });</script>
 	
 	<script type="text/javascript">
-
+        
+           
+            
+            function validation(){
+                var vimage = document.forms["news"]["image"].value;
+                if (vimage == null || vimage == "") {
+                    alert("you must have selected a image file before proceed");
+                    return false;
+                }
+                
+                var vtitle = document.forms["news"]["title"].value;
+                if (vtitle == null || vtitle == "") {
+                    alert("you must have filled out this 'title' field before proceed");
+                    return false;
+                }
+                var content = tinymce.get('body').getContent({format: 'text'});
+               
+                if($.trim(content) == '')
+                {
+                    alert("'description' field is empty can not proceed");
+                    return false;                 
+                }
+                
+                
+                
+            }
+            
 			function readURL(input) {
 				if (input.files && input.files[0]) {
 					var reader = new FileReader();
@@ -47,39 +73,39 @@
 	
 		<div class="s">
 		
-			<form  method="post" enctype="multipart/form-data" action=""> 
+			<form  name="news" method="post" enctype="multipart/form-data" action="" onsubmit="return validation()"> 
 				<div class="register-top-grid">				
 					<h3>INSERT NEWS</h3>
 					<input type="hidden" name="new" value="1" />
 
-					<div class="wow fadeInLeft" data-wow-delay="0.4s">
-						<span>Select Image<label>*</label></span>
-						<input type="file" name="image" required onchange="readURL(this);"><br />
-						<img id="blah" src="#" alt=""/>
+					<div class="form-group" >						
+                        <label for="inputtitle">Select an image</label>
+						<input type="file" name="image"  required onchange="readURL(this);"><br />
+						<img id="blah" src="" alt="your image"/>
 						
 					</div>
-					    <div class="form-group">
-						<label for="inputEmail">enter title of the news</label>
-						<input type="text" class="form-control" name="title" required placeholder="title">
+				    <div class="form-group">
+						<label for="inputtitle">Enter a title for the news</label>
+						<input type="text" class="form-control" name="title" required  placeholder="title">
 					</div>
-					<!--
-					<div class="form-group" data-wow-delay="0.4s">
-						<span>Title<label>*</label></span>
-						<input type="text" name="title" required> 
-					</div>-->
-					 					 
-					<textarea type="text" name="body"></textarea>
-					<p><?php //echo $status; ?></p>
+					
+                    <div class="form-group">
+						<label for="inputnew_body">Enter enter your description for the above title </label>
+					   <textarea type="text" name="body" class="form-control"></textarea>
+					</div>
+                    
 					<div class="clearfix"> </div>
 					<div class="register-but">
-					<input type="submit" name="submit" value="submit" onclick="alert('view of your submission')"></br>				   
+                    <label>to get a view before your news is published hit 'view' button here</label>    
+					</br><input type="submit" name="submit" value="view" onclick="alert('view of your submission')"></br>				   
 					 
 					<div class="clearfix"> </div>
 				   
 					</div>
 				</div>	 
 			</form>
-			     
+		<label>to cancel your submission hit 'cancel' button</label>    
+					</br>	     
         <a class="btn btn-default btn-sm" href="" onclick="alert('cancel the procedure')">cancel</a>
              
 		</div>

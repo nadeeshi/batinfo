@@ -9,10 +9,10 @@
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-        <link rel="stylesheet" href="../../assets/CSS/insert_form.css">
+       
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/CSS/footer.css" rel="stylesheet">
+       
        
         <script src="../../assets/JS/bootstrap.js"></script>
         <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>

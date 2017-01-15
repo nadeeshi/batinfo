@@ -53,47 +53,47 @@ require_once('../../assets/includedFiles/auth.php');
 
 
 
-<div id="body">
-	<table width="100%" border="1">
-    <tr>
-    <th colspan="4">your uploads...<label><a href="../../controller/insert/researchDetails.php">upload new files...</a></label></th>
-    </tr>
-    <tr>
-    <td>File Name</td>
-    <td>File Type</td>
-    <td>File Size(KB)</td>
-    <td>View</td>
-    </tr>
-    <?php
-    ob_start();
-    include("../../assets/includedFiles/connect.php");
-    $sql="SELECT * FROM tbl_uploads";
+                            <div id="body">
+                                <table width="100%" border="1">
+                                    <tr>
+                                        <th colspan="4">your uploads...<label><a href="../../controller/insert/researchDetails.php">upload new files...</a></label></th>
+                                    </tr>
+                                    <tr>
+                                        <td>File Name</td>
+                                        <td>File Type</td>
+                                        <td>File Size(KB)</td>
+                                        <td>View</td>
+                                    </tr>
+                                    <?php
+                                    ob_start();
+                                    include("../../assets/includedFiles/connect.php");
+                                    $sql="SELECT * FROM tbl_uploads";
 
-	$result_set=mysqli_query($bd,$sql);
-	while($row=mysqli_fetch_array($result_set))
-	{
-		?>
-        <tr>
-        <td><?php echo $row['file'] ?></td>
-        <td><?php echo $row['type'] ?></td>
-        <td><?php echo $row['size'] ?></td>
-        <td><a href="../../controller/insert/uploads/<?php echo $row['file'] ?>" target="_blank">view file</a></td>
-        </tr>
-        <?php
-	}
-	?>
-    </table>
-    
-</div></div>
-                        </div>
+                                    $result_set=mysqli_query($bd,$sql);
+                                    while($row=mysqli_fetch_array($result_set))
+                                    {
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $row['file'] ?></td>
+                                            <td><?php echo $row['type'] ?></td>
+                                            <td><?php echo $row['size'] ?></td>
+                                            <td><a href="../../controller/insert/uploads/<?php echo $row['file'] ?>" target="_blank">view file</a></td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </table>
+
+                            </div></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-                            <div id="footer-sec"><b>Group 23-UCSC Group Project</b>
-                            </div>
+<div id="footer-sec"><b>Group 23-UCSC Group Project</b>
+</div>
 
 </body>
 </html>

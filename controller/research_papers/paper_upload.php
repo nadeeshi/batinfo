@@ -52,14 +52,14 @@
 
                 $title = $_POST['title'];
                 $author = $_POST['author'];
-                $rid = $_POST['rid'];
+                $researcher_id =  $_SESSION['usr_id'];
                 $description= $_POST['description'];
                 
                 $area = $_POST['area'];
                 $category = $_POST['category'];
                
 
-                $query= mysqli_query($con, "INSERT INTO research_papers (paper,	title,author,researcher_id,area,description,category) VALUES('$location','$title','$author','$rid','$area','$description','$category')");
+                $query= mysqli_query($con, "INSERT INTO research_papers (paper,	title,author,researcher_id,area,description,category) VALUES('$location','$title','$author','$researcher_id','$area','$description','$category')");
                 
                 echo "<p class='msg'>File Succesfully Uploaded<p>";
                 echo '<br><br><a href="../../view/research_papers/research_papers.php"><button class="my-button">Back</button></a>';

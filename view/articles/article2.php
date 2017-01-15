@@ -93,11 +93,15 @@ while($row = $result->fetch_assoc()) {
   </div>
   <div id="top" class="col-md-9">
   <?php 
-      $link=$_SESSION['lnk'];
+  $link2= "www.facebook.com "; 
+  
+  echo '<iframe src= $link2 name="ifrm" style="border:none;" width="90%" height="1200"> </iframe>';
+  
+      $link2=$_SESSION['lnk'];
       $content=$_SESSION['cntnt'];
       
-      ?>
-      <iframe src= $link name="ifrm" style="border:none;" width="90%" height="1200"> </iframe>
+    ?>
+      
     
   </div>
 </div>
