@@ -1,8 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-include ('../../database/dbconnect.php');/*project
-@mysql_connect("localhost","root","") or die("could not connect");
-@mysql_select_db("project") or die("could not find");*/
+include ('../../database/dbconnect.php');
 ?>
 
 <!DOCTYPE html>
@@ -32,8 +30,6 @@ include ('../../database/dbconnect.php');/*project
 	$count = 0;
 		$count1 = 0;
 		$count2 = 0;
-	//$rec =0;
-	
 	
 	if($_POST){
 	
@@ -43,39 +39,27 @@ include ('../../database/dbconnect.php');/*project
 			$searchq = preg_replace("#[^0-9a-z]#i","",$searchq);		
 		
 			if(!empty($searchq)){
-				//$query = "SELECT * FROM fulldemo WHERE name = '$searchq';";
-				//$result = mysqli_query($con, $query);
-				//$record = mysqli_fetch_assoc($result);
-        //---SELECT title FROM pages WHERE my_col LIKE %$param1% OR another_col LIKE %$param2%;
-                //bat_info
+				
                 $query = mysqli_query($con,"SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' 
 				OR common_names Like '%$searchq%' OR
 				synonyms LIKE '%$searchq%';") or die("could  not search");
-                //echo mysqli_error($con);
-                //die(1);
-                /*$query = mysql_query("SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' OR common_name Like '%$searchq%' OR synonyms LIKE '%$searchq%';") or die("could can not search");*/
-				/*$query = mysql_query("SELECT * FROM fulldemo WHERE name = '$searchq';") or die("could not search");*/
+                
 				while($row = mysqli_fetch_assoc($query)){
 					$fname = $row['scientific_name'];
-					//$lplace1 = $row['city'];
-					//$id = $row['id'];//--
+					
                     $id = $row['bat_id'];
-					//$img = $row['location'];
+					
 					$des = $row['other_details'];
 					$count = 1;
 		
 				}
 	
 				include ("vm.php");
-				//$query = "SELECT * FROM photos;";
-				//$result = mysqli_query($con, $query);
 				
 				$query = mysqli_query($con,"SELECT * FROM photos;") or die("could  not search");
 	
-	//$result = mysql_query("SELECT * FROM photos");
-				//if($result ){
-					$num_rows = mysqli_num_rows($query);
-//echo $num_rows;	
+				$num_rows = mysqli_num_rows($query);
+	
 	
 				$dat = "zi";
 				$ab = array();
@@ -100,7 +84,7 @@ include ('../../database/dbconnect.php');/*project
 					}
 					$r = count($xx);
 		
-				}//NMMMN
+				}
 				if($count1==0){
 					for($i=0;$i<=$num_rows-1;$i++){
 						SearchString($head[$i], $searchq);
@@ -112,8 +96,8 @@ include ('../../database/dbconnect.php');/*project
 						}
 						$r = count($xx);		
 					}		
-				}//echo $r;
-			}//}
+				}
+			}
 		}
 	}
 ?>
@@ -139,7 +123,7 @@ include ('../../database/dbconnect.php');/*project
 						}		
 						if(($count1 ==1)||($count2==1)){
 							for($s=0;$s<$r;$s++){
-				//echo $xx[$s];
+				
 						?>
 						<li><a href=<?php echo "'../news/news_child.php?photoid=".$xx[$s]."'";?>><?php echo $head[$xx[$s]-1];?></a></li>
 						<?php echo substr( $ab[$xx[$s]-1],0,150)."..."; 

@@ -38,12 +38,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="inblock">
-									<!--
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <p><h1 class="ax"><?php //echo $record['caption']; ?></h1></br></p>
-                                        </div></div>-->
-
+									
 									<div class="row">
 										<div class="col-sm-12">
 											<p>                            
@@ -57,14 +52,7 @@
 											</p>
 										</div>
 									</div>
-                                    <!--
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <a href="news.php" class="readon">
-                                                back to news
-                                            </a>
-                                        </div>
-									</div>-->
+                                    
 
 								</div>
 								<div class="row">
@@ -82,7 +70,7 @@
 								<p style="text-align:right">create a pdf<br>of this infomation<br>
 						
 									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?>>
-									<img src="pdf.png" alt="pdf" />
+									<img src="../../assets/images/pdf.png" alt="pdf" />
 						
 									</a>
 								</p>
