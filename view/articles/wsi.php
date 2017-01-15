@@ -63,25 +63,15 @@ img.intLink { border: 0; }
   </div>
   <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10 " style="z-index: 0;">
-      <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 20px;">
+      <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 20px";>
         <?php
          if(isset($_POST['add'])) {
             $dbhost = 'localhost';
             $dbuser = 'root';
             $dbpass = '';
             $dbname = "project";
-
-
-            
-
     
-    echo "Your add has been submited, you will be redirected to your account page in 3 seconds....";
-    
-            $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-            
-            if(! $conn ) {
-               die('Could not connect: ' . mysqli_error());
-            }
+            include "../../database/dbconnect.php";
             
             if(! get_magic_quotes_gpc() ) {
                $title = addslashes ($_POST['title']);
@@ -110,11 +100,11 @@ img.intLink { border: 0; }
             $_SESSION['ttl'] = $title;
             $sql = "INSERT INTO articles(title,content,link) VALUES('$title','$content','$link')";
                
-            mysqli_select_db($conn,'project');
-            $retval = mysqli_query( $conn, $sql );
+            mysqli_select_db($con,'project');
+            $retval = mysqli_query( $con, $sql );
             
             if(! $retval ) {
-               die('Could not enter data: ' . mysqli_error($conn));
+               die('Could not enter data: ' . mysqli_error($con));
             }
             
             //echo "Entered data successfully\n";
@@ -125,7 +115,7 @@ img.intLink { border: 0; }
             echo "<a href='pdf.php'>"."create pdf"."</a>";
             fclose($myfile);
             
-            mysqli_close($conn);
+            mysqli_close($con);
 
 
     
