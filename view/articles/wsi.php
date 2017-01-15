@@ -63,7 +63,7 @@ img.intLink { border: 0; }
   </div>
   <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10 " style="z-index: 0;">
-      <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 110px;">
+      <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 20px;">
         <?php
          if(isset($_POST['add'])) {
             $dbhost = 'localhost';
