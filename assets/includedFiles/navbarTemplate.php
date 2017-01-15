@@ -36,11 +36,8 @@ ob_end_flush();
 			                <li><a class="navbar-head-list" href="../../controller/login/logout.php">Sign Up</a></li>
 			                <?php } ?>
 			              
-
-			              
-
-
-			            
+			            </ul>
+			             
 			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
 	      					<div class="form-group">
 	        					<input type="text" class="form-control form-control-custom input-area" name='address' placeholder="Enter name here">
