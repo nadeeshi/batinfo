@@ -7,29 +7,29 @@ $neid= $_POST['webpage'];
 //echo $table;
 
 $date= date("m-d-Y");
-/*
+
 $user = "user"; //root
 $password = ""; 
 $host = "localhost"; 
 $dbase = "test2";//project 
-*/
 
 
-include ('../../database/dbconnect.php');
-/*
+
+//include ('../../database/cnm_db_con.php');
+
 $connection= mysql_connect ($host, $user, $password);//
 if (!$connection)//
 {
 die ('Could not connect:' . mysql_error());//
 }
 mysql_select_db($dbase, $connection);//
-
+/*
 $qry = "SELECT 1 from $table;";
 $result = mysqli_query($con, $qry);
 if($result1== FALSE)        
 */
 
-$val = mysqli_query($con,"SELECT 1 FROM comment ORDER BY ID DESC where neid =25");
+$val = mysql_query("SELECT 1 FROM comment ORDER BY ID DESC where neid =25");
 
 if($val == FALSE){
    
@@ -41,24 +41,24 @@ VALUES ('$name_entered', '$date', '$comment_entered')");
 $result = mysqli_query($con, $qry);
         
 */
-mysqli_query($con,"INSERT INTO comment (name, date, comments,neid)
+mysql_query("INSERT INTO comment (name, date, comments,neid)
 VALUES ('$name_entered', '$date', '$comment_entered','$neid')");
 }
 /*
 $result="SELECT * FROM $table ORDER BY ID DESC";
 $result1 = mysqli_query($con, $result);
 */
- $g = mysqli_query($con,"SELECT * FROM comment"); 
-$f=mysqli_num_rows($g);
+ $g = mysql_query("SELECT * FROM comment"); 
+$f=mysql_num_rows($g);
     if($f!=0){
-$result= mysqli_query( $con,"SELECT * FROM comment  WHERE neid ='$neid' ORDER BY ID DESC" ) 
-or die("SELECT Error: ".mysqli_error());// 
+$result= mysql_query( "SELECT * FROM comment  WHERE neid ='$neid' ORDER BY ID DESC" ) 
+or die("SELECT Error: ".mysql_error());// 
 
 
 /*
 $row = mysqli_fetch_assoc($result1);
 */
-while ($row = mysqli_fetch_assoc($result)){ 
+while ($row = mysql_fetch_array($result)){ 
 $name_field= $row['name'];
 $date_field= $row['date'];
 $comment_field= $row['comments'];

@@ -50,10 +50,22 @@
 
                         var lastpart= webpage.substring(position + 1);
 
+//var period= lastpart.indexOf(".");
+
+//var complete= lastpart.substring(0, period);
+
+//var id = "ctl03_Tabs1";
+//var lastChar = lastpart[lastpart.length - 1];
+
+//var period= lastpart.indexOf(lastChar);
+
+//var complete= lastpart.substring(0, period+1);
+//window.alert(lastpart);
                         var complete=lastpart;
 
                         complete= complete.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&\=])/g, "_");
-
+//complete= complete1.replace(/?/g, "_");
+//window.alert(complete);
 
                         var url= "usercomments1.php";
                         var username= document.getElementById("name_entered").value;
@@ -91,7 +103,7 @@
         <?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
         </div>
         <?php
-		include ('../../database/dbconnect.php');//dbconnect.php
+		include ('../../database/cnm_db_con.php');//dbconnect.php
 		$qry = "SELECT * FROM photos WHERE id = '" . $_GET['photoid'] . "' ;";
         $result = mysqli_query($con, $qry);
         $record = mysqli_fetch_assoc($result);
@@ -127,7 +139,18 @@
                                             </p>
                                         </div>
                                     </div>
-                                    
+                                    <!--
+        <a class="aidanews2_img1" href="">
+            <img src="<?php //echo "photos/" . $record['location'];  ?>" alt="100-000-awarded-in-grants-to-battle-wns" style = "margin:auto; max-height: 32em ; min-height:14em; width: 45%; height:auto;"/>
+        </a>
+        <div class="des">
+            <h1 class="ax">
+                                    <?php //echo $record['caption']; ?></br>
+
+            </h1>
+                                            <p><?php //echo $record['desc']; ?></p>
+
+        </div>-->
                                     <div class="row">
                                         <div class="col-md-12">
                                             <a href="newst.php" class="readon">

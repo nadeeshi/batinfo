@@ -3,16 +3,16 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 $name_entered= $_POST['name'];
 $comment_entered= $_POST['comment'];
 $neid= $_POST['webpage'];
-
+$r_id= 9;//$_POST['ar'];
 //echo $table;
 
 $date= date("m-d-Y");
-/*
+
 $user = "user"; //root
 $password = ""; 
 $host = "localhost"; 
-$dbase = "test2";//project 
-*/
+$dbase = "project";//project 
+//$r_id= $_SESSION['usr_id'];
 
 
 include ('../../database/dbconnect.php');
@@ -23,13 +23,15 @@ if (!$connection)//
 die ('Could not connect:' . mysql_error());//
 }
 mysql_select_db($dbase, $connection);//
-
+/*
 $qry = "SELECT 1 from $table;";
 $result = mysqli_query($con, $qry);
-if($result1== FALSE)        
+
+$x=mysqli_num_rows($result);
+if($x==0){
 */
 
-$val = mysqli_query($con,"SELECT 1 FROM comment ORDER BY ID DESC where neid =25");
+$val = mysqli_query($con,"SELECT 1 FROM comment ORDER BY ID DESC where neid ='$neid'");
 
 if($val == FALSE){
    
@@ -41,8 +43,8 @@ VALUES ('$name_entered', '$date', '$comment_entered')");
 $result = mysqli_query($con, $qry);
         
 */
-mysqli_query($con,"INSERT INTO comment (name, date, comments,neid)
-VALUES ('$name_entered', '$date', '$comment_entered','$neid')");
+mysqli_query($con,"INSERT INTO comment (name, date, comments,neid,r_id)
+VALUES ('$name_entered', '$date', '$comment_entered','$neid','$r_id')");
 }
 /*
 $result="SELECT * FROM $table ORDER BY ID DESC";
