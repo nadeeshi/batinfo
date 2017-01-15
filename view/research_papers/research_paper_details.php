@@ -6,45 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>edit bats</title>
-
-
+        <title>research papers view</title>
 
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-        <link rel="stylesheet" href="../../assets/CSS/insert_form.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/CSS/footer.css" rel="stylesheet">
         <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/bootstrapjs.js"></script>
-     
         <script src="../../assets/JS/jquery.js"></script>
-       
+        <script src="../../assets/JS/bootstrap.js"></script>
         <style>
-            .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-                background-color:beige  !important;
-                opacity: 1;
-                border: none;
-                cursor: context-menu!important;
-            }
-            img{
-                
-                    width: 100%;
-                    height: 100%;;
-            }
-            .pdf-link{
-                font-size: 15px;
-                font-weight: bold;
-                color:darkgreen;
-                border: 1px;
-                
-            }
-            .pdf-link:hover{
-                color: red;
-                
-            }
+           
         </style> 
     </head>
 
@@ -66,7 +39,7 @@
         $details = mysqli_fetch_array($result);
 
         if (!$details) {
-            
+
             echo "<p class='msg'>Error Occur! <p>";
 
             echo '<br><br><a href="edit_delete_home.php"><button class="my-button">Try Again</button></a>';
@@ -77,20 +50,14 @@
         ?>
 
         <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form">
-            
-
-
+             <div class="head-form">
+                    <h2>Reasearch Paper Details</h2>
+                </div>
             <form id="form" method="post" action="">
-
-             
-
-
                 <div class="form-group clearfix">
                     <label class="lbl " >Title</label>
 
                     <input type="text"   class="form-control " value="<?php echo $details['title'] ?>"  disabled />
-                    
-
 
                 </div>
 
@@ -98,52 +65,40 @@
                     <label class="lbl " >Author</label>
 
                     <input type="text"  class="form-control " value="<?php echo $details['author'] ?>"  disabled />
-
-
                 </div>
-                <div class="form-group clearfix">
-                    <label class="lbl " >Researcher ID</label>
-
-                    <input class="required form-control " type="text" value="<?php echo $details['researcher_id'] ?>"  disabled/>
-
-                </div>
+              
 
                 <div class="form-group clearfix">
                     <label class="lbl" >Description</label>
                     <textarea class="form-control my-text" name="description" id="description" rows="4" cols="50"  disabled> <?php echo $details['description'] ?></textarea>
-                    
+
                 </div>
 
 
                 <div class="form-group clearfix">
-                    <label class="lbl " >Area </label>
+                    <label class="lbl " >Research Area </label>
 
                     <input  class="form-control " value="<?php echo $details['area'] ?>"  disabled/>
 
                 </div>
-                
+
                 <div class="form-group clearfix">
-                    <label class="lbl " >Category </label>
+                    <label class="lbl " >Research Category </label>
 
                     <input  class="form-control " value="<?php echo $details['category'] ?>"  disabled/>
 
                 </div>
                 <div class="form-group clearfix">
-                  
+
                     <div class="pdf-link">
-                    <a target="_blank" class="pdf-link" href="<?php echo $details['paper'] ?> ">Click Here to View the Research Paper</a>
+                        <a target="_blank" class="pdf-link" href="../../assets/<?php echo $details['paper'] ?> ">Click Here to View the Research Paper</a>
                     </div>
                 </div>
-                
-                
-
 
             </form>                
-           
-
 
         </div>
-          <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
             <?php include "../../assets/IncludedFiles/footer.php" ?>
         </div>
     </body>

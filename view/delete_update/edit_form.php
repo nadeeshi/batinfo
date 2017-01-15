@@ -7,80 +7,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>edit bats</title>
-   
-        
-        
-         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
+        <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
+         <link rel="stylesheet" href="../../assets/CSS/edit_form_css.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-       
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/CSS/footer.css" rel="stylesheet">
         <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/bootstrapjs.js"></script>
-        <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/validate_text_fields.js"></script>
-      
+        <script src="../../assets/JS/bootstrap.js"></script>
 
-        <style>
-               .sname_control{
-                background-color: #ffffff !important;
-
-
-                font-size: 20px;
-                font-weight: 400;
-            }
-            .glyphicon-pencil{
-
-                padding-left: 84%;  
-                top: 24px!important; 
-                color:#15120e!important;
-                font-size: 120%;
-                text-decoration: underline  !important;
-
-            } .glyphicon_my:hover, .glyphicon_my:focus {
-                color: #f30505 !important;
-                text-decoration: none !important;
-                cursor:pointer !important;
-            }
-            .edit{
-                font-family: 'Copse', serif !important;
-
-
-            }
-
-
-            .form-control[disabled], fieldset[disabled] .form-control {
-                cursor: help !important;
-
-            }
-            .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-                background-color: #e8e8e8;
-                opacity: 1;
-            }
-            .submit_btn_edit{
-                margin-left: -15px;
-
-            }
-            .edit-form{
-                margin-bottom: 50px !important;
-
-
-            }
-            img{
-                
-                    width: 100%;
-                    height: 100%;;
-            }
-        
-        </style> 
     </head>
 
     <body >
         <div>
-         <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
+            <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
         <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form">
@@ -119,36 +61,32 @@
 
                 <div class="form-group clearfix">
                     <div>
-                        
+
                         <a class="link" onclick="return myFunction();" >
                             <span class="glyphicon_my glyphicon glyphicon-pencil " ><span class="edit">Edit</span></span>
 
                             <!-- button, make disabled text fields editable -->
-
-                           
-
                         </a>
                     </div>
 
 
-                        <!--print curretnt bat`s name -->
+                    <!--print curretnt bat`s name -->
 
-   
+
                     <p class="lbl sname_control">  <?php echo $details['scientific_name'] ?></p>
-                    
-                    
+
+
                     <!-- hidden text field to send the scientific_name to update form-->
                     <input type="hidden"  id="sname" name="scientific_name" value="<?php echo $details['scientific_name'] ?>" required />
                     <div class="image"> 
-                        
-                <?php 
-                   $path = $details['pic'];
-                   $path ="../../assets/images/".$path;
-                   
-                   ?>
-                <input type="hidden"  id="pic_path" name="pic_path" value="<?php echo $details['pic'] ?>"   />
-                <img src="<?php echo $path;?>"/>
-                </div>
+
+                        <?php
+                        $path = $details['pic'];
+                        $path = "../../assets/images/" . $path;
+                        ?>
+                        <input type="hidden"  id="pic_path" name="pic_path" value="<?php echo $details['pic'] ?>"   />
+                        <img src="<?php echo $path; ?>"/>
+                    </div>
 
                 </div>
 
@@ -211,7 +149,7 @@
 
 
                 </div>
-                 <div class="form-group ">
+                <div class="form-group ">
                     <label class= "lbl">Select a photo<span class="red-star" >*</span></label>
                     <input type="file" name="image" id= "image" class="my-text"  ><br />
                 </div>  
@@ -234,7 +172,7 @@
 
                 <div class="form-group clearfix">
                     <label class="lbl " for="">Roosts Types<span class="red-star" >*</span></label>
-                    <textarea class="form-control my-text " id="roost" name="roost" rows="5" cols="50" required disabled><?php echo $details['roost']?></textarea>
+                    <textarea class="form-control my-text " id="roost" name="roost" rows="5" cols="50" required disabled><?php echo $details['roost'] ?></textarea>
 
 
                 </div>
@@ -255,7 +193,7 @@
 
 
                 </div>
-                
+
                 <div class="form-group clearfix">
                     <label class="lbl" for="">Locations <span class="red-star" >*</span></label>
 
@@ -324,62 +262,40 @@
 
 
             </form>
- 
+
             <script>
                 //make disabled text fields editable
-                
+
                 function myFunction() {
                     document.getElementById("myBtn").disabled = false;
-
-                  
-                   
                     document.getElementById("bat_order").disabled = false;
                     document.getElementById("threats").disabled = false;
-                    
                     document.getElementById("synonyms").disabled = false;
-                     document.getElementById("roost").disabled = false;
-                     document.getElementById("conservation_status").disabled = false;
-                     document.getElementById("country_occurence").disabled = false;
-                     document.getElementById("locations").disabled = false;
-                     document.getElementById("feeding").disabled = false;
-                     document.getElementById("breeding").disabled = false;
-                     document.getElementById("conservation_action").disabled = false;
-                     document.getElementById("measurements").disabled = false;
-                     document.getElementById("other_details").disabled = false;
-                    
+                    document.getElementById("roost").disabled = false;
+                    document.getElementById("conservation_status").disabled = false;
+                    document.getElementById("country_occurence").disabled = false;
+                    document.getElementById("locations").disabled = false;
+                    document.getElementById("feeding").disabled = false;
+                    document.getElementById("breeding").disabled = false;
+                    document.getElementById("conservation_action").disabled = false;
+                    document.getElementById("measurements").disabled = false;
+                    document.getElementById("other_details").disabled = false;
                     document.getElementById("kingdom").disabled = false;
-
-
                     document.getElementById("genus").disabled = false;
-
-
                     document.getElementById("phylum").disabled = false;
-
-
                     document.getElementById("family").disabled = false;
-
-
                     document.getElementById("sbfamily").disabled = false;
-
                     document.getElementById("bat_class").disabled = false;
-
-
                     document.getElementById("species").disabled = false;
-
-
                     document.getElementById("common_names").disabled = false;
-                    
                     document.getElementById("population").disabled = false;
-                    
-                    
+
                 }
-
-
 
             </script>
         </div>
-            <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
-                <?php include "../../assets/IncludedFiles/footer.php" ?>
-            </div>
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+            <?php include "../../assets/IncludedFiles/footer.php" ?>
+        </div>
     </body>
 </html>

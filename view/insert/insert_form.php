@@ -4,26 +4,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>insert a new bat</title>
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-       
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-       
-       
-        <script src="../../assets/JS/bootstrap.js"></script>
         <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/validate_text_fields.js"></script>
        
-        <style>
-        
-        </style>
-
+        <script src="../../assets/JS/validation_check.js"></script>
+        <script src="../../assets/JS/bootstrap.js"></script>
+     
     </head>
     <body>
         <!-- include header file-->
@@ -32,54 +25,45 @@
         </div>
 
         <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form">
-                   <!-- set the insert form -->
+            <!-- set the insert form -->
             <form  id="form" action="../../controller/insert/insert_core.php" method ="post" enctype="multipart/form-data">
-              
+
                 <fieldset id="first" class="my-fieldset">
                     <div class="container-form">
-                        
+
                         <div class="head-form" >
                             <h2>Insert New Bats</h2>
                         </div>
-
-                        
-                        
                         <?php
                         //get already availabale bats, so user can see newly inserting bats is alraedy there
-                         require_once('../../database/dbconnect.php');
-                         $sql = "SELECT scientific_name FROM bat_info WHERE del_bit='0'";
-                            $result = mysqli_query($con,$sql);
-
-                      
+                        require_once('../../database/dbconnect.php');
+                        $sql = "SELECT scientific_name FROM bat_info WHERE del_bit='0'";
+                        $result = mysqli_query($con, $sql);
                         ?>
-                        
-                        
-                        
 
                         <p class="subtitle">[ 1/3 ] <span class="red-star" >(* required )</span></p>
                         <div class="form-group ">
-                        
+
                             <label class= "lbl" >Scientific Name <span class="red-star" >*</span></label>
                             <input type="text" name ="scientific_name" class="form-control my-text" id= "sname" aria-describedby="sname" required><br>
-                           
-                            <?php  
-                            
-                           //get already availabale bats, so user can see newly inserting bats is alraedy there
-                            
+
+                            <?php
+                            //get already availabale bats, so user can see newly inserting bats is alraedy there
+
                             echo"<label id= 'alredy_bats' class ='lbl'>already availabale bats</label> <br> ";
                             echo "<select id='selected'>";
                             while ($row = mysqli_fetch_array($result)) {
-                                
-                            echo "<option class ='lbl' value=" . $row['scientific_name'] . "'>" . $row['scientific_name'] . "
+
+                                echo "<option class ='lbl' value=" . $row['scientific_name'] . "'>" . $row['scientific_name'] . "
                                   
                                 </option>";
                             }
                             echo "</select>";
-                            
+
                             //checking done
-                             mysqli_close($con);
+                            mysqli_close($con);
                             ?>
-                                
+
                         </div>
 
 
@@ -123,7 +107,7 @@
 
                             <input type="text" class="form-control my-text" name= "species" id="species" aria-describedby="species" required>
                         </div>
-                        
+
                         <div class="form-group ">
                             <label class= "lbl">Select a photo<span class="red-star" >*</span></label>
                             <input type="file" name="image" id= "image" class="my-text" required><br />
@@ -197,25 +181,18 @@
                         <textarea class="form-control my-text" name= "threats" id="threats" rows="4" cols="20" required></textarea>
 
                     </div>
-
-
                     <div class="form-group">
                         <label class= "lbl">Conservation Actions </label>
                         <textarea class="form-control my-text" name="conservation_action" id="conseravtion" rows="4" cols="20" ></textarea>
                     </div>
                     <div class="form-group">
                         <label class= "lbl">Population</label> 
-                        <input type="text" class="form-control my-text" name= "population" id="population" aria-describedby="species" required>
-                      
+                        <input type="text" class="form-control my-text" name= "population" id="population"  required>
+
                     </div>
-                    
-
-
                     <div class="form-group">
                         <label class= "lbl">Measurements<span class="red-star" >*</span></label>
                         <textarea class="form-control my-text" name="measurements" id="measurements" rows="4" cols="20" required></textarea>
-
-
                     </div>
 
 
@@ -223,7 +200,7 @@
                         <label class= "lbl">Other Details</label>
                         <textarea class="form-control my-text" name="other_details" id="otherDetails" rows="4" cols="20" ></textarea>
                     </div>
-                
+
 
                     <div class=" col-xs-8">
                         <input type="button" id="pre_btn2" class="prev-btn-3 my-button" value="< Previous" onclick="prev_step2()"/>
@@ -231,25 +208,19 @@
 
                     </div>
 
-
                 </fieldset>
 
-
             </form><br><br>
-
-
-           
         </div>
 
-
         <!-- start footer -->
-              <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
-                <?php include "../../assets/IncludedFiles/footer.php"?>
-            </div>
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+            <?php include "../../assets/IncludedFiles/footer.php" ?>
+        </div>
 
 
     </body>
 
-  
+
     <script></script>
 </html>

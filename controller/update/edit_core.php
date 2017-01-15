@@ -10,21 +10,12 @@
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-        <link rel="stylesheet" href="../../assets/CSS/insert_form.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/CSS/footer.css" rel="stylesheet">
-        <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/bootstrapjs.js"></script>
-        <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
-        <script src="../../assets/JS/jquery.js"></script>
-        <script src="../../assets/JS/validate_text_fields.js"></script>
-       
-        <style></style>
-       
-
-
-    </head>
+       <script src="../../assets/JS/jquary.js"></script>
+          <script src="../../assets/JS/jquery.js"></script>
+        <script src="../../assets/JS/bootstrap.js"></script>
+     </head>
     <body>
 
         <div>
@@ -139,5 +130,5 @@
             <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
                 <?php include "../../assets/IncludedFiles/footer.php" ?>
             </div>
-    </body>
+        </body>
 </html>

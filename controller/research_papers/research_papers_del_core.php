@@ -5,73 +5,88 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>edit bats</title>
-        
+        <title>delete reserach papers</title>
+
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-        <link rel="stylesheet" href="../../assets/CSS/insert_form.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/CSS/footer.css" rel="stylesheet">
         <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/bootstrapjs.js"></script>
-        <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
+        <script src="../../assets/JS/bootstrap.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
-        <script src="../../assets/JS/validate_text_fields.js"></script>
-       
-        <style></style>
-       
+
 
 
     </head>
     <body>
 
         <div>
-              <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
+            <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
         <div class="col-sm-8 col-sm-push-2 col-xs-12 insert-form">
-          <div class="height_default_edit">
-
-          
-            <?php
-            require_once('../../database/dbconnect.php');
-
-            if (mysqli_connect_errno()) {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            }
-        
-            $paper_id = $_GET['paper_id'];
-            
-            $del_bit = 1;
+            <div class="height_default_edit">
 
 
-            $query = "UPDATE research_papers SET del_bit='$del_bit' WHERE paper_id = '$paper_id'";
+                <?php
+                require_once('../../database/dbconnect.php');
 
-            mysqli_query($con, $query) or die("Something Went Wrong!!!");
+                if (mysqli_connect_errno()) {
+                    echo "<p class='msg'>Something Went Wrong!!!</p>";
+                    echo '<br><br><a href="../../view/research_papers/research_papers_del_home.php"><button class="my-button">Try Again</button></a>';
+                }
 
-            if ($con->query($query) === TRUE) {
-                echo "<p class='msg'>Paper Succesfully Deleted<p>";
-                echo '<br><br><a href="../../view/research_papers/research_papers_update_del.php"><button class="my-button">Back</button></a>';
-            } else {
-                echo "<p class='msg'>Something Went Wrong!!!</p>";
-                echo '<br><br><a href="../../view/research_papers/research_papers_update_del.php"><button class="my-button">Try Again</button></a>';
+                $paper_id_path = $_GET['paper_id_path']; // get the merged paper path and paper id with ^ symbol
+                $explodes = explode('^', $paper_id_path); // split in to sepearate id and file path
 
-            }
-
-            mysqli_close($con);
-
-
-            
-            ?>
+                $paper_id = $explodes[0]; // get the paper id
+                $paper = $explodes[1]; // get the paper path
+                //$researcher_id = $_SESSION['usr_id'];
 
 
-        
-        </div>
-        </div>
-            <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
-                <?php include "../../assets/IncludedFiles/footer.php" ?>
+                $researcher_id = 6;
+                $var = $researcher_id;
+                $structure = "/wamp/www/batinfo/assets/$paper";
+
+                $file = $structure;
+
+                // delete the file from relavant folder/ directory
+                if (!unlink($file)) {
+                    echo "<p class='msg'>Something Went Wrong!!!</p>";
+                    echo '<br><br><a href="../../view/research_papers/research_papers_del_home.php"><button class="my-button">Try Again</button></a>';
+                } else {
+                // 
+                    $query = "DELETE FROM research_papers WHERE paper_id='$paper_id'";
+
+                    if (mysqli_query($con, $query)) {
+                        
+                    } else {
+                        //echo nothing here...
+                    }
+
+
+                    if ($con->query($query) === TRUE) {
+                        echo "<p class='msg'>Paper Succesfully Deleted<p>";
+                        echo '<br><br><a href="../../view/research_papers/research_papers_del_home.php"><button class="my-button">Back</button></a>';
+                    } else {
+                        echo "<p class='msg'>Something Went Wrong!!!</p>";
+                        echo '<br><br><a href="../../view/research_papers/research_papers_del_home.php"><button class="my-button">Try Again</button></a>';
+                    }
+                }
+
+
+
+
+                mysqli_close($con);
+                ?>
+
+
+
             </div>
+        </div>
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+<?php include "../../assets/IncludedFiles/footer.php" ?>
+        </div>
     </body>
 </html>

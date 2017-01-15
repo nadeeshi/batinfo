@@ -5,23 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>edit bats</title>
+        <title>upadate reserach papers</title>
         
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-        <link rel="stylesheet" href="../../assets/CSS/insert_form.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/CSS/footer.css" rel="stylesheet">
         <script src="../../assets/JS/jquary.js"></script>
-        <script src="../../assets/JS/bootstrapjs.js"></script>
-        <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
-        <script src="../../assets/JS/validate_text_fields.js"></script>
-       
-        <style></style>
-       
+        <script src="../../assets/JS/bootstrap.js"></script>
+        
 
 
     </head>
@@ -44,7 +38,10 @@
             
             $size = $_FILES['pdf']['size'];
             
-            
+             // $researcher_id =  $_SESSION['usr_id'];
+
+                $researcher_id = 4;
+
             if($size<=0){
                 $location=  mysqli_real_escape_string($con, $_POST['paper']);
                 
@@ -57,9 +54,9 @@
                 $size = $size / 1024;
 
 
-                move_uploaded_file($_FILES["pdf"]["tmp_name"], "../../assets/research_papers/" . $_FILES["pdf"]["name"]);
+                move_uploaded_file($_FILES["pdf"]["tmp_name"], "../../assets/research_papers/".$researcher_id."/" . $_FILES["pdf"]["name"]);
 
-                $location = "../../assets/research_papers/" . $_FILES["pdf"]["name"];
+                $location = "research_papers/".$researcher_id."/". $_FILES["pdf"]["name"];
 
                 
             }
@@ -89,10 +86,10 @@
 
             if ($con->query($query) === TRUE) {
                 echo "<p class='msg'>Paper Succesfully Updated<p>";
-                echo '<br><br><a href="../../view/delete_update/edit_delete_home.php"><button class="my-button">Back</button></a>';
+                echo '<br><br><a href="../../view/research_papers/research_papers_update_home.php"><button class="my-button">Back</button></a>';
             } else {
                 echo "<p class='msg'>Something Went Wrong!!!</p>";
-                echo '<br><br><a href="../../view/delete_update/edit_delete_home.php"><button class="my-button">Try Again</button></a>';
+                echo '<br><br><a href="../../view/research_papers/research_papers_update_home.php"><button class="my-button">Try Again</button></a>';
 
             }
 

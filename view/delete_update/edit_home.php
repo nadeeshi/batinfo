@@ -8,22 +8,18 @@
         <title>edit & delete bats</title>
 
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
-        <link rel="stylesheet" href="../../assets/CSS/edit_del_home_css.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
+          <link rel="stylesheet" href="../../assets/CSS/edit_home_css.css"/>
         <link rel="stylesheet" href="../../assets/CSS/edit_del_page.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
-
+        <script src="../../assets/JS/edit_del_confimtions.js"></script>
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
 
-        <style> 
-
-          
-
-        </style>
+       
 
 
     </head>
@@ -62,8 +58,7 @@
 
 
                             <td class='td th_option lbl head'>Action</td>
-                            <td class='td th_option lbl head'>Action</td>
-
+                          
                         </tr>
                     </thead>
 
@@ -77,9 +72,9 @@
                             echo '<td class="td_data lbl">' . $row['scientific_name'] . '</td>';
                             $i = $i + 1;
 
-                            echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_edit();">edit</a></td>';
+                            echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_update();">edit</a></td>';
 
-                            echo '<td class="td_data td_data_op lbl"><a class="link" href="../../controller/delete/delete_bat.php?scientific_name=' . $row['scientific_name'] . '"onclick="return myFunction_del();">delete</a></td>';
+                         
 
                             echo '</tr>';
                         }

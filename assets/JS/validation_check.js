@@ -1,4 +1,4 @@
- $(function () {
+            $(function () {
 
             $("#sname").bind("keyup", function (event) {
                 var regex = /^[a-zA-Z\s]+$/;
@@ -6,8 +6,6 @@
                     $('.validation').html('');
                 } else {
                     return confirm('This field can not be empty or must be English letters');
-
-
                 }
             });
 
@@ -158,7 +156,7 @@
                 if (regex.test($("#occurence").val())) {
                     $('.validation').html('');
                 } else {
-                    return confirm('This field can not be empty or please check your syntax!');
+                    return confirm('fuck This field can not be empty or please check your syntax!');
 
 
                 }
@@ -184,6 +182,28 @@
 
                 }
             });
+            $("#population").bind("keyup", function (event) {
+                var regex = /^[0-9]\\.\\,\\(\\)+$/;
+                if (regex.test($("#population").val())) {
+                    $('.validation').html('');
+                } else {
+                    return confirm('Please enter valid number!');
+
+
+                }
+            });
+            
+                $("#locations").bind("keyup", function (event) {
+                var regex = /^[a-zA-Z\s]\\.\\,\\(\\)+$/;
+                if (regex.test($("#locations").val())) {
+                    $('.validation').html('');
+                } else {
+                    return confirm('This field can not be empty or please check your syntax!');
+
+
+                }
+            });
+
 
             $("#threats").bind("keyup", function (event) {
                 var regex = /^[a-zA-Z0-9\s\\.\\,\\(\\)]+$/;
