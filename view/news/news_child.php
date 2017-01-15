@@ -12,76 +12,7 @@
 		<script src="../../assets/JS/jquery.js"></script> 
 		<script src="../../assets/JS/bootstrap.js"></script>
 		
-		<script>
-			function submitcomment() {
-
-                            var request;
-
-                            try {
-
-                            request= new XMLHttpRequest();
-
-							}
-
-                        catch (tryMicrosoft) {
-
-                            try {
-
-                                request= new ActiveXObject("Msxml2.XMLHTTP");
-                            }
-
-                            catch (otherMicrosoft) 
-                            {
-                                try {
-                                    request= new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-
-                                catch (failed) {
-                                    request= null;
-                                }
-                            }
-                        }
-
-
-                        var webpage= location.href;
-
-                       // position= webpage.lastIndexOf("/"); 
-                        position= webpage.lastIndexOf("="); 
-
-                        var lastpart= webpage.substring(position + 1);
-
-                        var complete=lastpart;
-
-                        complete= complete.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&\=])/g, "_");
-
-
-                        var url= "usercomments1.php";
-                        var username= document.getElementById("name_entered").value;
-                        document.getElementById("name_entered").value='';
-
-                        var usercomment= document.getElementById("comment_entered").value;
-                        document.getElementById("comment_entered").value='';
-
-                        var vars= "name="+username+"&comment="+usercomment+"&webpage="+complete;
-                        request.open("POST", url, true);
-
-                        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-                        request.onreadystatechange= function() {
-                            if (request.readyState == 4 && request.status == 200) {
-                                var return_data=  request.responseText;
-                                document.getElementById("showcomments").innerHTML= return_data;
-                            }
-                        }
-
-                        request.send(vars);
-
-
-                        }
-
-                        document.getElementById('numquest').value='';
 		
-		</script>
 		
 		
 		
@@ -91,16 +22,14 @@
         <?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
         </div>
         <?php
-		include ('../../database/dbconnect.php');//dbconnect.php
+		include ('../../database/dbconnect.php');
 		$qry = "SELECT * FROM photos WHERE id = '" . $_GET['photoid'] . "' ;";
         $result = mysqli_query($con, $qry);
         $record = mysqli_fetch_assoc($result);
         ?>
-
         
-		
-		
-		
+        
+       
         <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
             <div class="container">
                 <div class="row">
@@ -139,8 +68,10 @@
                                 </div>
                             <!---comment goes here-->
                     <div class="com">
-                            <table>
+                        <table>
                                 <p>add comments</p>
+                                
+                                <input type="hidden" name="new" id="sessionVariable" value="1" />
                                 <tr>
                                 <td></td>
                                 <td>Name:</td>
@@ -170,12 +101,83 @@
                                 <tr>
                                 <td></td>
                                 <td>
-                                    <input type="submit" value="Post" onclick="submitcomment();" />
+                                    <input type="submit"  value="Post" onclick="submitcomment();" />
                                 </td>
                                 </tr>
 
                             </table>
+                        <script>
+			function submitcomment() {
+                            
+                            var request;
 
+                            try {
+
+                            request= new XMLHttpRequest();
+
+							}
+
+                        catch (tryMicrosoft) {
+
+                            try {
+
+                                request= new ActiveXObject("Msxml2.XMLHTTP");
+                            }
+
+                            catch (otherMicrosoft) 
+                            {
+                                try {
+                                    request= new ActiveXObject("Microsoft.XMLHTTP");
+                                }
+
+                                catch (failed) {
+                                    request= null;
+                                }
+                            }
+                        }
+
+                        var sessionVariable;
+                        
+                        var webpage= location.href;
+
+                        
+                        position= webpage.lastIndexOf("="); 
+
+                        var lastpart= webpage.substring(position + 1);
+
+                        var complete=lastpart;
+
+                        complete= complete.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&\=])/g, "_");
+
+
+                        var url= "usercomments1.php";
+                        var username= document.getElementById("name_entered").value;
+                        document.getElementById("name_entered").value='';
+
+                        var usercomment= document.getElementById("comment_entered").value;
+                        document.getElementById("comment_entered").value='';
+
+                        var vars = "name="+username+"&comment="+usercomment+"&webpage="+complete;
+                        request.open("POST", url, true);
+
+                        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                        request.onreadystatechange= function() {
+                            if (request.readyState == 4 && request.status == 200) {
+                                var return_data=  request.responseText;
+                                document.getElementById("showcomments").innerHTML= return_data;
+                            }
+                        }
+
+                        request.send(vars);
+
+
+                        }
+
+                        document.getElementById('numquest').value='';
+		
+		</script>
+                        
                             <br><br>
                             <div id="showcomments"></div>
                     </div>
