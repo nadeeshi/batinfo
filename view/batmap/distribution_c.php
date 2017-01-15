@@ -69,7 +69,7 @@
 												
 								<p style="text-align:right">create a pdf<br>of this infomation<br>
 						
-									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?>>
+									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?> target="_blank">
 									<img src="../../assets/images/pdf.png" alt="pdf" />
 						
 									</a>
