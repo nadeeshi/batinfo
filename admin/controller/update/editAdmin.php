@@ -1,4 +1,8 @@
 <?php
+require_once('../../assets/includedFiles/auth.php');
+?>
+
+<?php
 ob_start();
 include('../../assets/includedFiles/connect.php');
 if(isset($_GET['id']))
@@ -16,7 +20,7 @@ if(isset($_GET['id']))
         if($updated)
         {
             $msg="Successfully Updated!!";
-            header('Location:adminDetailsValidate.php');
+            header('Location:../insert/adminDetailsValidate.php');
         }
     }
 }  //update ends here

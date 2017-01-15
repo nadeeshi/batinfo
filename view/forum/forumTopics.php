@@ -1,5 +1,5 @@
 <?php 
-require_once ("../../database/connection.php");
+require_once ("../../database/dbconnect.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ require_once ("../../database/connection.php");
 	<div>
 		<?php include '../../assets/includedFiles/navbarTemplate.php' ?>
 	</div>
-		<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+		<div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form ">
 			<div class="row">
 				<div class="col-xs-12">
 					<a href="../../controller/insert/addThread.php">
@@ -32,30 +32,46 @@ require_once ("../../database/connection.php");
 					</a>
 				</div>
 			</div>
-			<div class="row" style="padding: 1.5%">
+			<div class="row forum-research" style="padding: 1.5%; margin-left: 7%;" >
 				<?php
-					$sql= "SELECT topic_id, topic_subject, topic_date, topic_by FROM topics";
-					$result= mysqli_query($db, $sql);
+                $sql= "SELECT topics.topic_id, topics.topic_subject, topics.topic_date, topics.topic_by, researchers.fname, researchers.lname FROM topics join researchers on topic_by = researchers.researcher_id order by topic_date DESC";
+                
+                $sql_to_get_data = mysqli_query($con,"SELECT * FROM topics where admin_by>''");
 
-					echo "<table>";
-			   		echo "<tr height='50'>";
-			        echo "<th class='col-sm-8'> Topic </th>";
-			        echo "<th class='col-sm-2'> Posted Date </th>";
-			        echo "<th class='col-sm-2'> Posted by </th>";
-			    	echo "</tr>";
 
-			    	echo "<tr>";
-			        foreach ($result as $user) {
-			          	echo  "<td class='col-sm-9 col-xs-9' height='50'>";
-			          	echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
-			          	echo  "<td height='50' class='col-sm-2 col-xs-2'>";
-			            echo $user['topic_date']." "."</td>";
-			            echo "<td class='col-sm-2 col-xs-2'>";
-			            echo "<a href=#>siguisgiwugiu</a>"." "."</td>";
-			        echo "</tr>";   
-					}	
-					echo "</table>";
-				?>
+                $result= mysqli_query($con, $sql);
+
+                echo "<table>";
+                echo "<tr height='50'>";
+                echo "<th class='col-sm-6'> Topic </th>";
+                echo "<th class='col-sm-2'> Posted Date </th>";
+                echo "<th class='col-sm-2'> Posted by </th>";
+                echo "</tr>";
+
+                echo "<tr>";
+                foreach ($result as $user) {
+                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
+                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
+                    echo $user['topic_date']." "."</td>";
+                    echo "<td class='col-sm-2 col-xs-2'>";
+                    echo ((trim($user['topic_by'])=='') ? "Admin" : ($user['fname']." ".$user['lname']." "))."</td>";
+                    echo "</tr>";
+                }
+
+                echo "<tr>";
+                foreach ($sql_to_get_data as $user) {
+                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
+                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
+                    echo $user['topic_date']." "."</td>";
+                    echo "<td class='col-sm-2 col-xs-2'>";
+                    echo "Admin </td>";
+                    echo "</tr>";   
+                }
+
+                echo "</table>";
+                ?>
 			</div>
 		</div>
 	

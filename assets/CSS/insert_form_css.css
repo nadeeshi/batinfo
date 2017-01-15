@@ -64,6 +64,8 @@
             .height_default_edit{
                 height:  400px !important;
                 
-            }    
+            }  body{
+                background-color: beige;
+            }  
 
            

@@ -15,20 +15,16 @@ while($row = mysqli_fetch_assoc($result)){
 	$id = $row['bat_id'];
 	$img = '../../assets/images/'.$row['pic'];
 	$des = $row['other_details'];
-    //$id=row['bat_id'];
-    //$sc_name=$row['sciencetific_name'];
-	 //$img=$row['pic'];
-     $bat_or=$row['bat_order'];
-     $kin=$row['kingdom'];
-     $gene=$row['genus'];
-     $phylum=$row['phylum'];
+    $bat_or=$row['bat_order'];
+    $kin=$row['kingdom'];
+    $gene=$row['genus'];
+    $phylum=$row['phylum'];
     $family=$row['family'];
     $subfamily=$row['sub_family'];
     $bat_cl=$row['bat_class'];
     $com_name=$row['common_names'];
     $syns=$row['synonyms'];
     $rst=$row['roost'];
-//$lplace1=$row['locations'];
     $conv_st=$row['conservation_status'];
     $conv_at=$row['conservation_action'];
     $feed=$row['feeding'];
@@ -36,27 +32,21 @@ while($row = mysqli_fetch_assoc($result)){
     $threat=$row['threats'];
     $coun_occ=$row['country_occurence'];
     $measure=$row['measurements'];
-		//echo '<p><img src="'.$row['location'].'"></p>';
 	$output = '<div> '.'name :  '.$fname.'</br> </br> place :  '. $lplace1.'</div></br>discription :  '.$des;
-		//echo $output;
-		
-		//echo '<p><img src="'.$row['description'].'"></p>';
-		
-	}//}
+	
+	}
 
 	class PDF extends FPDF
 {
 
-
-// Page header
 function Header()
 {
-    // Logo
+    // image
 	global $img;
 	global $fname;
      
 	
-    $this->Image("../../assets/images/".$img,10,6,30);
+    $this->Image("../../assets/images/".$img,10,15,40);
     // Arial bold 15
     $this->SetFont('Arial','B',15);
     // Move to the right
@@ -71,7 +61,7 @@ function Header()
 function Footer()
 {
     // Position at 1.5 cm from bottom
-    $this->SetY(-15);
+    $this->SetY(-18);
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Page number
@@ -91,7 +81,7 @@ $pdf->Cell(0,10,'scientific name : '.$fname,0,1);
 $pdf->Cell(0,10,'synonyms : '.$syns,0,1);
 
 $pdf->Cell(0,10,'frequently found places : '.$lplace1,0,1);
-//$pdf->Cell(0,10,'Printing line number : '.$des,0,1);
+
 $pdf->Cell(0,10,'bat order : '.$bat_or,0,1);
 
 $pdf->Cell(0,10,'kingdom : '.$kin,0,1);
@@ -106,12 +96,7 @@ $pdf->Cell(0,10,'sub family : '.$subfamily,0,1);
 
 $pdf->Cell(0,10,'bat class : '.$bat_cl,0,1);
 
-//$pdf->Cell(0,10,'Printing line number : '.$com_name,0,1);
-
-
 $pdf->Cell(0,10,'roost : '.$rst,0,1);
-
-//$pdf->Cell(0,10,'Printing line number : '.$lplace1,0,1);
 
 $pdf->Cell(0,10,'conservation status : '.$conv_st,0,1);
 

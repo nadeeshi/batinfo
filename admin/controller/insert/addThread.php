@@ -1,12 +1,14 @@
-<?php 
+<?php
+require_once('../../assets/includedFiles/auth.php'); 
 $msg ='';
 require_once ('../../assets/includedFiles/connect.php');
 if (!empty($_POST)) {
   $topic = $_POST['topic'];
   $message =$_POST['message'];
   $date= date('Y-m-d');
+  $adminby= $_SESSION['SESS_MEMBER_ID'];
 
-  $query= "INSERT INTO topics (topic_subject, topic_content, topic_date) VALUES ('$topic' ,'$message', '$date' )";
+  $query= "INSERT INTO topics (topic_subject, topic_content, topic_date, admin_by) VALUES ('$topic' ,'$message', '$date', '$adminby' )";
   $result= mysqli_query($bd, $query);
 
   if ($result){

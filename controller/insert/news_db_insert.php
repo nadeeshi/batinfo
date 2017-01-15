@@ -1,7 +1,8 @@
 <?php
+session_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/dbconnect.php');
-
+//if(isset($_SESSION['usr_id'])){
 
 if(isset($_POST['new']) && $_POST['new']==1){
 
@@ -14,10 +15,12 @@ if(isset($_POST['new']) && $_POST['new']==1){
 
 	
 	$fdname =$_REQUEST['title'];
-
+    $r_id=$_SESSION['usr_id'];
 	$descp = $_REQUEST['body'];
 	
-	$ins_query="insert into news_before (`title`,`image`,`body`) values ('$fdname','$flocation','$descp');";
+    
+    $ins_query="insert into news_before (`title`,`image`,`body`,`r_id`) values ('$fdname','$flocation','$descp','$r_id');";
+	//$ins_query="insert into news_before (`title`,`image`,`body`) values ('$fdname','$flocation','$descp');";
 	mysqli_query($con,$ins_query) or die(mysql_error());
 	
 	$result = "SELECT * FROM news_before;";
@@ -32,6 +35,9 @@ if(isset($_POST['new']) && $_POST['new']==1){
 	
 	header('Location:news_before.php?id='.$l_id);
 }
-	
+//}else{
+    //$r_id=$_SESSION['usr_id'];
+    //echo $r_id;
+//}	
 	
 ?>

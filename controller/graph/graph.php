@@ -18,19 +18,19 @@
 
 <?php include "../../assets/includedFiles/navbarTemplate.php" ?>
 
-<div id="page-wrapper" class="col-sm-10 col-sm-push-2 col-xs-12 insert-form insert-form-graph">
+<div id="page-wrapper" class="col-sm-9 col-sm-push-2 col-xs-12 insert-form insert-form-graph">
     <div id="page-inner" class="graph-content">
         <div class="row">
-            <div class="col-xs-10 page-head-graph">
+            <div class="col-xs-11 page-head-graph">
                 <p>Welcome to BatsInfo</p>
             </div>
-            <div class="col-xs-10 graph-content">
+            <div class="col-xs-11 graph-content">
                 <p>'''...Over 1,100 different species of bats have been identified. This is approximately 20% of all of the mammals in the world.Bat Species Over 1,100 different species of bats have been identified. This is approximately ¼ of all of the mammals in the world. They aren’t out there trying to get tangled up in the hair of humans either...'''
                 </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-10 graph">
+            <div class="col-xs-11 graph">
                 <div class="panel panel-default" style="background-color: rgba(76, 71, 67, 0.12)">
                     <div class="panel-heading">
                         Population of Bats in BatsInfo

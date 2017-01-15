@@ -1,0 +1,17 @@
+ .head-view{
+                margin-bottom: -65px;
+                margin-top: 50px;
+                margin-left: 26%;
+
+            }
+            .th_sname, .th_option{
+                font-size: 20px;
+
+            }
+            .td_data_op:hover{
+              
+            }
+            table{
+                font-size: 121%
+             
+            }

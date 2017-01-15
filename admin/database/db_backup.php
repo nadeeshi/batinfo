@@ -66,6 +66,7 @@ $xml.= '<database name="'.$mysqli_database.'">'.$br;
 
 //save file
 $handle = fopen($mysqli_database.'-backup-'.time().'.xml','w+');
+    //fopen("../pages/" .$ourFileName, 'w') or die("can't open file");
 fwrite($handle,$xml);
 fclose($handle);
 }

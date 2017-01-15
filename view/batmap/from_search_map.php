@@ -51,11 +51,7 @@ include ('../../database/dbconnect.php');
 					$fname = $row['scientific_name'];
 					$lplace1 = $row['locations'];
 					$id = $row['bat_id'];
-					//$img = $row['location'];
-					//$des = $row['description'];
-		          //$id=row['bat_id'];
-                    //$lplace1=$row['locations'];
-		
+					
 		$places_ar = explode(",",$lplace1);
 		$length = count($places_ar);
 	}

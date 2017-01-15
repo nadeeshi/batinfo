@@ -5,12 +5,12 @@ include ('../../database/dbconnect.php');
 
 
 
-		$ins_query="INSERT INTO photos (`location`, `caption`, `desc`)
-		SELECT image, title, body FROM news_before
+		$ins_query="INSERT INTO photos (`location`, `caption`, `desc`,`r_id`)
+		SELECT image, title, body, r_id FROM news_before
 		WHERE nid = '" . $_GET['to_id'] . "';";
 		$r1=mysqli_query($con,$ins_query) or die(mysql_error());
         
-         $sql = "DELETE  FROM news_before WHERE nid = '" . $_GET['to_id'] . "';";
+        $sql = "DELETE  FROM news_before WHERE nid = '" . $_GET['to_id'] . "';";
 
         mysqli_query($con,$sql); 
 		

@@ -17,7 +17,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/footer3.css">-->
         <script src="assets/JS/jquery.js"></script>
         <script src="assets/JS/bootstrap.js"></script>
-        <script src=""https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js""></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="assets/JS/jssor.slider.mini.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
 
-    </style>
+    
 </head>
 
 <body style="margin: 0px;"">
@@ -80,6 +80,7 @@
                     </li>
               
             </ul>
+
         </div>
         
     </nav>
@@ -94,8 +95,16 @@
         <?php include ("assets/IncludedFiles/headerImage.php") ?>
     </div>
     
-    <div class="container-fluid" style="padding-top:30px; padding-bottom:200px; ">
-      
+          </div>
+    </nav>
+
+  
+    <div class="container" style="padding-top:100px;">
+        <?php include ("assets/IncludedFiles/headerImage.php") ?>
+    </div>
+
+        <div class="container-fluid" style="padding-top:30px; padding-bottom:200px;">
+
         <h2 style="font-color:black"><a name="articles" style="text-decoration:none; " href="">Recent Articles</a></h2>
         
         <?php 
@@ -133,15 +142,17 @@ if ($result->num_rows > 0) {
 }
 
 ?>
-</div>
- </div>
- </div>
- 
- </div>
+
+        
+
+    
+    <div class="push"></div>
+
     <!--get footer -->
 <div id="footer" class="container-fluid" >
     <a name="contact"> <?php include ("assets/IncludedFiles/footer.php") ?> </a>
 </div>
+
 
 </body>
 </html>

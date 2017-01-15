@@ -1,31 +1,8 @@
-
-<?php 
-$msg ='';
-require_once ('../../database/connection.php');
-if (!empty($_POST)) {
-  $topic = $_POST['topic'];
-  $message =$_POST['message'];
-  $date= date('Y-m-d');
-  /*$topicby= $_SESSION['id'];*/
-
-  $query= "INSERT INTO topics (topic_subject, topic_content, topic_date) VALUES ('$topic' ,'$message', '$date' )";
-  $result= mysqli_query($db, $query);
-
-  if ($result){
-    $msg ='<a href=../../view/forum/forumTopics.php>View your topics</a>';
-  }
-  else{
-    $msg= "Error" .'<br>'. mysqli_error($db);
-  }
-
-}
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>addThread</title>
-    	<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <title>addThread</title>
+      <link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
       <link href="../../assets/css/forum.css" rel="stylesheet" type="text/css">
       <link href="../../assets/css/navbar1n2.css" rel="stylesheet" type="text/css">
       <script src="../../assets/js/jquery.js"></script>
@@ -35,8 +12,41 @@ if (!empty($_POST)) {
   </head>
   <body>
     <div>
-      <?php include "../../assets/includedFiles/navbarTemplate.php" ?> 
+      <?php include "../../assets/includedFiles/navbarTemplate.php";
+       ?> 
     </div>
+
+
+<?php
+
+$msg ='';
+require_once ('../../database/connection.php');
+if (!empty($_POST)) {
+  $topic = $_POST['topic'];
+  $message =$_POST['message'];
+  $date= date('Y-m-d');
+  $topicby= $_SESSION['usr_id'];
+  //echo $topic;
+   //echo $_SESSION['usr_id'];
+  // session_destroy();
+  $query= "INSERT INTO topics (topic_subject, topic_content, topic_date, topic_by) VALUES ('$topic' ,'$message', '$date', '$topicby' )";
+  $result= mysqli_query($db, $query);
+  error_reporting(E_ALL^E_WARNING);
+  if ($result){
+    header("Location:../../view/forum/forumTopics.php");
+
+  }
+  else{
+    
+    $msg= "Error in adding thread";
+  }
+
+  
+
+}
+?>
+
+
       <div class="col-sm-8 col-sm-push-3 col-xs-12 insert-form">
       	<div class="content col-xs-12">
           <h4 class="header-content">Your New Discussion Topic</h4>

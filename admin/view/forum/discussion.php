@@ -1,4 +1,5 @@
 <?php
+require_once('../../assets/includedFiles/auth.php');
 require_once ("../../assets/includedFiles/connect.php");
 ?>
 
