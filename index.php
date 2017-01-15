@@ -91,21 +91,16 @@
 </div>
     <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10">
-    <div class="container" style="padding-top:20px; padding-right: 110px; width: 800px;">
+    <div class="container" style="padding-top:40px; padding-right: 110px; width: 800px; padding-bottom: 20px;">
         <?php include ("assets/IncludedFiles/headerImage.php") ?>
     </div>
-    
-          </div>
-    </nav>
 
   
-    <div class="container" style="padding-top:100px;">
-        <?php include ("assets/IncludedFiles/headerImage.php") ?>
-    </div>
 
-        <div class="container-fluid" style="padding-top:30px; padding-bottom:200px;">
 
-        <h2 style="font-color:black"><a name="articles" style="text-decoration:none; " href="">Recent Articles</a></h2>
+        <div class="container-fluid" style=" padding-bottom:200px;">
+
+        <h2 style="font-color:black" name="articles" style="text-decoration:none; " >Recent Articles</h2>
         
         <?php 
 include_once 'database/dbconnect.php';
@@ -143,10 +138,11 @@ if ($result->num_rows > 0) {
 
 ?>
 
-        
-
-    
-    <div class="push"></div>
+ </div>       
+</div>
+ </div>
+ </div>
+<div class="push"></div>
 
     <!--get footer -->
 <div id="footer" class="container-fluid" >
