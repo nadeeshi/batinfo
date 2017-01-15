@@ -53,17 +53,18 @@ if (isset($_POST['login'])) {
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../../assets/JS/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="public-background">
         <img src="../../assets/images/bat.jpg" width="100%" height="100%" >
     </div>
     <div>
-    <?php include("../../assets/IncludedFiles/mainnav.php")?>
-    <div>
+        <?php include("../../assets/IncludedFiles/mainnav.php") ?>
+    </div>
 
-<div class="container" style="padding-top:10%;>
-    <div class="row">
+    <div class="container" style="padding-top:10%;>
+        <div class= "row">
         <div class="col-md-4 col-md-offset-4 well" style="opacity:0.925;">
             <form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
                 <fieldset>
@@ -83,7 +84,7 @@ if (isset($_POST['login'])) {
                         <input type="submit" name="login" value="Login" class="btn btn-primary" />
                     </div>
                     <div class="form-group" style="text-align: center;">    
-                    New User? <a href="page1_form.php">Sign Up Here</a>
+                        New User? <a href="page1_form.php">Sign Up Here</a>
                     </div>
                     <span class="text-danger"><?php if (isset($errormsg)) { echo $errormsg; } ?></span>
                 </fieldset>
@@ -91,17 +92,22 @@ if (isset($_POST['login'])) {
             
         </div>
     </div>
+ 
     <div class="push"></div>
 </div>
+
     <!--get footer -->
+
     <div>
         <div class="col-xs-12 ">
           <?php include "../../assets/includedFiles/footer.php" ?>
         </div>  
-    </div> 
+    </div>
+
 
 
 <script src="../../assets/JS/jquery.js"></script>
 <script src="../../assets/JS/bootstrap.min.js"></script>
+
 </body>
 </html>

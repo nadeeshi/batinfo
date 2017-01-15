@@ -27,12 +27,17 @@ include_once '../../database/dbconnect.php';
 		            <div class="collapse navbar-collapse" id="navbar1">
 			            <ul class="nav navbar-nav navbar-right">
 			                <?php if (isset($_SESSION['usr_id'])) { ?>
-			                <li><a href="../../controller/login/logout.php" class="navbar-head-list">Log Out</a></li>
+			                <li><a href="logout.php" class="navbar-head-list">Log Out</a></li>
 			                <?php } else { ?>
-			                <li><a class="navbar-head-list" href="login.php">Login</a></li>
-			                <li><a class="navbar-head-list" href="register.php">Sign Up</a></li>
+			                <li class="navbar-head-list"><a href="login.php">Login</a></li>
+			                <li class="navbar-head-list"><a href="register.php">Sign Up</a></li>
 			                <?php } ?>
-			            </ul>
+			              
+
+			              
+
+
+			            
 			            <form class="navbar-form  navbar-right" action="../../view/rltsearch/testing.php" method="post">
 	      					<div class="form-group">
 	        					<input type="text" class="form-control form-control-custom input-area" name='address' placeholder="Enter name here">

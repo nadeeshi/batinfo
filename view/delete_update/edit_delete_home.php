@@ -58,8 +58,10 @@
                     if (mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
-                    $researcher_id = $_SESSION['usr_id'];
-                    $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0' AND researcher_id= '$researcher_id'");
+                    //$researcher_id = $_SESSION['usr_id'];
+                    
+            $researcher_id= 5;
+            $result = mysqli_query($con, "SELECT scientific_name FROM bat_info WHERE del_bit='0' AND researcher_id= '$researcher_id'");
 
 
 

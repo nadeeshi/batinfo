@@ -52,7 +52,11 @@
 
                 $title = $_POST['title'];
                 $author = $_POST['author'];
-                $researcher_id =  $_SESSION['usr_id'];
+                
+               // $researcher_id =  $_SESSION['usr_id'];
+                
+                $researcher_id = 4;
+                
                 $description= $_POST['description'];
                 
                 $area = $_POST['area'];

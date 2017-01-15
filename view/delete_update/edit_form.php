@@ -89,7 +89,7 @@
             </div>
 
             <?php
-              require_once('../../database/dbconnect.php');
+            require_once('../../database/dbconnect.php');
 
             if (mysqli_connect_errno()) {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -146,6 +146,7 @@
                    $path ="../../assets/images/".$path;
                    
                    ?>
+                <input type="hidden"  id="pic_path" name="pic_path" value="<?php echo $details['pic'] ?>"   />
                 <img src="<?php echo $path;?>"/>
                 </div>
 
@@ -211,8 +212,8 @@
 
                 </div>
                  <div class="form-group ">
-                            <label class= "lbl">Select a photo<span class="red-star" >*</span></label>
-                            <input type="file" name="image" id= "image" class="my-text" required><br />
+                    <label class= "lbl">Select a photo<span class="red-star" >*</span></label>
+                    <input type="file" name="image" id= "image" class="my-text"  ><br />
                 </div>  
                 <div class="form-group clearfix">
                     <label class="lbl " for="">Common Name(s)<span class="red-star" >*</span></label>

@@ -41,18 +41,28 @@
             if (mysqli_connect_errno()) {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
             }
-            if(isset($_FILES['image']['tmp_name'])){
+            $size = $_FILES['image']['size'];
+                
+
+            if($size>0){
+                
                 $file = $_FILES['image']['tmp_name'];
                 $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
                 $image_name = addslashes($_FILES['image']['name']);
-               
-
+                $size = $_FILES['image']['size'];
+              
 
                 move_uploaded_file($_FILES["image"]["tmp_name"], "../../assets/images/bphotos/" . $_FILES["image"]["name"]);
 
                 $pic_path = "bphotos/" . $_FILES["image"]["name"];
+            }elseif ($size<=0){
+                
+                
+                $pic_path = mysqli_real_escape_string($con, $_POST['pic_path']);  
                 
             }
+            
+          
             $path= $pic_path;
           
             $scientific_name = mysqli_real_escape_string($con, $_POST['scientific_name']);
