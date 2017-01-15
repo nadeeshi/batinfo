@@ -13,25 +13,23 @@
     <link href="../../assets/css/navbar1n2.css" rel="stylesheet">
 
     <style>
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
 
+      li a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
 
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-</style>
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+    </style>
 
 </head>
 <body>
@@ -46,10 +44,7 @@ include "../../assets/IncludedFiles/footer.php" ;
 
 <div class="col-xs-12 body-content">
 <div class="public-thread-content public-div-content col-xs-10">
-<div class="container" style="padding-top:120px; padding-bottom:120px;">
-
-
-    
+<div class="container" style="padding-top:120px; padding-bottom:120px;">   
   <div class="row">
     <div class="col-md-3">
       <ul style="list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #f1f1f1;">
@@ -60,13 +55,7 @@ include "../../assets/IncludedFiles/footer.php" ;
   <br>
   <div class="row">
     <div class="col-md-3">
-    <?php
-      $con=mysqli_connect("localhost","root","","project");
-// Check connection
-      if (mysqli_connect_errno())
-      {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-      }
+    <?php include "../../database/dbconnect.php";
 
       $sql="SELECT title,content,link FROM articles ORDER BY pubdate DESC";
       $result = $con->query($sql);

@@ -77,6 +77,9 @@ img.intLink { border: 0; }
                $title = addslashes ($_POST['title']);
                $content = addslashes ($_POST['content']);
                $link = addslashes ($_POST['link']);
+               $image = $_POST['image'];
+               $name = addslashes ($_POST['name']);
+               $status = addslashes ($_POST['status']);
 
                //$img = $_POST['img1'];
             }else {
@@ -84,6 +87,9 @@ img.intLink { border: 0; }
                $content = $_POST['content'];
                //$img1 = $_POST['img1'];
                $link = $_POST['link'];
+               $image = $_POST['image'];
+               $name = addslashes ($_POST['name']);
+               $status = addslashes ($_POST['status']);
             }
             
               $myfile = fopen("$link", "w");
@@ -98,7 +104,7 @@ img.intLink { border: 0; }
 
             $_SESSION['cntnt'] = $content;
             $_SESSION['ttl'] = $title;
-            $sql = "INSERT INTO articles(title,content,link) VALUES('$title','$content','$link')";
+            $sql = "INSERT INTO articles(title,content,link,image,name,status) VALUES('$title','$content','$link','$image','$name','$status')";
                
             mysqli_select_db($con,'project');
             $retval = mysqli_query( $con, $sql );
@@ -164,7 +170,19 @@ img.intLink { border: 0; }
             
               </div>
                     </div>
-
+            <div class="form-group">
+              <label >Your Name</label>
+              <input type="text" name="name" id="name" />
+                        
+            </div>
+            <div class="form-group">
+              <label >Status</label>
+              <select name="status" id="status">
+              <option name="researcher">Researcher</option>
+              <option name="publicuser">Public user</option>
+              </select>
+                        
+            </div>
                     <!--<div class="form-group">
                         <label for="img2">Upload image</label>
                         <input type="file" name="img2" id="img2" /><br><br>
