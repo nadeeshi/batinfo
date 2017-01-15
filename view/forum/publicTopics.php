@@ -51,28 +51,22 @@ require_once ("../../database/dbconnect.php");
 			                echo "<tr>";
 			                foreach ($result as $user) {
 			                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
-			                    echo "<a href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+			                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
 			                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
 			                    echo $user['topic_date']." "."</td>";
 			                    echo "<td class='col-sm-2 col-xs-2'>";
 			                    echo ((trim($user['topic_by'])=='') ? "Admin" : ($user['fname']." ".$user['lname']." "))."</td>";
-			                    echo "<td class='col-sm-2 col-xs-2'>";?>
-			                    <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
-			                    <?php
 			                    echo "</tr>";
 			                }
 
 			                echo "<tr>";
 			                foreach ($sql_to_get_data as $user) {
 			                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
-			                    echo "<a href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+			                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
 			                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
 			                    echo $user['topic_date']." "."</td>";
 			                    echo "<td class='col-sm-2 col-xs-2'>";
 			                    echo "Admin </td>";
-			                    echo "<td class='col-sm-2 col-xs-2'>";?>
-			                    <a href='../../controller/delete/deleteThread.php?id=<?=$user['topic_id']?>'  onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a></td>
-			                    <?php
 			                    echo "</tr>";   
 			                }
 
