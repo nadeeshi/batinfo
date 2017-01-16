@@ -43,10 +43,10 @@ unset($_SESSION['SESS_LAST_NAME']);
 <body>
 
 <!-----start-main---->
-<div class="login-form">
+<div class="login-form" style="opacity: 0.9">
     <div class="head">
 
-        <img src="assets/images/003.jpg" />
+        <img src="assets/images/propic.png" />
 
     </div>
     <form name="loginform" action="assets/includedFiles/login_exec.php" method="post">
@@ -82,14 +82,7 @@ unset($_SESSION['SESS_LAST_NAME']);
                     <input type="password" name="password" class="form-control"  placeholder="Enter Password" required/>
                 </div>
             </li>
-
-
-
-
-
         <div class="p-container">
-            <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Remember Me</label>
-
             <input name="" type="submit" class="btn btn-primary"  value="login" />
             <div class="clear"> </div>
         </div>

@@ -18,6 +18,8 @@ $(document).ready(function(){
                 datasets : [
                     {
                         label: 'Bats Population',
+                       // backgroundColor: 'rgba(500, 500, 500, 0.75)',
+
                         backgroundColor: 'rgba(500, 500, 500, 0.75)',
                         borderColor: 'rgba(200, 200, 200, 0.75)',
                         hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
