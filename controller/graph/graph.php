@@ -31,7 +31,7 @@
         </div>
         <div class="row">
             <div class="col-xs-11 graph">
-                <div class="panel panel-default" style="background-color: rgba(76, 71, 67, 0.12)">
+                <div class="panel panel-default" style="background-color: rgb(232, 201, 139)">
                     <div class="panel-heading">
                         Population of Bats in BatsInfo
                     </div>

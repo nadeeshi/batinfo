@@ -16,11 +16,6 @@
        
         <script src="../../assets/JS/validation_check.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-    <style>
-        body{
-                background-color: beige;
-            }
-        </style>
     </head>
     <body>
         <!-- include header file-->
@@ -28,15 +23,15 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form">
+        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form insert-bat">
             <!-- set the insert form -->
-            <form  id="form" action="../../controller/insert/insert_core.php" method ="post" enctype="multipart/form-data">
+            <form  id="form" action="../../controller/insert/insert_core.php" method ="post" enctype="multipart/form-data" class="col-sm-11 col-xs-11">
 
                 <fieldset id="first" class="my-fieldset">
                     <div class="container-form">
 
                         <div class="head-form" >
-                            <h2>Insert New Bats</h2>
+                            <p>Insert New Bats</p>
                         </div>
                         <?php
                         //get already availabale bats, so user can see newly inserting bats is alraedy there
