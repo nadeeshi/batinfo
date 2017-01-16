@@ -21,7 +21,9 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
+        <style>
         
+        </style>
     </head>
     <body>
 
@@ -49,7 +51,7 @@
 
                 mysqli_close($con);
                 ?>
-                <h3>Hide or delete a Bat </h3>
+                <h3>Hide or delete a Bat </h3><br>
                 <table >
                     <thead>
                         <tr>
@@ -81,7 +83,7 @@
                     </tbody>
 
                 </table><br><br><br><br>
-                <h3>Unide or delete a Bat </h3>
+                <h3>Unide or delete a Bat </h3><br>
                 <table >
                     <thead>
                         <tr>

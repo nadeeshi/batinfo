@@ -16,7 +16,7 @@
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/validate_text_fields.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
+        
 
 
     </head>
@@ -32,7 +32,9 @@
                 <?php
                 require_once('../../database/dbconnect.php');
                 if (mysqli_connect_errno()) {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                   echo "<p class='msg'><h3>Error Occur! <h3><p>";
+
+                    echo '<br><br><a href="../../view/insert/insert_form.php"><button class="my-button">Try Again</button></a>';
                 } else {
 
                     if (isset($_FILES['image']['tmp_name'])) {
@@ -86,13 +88,13 @@
                 if (mysqli_query($con, $query)) {
                     mysqli_close($con);
                     //procceed if successful
-                    echo "<p class='msg'>Bat Successfully Added</p>";
+                    echo "<p class='msg'><h3>Bat Successfully Added<h3></p>";
 
                     echo '<br><br><a href="../../view/insert/insert_form.php"><button class="my-button">Back</button></a>';
                 } else {
 
                     //try again if unsuccessful
-                    echo "<p class='msg'>Error Occur! <p>";
+                    echo "<p class='msg'><h3>Error Occur! <h3><p>";
 
                     echo '<br><br><a href="../../view/insert/insert_form.php"><button class="my-button">Try Again</button></a>';
                 }

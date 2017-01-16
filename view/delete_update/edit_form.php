@@ -17,7 +17,7 @@
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/validate_text_fields.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
+        <style></style>
     </head>
 
     <body >

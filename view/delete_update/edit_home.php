@@ -20,8 +20,7 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
-        
+       
 
 
     </head>
@@ -31,9 +30,9 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 col-sm-11 col-xs-11 insert-bat insert-form">
             <div class="head-up-del">
-                <h2>Upadte Delete Bats Details</h2>
+                <h2>Update Delete Bats Details</h2>
             </div>
             <div class="table" >
 

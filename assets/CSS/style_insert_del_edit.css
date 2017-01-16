@@ -124,19 +124,13 @@
                 margin-left: -15px;
 
             }
-            /*h2{
-
-                font-family: 'Yatra One', cursive !important;
-                font-weight: bold;
-                font-size: 30px !important;
-            }*/
+           
             .lbl {
-                font-family: 'Copse', serif !important;
-
+              font-family: 'Varela Round', sans-serif;
             }
 
             .subtitle{
-                font-family: 'Copse', serif !important;
+                font-family: 'Varela Round', sans-serif;
             }
 
             .height_default_del{
