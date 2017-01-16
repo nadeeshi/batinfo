@@ -126,7 +126,7 @@ if ($result->num_rows > 0) {
          $path= $row['link'];
          //echo "$path";
         // make sure it ends in a word so assassinate doesn't become ass...
-        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href=$path>Read More</a>'; 
+        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="view/articles/article2.php">Read More</a>'; 
         }
         echo $string;
         echo "</div>";
