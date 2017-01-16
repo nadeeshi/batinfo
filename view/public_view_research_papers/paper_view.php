@@ -42,7 +42,7 @@ require_once ("../../database/dbconnect.php");
 
                     <?php
                     require_once('../../database/dbconnect.php');
-                    if (mysqli_connect_errno()) {
+                    if (@mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
 
