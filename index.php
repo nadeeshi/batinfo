@@ -145,14 +145,19 @@ if ($result->num_rows > 0) {
 ?>
         </div>       
 </div>
-    </div>
+</div>
 
 <div class="push"></div>
     
     <!--get footer -->
-<div id="footer" class="container-fluid" >
-    <a name="contact"> <?php include ("assets/IncludedFiles/footer.php") ?> </a>
+<!-- <div id="footer" class="container-fluid" >
+    <?php include ("assets/IncludedFiles/footer.php") ?> 
+</div> -->
+
+<div>
+    <?php include ("assets/IncludedFiles/footer.php") ?>
 </div>
+
 
 
 </body>
