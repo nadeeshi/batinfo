@@ -1,5 +1,5 @@
 <?php session_start();
-include("wsi_ex.php");
+
  ?>
 
 <!doctype html>
@@ -64,7 +64,12 @@ img.intLink { border: 0; }
   <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10 " style="z-index: 0;">
       <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 20px";>
-<?php
+        <?php
+         if(isset($_POST['add'])) {
+            $dbhost = 'localhost';
+            $dbuser = 'root';
+            $dbpass = '';
+            $dbname = "project";
     
             include "../../database/dbconnect.php";
             
@@ -88,8 +93,10 @@ img.intLink { border: 0; }
               $myfile = fopen("$link", "w");
               //fwrite($myfile, $title); 
               //echo "<br>";
+
               $content= strip_tags($content);
-              fwrite($myfile, $title);
+              
+              echo '<br>';
               fwrite($myfile, $content);
               
               
@@ -97,7 +104,7 @@ img.intLink { border: 0; }
 
             $_SESSION['cntnt'] = $content;
             $_SESSION['ttl'] = $title;
-            $sql = "INSERT INTO articles(title,content,link,image,name,status) VALUES('$title','$content','$link','?','$name','$status')";
+            $sql = "INSERT INTO articles(title,content,link,name,status) VALUES('$title','$content','$link','$name','$status')";
              
             mysqli_select_db($con,'project');
             $retval = mysqli_query( $con, $sql );
@@ -111,22 +118,20 @@ img.intLink { border: 0; }
             //echo file_get_contents("$title").'<br>';
             echo "<h3>"."$title"."</h3>"."<br>"; 
             echo file_get_contents("$link").'<br>';
-            echo "<a href='pdf.php'>"."create pdf"."</a>";
+            echo '<div class="row">';
+            echo "<a href='pdf.php'>"."View as PDF"."</a>";
+            echo '</div>';
             fclose($myfile);
             
             mysqli_close($con);
-
-
-    
 
          }else {
             ?>
 
 
-
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 well">
-            <form method = "post" enctype="multipart/form-data" action = "">
+            <form method = "post" action = "<?php $_PHP_SELF ?>">
                 <fieldset>
                     <legend>Post your article</legend>
 
@@ -147,22 +152,20 @@ img.intLink { border: 0; }
           <div class="clearfix"> </div>
            
           </div>
-</form>
 
-                    </div>
                     <div class="form-group">
                         <label for="link">Link</label>
                         <input type="text"  name="link" placeholder="title.html" id="link" />
                     </div>
 
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label for="img1">Upload image</label>
                         <div class="wow fadeInLeft" data-wow-delay="0.4s">
             <span>Select Image<label>*</label></span>
             <input type="file" name="image"  onchange="readURL(this);"><br />
             <img id="blah" src="" alt="your image"/>
             
-              </div>
+              </div>-->
                     </div>
             <div class="form-group">
               <label >Your Name</label>
@@ -201,7 +204,9 @@ img.intLink { border: 0; }
                     
             </form>
 
-           
+            <?php
+         }
+      ?>
   </div>
 </div>
 </div>
