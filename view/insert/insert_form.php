@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,7 +14,7 @@
         <script type ="text/javascript" src="../../assets/JS/multi_step_form.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/jquary.js"></script>
-       
+
         <script src="../../assets/JS/validation_check.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
     </head>
@@ -22,6 +23,7 @@
         <div>
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
+
 
         <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form insert-bat">
             <!-- set the insert form -->
