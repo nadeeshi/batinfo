@@ -42,9 +42,9 @@
 
         $research_papers = $_GET['id'];
 
-        $result = mysqli_query($con, "SELECT * FROM research_papers WHERE paper_id= '$research_papers' ");
+        $result = @mysqli_query($con, "SELECT * FROM research_papers WHERE paper_id= '$research_papers' ");
 
-        $details = mysqli_fetch_array($result);
+        $details = @mysqli_fetch_array($result);
 
         if (!$details) {
 
