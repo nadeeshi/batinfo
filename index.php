@@ -104,7 +104,7 @@
         
         <?php 
 include_once 'database/dbconnect.php';
-$sql = "SELECT title, content, pubdate FROM articles ORDER BY pubdate DESC LIMIT 3";
+$sql = "SELECT title, content,link, pubdate FROM articles ORDER BY pubdate DESC LIMIT 3";
 $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
@@ -122,10 +122,11 @@ if ($result->num_rows > 0) {
         if (strlen($row['content']) > 500) {
 
         // truncate string
-         $stringCut = substr($row['content'], 0, 5000);
-
+         $stringCut = substr($row['content'], 0, 4000);
+         $path= $row['link'];
+         //echo "$path";
         // make sure it ends in a word so assassinate doesn't become ass...
-        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="/this/story">Read More</a>'; 
+        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href=$path>Read More</a>'; 
         }
         echo $string;
         echo "</div>";
