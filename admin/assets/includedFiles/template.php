@@ -67,7 +67,7 @@
                 <b><?php
                     ob_start();
                     include("connect.php");
-                    $query = mysqli_query($bd,"select count(*) as total from tbl_uploads");
+                    $query = mysqli_query($bd,"select count(*) as total from research_papers");
                     $result = mysqli_fetch_array($query);
                     echo $result['total'];
                     ob_end_flush();

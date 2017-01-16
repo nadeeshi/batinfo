@@ -42,7 +42,7 @@ require_once('../../assets/includedFiles/auth.php');
                                 <?php } else if(isset($_GET['fail'])) {?>
                                     <label>Problem While File Uploading !</label>
                                 <?php } else {?>
-                                    <label>Try to upload any files(PDF, DOC, EXE, VIDEO, MP3, ZIP,etc...)</label>
+                                    <label>Try to upload any files(PDF, DOC, EXE, VIDEO, ZIP,etc...)</label>
                                 <?php } ?>
                             </div>
                         </div>

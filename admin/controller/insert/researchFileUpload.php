@@ -1,4 +1,5 @@
 <?php
+require_once('../../assets/includedFiles/auth.php');
 include_once '../../assets/includedFiles/connect.php';
 if(isset($_POST['btn-upload']))
 {    
@@ -22,7 +23,8 @@ if(isset($_POST['btn-upload']))
 	
 	if(move_uploaded_file($file_loc,$folder.$final_file))
 	{
-		$sql="INSERT INTO tbl_uploads(file,type,size) VALUES('$final_file','$file_type','$new_size')";
+
+		$sql="INSERT INTO admin_research_papers(file,type,size) VALUES('$final_file','$file_type','$new_size')";
 		mysqli_query($bd,$sql);
 		?>
 		<script>
