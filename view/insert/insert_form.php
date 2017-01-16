@@ -190,7 +190,7 @@
                         <textarea class="form-control my-text" name="conservation_action" id="conseravtion" rows="4" cols="20" ></textarea>
                     </div>
                     <div class="form-group">
-                        <label class= "lbl">Population</label> 
+                        <label class= "lbl">Population (million)<span class="red-star" >*</span> </label> 
                         <input type="text" class="form-control my-text" name= "population" id="population"  required>
 
                     </div>

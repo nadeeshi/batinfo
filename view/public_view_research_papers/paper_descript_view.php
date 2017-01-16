@@ -17,7 +17,13 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}h2{color: white;}</style>
+        <style> h2,.lbl_cat{color:#2D343E;}
+            .ppr_view{
+                background-color: white;
+               opacity: 0.925;
+            }
+        
+        </style>
     </head>
 
     <body >
@@ -51,11 +57,11 @@
         mysqli_close($con);
         ?>
 
-        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form">
+        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form ppr_view ">
             <div class="head-form">
                 <h2>Reasearch Paper Details</h2>
             </div>
-            <form id="form" method="post" action="">
+            <form id="form" method="post" class="ppr_view">
                 <div class="form-group clearfix">
                     <label class="lbl_cat " >Title</label>
 
