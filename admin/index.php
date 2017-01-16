@@ -88,7 +88,7 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
         <div class="p-container">
-            <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Remember Me</label>
+            <label class="checkbox"><input type="checkbox" name="checkbox" checked><i>Remember Me</i></label>
 
             <input name="" type="submit" class="btn btn-primary"  value="login" />
             <div class="clear"> </div>
