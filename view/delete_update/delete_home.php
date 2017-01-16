@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +21,9 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
+        <style>
         
+        </style>
     </head>
     <body>
 
@@ -27,7 +31,7 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form insert-bat">
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form insert-bat col-sm-11 col-xs-11">
 
             <div class="table" >
 
@@ -35,7 +39,8 @@
                 <?php
                 require_once('../../database/dbconnect.php');
                 if (mysqli_connect_errno()) {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                  echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
+                    echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                 }
                 $researcher_id = $_SESSION['usr_id'];
 
@@ -47,7 +52,7 @@
 
                 mysqli_close($con);
                 ?>
-                <h3>Hide or delete a Bat </h3>
+                <h3>Hide or delete a Bat </h3><br>
                 <table >
                     <thead>
                         <tr>
@@ -79,7 +84,7 @@
                     </tbody>
 
                 </table><br><br><br><br>
-                <h3>Unide or delete a Bat </h3>
+                <h3>Unide or delete a Bat </h3><br>
                 <table >
                     <thead>
                         <tr>
@@ -117,11 +122,6 @@
 
 
 
-                <div class="col-xs-8">
-                    <button onclick="window.location.href = '../bats_view/bats_view.php'" class="my-button submit_btn_edit my-buttons" id ="myBtn">Back</button>
-
-
-                </div>
             </div>
 
         </div>

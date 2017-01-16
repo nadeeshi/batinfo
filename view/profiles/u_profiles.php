@@ -37,14 +37,14 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 					
 					include ('../../database/dbconnect.php');
 					$qry = "SELECT * FROM bat_info ;";
-					$imgList =array(1,2,3,4);
-					$desc = array(1,2,3,4);
-					$caption =array(1,2,3,4);
-					$id = array(1,2,3,4);
+					$imgList =array();
+					$desc = array();
+					$caption =array();
+					$id = array();
 					//echo "lsdhk";
 					$result = mysqli_query($con, $qry) or die();
 		            $n=mysqli_num_rows($result);
-					if (mysqli_num_rows($result) >= 3){
+					if (mysqli_num_rows($result) > 0){
 						for($i = 0 ; $i < $n;$i++){
 							mysqli_data_seek($result,$i);
 							$record = mysqli_fetch_assoc($result);

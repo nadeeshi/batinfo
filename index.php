@@ -41,10 +41,10 @@
     </style>
 </head>
 
-<body style="margin: 0px;"">
+<body style="margin: 0px;">
 
-    <a name="home"></a>
-    <div class="container-fluid"  >
+    <a name ="home"></a>
+    <div class="container-fluid">
         <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #4c4743;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -55,7 +55,6 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
         <div class="collapse navbar-collapse" id="myNavbar">
         <a class="navbar-brand" href="#"><span style="font-family: 'Chewy', cursive;
               font-size: 45px; color:#ffffff;" >Bats</span><span style="font-size: 40px; color:#ffffff;">Info</span></a>
@@ -87,7 +86,7 @@
             </ul>
 
         </div>
-        
+            </div>
     </nav>
 
 </div>
@@ -109,7 +108,7 @@
         
         <?php 
 include_once 'database/dbconnect.php';
-$sql = "SELECT title, content,link, pubdate FROM articles ORDER BY pubdate DESC LIMIT 3";
+$sql = "SELECT title, content, pubdate FROM articles ORDER BY pubdate DESC LIMIT 3";
 $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
@@ -127,11 +126,12 @@ if ($result->num_rows > 0) {
         if (strlen($row['content']) > 500) {
 
         // truncate string
-         $stringCut = substr($row['content'], 0, 4000);
-         $path= $row['link'];
-         //echo "$path";
+         $stringCut = substr($row['content'], 0, 5000);
+
         // make sure it ends in a word so assassinate doesn't become ass...
+ 
         $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="view/article2.php">Read More</a>'; 
+
         }
         echo $string;
         echo "</div>";
@@ -143,17 +143,21 @@ if ($result->num_rows > 0) {
 }
 
 ?>
-
- </div>       
+        </div>       
 </div>
- </div>
- </div>
+</div>
+
 <div class="push"></div>
-
+    
     <!--get footer -->
-<div id="footer" class="container-fluid" >
-    <a name="contact"> <?php include ("assets/IncludedFiles/footer.php") ?> </a>
+<!-- <div id="footer" class="container-fluid" >
+    <?php include ("assets/IncludedFiles/footer.php") ?> 
+</div> -->
+
+<div>
+    <?php include ("assets/IncludedFiles/footer.php") ?>
 </div>
+
 
 
 </body>

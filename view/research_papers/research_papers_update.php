@@ -17,7 +17,10 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
+        <style>body{background-color: beige;}
+        
+            .edit{font-size: 15px;}
+        </style>
        
     </head>
     <body>
@@ -156,7 +159,7 @@
 
                 function myFunction2() {
                     document.getElementById("sub_btn").disabled = false;
-                    document.getElementById("category1").disabled = false;
+
                     document.getElementById("category2").disabled = false;
                     document.getElementById("pdf_file").disabled = false;
                     document.getElementById("title").disabled = false;

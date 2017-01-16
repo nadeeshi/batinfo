@@ -1,0 +1,22 @@
+        table tr:nth-child(even) {
+                background-color: #e1e1d0;
+            }
+            table tr:nth-child(odd) {
+                background-color: white;
+            }
+            .head-view{
+                margin-bottom: -65px;
+                margin-top: 69px;
+                margin-left: 29% !important;
+
+            }
+            .th_sname{
+
+            }
+            body{
+                align-content: center !important;
+            }
+          
+            td{
+                align-content: center !important;
+            }

@@ -1,0 +1,15 @@
+h2,.lbl_cat{
+                color: #2D343E;
+
+            }
+
+            .pdf-link{
+                color: white;
+                background-color: coral;
+            }
+            .pdf-link:hover{
+                color: blue;
+            }
+            .form-control[disabled], fieldset[disabled] .form-control {
+                cursor: default !important;
+            }

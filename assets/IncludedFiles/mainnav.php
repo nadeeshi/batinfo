@@ -1,13 +1,13 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #4c4743;">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="sr-only">Toggle navigation</span>
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-    	</button>
-    </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
 
   	<div class="collapse navbar-collapse" id="myNavbar">
       <a class="navbar-brand" href="#"><span style="font-family: 'Chewy', cursive;
@@ -38,7 +38,7 @@
             
     			</ul>
   		</div>
-		
+
 </nav>
 
 

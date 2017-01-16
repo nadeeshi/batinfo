@@ -1,5 +1,5 @@
 <?php session_start();
-
+include("wsi_ex.php");
  ?>
 
 <!doctype html>
@@ -64,12 +64,7 @@ img.intLink { border: 0; }
   <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10 " style="z-index: 0;">
       <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 20px";>
-        <?php
-         if(isset($_POST['add'])) {
-            $dbhost = 'localhost';
-            $dbuser = 'root';
-            $dbpass = '';
-            $dbname = "project";
+<?php
     
             include "../../database/dbconnect.php";
             
@@ -128,9 +123,10 @@ img.intLink { border: 0; }
             ?>
 
 
+
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 well">
-            <form method = "post" action = "<?php $_PHP_SELF ?>">
+            <form method = "post" enctype="multipart/form-data" action = "">
                 <fieldset>
                     <legend>Post your article</legend>
 
@@ -205,9 +201,7 @@ img.intLink { border: 0; }
                     
             </form>
 
-            <?php
-         }
-      ?>
+           
   </div>
 </div>
 </div>

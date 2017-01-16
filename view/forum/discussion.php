@@ -34,7 +34,7 @@ require_once ("../../database/dbconnect.php");
     			<div class="col-xs-12 thread-topic-content" id = "-1">
                     <p class="topic-subject"><?php echo $row['topic_subject']; ?></p>
                     <p class="topic-date"><?php echo $row['topic_date'] ?></p>
-                    <p class="topic-date"><?php echo $row['fname']?></p>
+                    <!-- <p class="topic-date"><?php echo $row['fname']?></p> -->
                     <div class="row">
                     	<div class="col-xs-push-1 col-xs-11">
                     		<p><?php echo $row['topic_content']; ?></p>

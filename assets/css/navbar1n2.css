@@ -234,7 +234,7 @@ div.profile-picture {
     margin-top: 50px;
     position: fixed;
     bottom: 0;
-    text-align: center;
+    text-align: right;
 }
 .footcon-col-1 {
     margin-top: 0.5%;
@@ -303,7 +303,7 @@ div.profile-picture {
 	position: absolute;
 	z-index: -2;
 	height: 100%;
-	opacity: 0.925;
+	opacity: 0.965;
 }
 
 .public-thread-content{

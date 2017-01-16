@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -64,7 +65,7 @@
                             <option value="Anatomy">Anatomy</option>
                             <option value="Echolocation">Echolocation</option>
                             <option value="Behaviour">Behaviour</option>
-                            <option value="Anatomy">Anatomy</option>
+                           
                             <option value="Conservation">Conservation</option>
                             <option value="Others">Others</option>
                         </select>

@@ -41,7 +41,7 @@
      <div class="main">
      <h4><b>Following are some important links. You can get more knowledge from following links.</b></h4>
      <ul>
-     	<li class="a"><a href="../public_view_research_papers/paper_view.php">Research Papers</a></li>
+
      	<li class="a"><a href="http://www.batcon.org/">Bat Conservation International</a></li>
      	<li class="a"><a href="http://www.bats.org.uk/pages/bats_of_the_world.html">Bat Conservation Trust</a></li>
      	<li class="a"> <a href="http://www.sci-news.com/paleontology/science-original-color-extinct-bats-03283.html">SCI-NEWS : Paleontologists Determine Original Color of Extinct Bats</a></li>
