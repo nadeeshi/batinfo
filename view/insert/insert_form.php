@@ -113,7 +113,7 @@
                         </div>  
 
                         <div class="form-group ">
-                            <input type="submit" id="next_btn1"  class="my-button next-btn-1 " value="Next >" onclick="next_step1()" />
+                            <input type="button" id="next_btn1"  class="my-button next-btn-1 " value="Next >" onclick="next_step1()" />
                         </div>
 
 
