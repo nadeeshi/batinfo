@@ -1,5 +1,5 @@
 <?php session_start();
-
+include("wsi_ex.php");
  ?>
 
 <!doctype html>
@@ -59,80 +59,17 @@ img.intLink { border: 0; }
         <img src="../../assets/images/bat.jpg" width="100%" height="100%" style="opacity: 0.9;" >
   </div>
   <div>
-    <?php include "../../assets/IncludedFiles/mainnav.php"; ?> 
+    <?php //include "../../assets/IncludedFiles/mainnav.php"; ?> 
   </div>
   <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10 " style="z-index: 0;">
       <div class="container" style="padding-top:80px; padding-bottom:120px; padding-right: 20px";>
-        <?php
-         if(isset($_POST['add'])) {
-            $dbhost = 'localhost';
-            $dbuser = 'root';
-            $dbpass = '';
-            $dbname = "project";
-    
-            include "../../database/dbconnect.php";
-            
-            if(! get_magic_quotes_gpc() ) {
-               $title = addslashes ($_POST['title']);
-               $content = addslashes ($_POST['content']);
-               $link = addslashes ($_POST['link']);
-               $image = $_POST['image'];
-               $name = addslashes ($_POST['name']);
-               $status = addslashes ($_POST['status']);
-
-               //$img = $_POST['img1'];
-            }else {
-               $title = $_POST['title'];
-               $content = $_POST['content'];
-               //$img1 = $_POST['img1'];
-               $link = $_POST['link'];
-               $image = $_POST['image'];
-               $name = addslashes ($_POST['name']);
-               $status = addslashes ($_POST['status']);
-            }
-            
-              $myfile = fopen("$link", "w");
-              //fwrite($myfile, $title); 
-              //echo "<br>";
-              $content= strip_tags($content);
-              fwrite($myfile, $title);
-              fwrite($myfile, $content);
-              
-              
-              
-
-            $_SESSION['cntnt'] = $content;
-            $_SESSION['ttl'] = $title;
-            $sql = "INSERT INTO articles(title,content,link,image,name,status) VALUES('$title','$content','$link','$image','$name','$status')";
-               
-            mysqli_select_db($con,'project');
-            $retval = mysqli_query( $con, $sql );
-            
-            if(! $retval ) {
-               die('Could not enter data: ' . mysqli_error($con));
-            }
-            
-            //echo "Entered data successfully\n";
-            
-            //echo file_get_contents("$title").'<br>';
-            echo "<h3>"."$title"."</h3>"."<br>"; 
-            echo file_get_contents("$link").'<br>';
-            echo "<a href='pdf.php'>"."create pdf"."</a>";
-            fclose($myfile);
-            
-            mysqli_close($con);
-
-
-    
-
-         }else {
-            ?>
+        
 
 
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 well">
-            <form method = "post" action = "<?php $_PHP_SELF ?>">
+            <form method = "post" enctype="multipart/form-data" action = "">
                 <fieldset>
                     <legend>Post your article</legend>
 
@@ -207,9 +144,7 @@ img.intLink { border: 0; }
                     
             </form>
 
-            <?php
-         }
-      ?>
+           
   </div>
 </div>
 </div>
