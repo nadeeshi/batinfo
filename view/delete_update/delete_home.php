@@ -27,7 +27,7 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form insert-bat">
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form insert-bat col-sm-11 col-xs-11">
 
             <div class="table" >
 
@@ -117,11 +117,6 @@
 
 
 
-                <div class="col-xs-8">
-                    <button onclick="window.location.href = '../bats_view/bats_view.php'" class="my-button submit_btn_edit my-buttons" id ="myBtn">Back</button>
-
-
-                </div>
             </div>
 
         </div>
