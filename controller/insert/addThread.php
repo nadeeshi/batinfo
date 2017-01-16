@@ -20,7 +20,7 @@
 <?php
 
 $msg ='';
-require_once ('../../database/connection.php');
+require_once ('../../database/dbconnect.php');
 if (!empty($_POST)) {
   $topic = $_POST['topic'];
   $message =$_POST['message'];
@@ -30,7 +30,7 @@ if (!empty($_POST)) {
    //echo $_SESSION['usr_id'];
   // session_destroy();
   $query= "INSERT INTO topics (topic_subject, topic_content, topic_date, topic_by) VALUES ('$topic' ,'$message', '$date', '$topicby' )";
-  $result= mysqli_query($db, $query);
+  $result= mysqli_query($con, $query);
   error_reporting(E_ALL^E_WARNING);
   if ($result){
     header("Location:../../view/forum/forumTopics.php");

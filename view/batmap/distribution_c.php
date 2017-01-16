@@ -69,7 +69,7 @@
 												
 								<p style="text-align:right">create a pdf<br>of this infomation<br>
 						
-									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?>>
+									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?> target="_blank">
 									<img src="../../assets/images/pdf.png" alt="pdf" />
 						
 									</a>
@@ -105,7 +105,7 @@
 					<h4>OOPS!!! NO MATCH FOUND</h4>
 					<ul>
 						<li>
-							<img src="images/404.jpg" alt="404" style = "display: block; margin:auto !important;  height: 80% ; width: 100%; height:auto;"/>
+							<img src="../../assets/images/404.jpg" alt="404" style = "display: block; margin:auto !important;  height: 80% ; width: 100%; height:auto;"/>
 						</li>
 					</ul>
 				

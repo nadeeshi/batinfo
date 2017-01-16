@@ -12,9 +12,14 @@
 	
 </head>
 <body>
+	<div class="public-background">
+		<img src="../../assets/images/bat.jpg" width="100%" height="100%" >
+	</div>
 	<div>
 		<?php include ("../../assets/IncludedFiles/mainnav.php"); ?>
 	</div>
+	<div class="col-xs-12 body-content">
+	<div class="public-thread-content public-div-content col-xs-10">
 	<div class="col-sm-12 col-xs-12 insert-form">
 		<?php
 			
@@ -67,7 +72,7 @@
 												
 								<p style="text-align:right">create a pdf<br>of this infomation<br>
 						
-									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?>>
+									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?> target="_blank">
 									<img src="../../assets/images/pdf.png" alt="pdf" />
 						
 									</a>
@@ -118,6 +123,8 @@
 	<?php }?>
 	
 	</div>
+	</div>
+	
 
 
 	<!-- start footer -->

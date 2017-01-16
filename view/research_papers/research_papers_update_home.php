@@ -48,7 +48,7 @@
 
                 mysqli_close($con);
                 ?>
-                <h3>Upadte Research Papers</h3><br><br>
+                <h3>Update Research Papers</h3><br><br>
                 <table >
                     <thead>
                         <tr>

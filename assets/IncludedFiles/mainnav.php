@@ -21,8 +21,8 @@
                 <li><a href="../../view/articles/article2.php">Articles</a></li>
                 <li><a href="../../view/forum/publicTopics.php">Forum</a></li>
                 <li><a href="../../view/profiles/u_profiles.php">Gallery</a></li>
-                <li><a href="../../view/public_view_research_papers/paper_view.php">Research Papers</a></li>
                 <li><a href="../../view/aboutus/aboutus.php">About Us</a></li>
+
 
             </ul>
             <form class="navbar-form  navbar-right"
@@ -40,6 +40,8 @@
             </ul>
         </div>
     </div>
+
+
 </nav>
 
 

@@ -87,7 +87,7 @@ require_once('auth.php');
                         <?php
                         ob_start();
                         include("connect.php");
-                        $query = mysqli_query($bd,"select count(*) as total from researchers");
+                        $query = mysqli_query($bd,"select count(*) as total from researchers where password is not NULL");
                         $result = mysqli_fetch_array($query);
                         echo $result['total'];
                         ob_end_flush();
@@ -119,7 +119,7 @@ require_once('auth.php');
                         <?php
                         ob_start();
                         include("connect.php");
-                        $query = mysqli_query($bd,"select count(*) as total from tbl_uploads");
+                        $query = mysqli_query($bd,"select count(*) as total from research_papers");
                         $result = mysqli_fetch_array($query);
                         echo $result['total'];
                         ob_end_flush();
@@ -220,7 +220,7 @@ require_once('auth.php');
                         <?php
                         ob_start();
                         include("../../assets/includedFiles/connect.php");
-                        $sql="SELECT * FROM tbl_uploads";
+                        $sql="SELECT * FROM admin_research_papers";
 
                         $result_set=mysqli_query($bd,$sql);
                         while($row=mysqli_fetch_array($result_set))

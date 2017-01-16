@@ -1,16 +1,14 @@
 <?php
-require_once('../../assets/includedFiles/auth.php');
-?>
-
-<?php
 ob_start();
+require_once('../../assets/includedFiles/auth.php');
+
 include("../../assets/includedFiles/connect.php");
 
 //if(isset($_POST['send'])!=""){
     $scientific_name=mysql_real_escape_string($_POST['scientific_name']);
     $bat_order=mysql_real_escape_string($_POST['bat_order']);
     $kingdom=mysql_real_escape_string($_POST['kingdom']);
-    /*$genus=mysql_real_escape_string($_POST['genus']);
+    $genus=mysql_real_escape_string($_POST['genus']);
     $phylum=mysql_real_escape_string($_POST['phylum']);
     $family=mysql_real_escape_string($_POST['family']);
     $sub_family=mysql_real_escape_string($_POST['sub_family']);
@@ -28,23 +26,22 @@ include("../../assets/includedFiles/connect.php");
     $population=mysql_real_escape_string($_POST['population']);
     $measurements=mysql_real_escape_string($_POST['measurements']);
     $other_details=mysql_real_escape_string($_POST['other_details']);
-*/
-
-echo $scientific_name."<br>";
-echo $bat_order;
- $researcher_id=12;
 
 
-$update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,researcher_id)VALUES
-                                      ('$scientific_name','$bat_order','$kingdom','$researcher_id')");
 
-/*
+ $admin_id= $_SESSION['SESS_MEMBER_ID'];
+
+
+/*$update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,researcher_id)VALUES
+                                      ('$scientific_name','$bat_order','$kingdom','$researcher_id')");*/
+
+
 $update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,genus,phylum,family,sub_family,
 bat_class,species,common_names,synonyms,roost,conservation_status,country_occurence,feeding,breeding,threats,conservation_action,population,measurements,other_details,researcher_id)VALUES
                                       ('$scientific_name','$bat_order','$kingdom','$genus','$phylum','$family','$sub_family','$bat_class','$species','$common_names','$synonyms','$roost','$conservation_status','$country_occurence',
-                                      '$feeding','$breeding','$threats','$conservation_action','$population','$measurements','$other_details','$researcher_id')");
+                                      '$feeding','$breeding','$threats','$conservation_action','$population','$measurements','$other_details','$admin_id')");
 
-*/
+
     if($update)
     {
         $msg="Successfully Updated!!";
@@ -56,7 +53,7 @@ bat_class,species,common_names,synonyms,roost,conservation_status,country_occure
         $errormsg="Something went wrong, Try again";
         echo "<script type='text/javascript'>alert('$errormsg');</script>";
 
-    //}
+   // }
     }
 ob_end_flush();
 ?>

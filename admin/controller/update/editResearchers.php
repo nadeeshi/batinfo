@@ -102,7 +102,7 @@ ob_end_flush();
                             {
                                 $id=$_GET['id'];
                                 $getselect=mysqli_query($bd,"SELECT * FROM researchers WHERE researcher_id='$id'");
-                                $getselect=mysqli_query($bd,"SELECT * FROM qualifications WHERE researcher_id='$id'");
+
 
                                 while($profile=mysqli_fetch_array($getselect))
                                 {

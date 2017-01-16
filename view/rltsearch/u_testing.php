@@ -7,7 +7,7 @@ include ('../../database/dbconnect.php');
 <html>
 	
 	<head>
-	<title>thread</title>
+	<title>bat search</title>
 	<link href="https://fonts.googleapis.com/css?family=Alike+Angular" rel="stylesheet"> 
     <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../assets/CSS/testing.css">	
@@ -19,10 +19,15 @@ include ('../../database/dbconnect.php');
 	</head>
 
 <body>
+	<div class="public-background">
+		<img src="../../assets/images/bat.jpg" width="100%" height="100%" >
+	</div>
 
 	<div>
 	<?php include('../../assets/IncludedFiles/mainnav.php');?>
 	</div>
+	<div class="col-xs-12 body-content">
+	<div class="public-thread-content public-div-content col-xs-10">
 	<div class="col-sm-12 col-xs-12 insert-form">
 		<div class="container">
 
@@ -58,9 +63,9 @@ include ('../../database/dbconnect.php');
 	
 				include ("vm.php");
 				
-				$query = mysql_query("SELECT * FROM photos;");
+				$query = mysqli_query($con,"SELECT * FROM photos;");
 	
-				$num_rows = mysql_num_rows($query);
+				$num_rows = mysqli_num_rows($query);
 //echo $num_rows;	
 	
 				$dat = "zi";
@@ -68,7 +73,7 @@ include ('../../database/dbconnect.php');
 				$d =array();
 				$xx =array();
 				$head =array();
-				while($row = mysql_fetch_array($query)){
+				while($row = mysqli_fetch_assoc($query)){
 					$cap = $row['caption'];
 					$ds = $row['desc'];
 					$idn = $row['id'];
@@ -138,6 +143,8 @@ include ('../../database/dbconnect.php');
 				</div>
 			</div>  
 		</div>
+	</div>
+	</div>
 	</div>  
 	
 		<div class="col-sm-12 col-xs-12">
