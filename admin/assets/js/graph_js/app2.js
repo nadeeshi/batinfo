@@ -19,7 +19,8 @@ $(document).ready(function(){
                     {
                         label: 'Bats Population',
                        // backgroundColor: 'rgba(500, 500, 500, 0.75)',
-                        backgroundColor: 'rgba(500, 0, 0, 1.0)',
+
+                        backgroundColor: 'rgba(500, 500, 500, 0.75)',
                         borderColor: 'rgba(200, 200, 200, 0.75)',
                         hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                         hoverBorderColor: 'rgba(200, 200, 200, 1)',
