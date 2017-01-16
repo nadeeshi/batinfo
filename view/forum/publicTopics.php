@@ -51,7 +51,7 @@ require_once ("../../database/dbconnect.php");
 			                echo "<tr>";
 			                foreach ($result as $user) {
 			                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
-			                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+			                    echo "<a style='color:black!important;' href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
 			                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
 			                    echo $user['topic_date']." "."</td>";
 			                    echo "<td class='col-sm-2 col-xs-2'>";
@@ -62,7 +62,7 @@ require_once ("../../database/dbconnect.php");
 			                echo "<tr>";
 			                foreach ($sql_to_get_data as $user) {
 			                    echo  "<td class='col-sm-9 col-xs-9' height='50'>";
-			                    echo "<a href='discussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
+			                    echo "<a style='color:black!important;' href='publicDiscussion.php?id=".$user['topic_id']."'>".$user['topic_subject']."</a>"." "."</td>";
 			                    echo  "<td height='50' class='col-sm-2 col-xs-2'>";
 			                    echo $user['topic_date']." "."</td>";
 			                    echo "<td class='col-sm-2 col-xs-2'>";

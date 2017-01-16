@@ -173,20 +173,20 @@ body {
 div.profile-picture {
 	border-style: solid;
 	border-color: #c16d28;
-	border-radius: 50%;
+	border-radius: 4%;
 	width: 80px;
-	height: 80px;
+	height: 73px;
 	margin: auto;
 	margin-top: 15px;
-	background-image: url('../../assets/images/bubble.png');
 	background-position: center;
+	background-color: #4c4743;
 }
 
-.profile-picture img{
+/*.profile-picture img{
 	min-width: 100%;
 	min-height: 100%;
 	display: block;
-}
+}*/
 
 
 
