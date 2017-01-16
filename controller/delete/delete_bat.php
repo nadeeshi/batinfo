@@ -16,7 +16,7 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
+       
     </head>
     <body>
 
@@ -24,7 +24,8 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-8 col-sm-push-2 col-xs-12 insert-form">
+               <div class="col-sm-8 col-sm-push-2 col-xs-12 insert-form insert-bat col-sm-11 col-xs-11">
+
             <div class="height_default_edit">
 
 
@@ -32,7 +33,7 @@
                 require_once('../../database/dbconnect.php');
 
                 if (mysqli_connect_errno()) {
-                    echo "<p class='msg'>Something Went Wrong!!!</p>";
+                    echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
                     echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                 }
 
@@ -51,7 +52,7 @@
 
                 // delete the image from relavant folder/ directory
                 if (!unlink($file)) {
-                    echo "<p class='msg'>Something Went Wrong!!!</p>";
+                        echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
                     echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                 } else {
                     // 
@@ -65,10 +66,10 @@
 
 
                     if ($con->query($query) === TRUE) {
-                        echo "<p class='msg'>Bat Succesfully Deleted<p>";
+                        echo "<p class='msg'><h3>Bat Succesfully Deleted<h3><p>";
                         echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Back</button></a>';
                     } else {
-                        echo "<p class='msg'>Something Went Wrong!!!</p>";
+                         echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
                         echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                     }
                 }

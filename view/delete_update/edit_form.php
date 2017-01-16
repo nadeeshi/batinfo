@@ -25,7 +25,7 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form">
+        <div class="col-sm-10 col-sm-push-2 col-xs-12 col-sm-11 col-xs-11 insert-form">
             <div class="head-form">
                 <h2>Edit Bats Details</h2>
             </div>

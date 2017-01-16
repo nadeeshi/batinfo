@@ -73,7 +73,7 @@
                             echo '<td class="td_data lbl">' . $row['scientific_name'] . '</td>';
                             $i = $i + 1;
 
-                            echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_form.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_update();">edit</a></td>';
+                            echo '<td class="td_data td_data_op lbl"><a class="link" href="edit_fk.php?id=' . $row['scientific_name'] . '" onclick="return myFunction_update();">edit</a></td>';
 
 
 

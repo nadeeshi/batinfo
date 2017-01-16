@@ -39,7 +39,8 @@
                 <?php
                 require_once('../../database/dbconnect.php');
                 if (mysqli_connect_errno()) {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                  echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
+                    echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                 }
                 $researcher_id = $_SESSION['usr_id'];
 
