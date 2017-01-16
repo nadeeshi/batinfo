@@ -46,7 +46,7 @@ function Header()
 	global $fname;
      
 	
-    $this->Image("../../assets/images/".$img,10,15,40);
+    $this->Image("../../assets/images/".$img,10,15,30);
     // Arial bold 15
     $this->SetFont('Arial','B',15);
     // Move to the right

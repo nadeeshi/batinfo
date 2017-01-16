@@ -54,6 +54,10 @@ if (isset($_POST['login'])) {
         <script src="../../assets/JS/bootstrap.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="../../assets/JS/bootstrap.min.js"></script>
+        <style>
+        .footer-container {position:fixed;
+            bottom:0;}
+        </style>
 </head>
 <body>
     <div class="public-background">
@@ -64,8 +68,8 @@ if (isset($_POST['login'])) {
     </div>
 
     <div class="container" style="padding-top:10%;>
-        <div class= "row">
-        <div class="col-md-4 col-md-offset-4 well" style="opacity:0.925;">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 well" style="opacity:0.925;">
             <form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
                 <fieldset>
                     <legend>Login</legend>
@@ -91,23 +95,11 @@ if (isset($_POST['login'])) {
             </form>
             
         </div>
-    </div>
-
-    <div class="push"></div>
+        </div>
+    </div>  
+ <div class="col-xs-12 footer-container" >
+    <?php include "../../assets/includedFiles/footer.php" ?>
 </div>
-
-    <!--get footer -->
-
-    <div>
-        <div class="col-xs-12 ">
-          <?php include "../../assets/includedFiles/footer.php" ?>
-        </div>  
-    </div>
-
-
-
-<script src="../../assets/JS/jquery.js"></script>
-<script src="../../assets/JS/bootstrap.min.js"></script>
 
 
 </body>

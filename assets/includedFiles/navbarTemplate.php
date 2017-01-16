@@ -1,6 +1,6 @@
 <?php
 ob_start(); 
-@session_start();
+session_start();
 
 include_once '../../database/dbconnect.php';
 
@@ -75,7 +75,7 @@ ob_end_flush();
     <!-- start of the side navigation bar -->
  		<div class="col-xs-2 list-container mini-bar">
  			<div class="profile-picture">
- 				<!-- <img src="../img/proPic.png"> -->
+ 				<img style='height: 100%; width: 100%; object-fit: contain' src="../../assets/images/bubble.png"/>
  			</div>
 			<nav class="list-of-content">
 			  <ul class="mainmenu nav nav-pills nav-stacked">

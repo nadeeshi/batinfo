@@ -147,7 +147,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                       How can I change back my username?
+                                       How can I change back my username(email)?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -156,7 +156,10 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                    1. You have to contact admin panel for the new username
+                                    1. You can click the name which is on the top<br>
+                                    2. You can change it<br>
+                                    3. click "Update Profile"
+
                                 </div>
                             </div>
                         </div>
@@ -173,7 +176,10 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">
-                                     1. You have to contact admin panel for the new Password
+                                     1. You can<br>
+                                     2. Click the name which is on the top<br>
+                                     3. Change the password<br>
+                                     4. click "Update Profile" 
                                 </div>
                             </div>
                         </div>
