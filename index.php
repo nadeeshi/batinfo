@@ -34,7 +34,11 @@
     <script type="text/javascript" src="assets/JS/jssor.slider.mini.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
 
-    
+    <style>
+        .acolor {
+            color:#ffffff;
+        }
+    </style>
 </head>
 
 <body style="margin: 0px;"">
@@ -57,12 +61,13 @@
               font-size: 45px; color:#ffffff;" >Bats</span><span style="font-size: 40px; color:#ffffff;">Info</span></a>
                 <ul class="nav navbar-nav" style="font-size: 16px; padding-top: 1px; ">
 
-                    <li><a href="">Home</a></li>
-                    <li><a href="view/news/u_newst.php">News</a></li>
-                    <li><a href="view/articles/article2.php">Articles</a></li>
-                    <li><a href="view/forum/publicTopics.php">Forum</a></li>
-                    <li><a href="view/profiles/u_profiles.php">Gallery</a></li>
-                    <li><a href="view/aboutus/publicAboutUs.php">About Us</a></li>
+                    <li><a href="" style="color:#ffffff;">Home</a></li>
+                    <li ><a href="view/news/u_newst.php" style="color:#ffffff;">News</a></li>
+                    <li><a href="view/articles/article2.php" style="color:#ffffff;">Articles</a></li>
+                    <li><a href="view/forum/publicTopics.php" style="color:#ffffff;">Forum</a></li>
+                    <li><a href="view/profiles/u_profiles.php" style="color:#ffffff;">Gallery</a></li>
+                    <li><a href="view/aboutus/publicAboutUs.php" style="color:#ffffff;">About Us</a></li>
+                    <li><a href="view/resources/resources.php" style="color:#ffffff;">Resources</a></li>
                         
                 </ul>
             <form class="navbar-form  navbar-right" action="view/rltsearch/u_testing.php" method="post">
@@ -74,9 +79,9 @@
             </form>
             <ul class="nav navbar-nav navbar-right" style="font-size: 16px; padding-top: 1px; padding-bottom: 8px;">
            
-                    <li><a href="controller/login/page1_form.php" id="myBtn" style="font-size: 16px;"><span class="glyphicon glyphicon-user"></span> Register</a>
+                    <li><a href="controller/login/page1_form.php" id="myBtn" style="color:#ffffff;" style="font-size: 16px;"><span class="glyphicon glyphicon-user"></span> Register</a>
                     </li>
-                    <li><a href="controller/login/login.php"  style="font-size: 16px;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    <li><a href="controller/login/login.php" style="color:#ffffff;" style="font-size: 16px;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
               
             </ul>
@@ -126,7 +131,7 @@ if ($result->num_rows > 0) {
          $path= $row['link'];
          //echo "$path";
         // make sure it ends in a word so assassinate doesn't become ass...
-        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="view/articles/article2.php">Read More</a>'; 
+        $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="view/article2.php">Read More</a>'; 
         }
         echo $string;
         echo "</div>";
