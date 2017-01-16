@@ -53,6 +53,7 @@ include "../../assets/IncludedFiles/footer.php" ;
     </div>
   </div> 
   <br>
+  
   <div class="row">
     <div class="col-md-3">
     <?php include "../../database/dbconnect.php";
@@ -70,8 +71,7 @@ include "../../assets/IncludedFiles/footer.php" ;
           echo '<ul style="list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #f1f1f1;">';
           echo '<li>'.'<a target= "ifrm" href='. $link.'>'. $title.'</a>'.'</li>';
           echo '<div class="col-md-9" id="rest">';
-      
-      //echo  $row['content']; 
+  
           $_SESSION['lnk']=$link;
           $_SESSION['cntnt']=$content;
 
@@ -82,14 +82,25 @@ include "../../assets/IncludedFiles/footer.php" ;
     ?>
 
   </div>
+
   <div id="top" class="col-md-9">
     
     <?php 
-     $_SESSION['lnk']=$link;
+    $_SESSION['lnk']=$link;
     $_SESSION['cntnt']=$content;
-  
+    echo '<form action="pdf.php">';
+    $link= $_SESSION['lnk'];
+    $content =$_SESSION['cntnt'];
+    echo '<button type="submit" > PDF</button>';
+    echo '</form>';
     echo'<iframe src= "article_main.html" name="ifrm" style="border:none;" width="90%" height="1200"></iframe>';  
     ?>
+  </div>
+  <div>
+  
+  
+
+  
   </div>
 </div>
 

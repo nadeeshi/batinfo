@@ -77,7 +77,6 @@ img.intLink { border: 0; }
                $title = addslashes ($_POST['title']);
                $content = addslashes ($_POST['content']);
                $link = addslashes ($_POST['link']);
-               $image = $_POST['image'];
                $name = addslashes ($_POST['name']);
                $status = addslashes ($_POST['status']);
 
@@ -87,7 +86,6 @@ img.intLink { border: 0; }
                $content = $_POST['content'];
                //$img1 = $_POST['img1'];
                $link = $_POST['link'];
-               $image = $_POST['image'];
                $name = addslashes ($_POST['name']);
                $status = addslashes ($_POST['status']);
             }
@@ -104,8 +102,8 @@ img.intLink { border: 0; }
 
             $_SESSION['cntnt'] = $content;
             $_SESSION['ttl'] = $title;
-            $sql = "INSERT INTO articles(title,content,link,image,name,status) VALUES('$title','$content','$link','$image','$name','$status')";
-               
+            $sql = "INSERT INTO articles(title,content,link,image,name,status) VALUES('$title','$content','$link','?','$name','$status')";
+             
             mysqli_select_db($con,'project');
             $retval = mysqli_query( $con, $sql );
             
