@@ -36,7 +36,7 @@
 						
 						<div class="row">
 							<div class="col-xs-12">
-								<h3 style="text-align:center">Bat Profile</h3>
+								<h2 style="text-align:center; font-family: 'Varela Round', sans-serif;">Bat Profile</h2>
 							</div>
 						</div>
 						<div class="row">

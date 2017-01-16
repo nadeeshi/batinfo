@@ -59,7 +59,7 @@ img.intLink { border: 0; }
         <img src="../../assets/images/bat.jpg" width="100%" height="100%" style="opacity: 0.9;" >
   </div>
   <div>
-    <?php //include "../../assets/IncludedFiles/mainnav.php"; ?> 
+    <?php include "../../assets/IncludedFiles/mainnav.php"; ?> 
   </div>
   <div class="col-xs-12 body-content">
     <div class="public-thread-content public-div-content col-xs-10 " style="z-index: 0;">
