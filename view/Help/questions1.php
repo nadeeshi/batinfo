@@ -133,7 +133,7 @@
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                        Why my user name was rejected during sign up?
+                                        Why my user name(email) was rejected during sign up?
                                     </a>
                                     <span  class="pull-right">
                                         <i class="fa fa-caret-square-o-down"></i>
@@ -143,7 +143,7 @@
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
                                      1. It might be already taken by another user<br>
-                                     2. You have to try with new username 
+                                     2. You have to try with new email address 
                                 </div>
                             </div>
                         </div>
