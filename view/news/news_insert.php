@@ -83,13 +83,15 @@
         ?>
         /*if(isset($_SESSION['usr_id'])){echo $_SESSION['usr_id'];}*/
 	</div>
-	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+	<div class="col-sm-8 col-sm-push-2 col-xs-12 insert-form insert-bat">
 	
 		<div class="s">
 		
 			<form  name="news" method="post" enctype="multipart/form-data" action="" onsubmit="return validation()"> 
-				<div class="register-top-grid">				
-					<h3>INSERT NEWS</h3>
+				<div class="register-top-grid">	
+					<div style="text-align: center;">			
+					<h2 style="font-family: 'Varela Round', sans-serif;">INSERT NEWS</h2>
+					</div>
 					<input type="hidden" name="new" value="1" />
 
 				
