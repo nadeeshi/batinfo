@@ -11,30 +11,13 @@
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
-            
+        <link rel="stylesheet" href="../../assets/CSS/pub_paper_descript.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}
-         h2,.lbl_cat{
-                color: white;
-
-            }
-           
-            .pdf-link{
-                 color: white;
-               background-color: coral;
-            }
-            .pdf-link:hover{
-                color: blue;
-            }
-        .form-control[disabled], fieldset[disabled] .form-control {
-    cursor: help !important;
-}
-        
-        </style>
+        <style>body{background-color: beige;}h2{color: white;}</style>
     </head>
 
     <body >
@@ -44,7 +27,7 @@
         <div>
             <?php include '../../assets/IncludedFiles/mainnav.php' ?>
         </div>
-       <?php
+        <?php
         require_once('../../database/dbconnect.php');
 
         if (mysqli_connect_errno()) {
@@ -69,9 +52,9 @@
         ?>
 
         <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form">
-             <div class="head-form">
-                    <h2>Reasearch Paper Details</h2>
-                </div>
+            <div class="head-form">
+                <h2>Reasearch Paper Details</h2>
+            </div>
             <form id="form" method="post" action="">
                 <div class="form-group clearfix">
                     <label class="lbl_cat " >Title</label>
@@ -85,7 +68,7 @@
 
                     <input type="text"  class="form-control " value="<?php echo $details['author'] ?>"  disabled />
                 </div>
-              
+
 
                 <div class="form-group clearfix">
                     <label class="lbl_cat" >Description</label>
@@ -117,7 +100,7 @@
             </form>                
 
         </div>
-       
+
         <div class=" col-xs-12 ">
             <?php include "../../assets/IncludedFiles/footer.php" ?>
         </div>

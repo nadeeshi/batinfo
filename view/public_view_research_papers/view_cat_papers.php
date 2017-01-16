@@ -15,6 +15,7 @@ require_once ("../../database/dbconnect.php");
         <link rel="stylesheet" href="../../assets/CSS/bats_view.css"/>
         <link rel="stylesheet" href="../../assets/CSS/edit_del_page.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
+        <link rel="stylesheet" href="../../assets/CSS/pub_view_cat.css">
 
 
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
@@ -22,36 +23,7 @@ require_once ("../../database/dbconnect.php");
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style type="text/css">
-            table tr:nth-child(even) {
-                background-color: #e1e1d0;
-            }
-            table tr:nth-child(odd) {
-                background-color: white;
-            }
-            .head-view{
-                margin-bottom: -65px;
-                margin-top: 69px;
-                margin-left: 29% !important;
-
-            }
-            .th_sname{
-
-            }
-            body{
-                align-content: center !important;
-            }
-            h2{
-                color: white;
-
-            }
-            td{
-                align-content: center !important;
-            }
-            .my-button{
-                margin-top: 10px;
-            }
-        </style>
+        <style>h2{color: white;}</style>
     </head>
     <body>
         <div class="public-background">

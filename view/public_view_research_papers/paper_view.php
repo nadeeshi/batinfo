@@ -16,40 +16,13 @@ require_once ("../../database/dbconnect.php");
         <link rel="stylesheet" href="../../assets/CSS/edit_del_page.css"/>
         <link rel="stylesheet" href="../../assets/CSS/insert_form_css.css">
 
-
+        <link rel="stylesheet" href="../../assets/CSS/public_paper_view.css.css">
         <link href="../../assets/CSS/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../../assets/CSS/navbar1n2.css" rel="stylesheet" type="text/css">
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style type="text/css">
-            table tr:nth-child(even) {
-                background-color: #e1e1d0;
-            }
-            table tr:nth-child(odd) {
-                background-color: white;
-            }
-            .head-view{
-                margin-bottom: -65px;
-                margin-top: 69px;
-                margin-left: 29% !important;
-
-            }
-            .th_sname{
-
-            }
-            body{
-                align-content: center !important;
-            }
-            h2{
-                color: white;
-
-            }
-            td{
-                align-content: center !important;
-            }
-
-        </style>
+        <style >h2{color: white;}</style>
     </head>
     <body>
         <div class="public-background">
@@ -73,19 +46,14 @@ require_once ("../../database/dbconnect.php");
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
 
-                
-                $diet= "Diet & Feed";
-                $habits="Habitats";
-                $anatomy="Anatomy";
-                $echolocation="Echolocation";
-                $behaviour="Behaviour";
-                $conservation="Conservation";
-                $others="Others";
-               
-                
-                
-                
-                
+
+                    $diet = "Diet & Feed";
+                    $habits = "Habitats";
+                    $anatomy = "Anatomy";
+                    $echolocation = "Echolocation";
+                    $behaviour = "Behaviour";
+                    $conservation = "Conservation";
+                    $others = "Others";
                     ?>
                     <table style="width:100%">
                         <tr>
@@ -95,35 +63,35 @@ require_once ("../../database/dbconnect.php");
                         </tr>
                         <tr>
                             <td>Diet & Feed</td>
-                           <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $diet . '" onclick="return myFunction_update();">view</a></td>';?>
+<?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $diet . '">view</a></td>'; ?>
 
                         </tr>
                         <tr>
                             <td>Habitats</td>
-                             <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $habits . '" onclick="return myFunction_update();">view</a></td>';?>
+                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $habits . '">view</a></td>'; ?>
                         </tr>
                         <tr>
                             <td>Anatomy</td>
-                           <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $anatomy . '" onclick="return myFunction_update();">view</a></td>';?>
+                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $anatomy . '">view</a></td>'; ?>
 
                         </tr>
                         <tr>
                             <td>Echolocation</td>
-                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $echolocation . '" onclick="return myFunction_update();">view</a></td>';?>
+                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $echolocation . '">view</a></td>'; ?>
                         </tr>
                         <tr>
                             <td>Behaviour</td>
-                             <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $behaviour . '" onclick="return myFunction_update();">view</a></td>';?>
+                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $behaviour . '">view</a></td>'; ?>
 
                         </tr>
                         <tr>
                             <td>Conservation</td>
-                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $conservation . '" onclick="return myFunction_update();">view</a></td>';?>
+                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $conservation . '" >view</a></td>'; ?>
 
                         </tr>
                         <tr>
                             <td>Others</td>
-                             <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $others . '" onclick="return myFunction_update();">view</a></td>';?>
+                            <?php echo '<td ><a class="link" href="view_cat_papers.php?category=' . $others . '">view</a></td>'; ?>
 
                         </tr>
                     </table>
@@ -143,7 +111,7 @@ require_once ("../../database/dbconnect.php");
 
         <div>
             <div class="col-xs-12 ">
-                <?php include "../../assets/includedFiles/footer.php" ?>
+<?php include "../../assets/includedFiles/footer.php" ?>
             </div>  
         </div>
 
