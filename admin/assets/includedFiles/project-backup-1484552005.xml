@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="project">
+	<table name="admin_details">
+		<columns>
+			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="admin_details" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="username" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="password" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="emailid" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="mobileno" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="admin_details" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="created" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<id>200</id>
+				<username>nadee</username>
+				<password>68e2db743735b254dcd9d11631bca705</password>
+				<emailid>n@gmail.com</emailid>
+				<mobileno>754636571</mobileno>
+				<created>2017-01-12 17:14:27</created>
+			</record>
+			<record>
+				<id>210</id>
+				<username>madu</username>
+				<password>68e2db743735b254dcd9d11631bca705</password>
+				<emailid>m@gmail.com</emailid>
+				<mobileno>915614732</mobileno>
+				<created>2017-01-16 05:49:08</created>
+			</record>
+		</records>
+	</table>
+	<table name="admin_research_papers">
+		<columns>
+			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="admin_research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="file" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="type" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="size" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="admin_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="admin_research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<id>1</id>
+				<file>4392-munshisouthwilkinson2010arr.pdf</file>
+				<type>application/pdf</type>
+				<size>308.400390625</size>
+				<admin_id>0</admin_id>
+			</record>
+		</records>
+	</table>
+	<table name="articles">
+		<columns>
+			<column name="article_no" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="articles" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="content" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="image" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="link" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="articles" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="pubdate" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="datetime" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="name" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="status" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<article_no>28</article_no>
+				<title>Chamara</title>
+				<content>Chamara Munas</content>
+				<image></image>
+				<link>d.html</link>
+				<pubdate>2017-01-16 04:22:47</pubdate>
+				<name>Anjalee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>32</article_no>
+				<title>owl</title>
+				<content>hasa jopa san okpk nskasa</content>
+				<image>?</image>
+				<link>owl.html</link>
+				<pubdate>2017-01-16 04:36:48</pubdate>
+				<name>nadee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>34</article_no>
+				<title>sasas</title>
+				<content>sasa</content>
+				<image>?</image>
+				<link>dj.html</link>
+				<pubdate>2017-01-16 10:28:18</pubdate>
+				<name>Anjalee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>35</article_no>
+				<title>Long-Eared Bat</title>
+				<content>Rafinesque&amp;rsquo;s big-eared bats are known to form nursery colonies in large hollow trees. Hollow tree roosts provide stable internal environments, protection from predators, and often contain well-insulated areas that form the hot-air traps essential for rearing young. These bats range throughout the southeastern United States from southern Virginia south and west to eastern Texas and northward along the Mississippi River valley to southern Indiana. Their range most closely approximates the historical range of great cypress swamps, indicating that they may have formed a traditional reliance on these areas as roosting and/or foraging sites.</content>
+				<image></image>
+				<link>long.html</link>
+				<pubdate>2017-01-16 11:59:05</pubdate>
+				<name>Anjalee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>36</article_no>
+				<title>Indian Bat</title>
+				<content>As much of these swamp-lands have been drained and trees have been harvested, these bats have apparently moved their maternity roosts into old buildings or attics. Rafinesque&amp;rsquo;s big-eared bats are slow, agile flyers and appear to forage on a wide variety of small, nocturnal insects, especially moths. They hibernate near their summer foraging grounds in old mines, caves, and cisterns.</content>
+				<image></image>
+				<link>indian.html</link>
+				<pubdate>2017-01-16 12:00:12</pubdate>
+				<name>nadee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>37</article_no>
+				<title>Egyptian Bat</title>
+				<content>Though widespread in the eastern U.S., this bat is nowhere abundant and population levels appear to have declined in the past century due to loss of summer roosting or foraging habitat and/or disturbance at winter hibernacula. Rafinesque&amp;rsquo;s big-eared bats are at special risk where they form nursery or hibernation colonies in caves that are susceptible to recreational disturbance and in abandoned mines slated for closure or reclamation.</content>
+				<image></image>
+				<link>eg.html</link>
+				<pubdate>2017-01-16 12:00:59</pubdate>
+				<name>sa</name>
+				<status>Researcher</status>
+			</record>
+		</records>
+	</table>
+	<table name="bat_info">
+		<columns>
+			<column name="bat_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="1" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="scientific_name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="1" unsigned="0" zerofill="0" />
+			<column name="pic" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="bat_order" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="kingdom" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="genus" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="phylum" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="family" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="sub_family" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="bat_class" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="species" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="common_names" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="synonyms" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="roost" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="locations" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="conservation_status" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="conservation_action" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="feeding" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="breeding" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="threats" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="country_occurence" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="measurements" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="other_details" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="population" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="created" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="del_bit" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<bat_id>30</bat_id>
+				<scientific_name>Cynopterus</scientific_name>
+				<pic>bphotos/25110612800px-Cynopterus_brachyotis.jpg</pic>
+				<bat_order>Chiroptera</bat_order>
+				<kingdom>Animalia</kingdom>
+				<genus>Cynopterus</genus>
+				<phylum>Chordata</phylum>
+				<family>Pteropodidae</family>
+				<sub_family>Pteropodidae</sub_family>
+				<bat_class>Mammalia</bat_class>
+				<species>Pteropodidae</species>
+				<common_names> Chironx, Balionycteris, Penthetor, Dyacopterus and Cynopterus</common_names>
+				<synonyms> Chironx, Balionycteris, Penthetor</synonyms>
+				<roost> Cynopterus </roost>
+				<locations> moratuwa,galle,kandy</locations>
+				<conservation_status>Cynopterus </conservation_status>
+				<conservation_action>Mating System: P. giganteus is a polygynandrous species, and breeds yearly from July to October. Births occur from February to May.</conservation_action>
+				<feeding>The Indian flying fox is frugivorous or nectarivorous, i.e., they eat fruits or lick nectar from flowers. At dusk, these bats forage for ripe fruit. While ingesting fruit, these bats expel waste that pollinates and disperse seeds</feeding>
+				<breeding>The Indian flying fox lives in tropical forests and swamps, near bodies of water. They also live on coastal islands, and it is theorized that ancestors migrated here long ago and found a liking to it, or were blown there and quickly forged a lifestyl</breeding>
+				<threats>Cynopterus is a genus of megabats. The Cynopterine section is represented by 11 genera, five of which occur in Malaysia, namely, Chironx, Balionycteris, Penthetor, Dyacopterus and Cynopterus. 30 names for Cynopterus species have been proposed, but only 16 are taxonomically valid forms</threats>
+				<country_occurence> These bats have a relatively long snout. Their upper parts are brown to grey-brown with paler under parts. The fur is very fine and silky. The ears and wing bones of C. sphinx are edged in white. </country_occurence>
+				<measurements>These bats have a relatively long snout. Their upper parts are brown to grey-brown with paler under parts. The fur is very fine and silky. The ears and wing bones of C. sphinx are edged in white. </measurements>
+				<other_details>Genus Cynopterus
+Lesser short-nosed fruit bat (Cynopterus brachyotis)
+Horsfield's fruit bat (Cynopterus horsfieldii)
+Peters's fruit bat (Cynopterus luzoniensis)
+Minute fruit bat (Cynopterus minutus)</other_details>
+				<population>20</population>
+				<created>0</created>
+				<researcher_id>12</researcher_id>
+				<del_bit>0</del_bit>
+			</record>
+			<record>
+				<bat_id>31</bat_id>
+				<scientific_name>Pteropus giganteus</scientific_name>
+				<pic>bphotos/71493816Indian_Flying_Fox_(Pteropus_giganteus)_Kolkata_West_Bengal_India_27042013.png</pic>
+				<bat_order>Chiroptera</bat_order>
+				<kingdom>Animalia</kingdom>
+				<genus>Pteropus</genus>
+				<phylum>Chordata</phylum>
+				<family>Pteropodidae</family>
+				<sub_family>Pteropodidae</sub_family>
+				<bat_class>P. giganteus</bat_class>
+				<species>P. giganteus</species>
+				<common_names> Indian flying fox</common_names>
+				<synonyms> Pteropus giganteus</synonyms>
+				<roost>Pteropodidae</roost>
+				<locations> galle,colombo</locations>
+				<conservation_status>Indian flying fox</conservation_status>
+				<conservation_action>Like other fruit bats, the Indian flying fox may be a natural reservoir for a number of diseases including members of the groups Henipavirus and Coronavirus.</conservation_action>
+				<feeding>The Indian flying fox is frugivorous or nectarivorous, i.e., they eat fruits or lick nectar from flowers. At dusk, these bats forage for ripe fruit. While ingesting fruit, these bats expel waste that pollinates and disperse seeds.</feeding>
+				<breeding>The Indian flying fox lives in tropical forests and swamps, near bodies of water. They also live on coastal islands, and it is theorized that ancestors migrated here long ago and found a liking to it, or were blown there and quickly forged a lifestyl</breeding>
+				<threats>Mating System: P. giganteus is a polygynandrous species, and breeds yearly from July to October. Births occur from February to May. Gestation period is typically 140 to 150 days. The average birth number is 1 to 2 pups. Among members of the genus Pteropus, pups are carried by the mother for the first few weeks of life, with weaning occurring around 5 months of age</threats>
+				<country_occurence>It is found in India, Bangladesh, India, Tibet, the Maldives, Nepal, Pakistan, and Sri Lanka. It is classified as Least concern due to its wide range and apparent adaptability</country_occurence>
+				<measurements>The Indian flying fox (Pteropus giganteus), also known as the greater Indian fruit bat, is a species of flying fox in the family Pteropodidae. It is nocturnal and feeds mainly on ripe fruits, such as mangoes and bananas, and nectar.</measurements>
+				<other_details>Known as මා වවුලා (maa wawula) in Sinhala.</other_details>
+				<population>37</population>
+				<created>0</created>
+				<researcher_id>12</researcher_id>
+				<del_bit>0</del_bit>
+			</record>
+			<record>
+				<bat_id>33</bat_id>
+				<scientific_name>test</scientific_name>
+				<pic></pic>
+				<bat_order></bat_order>
+				<kingdom></kingdom>
+				<genus></genus>
+				<phylum></phylum>
+				<family></family>
+				<sub_family></sub_family>
+				<bat_class></bat_class>
+				<species></species>
+				<common_names></common_names>
+				<synonyms></synonyms>
+				<roost></roost>
+				<locations></locations>
+				<conservation_status></conservation_status>
+				<conservation_action></conservation_action>
+				<feeding></feeding>
+				<breeding></breeding>
+				<threats></threats>
+				<country_occurence></country_occurence>
+				<measurements></measurements>
+				<other_details></other_details>
+				<population>10</population>
+				<created>0</created>
+				<researcher_id>12</researcher_id>
+				<del_bit>0</del_bit>
+			</record>
+		</records>
+	</table>
+	<table name="comment">
+		<columns>
+			<column name="ID" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="comment" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="comment" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="date" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="comment" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="comments" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="comment" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="neid" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="comment" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="r_id" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="comment" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<ID>1</ID>
+				<name>hello</name>
+				<date>01-14-2017</date>
+				<comments>hello world</comments>
+				<neid>4</neid>
+				<r_id></r_id>
+			</record>
+			<record>
+				<ID>2</ID>
+				<name>chamara</name>
+				<date>01-14-2017</date>
+				<comments>hello chamara this is awesome</comments>
+				<neid>3</neid>
+				<r_id></r_id>
+			</record>
+			<record>
+				<ID>3</ID>
+				<name>nuwan</name>
+				<date>01-14-2017</date>
+				<comments>yep budy this is awesome</comments>
+				<neid>2</neid>
+				<r_id></r_id>
+			</record>
+			<record>
+				<ID>4</ID>
+				<name>munasinghe</name>
+				<date>01-14-2017</date>
+				<comments>well done bro</comments>
+				<neid>1</neid>
+				<r_id></r_id>
+			</record>
+			<record>
+				<ID>5</ID>
+				<name>test data</name>
+				<date>01-15-2017</date>
+				<comments>test data</comments>
+				<neid>4</neid>
+				<r_id></r_id>
+			</record>
+		</records>
+	</table>
+	<table name="news_before">
+		<columns>
+			<column name="nid" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="news_before" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="news_before" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="image" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="news_before" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="body" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="news_before" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="r_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="news_before" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+		</records>
+	</table>
+	<table name="photos">
+		<columns>
+			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="photos" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="location" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="photos" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="caption" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="photos" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="desc" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="photos" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="r_id" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="photos" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<id>1</id>
+				<location>1200-51194532-male-fruit-bat.jpg</location>
+				<caption>Getting up close with Grey-headed flying foxes</caption>
+				<desc>&lt;p&gt;Bats are a familiar sight in many regions of Australia, including many of our major cities. We are lucky to have several species of flying fox across Australia, bats of the genus &lt;em&gt;Pteropus&lt;/em&gt;, which are some of the largest bats in the world. These bats feed exclusively on nectar, blossoms, pollen and fruit, providing invaluable pollination and seed dispersal services to many native trees, including commercially important hardwood and rainforest species, such as native figs.&lt;/p&gt;
+&lt;p&gt;I have been lucky enough to work with grey-headed flying foxes in the past and couldn&amp;rsquo;t resist a trip to a local colony when I returned to Melbourne last December. In summer, Melbourne is home to a colony of more than 30,000 located near the center of the city. They love to camp near water, such as lakes or, in this case, the local Yarra River. The mothers give birth usually to a single pup in October and nurse them for three to four months. Once they are three weeks old the young are left at a cr&amp;egrave;che in the center of the camp at night while their mothers fly out to feed. The mothers were still nursing young when I visited the camp, cradling them in their wings. Grey-headed flying foxes can travel up to 30 miles (a 60 mile round trip) each night in search of native nectar, blossom and fruit.&lt;/p&gt;</desc>
+				<r_id></r_id>
+			</record>
+			<record>
+				<id>2</id>
+				<location>0001-livingston-fruit-bat-of-the-comoros.jpg</location>
+				<caption>Messy Eater a Boon for Cactus Fruit</caption>
+				<desc>&lt;p&gt;When it comes to bats, flexibility in foraging behavior is typically unidirectional &amp;ndash; frugivorous (fruit-eating) bats will sometimes incorporate arthropods into their diets. The converse is rarely seen.&lt;/p&gt;
+&lt;p&gt;Enter the pallid bat.&lt;/p&gt;
+&lt;p&gt;With its large ears and pig-like nose, the pallid bat (&lt;em&gt;Antrozous pallidus&lt;/em&gt;) may look a bit goofy, but these adaptations are key to the pollination services this unique bat provides. Known for preying on large beetles, Jerusalem crickets, and scorpions, the pallid bat has also been observed enjoying cactus fruit and nectar.&amp;nbsp; &lt;/p&gt;
+&lt;p&gt;This is good news for the cactus, as the pallid bat does not possess any morphological adaptions for nectar eating (long tongue, long muzzle, etc.), it must plunge its whole head and torso into the flower to obtain the nectar. This results in more pollen attaching to its fur. Consequently, the bat will deliver more pollen to the stigmas per visit, making it a more effective pollinator per flower visit than the lesser-nosed bat (the primary pollinator of the cardon cactus).&lt;/p&gt;
+&lt;p&gt;New research published in the &lt;em&gt;Journal of Mammalogy&lt;/em&gt; by Jaclyn R. Aliperti &lt;em&gt;et al.&lt;/em&gt; found that the pallid bat also visited the fruit of cardon cactus just as frequently as the lesser long-nosed bat and removed the same amount of fruit.&lt;/p&gt;</desc>
+				<r_id></r_id>
+			</record>
+			<record>
+				<id>3</id>
+				<location>1200-51194532-male-fruit-bat.jpg</location>
+				<caption>Young Conservationists Tackle Big Issues </caption>
+				<desc>&lt;p&gt;&lt;em&gt; &lt;em&gt;BCI has had the opportunity to work with many creative FIRST LEGO League teams who had chosen bats as the topic of their &amp;ldquo;Animal Allies&amp;rdquo; challenge. BCI is delighted to see so many young conservationists interested in finding solutions to the many issues bats face today.&amp;nbsp;&lt;/em&gt;Today we highlight the&lt;/em&gt; &lt;em&gt;Sharon Robo Knights robotics team of Suwanee, GA and their idea for deterring bats from wind turbines. Coach Wendy Wing shares with us their solution:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The Bat Drone Shield would be a deterrent system designed to keep bats away from wind turbines. It would consist of one drone for each 3 turbines. The drones would have a speaker that would emit the sound of the natural predator of the bat that was indigenous to that area. The drones would be charged on an induction pad and would be deployed at twilight and when the winds were between 4-7 m/s. The drones would be deployed when bats were detected using the bat acoustic detectors. The sound of the natural predator would be set at the actual frequency of the predator, so as to not be annoying to humans who might live in the area. The students have created a website explaining their solution&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</desc>
+				<r_id></r_id>
+			</record>
+			<record>
+				<id>4</id>
+				<location>Pteropus_poliocephalus_colony.JPG</location>
+				<caption>Prevent Extinctions </caption>
+				<desc>&lt;p&gt;The Christmas Island pipistrelle went extinct despite having a recovery plan, being listed Critically Endangered, and having a valiant recovery effort that included a moderate amount of research and knowledge of the species, a substantial reserve system, and some management of the threats to the species.&lt;/p&gt;
+&lt;p&gt;It is time for Bat Conservation International and all individuals, private and governmental organizations, corporations, and all interested parties to proactively take action for the conservation of the most endangered bats in the world. It is time for all of us to stand together and say through our words and deeds, &amp;ldquo;Not on our watch!&amp;rdquo; For many of these endangered bats it is not too late if we take action now!&lt;/p&gt;</desc>
+				<r_id></r_id>
+			</record>
+			<record>
+				<id>5</id>
+				<location>2.jpg</location>
+				<caption>Bats</caption>
+				<desc>&lt;p&gt;test data test data test data&lt;/p&gt;</desc>
+				<r_id>12</r_id>
+			</record>
+		</records>
+	</table>
+	<table name="post">
+		<columns>
+			<column name="post_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="post_content" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="post" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="post_date" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="post" type="timestamp" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="post_topic" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="post_by" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="parent_post" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<post_id>43</post_id>
+				<post_content>lfghsjlgrsjgrej
+</post_content>
+				<post_date>2017-01-15 18:28:59</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
+			</record>
+			<record>
+				<post_id>44</post_id>
+				<post_content>l;fgd;kbnk;
+</post_content>
+				<post_date>2017-01-15 18:29:30</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
+			</record>
+			<record>
+				<post_id>45</post_id>
+				<post_content>dklsgbsjgw</post_content>
+				<post_date>2017-01-15 18:30:02</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
+			</record>
+			<record>
+				<post_id>46</post_id>
+				<post_content>jkjkjkjkjkkkkkkkkkkkkkk</post_content>
+				<post_date>2017-01-15 23:26:53</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
+			</record>
+			<record>
+				<post_id>47</post_id>
+				<post_content>jkjjjjjjjjjjjjjjjjjjjjjj</post_content>
+				<post_date>2017-01-15 23:28:49</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>43</parent_post>
+			</record>
+			<record>
+				<post_id>48</post_id>
+				<post_content>klkkooooooooooooooo</post_content>
+				<post_date>2017-01-15 23:29:25</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
+			</record>
+			<record>
+				<post_id>49</post_id>
+				<post_content>weda</post_content>
+				<post_date>2017-01-15 23:29:54</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>45</parent_post>
+			</record>
+			<record>
+				<post_id>50</post_id>
+				<post_content>where is that bat ..?Did you see ..?</post_content>
+				<post_date>2017-01-16 07:01:40</post_date>
+				<post_topic>110</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
+			</record>
+			<record>
+				<post_id>51</post_id>
+				<post_content>why???</post_content>
+				<post_date>2017-01-16 11:51:11</post_date>
+				<post_topic>110</post_topic>
+				<post_by></post_by>
+				<parent_post>50</parent_post>
+			</record>
+		</records>
+	</table>
+	<table name="research_papers">
+		<columns>
+			<column name="paper_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="paper" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="author" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="description" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="area" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="category" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="del_bit" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="type" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="size" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<paper_id>16</paper_id>
+				<paper>research_papers/12/15705188MunshiSouthWilkinson2010ARR.pdf</paper>
+				<title>research_paper_1</title>
+				<author>Dr.Chamath Fonseka</author>
+				<researcher_id>12</researcher_id>
+				<description>About small mamals</description>
+				<area>flying mamals</area>
+				<category>Habitats</category>
+				<del_bit>0</del_bit>
+				<type></type>
+				<size></size>
+			</record>
+			<record>
+				<paper_id>17</paper_id>
+				<paper>research_papers/12/33823293SmallMammalsupdated.pdf</paper>
+				<title>research_paper_2</title>
+				<author>Dr.Saman Ellawala</author>
+				<researcher_id>12</researcher_id>
+				<description> About small mamals</description>
+				<area>conservation details</area>
+				<category>Conservation</category>
+				<del_bit>0</del_bit>
+				<type></type>
+				<size></size>
+			</record>
+			<record>
+				<paper_id>18</paper_id>
+				<paper>research_papers/12/683993642012Cooper et al WIRES development of bat flight.pdf</paper>
+				<title>research_paper_3</title>
+				<author>Dr.Kamal Senavirathna</author>
+				<researcher_id>12</researcher_id>
+				<description>full area of flying mamals</description>
+				<area>full area</area>
+				<category>Others</category>
+				<del_bit>0</del_bit>
+				<type></type>
+				<size></size>
+			</record>
+		</records>
+	</table>
+	<table name="researchers">
+		<columns>
+			<column name="title" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="fname" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="mname" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="lname" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="gender" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="nic" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="add1" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="add2" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="city" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="country" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="major" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="email" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="password" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="other" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<title>miss</title>
+				<fname>Anjalee</fname>
+				<mname>premudi</mname>
+				<lname>Abeysekara</lname>
+				<gender>f</gender>
+				<nic>928300110</nic>
+				<add1>colombo</add1>
+				<add2>colombo</add2>
+				<city>colombo</city>
+				<country>Sri Lanka</country>
+				<major>Science</major>
+				<email>a@t.com</email>
+				<password></password>
+				<researcher_id>9</researcher_id>
+				<q1name></q1name>
+				<q1ins></q1ins>
+				<q1year></q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
+			</record>
+			<record>
+				<title>miss</title>
+				<fname>Nadee</fname>
+				<mname>sansari</mname>
+				<lname>senavirathna</lname>
+				<gender>f</gender>
+				<nic>928300110</nic>
+				<add1>galle</add1>
+				<add2>galle</add2>
+				<city>galle</city>
+				<country>Sri Lanka</country>
+				<major>bat sceince</major>
+				<email>n@gmail.com</email>
+				<password></password>
+				<researcher_id>10</researcher_id>
+				<q1name></q1name>
+				<q1ins></q1ins>
+				<q1year></q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
+			</record>
+			<record>
+				<title>miss</title>
+				<fname>nade</fname>
+				<mname>ksdkdfkfd</mname>
+				<lname>sfdksdfksk</lname>
+				<gender>m</gender>
+				<nic>928300110</nic>
+				<add1>uuqwiqiu</add1>
+				<add2>qwkiqiq</add2>
+				<city>wqiqwoiqi</city>
+				<country>Sri Lanka</country>
+				<major>hdsjsjdjs</major>
+				<email>n@gmail.com</email>
+				<password>123</password>
+				<researcher_id>12</researcher_id>
+				<q1name></q1name>
+				<q1ins></q1ins>
+				<q1year></q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
+			</record>
+			<record>
+				<title>miss</title>
+				<fname>t</fname>
+				<mname>dkdjks</mname>
+				<lname>sdkdjds</lname>
+				<gender>f</gender>
+				<nic>928394484</nic>
+				<add1>djdkk</add1>
+				<add2>dslkdkl</add2>
+				<city>dlkdslk</city>
+				<country>ddskj</country>
+				<major>dskjdskjs</major>
+				<email>n@gmail.com</email>
+				<password>12345</password>
+				<researcher_id>30</researcher_id>
+				<q1name>djdsjksd</q1name>
+				<q1ins>dsdsksd</q1ins>
+				<q1year>dsdsks</q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
+			</record>
+		</records>
+	</table>
+	<table name="tbl_uploads">
+		<columns>
+			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="tbl_uploads" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="file" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="tbl_uploads" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="type" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="tbl_uploads" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="size" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="tbl_uploads" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="tbl_uploads" type="string" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<id>7</id>
+				<file>10671-biweeklyreport12.pdf</file>
+				<type>applicatio</type>
+				<size>149</size>
+				<title></title>
+			</record>
+			<record>
+				<id>3</id>
+				<file>54461-1.-r-lecture.pdf</file>
+				<type>applicatio</type>
+				<size>518</size>
+				<title></title>
+			</record>
+			<record>
+				<id>4</id>
+				<file>63537-os.pdf</file>
+				<type>applicatio</type>
+				<size>262</size>
+				<title></title>
+			</record>
+			<record>
+				<id>5</id>
+				<file>18360-refcard.pdf</file>
+				<type>applicatio</type>
+				<size>59</size>
+				<title></title>
+			</record>
+			<record>
+				<id>6</id>
+				<file>29143-r-intro.pdf</file>
+				<type>applicatio</type>
+				<size>608</size>
+				<title></title>
+			</record>
+		</records>
+	</table>
+	<table name="topics">
+		<columns>
+			<column name="topic_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="admin_by" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="topic_subject" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="topics" type="string" unique_key="1" unsigned="0" zerofill="0" />
+			<column name="topic_content" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="topics" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="topic_date" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="topics" type="date" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="topic_by" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<topic_id>108</topic_id>
+				<admin_by></admin_by>
+				<topic_subject>testing one </topic_subject>
+				<topic_content>sadu sadu</topic_content>
+				<topic_date>2017-01-15</topic_date>
+				<topic_by>12</topic_by>
+			</record>
+			<record>
+				<topic_id>109</topic_id>
+				<admin_by>200</admin_by>
+				<topic_subject>lsgusorguiwgrwigw</topic_subject>
+				<topic_content>egkgerge</topic_content>
+				<topic_date>2017-01-15</topic_date>
+				<topic_by></topic_by>
+			</record>
+			<record>
+				<topic_id>110</topic_id>
+				<admin_by></admin_by>
+				<topic_subject>new bat found</topic_subject>
+				<topic_content>there  is new bat in galle</topic_content>
+				<topic_date>2017-01-16</topic_date>
+				<topic_by>12</topic_by>
+			</record>
+		</records>
+	</table>
+</database>

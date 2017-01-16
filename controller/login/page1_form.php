@@ -28,6 +28,7 @@ session_start(); // Session starts here.
 
  </head>
  <body>
+
      <div class="public-background">
         <img src="../../assets/images/bat.jpg" width="100%" height="100%" style="opacity: 0.9;" >
      </div>
@@ -44,26 +45,29 @@ session_start(); // Session starts here.
      <span id="error">
      <!---- Initializing Session for errors ---->
      <?php
-     if (!empty($_SESSION['error'])) {
-     echo $_SESSION['error'];
-     unset($_SESSION['error']);
-     }
+     
      /*if (!preg_match("/^[a-zA-Z ]+$/",$fname)) {
             $error = true;
             $name_error = "Name must contain only alphabets and space";
         }
          if (!preg_match("/^[a-zA-Z ]+$/",$lname)) {
             $error = true;
-            $name_error = "Name must contain only alphabets and space";
-        }
-        if(strlen($nic) != 10) {
-            $error = true;
-            $nic_error = "NIC must be 10 characters";
-        }
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+            $name_error = "Name must contain only alphabets and space"; 
+        } */
+        
+        /*if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
             $error = true;
             $email_error = "Please Enter Valid Email ID";
+      
+
+
+    
+
         }*/
+
+        $fnameErr = $lnameErr = $emailErr =  "";
+         $fname = $lname = $email = "";
+
      ?>
 
      </span>
@@ -104,8 +108,10 @@ session_start(); // Session starts here.
      </div>
      <div class="form-group">
      <label>NIC </label>
-     <input name="nic" type="text" required placeholder="NIC" class="form-control" / >
-     <!--<span class="text-danger"><?php if (isset($name_error)) echo $name_error; ?></span>-->
+     <input name="nic" type="text" required placeholder="NIC" class="form-control"  maxlength="10" pattern="(?=.*[v])(?=.*[V]).{10}">
+
+    
+     <!--<span class="text-danger"><?php if (isset($nic_error)) echo $nic_error; ?></span>-->
      </div>
      <div class="form-group">
      <label>Address </label>
