@@ -140,10 +140,7 @@
                             </div>
                             <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                 <div class="panel-body">*
-                                    1. Click the name which is appeared on top<br>
-                                    2. You will get Your informations<br>
-                                    3. Click your profile picture<br>
-                                    4. Change
+                                    1. You cannot update profile picture
                                 </div>
                             </div>
                         </div>
@@ -161,10 +158,7 @@
                             </div>
                             <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                                 <div class="panel-body">
-                                     1. Click the name which is appeared on top<br>
-                                     2. You will get Your informations<br>
-                                     3. Click your profile picture<br>
-                                     4. Change
+                                     1. You cannot remove or change profile pic!
                                 </div>
                             </div>
                         </div>
@@ -181,7 +175,7 @@
                             </div>
                             <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
                                 <div class="panel-body">
-                                    1. Research can go to Publish article section<br>
+                                    1. Public users only have the features of article<br>
                                     2. Post an article
                                 </div>
                             </div>
@@ -199,7 +193,7 @@
                             </div>
                             <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseven">
                                 <div class="panel-body">
-                                    1. Research can go to Publish article section<br>
+                                    1. Public user can go to article section<br>
                                     2. Post an article<br>
                                     3. By clicking Add files, user can add media files
                                 </div>
@@ -218,27 +212,11 @@
                             </div>
                             <div id="collapseeight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeight">
                                 <div class="panel-body">
-                                    1.Public users and  other researchers can see articles posted.
+                                    1.Other public users can see the articles of everyone under recent articles
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsenine" class="panel-heading" role="tab" id="headingnine">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsenine" aria-expanded="true" aria-controls="collapsenine">
-                                        How do I share my article to social websites?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsenine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingnine">
-                                <div class="panel-body">
-                                    1. By Clicking the share button, users can share own articles and as well as other's articles too
-                                </div>
-                            </div>
-                        </div>
+                        
                         
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseeleven" class="panel-heading" role="tab" id="headingeleven">
@@ -274,7 +252,9 @@
                                     2. Click "Add new discussion topic"<br>
                                     3. type the Subject, message <br>
                                     4. User can add media files ny clicking "Choose File" if necessary<br>
-                                    5. Post it to forum
+                                    5. Post it to forum<br>
+                                    6. Public users can only reply forums<br>
+                                    7. Researcher can start new discussions
                                 </div>
                             </div>
                         </div>
@@ -348,9 +328,11 @@
                             </div>
                             <div id="collapseetn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingetn">
                                 <div class="panel-body">
-                                    1. Go to profile section <br>
-                                    2. Select the specific bat<br>
-                                    3. You can get entire details there
+                                    1. Go to Bats information <br>
+                                    2. Select the bat profile<br>
+                                    3. You can get entire details there by selecting specific bat<br>
+                                    4. Public users can go through gallery
+
                                 </div>
                             </div>
                         </div>

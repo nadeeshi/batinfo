@@ -3,20 +3,20 @@
 <head>
         
   <title>About Us | BatInfo</title>
-  <link href="../assets/css/bootstrap.css" rel="stylesheet">
-  <link href="../assets/css/navbar1n2.css" rel="stylesheet">
-  <link href="../assets/css/phpPages.css" rel="stylesheet">
-  <link href="../assets/css/footer.css" rel="stylesheet">
-  <script src="../assets/bootstrap/jquary.js"></script> 
-  <script src="../assets/bootstrap/bootstrapjs.js"></script>
+  <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/navbar1n2.css" rel="stylesheet">
+  <link href="../../assets/css/phpPages.css" rel="stylesheet">
+  <link href="../../assets/css/footer.css" rel="stylesheet">
+  <script src="../../assets/bootstrap/jquary.js"></script> 
+  <script src="../../assets/bootstrap/bootstrapjs.js"></script>
 </head>
 
 <body>
     <div>
-      <?php include '../assets/IncludedFiles/navbarTemplate.php'; ?>
+      <?php include '../../assets/includedFiles/navbarTemplate.php'; ?>
     </div>
     <div class="row">
-      <div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
+      <div class="col-sm-9 col-sm-push-2 col-xs-11 insert-form" style="margin-left: 2%;">
         <div>
           <h3>About BatsInfo</h3>
           <p>BatsInfo is a web system specially designed for researchers and those who are interested on bats to share 
@@ -41,7 +41,7 @@
     <!-- footer -->
     <div class="row">
       <div class="col-sm-10 col-sm-push-2 col-xs-12">
-        <?php include "../assets/IncludedFiles/footer.php" ?>
+        <?php include "../../assets/includedFiles/footer.php" ?>
       </div>  
     </div>
 

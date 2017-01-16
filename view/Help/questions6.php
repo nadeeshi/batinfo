@@ -123,6 +123,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="panel panel-default">
+                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsefive" class="panel-heading" role="tab" id="headingfive">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+                                        Can I block someone?
+                                    </a>
+                                    <span  class="pull-right">
+                                        <i class="fa fa-caret-square-o-down"></i>
+                                    </span>
+                                </h4>
+                            </div>
+                            <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+                                <div class="panel-body">
+                                   1. No. You cannot block other users as you wish.<br>
+                                   2. And you cannot be blocked by the other users too
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="panel panel-default">
                             <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="panel-heading" role="tab" id="headingThree">
@@ -138,36 +157,18 @@
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
                                     1. Inform to admin panel if you suspects someone
-                            </div>
-                        </div>
-                        
-                        <div class="panel panel-default">
-                            <div data-toggle="collapse" data-parent="#accordion" href="#collapsefive" class="panel-heading" role="tab" id="headingfive">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                                        Can I block someone?
-                                    </a>
-                                    <span  class="pull-right">
-                                        <i class="fa fa-caret-square-o-down"></i>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
-                                <div class="panel-body">
-                                   1. No. You cannot block other users
-                                   2. And you cannot be blocked
-                                </div>
-                            </div>
-                        </div>
+                            	</div>
+                        	</div>  
+                    	</div>
+                	</div>
+            	</div>
+        	</div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    	</div>
+	</div>
 </div>
 </div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

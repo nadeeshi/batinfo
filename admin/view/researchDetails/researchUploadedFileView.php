@@ -34,25 +34,16 @@ require_once('../../assets/includedFiles/auth.php');
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-md-11">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Insert Research Paper to the Database
+                        Insert Research Details to the Database
                     </div>
 
                     <div class="panel-body">
-                        <h4 style="color: #cc006a">Add New Research Paper</h4>
+                        <h4 style="color: #cc006a">Add New Research Details</h4>
                         <div style="margin-top: 20px;">
-
-
-
-
-
-
-
-
                             <div id="body">
                                 <table width="100%" border="1">
                                     <tr>
@@ -67,8 +58,8 @@ require_once('../../assets/includedFiles/auth.php');
                                     <?php
                                     ob_start();
                                     include("../../assets/includedFiles/connect.php");
-                                    $sql="SELECT * FROM tbl_uploads";
-                                   // $sql="SELECT * FROM tbl_uploads";
+                                    $sql="SELECT * FROM admin_research_papers";
+                                    // $sql="SELECT * FROM tbl_uploads";
                                     //$sql="SELECT * FROM research_papers AND tbl_uploads";
 
                                     $result_set=mysqli_query($bd,$sql);
@@ -81,6 +72,56 @@ require_once('../../assets/includedFiles/auth.php');
                                             <td><?php echo $row['type'] ?></td>
                                             <td><?php echo $row['size'] ?></td>
                                             <td><a href="../../controller/insert/uploads/<?php echo $row['file'] ?>" target="_blank">view file</a></td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </table>
+
+                            </div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <br><br>
+        <div class="row">
+            <div class="col-md-11">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        View Research Paper of the Database
+                    </div>
+
+                    <div class="panel-body">
+                        <h4 style="color: #cc006a">View Research Papers of Researchers</h4>
+                        <div style="margin-top: 20px;">
+
+                            <div id="body">
+                                <table width="100%" border="1">
+
+                                    <tr>
+                                        <td>File Name</td>
+                                        <td>File Type</td>
+                                        <td>File Size(KB)</td>
+                                        <td>View</td>
+                                    </tr>
+                                    <?php
+                                    ob_start();
+                                    include("../../assets/includedFiles/connect.php");
+                                    $sql="SELECT * FROM research_papers";
+                                   // $sql="SELECT * FROM tbl_uploads";
+                                    //$sql="SELECT * FROM research_papers AND tbl_uploads";
+
+                                    $result_set=mysqli_query($bd,$sql);
+                                    while($row=mysqli_fetch_array($result_set))
+                                    {
+                                        ?>
+                                        <tr>
+
+                                            <td><?php echo $row['paper'] ?></td>
+                                            <td><?php echo $row['type'] ?></td>
+                                            <td><?php echo $row['size'] ?></td>
+                                            <td><a href="../../controller/insert/uploads/<?php echo $row['paper'] ?>" target="_blank">view file</a></td>
                                         </tr>
                                     <?php
                                     }

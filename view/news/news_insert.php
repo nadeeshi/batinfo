@@ -34,6 +34,17 @@
                     alert("you must have filled out this 'title' field before proceed");
                     return false;
                 }
+                var alphaExp = /^[0-9a-zA-Z]+$/;
+                
+                if((inputtext.value.match(alphaExp)) && vtitle.length>=4){
+                    
+                    return true;
+                }
+                else{
+                    alert("title character length must be over 4 letters ");
+                    return false;
+                }
+                
                 var content = tinymce.get('body').getContent({format: 'text'});
                
                 if($.trim(content) == '')

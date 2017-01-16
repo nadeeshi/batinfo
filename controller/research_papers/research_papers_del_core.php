@@ -44,12 +44,11 @@
 
                 $paper_id = $explodes[0]; // get the paper id
                 $paper = $explodes[1]; // get the paper path
-                //$researcher_id = $_SESSION['usr_id'];
+                $researcher_id = $_SESSION['usr_id'];
 
 
-                $researcher_id = 6;
                 $var = $researcher_id;
-                $structure = "/wamp/www/batinfo/assets/$paper";
+                $structure = "../../assets/$paper";
 
                 $file = $structure;
 
