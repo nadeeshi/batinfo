@@ -49,6 +49,7 @@ include "../../assets/IncludedFiles/footer.php" ;
     <div class="col-md-3">
       <ul style="list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #f1f1f1;">
         <li><a href='wsi.php'>Post your Article</a></li>
+        <!--<li><a href='wsi.php'>Download Articles</a></li>-->
       </ul>
     </div>
   </div> 
@@ -64,6 +65,7 @@ include "../../assets/IncludedFiles/footer.php" ;
 //echo '<div class="col-md-3">';
 
       echo '<label style="font-size: 17px ;">Recent Articles</label>';
+
       while($row = $result->fetch_assoc()) {
           $title=$row['title'];
           $content=$row['content'];
@@ -91,7 +93,7 @@ include "../../assets/IncludedFiles/footer.php" ;
     echo '<form action="pdf.php">';
     $link= $_SESSION['lnk'];
     $content =$_SESSION['cntnt'];
-    echo '<button type="submit" > PDF</button>';
+   
     echo '</form>';
     echo'<iframe src= "article_main.html" name="ifrm" style="border:none;" width="90%" height="1200"></iframe>';  
     ?>

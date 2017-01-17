@@ -3,7 +3,7 @@ require('fpdf/html2pdf.php');
 	
 		echo '<a href="article2.php#top"></a>'
 			$content = $_SESSION['cntnt2'];
-	$title = $_SESSION['ttl2'];
+			$title = $_SESSION['ttl2'];
 
             $pdf = new FPDF();
             $pdf->AddPage();
