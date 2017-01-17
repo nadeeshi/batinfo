@@ -76,6 +76,7 @@ include "../../assets/IncludedFiles/footer.php" ;
   
           $_SESSION['lnk']=$link;
           $_SESSION['cntnt']=$content;
+          $_SESSION['ttl'] = $title;
 
           echo '</div>';
           }
@@ -87,12 +88,17 @@ include "../../assets/IncludedFiles/footer.php" ;
 
   <div id="top" class="col-md-9">
     
-    <?php 
+   <?php 
     $_SESSION['lnk']=$link;
     $_SESSION['cntnt']=$content;
+    $title=$_SESSION['ttl'];
     echo '<form action="pdf.php">';
     $link= $_SESSION['lnk'];
     $content =$_SESSION['cntnt'];
+    
+    echo '<input type="image" value="submit" src="unnamed.png" style="width:40px; height:40px;"/> ';
+    
+   
    
     echo '</form>';
     echo'<iframe src= "article_main.html" name="ifrm" style="border:none;" width="90%" height="1200"></iframe>';  
