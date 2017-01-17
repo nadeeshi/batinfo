@@ -119,7 +119,7 @@ img.intLink { border: 0; }
             echo "<h3>"."$title"."</h3>"."<br>"; 
             echo file_get_contents("$link").'<br>';
             echo '<div class="row">';
-            echo "<a href='pdf.php'>"."View as PDF"."</a>";
+            echo "<a href='pdf.php' target='_blank'>"."View as PDF"."</a>";
             echo '</div>';
             fclose($myfile);
             

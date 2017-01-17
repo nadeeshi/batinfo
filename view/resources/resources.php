@@ -42,13 +42,13 @@
      <h4><b>Following are some important links. You can get more knowledge from following links.</b></h4>
      <ul>
 
-     	<li class="a"><a href="http://www.batcon.org/">Bat Conservation International</a></li>
-     	<li class="a"><a href="http://www.bats.org.uk/pages/bats_of_the_world.html">Bat Conservation Trust</a></li>
-     	<li class="a"> <a href="http://www.sci-news.com/paleontology/science-original-color-extinct-bats-03283.html">SCI-NEWS : Paleontologists Determine Original Color of Extinct Bats</a></li>
-     	<li class="a"><a href="http://www.nsrl.ttu.edu/tmot1/ordchiro.htm">The Mammals of Texas</a></li>
-     	<li class="a"><a href="Vision in Echolocating Bats"> Vision in Echolocating Bats</a></li>
-     	<li class="a"><a href="https://batconservation.org/learn/about-bats/">Organization for Bat Conservation</a></li>
-     	<li class="a"><a href="http://www.hscott.net/the-dsp-behind-bat-echolocation/">Hunter Scott : Bat Biology</a></li>
+     	<li class="a" ><a href="http://www.batcon.org/" target="_blank">Bat Conservation International</a></li>
+     	<li class="a"><a href="http://www.bats.org.uk/pages/bats_of_the_world.html" target="_blank">Bat Conservation Trust</a></li>
+     	<li class="a"> <a href="http://www.sci-news.com/paleontology/science-original-color-extinct-bats-03283.html" target="_blank">SCI-NEWS : Paleontologists Determine Original Color of Extinct Bats</a></li>
+     	<li class="a"><a href="http://www.nsrl.ttu.edu/tmot1/ordchiro.htm" target="_blank">The Mammals of Texas</a></li>
+     	<li class="a"><a href="Vision in Echolocating Bats" target="_blank"> Vision in Echolocating Bats</a></li>
+     	<li class="a"><a href="https://batconservation.org/learn/about-bats/" target="_blank">Organization for Bat Conservation</a></li>
+     	<li class="a"><a href="http://www.hscott.net/the-dsp-behind-bat-echolocation/" target="_blank">Hunter Scott : Bat Biology</a></li>
 
      </ul>
      </div>

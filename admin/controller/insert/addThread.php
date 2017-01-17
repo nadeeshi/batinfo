@@ -68,7 +68,7 @@ require_once ("../../assets/includedFiles/connect.php");
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-head-line" style="color: #500a6f"><b>Forum Details</b></h1>
+                <h1 class="page-head-line" style="color: #500a6f">Forum Details</h1>
                 <h1 class="page-subhead-line">Add Different Topics </h1>
 
                 <form class="form-horizontal" method="post" action="addThread.php">

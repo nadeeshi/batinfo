@@ -33,8 +33,9 @@ while($row = mysqli_fetch_assoc($result)){
     $measure=$row['measurements'];
     $count = 1;
 	
+
     $output = '<div> '.'
-    Sciencetific name   :  '.$fname.'</br> </br> 
+    Sciencetific Name   :  '.$fname.'</br> </br>
     Place               :  '. $lplace1.'</div></br> 
     Pat order           :  '.$bat_or.'</br></br>
     Kindom              :  '.$kin.'</br></br>
@@ -46,14 +47,15 @@ while($row = mysqli_fetch_assoc($result)){
     Common names        :  '.$com_name.'</br></br>
     Synonyms            :  '.$syns.'</br></br>
     Roost               :  '.$rst.'</br></br>
-    Conservation status :  '.$conv_st.'</br></br>
-    Conservation action :  '.$conv_at.'</br></br>
+    Conservation Status :  '.$conv_st.'</br></br>
+    Conservation Action :  '.$conv_at.'</br></br>
     Feeding             :  '.$feed.'</br></br>
     Breeding            :  '.$breed.'</br></br>
     Threats             :  '.$threat.'</br></br>
-    Country occurences  :  '.$coun_occ.'</br></br>
+    Country Occurrences  :  '.$coun_occ.'</br></br>
     Measurements        :  '.$measure.'</br></br>
-    Discription         :  '.$des.'</br></br>' ;
+    Description         :  '.$des.'</br></br>' ;
+
     
 		
 }

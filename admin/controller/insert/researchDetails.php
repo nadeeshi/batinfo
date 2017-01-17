@@ -17,7 +17,7 @@ require_once('../../assets/includedFiles/auth.php');
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-head-line" style="color: #500a6f"><b>Research Details</b></h1>
+                <h1 class="page-head-line" style="color: #500a6f">Research Details</h1>
                 <h1 class="page-subhead-line">All Research details </h1>
             </div>
         </div>

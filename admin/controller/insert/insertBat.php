@@ -34,26 +34,27 @@ include("../../assets/includedFiles/connect.php");
 
 /*$update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,researcher_id)VALUES
                                       ('$scientific_name','$bat_order','$kingdom','$researcher_id')");*/
+if($admin_id = NULL){
 
-
-$update=mysqli_query($bd,"INSERT INTO bat_info(scientific_name,bat_order,kingdom,genus,phylum,family,sub_family,
-bat_class,species,common_names,synonyms,roost,conservation_status,country_occurence,feeding,breeding,threats,conservation_action,population,measurements,other_details,researcher_id)VALUES
+}else {
+    $researcher_id = NULL;
+    $update = mysqli_query($bd, "INSERT INTO bat_info(scientific_name,bat_order,kingdom,genus,phylum,family,sub_family,
+bat_class,species,common_names,synonyms,roost,conservation_status,country_occurence,feeding,breeding,threats,conservation_action,population,measurements,other_details,researcher_id,admin_id)VALUES
                                       ('$scientific_name','$bat_order','$kingdom','$genus','$phylum','$family','$sub_family','$bat_class','$species','$common_names','$synonyms','$roost','$conservation_status','$country_occurence',
-                                      '$feeding','$breeding','$threats','$conservation_action','$population','$measurements','$other_details','$admin_id')");
+                                      '$feeding','$breeding','$threats','$conservation_action','$population','$measurements','$other_details','$researcher_id','$admin_id')");
 
 
-    if($update)
-    {
-        $msg="Successfully Updated!!";
+    echo $admin_id;
+    if ($update) {
+        $msg = "Successfully Updated!!";
         echo "<script type='text/javascript'>alert('$msg');</script>";
         header('Location:newBat.php');
-    }
-    else
-    {
-        $errormsg="Something went wrong, Try again";
+    } else {
+        $errormsg = "Something went wrong, Try again";
         echo "<script type='text/javascript'>alert('$errormsg');</script>";
 
-   // }
+        // }
     }
+}
 ob_end_flush();
 ?>

@@ -31,7 +31,7 @@ require_once('../../assets/includedFiles/auth.php');
                     </div>
                     <!-- <a href="test.php">get pdf</a>-->
                     <div class="panel-body">
-                        <h4 style="color: #00CA79">View  Details of Bats</h4>
+
                         <div style="margin-top: 20px;">
                             <?php
                             if(isset($_GET['id']))

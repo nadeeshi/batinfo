@@ -6,8 +6,6 @@
 			<column name="username" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="password" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="emailid" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="fname" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="lname" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="mobileno" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="admin_details" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="created" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_details" type="string" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
@@ -17,29 +15,43 @@
 				<username>nadee</username>
 				<password>68e2db743735b254dcd9d11631bca705</password>
 				<emailid>n@gmail.com</emailid>
-				<fname></fname>
-				<lname></lname>
 				<mobileno>754636571</mobileno>
 				<created>2017-01-12 17:14:27</created>
 			</record>
 			<record>
-				<id>203</id>
+				<id>210</id>
 				<username>madu</username>
-				<password>5f6cdeee3b4e41e6dd4713ceac914217</password>
+				<password>68e2db743735b254dcd9d11631bca705</password>
 				<emailid>m@gmail.com</emailid>
-				<fname></fname>
-				<lname></lname>
-				<mobileno>754636572</mobileno>
-				<created>2017-01-12 17:45:11</created>
+				<mobileno>915614732</mobileno>
+				<created>2017-01-16 05:49:08</created>
+			</record>
+		</records>
+	</table>
+	<table name="admin_research_papers">
+		<columns>
+			<column name="id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="admin_research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="file" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="type" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="size" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="admin_research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="admin_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="admin_research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+		</columns>
+		<records>
+			<record>
+				<id>1</id>
+				<file>4392-munshisouthwilkinson2010arr.pdf</file>
+				<type>application/pdf</type>
+				<size>308.400390625</size>
+				<admin_id>0</admin_id>
 			</record>
 		</records>
 	</table>
 	<table name="articles">
 		<columns>
-			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="1" table="articles" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="content" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="img1" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="img2" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="article_no" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="articles" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="content" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="image" blob="1" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="link" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="articles" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="pubdate" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="datetime" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="name" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="articles" type="blob" unique_key="0" unsigned="0" zerofill="0" />
@@ -47,21 +59,53 @@
 		</columns>
 		<records>
 			<record>
-				<title>narthana bat</title>
-				<content>nlkad;ajd;la hd;akjda jda;kd;a&amp;nbsp;&lt;p&gt;&lt;/p&gt;</content>
-				<img1></img1>
-				<img2></img2>
-				<link>nar.html</link>
-				<pubdate>2017-01-13 13:57:19</pubdate>
-				<name>name</name>
-				<status>status</status>
+				<article_no>35</article_no>
+				<title>Long-Eared Bat</title>
+				<content>Rafinesque&amp;rsquo;s big-eared bats are known to form nursery colonies in large hollow trees. Hollow tree roosts provide stable internal environments, protection from predators, and often contain well-insulated areas that form the hot-air traps essential for rearing young. These bats range throughout the southeastern United States from southern Virginia south and west to eastern Texas and northward along the Mississippi River valley to southern Indiana. Their range most closely approximates the historical range of great cypress swamps, indicating that they may have formed a traditional reliance on these areas as roosting and/or foraging sites.</content>
+				<image></image>
+				<link>long.html</link>
+				<pubdate>2017-01-16 11:59:05</pubdate>
+				<name>Anjalee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>36</article_no>
+				<title>Indian Bat</title>
+				<content>As much of these swamp-lands have been drained and trees have been harvested, these bats have apparently moved their maternity roosts into old buildings or attics. Rafinesque&amp;rsquo;s big-eared bats are slow, agile flyers and appear to forage on a wide variety of small, nocturnal insects, especially moths. They hibernate near their summer foraging grounds in old mines, caves, and cisterns.</content>
+				<image></image>
+				<link>indian.html</link>
+				<pubdate>2017-01-16 12:00:12</pubdate>
+				<name>nadee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>38</article_no>
+				<title>Colombo Fruit Bats</title>
+				<content>Bats, Bats and more Bats. I did not expect this. None of the travel guides I had read before my visit to Sri Lanka mentioned the giant fruit bats that you could see flying above the Colombo skyline. The best place to view these monsters of the air is in Viharamahadevi Park which is positioned between the National Museum and the Colombo Town Hall.
+They use the tall trees to roost. I had seen banana trees with bags over the fruit in an earlier part of my trip. I know know why. It is to protect the cash crop from being nibbled.</content>
+				<image></image>
+				<link>newbat.html</link>
+				<pubdate>2017-01-17 05:51:47</pubdate>
+				<name>nadee</name>
+				<status>Researcher</status>
+			</record>
+			<record>
+				<article_no>39</article_no>
+				<title>Colombo Fruit Bats</title>
+				<content>Bats, Bats and more Bats. I did not expect this. None of the travel guides I had read before my visit to Sri Lanka mentioned the giant fruit bats that you could see flying above the Colombo skyline. The best place to view these monsters of the air is in Viharamahadevi Park which is positioned between the National Museum and the Colombo Town Hall.
+They use the tall trees to roost. I had seen banana trees with bags over the fruit in an earlier part of my trip. I know know why. It is to protect the cash crop from being nibbled.</content>
+				<image></image>
+				<link>newbat.html</link>
+				<pubdate>2017-01-17 05:53:29</pubdate>
+				<name>nadee</name>
+				<status>Researcher</status>
 			</record>
 		</records>
 	</table>
 	<table name="bat_info">
 		<columns>
-			<column name="bat_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="scientific_name" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="1" unsigned="0" zerofill="0" />
+			<column name="bat_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="1" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="scientific_name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="1" unsigned="0" zerofill="0" />
 			<column name="pic" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="bat_order" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="kingdom" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
@@ -85,176 +129,104 @@
 			<column name="other_details" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="bat_info" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="population" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="created" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="del_bit" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="admin_id" blob="0" multiple_key="0" not_null="0" numeric="1" primary_key="0" table="bat_info" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<bat_id>440</bat_id>
-				<scientific_name>JSDH SKD </scientific_name>
-				<pic>bphotos/1.jpg</pic>
-				<bat_order>chhhhhhhhhhhhh</bat_order>
-				<kingdom>c</kingdom>
-				<genus>c</genus>
-				<phylum>c</phylum>
-				<family>c</family>
-				<sub_family>c</sub_family>
-				<bat_class>c</bat_class>
-				<species>c</species>
-				<common_names> c</common_names>
-				<synonyms> c</synonyms>
-				<roost> c</roost>
-				<locations>Kadugannawa,Haputale,Kuliyapitiya</locations>
-				<conservation_status>c</conservation_status>
-				<conservation_action> c </conservation_action>
-				<feeding> c </feeding>
-				<breeding> c </breeding>
-				<threats> c </threats>
-				<country_occurence> c</country_occurence>
-				<measurements> c </measurements>
-				<other_details> c </other_details>
-				<population>0</population>
+				<bat_id>30</bat_id>
+				<scientific_name>Cynopterus</scientific_name>
+				<pic>bphotos/25110612800px-Cynopterus_brachyotis.jpg</pic>
+				<bat_order>Chiroptera</bat_order>
+				<kingdom>Animalia</kingdom>
+				<genus>Cynopterus</genus>
+				<phylum>Chordata</phylum>
+				<family>Pteropodidae</family>
+				<sub_family>Pteropodidae</sub_family>
+				<bat_class>Mammalia</bat_class>
+				<species>Pteropodidae</species>
+				<common_names> Chironx, Balionycteris, Penthetor, Dyacopterus and Cynopterus</common_names>
+				<synonyms> Chironx, Balionycteris, Penthetor</synonyms>
+				<roost> Cynopterus </roost>
+				<locations> moratuwa,galle,kandy</locations>
+				<conservation_status>Cynopterus </conservation_status>
+				<conservation_action>Mating System: P. giganteus is a polygynandrous species, and breeds yearly from July to October. Births occur from February to May.</conservation_action>
+				<feeding>The Indian flying fox is frugivorous or nectarivorous, i.e., they eat fruits or lick nectar from flowers. At dusk, these bats forage for ripe fruit. While ingesting fruit, these bats expel waste that pollinates and disperse seeds</feeding>
+				<breeding>The Indian flying fox lives in tropical forests and swamps, near bodies of water. They also live on coastal islands, and it is theorized that ancestors migrated here long ago and found a liking to it, or were blown there and quickly forged a lifestyl</breeding>
+				<threats>Cynopterus is a genus of megabats. The Cynopterine section is represented by 11 genera, five of which occur in Malaysia, namely, Chironx, Balionycteris, Penthetor, Dyacopterus and Cynopterus. 30 names for Cynopterus species have been proposed, but only 16 are taxonomically valid forms</threats>
+				<country_occurence> These bats have a relatively long snout. Their upper parts are brown to grey-brown with paler under parts. The fur is very fine and silky. The ears and wing bones of C. sphinx are edged in white. </country_occurence>
+				<measurements>These bats have a relatively long snout. Their upper parts are brown to grey-brown with paler under parts. The fur is very fine and silky. The ears and wing bones of C. sphinx are edged in white. </measurements>
+				<other_details>Genus Cynopterus
+Lesser short-nosed fruit bat (Cynopterus brachyotis)
+Horsfield's fruit bat (Cynopterus horsfieldii)
+Peters's fruit bat (Cynopterus luzoniensis)
+Minute fruit bat (Cynopterus minutus)</other_details>
+				<population>80</population>
 				<created>0</created>
+				<researcher_id>12</researcher_id>
 				<del_bit>0</del_bit>
+				<admin_id>0</admin_id>
 			</record>
 			<record>
-				<bat_id>441</bat_id>
-				<scientific_name>he loo oooo JSKooo</scientific_name>
-				<pic>bphotos/2.jpg</pic>
-				<bat_order>d</bat_order>
-				<kingdom>d</kingdom>
-				<genus>d</genus>
-				<phylum>d</phylum>
-				<family>d</family>
-				<sub_family>d</sub_family>
-				<bat_class>d</bat_class>
-				<species>d</species>
-				<common_names> d</common_names>
-				<synonyms> d</synonyms>
-				<roost> d</roost>
-				<locations>Horana,Monaragala,Wattegama,Tangalle</locations>
-				<conservation_status>d</conservation_status>
-				<conservation_action>     hjh   </conservation_action>
-				<feeding> scsfd </feeding>
-				<breeding>    d    </breeding>
-				<threats>    d    </threats>
-				<country_occurence> d</country_occurence>
-				<measurements>    d    </measurements>
-				<other_details>    d h   </other_details>
-				<population>0</population>
+				<bat_id>31</bat_id>
+				<scientific_name>Pteropus giganteus</scientific_name>
+				<pic>bphotos/71493816Indian_Flying_Fox_(Pteropus_giganteus)_Kolkata_West_Bengal_India_27042013.png</pic>
+				<bat_order>Chiroptera</bat_order>
+				<kingdom>Animalia</kingdom>
+				<genus>Pteropus</genus>
+				<phylum>Chordata</phylum>
+				<family>Pteropodidae</family>
+				<sub_family>Pteropodidae</sub_family>
+				<bat_class>P. giganteus</bat_class>
+				<species>P. giganteus</species>
+				<common_names> Indian flying fox</common_names>
+				<synonyms> Pteropus giganteus</synonyms>
+				<roost>Pteropodidae</roost>
+				<locations> galle,colombo</locations>
+				<conservation_status>Indian flying fox</conservation_status>
+				<conservation_action>Like other fruit bats, the Indian flying fox may be a natural reservoir for a number of diseases including members of the groups Henipavirus and Coronavirus.</conservation_action>
+				<feeding>The Indian flying fox is frugivorous or nectarivorous, i.e., they eat fruits or lick nectar from flowers. At dusk, these bats forage for ripe fruit. While ingesting fruit, these bats expel waste that pollinates and disperse seeds.</feeding>
+				<breeding>The Indian flying fox lives in tropical forests and swamps, near bodies of water. They also live on coastal islands, and it is theorized that ancestors migrated here long ago and found a liking to it, or were blown there and quickly forged a lifestyl</breeding>
+				<threats>Mating System: P. giganteus is a polygynandrous species, and breeds yearly from July to October. Births occur from February to May. Gestation period is typically 140 to 150 days. The average birth number is 1 to 2 pups. Among members of the genus Pteropus, pups are carried by the mother for the first few weeks of life, with weaning occurring around 5 months of age</threats>
+				<country_occurence>It is found in India, Bangladesh, India, Tibet, the Maldives, Nepal, Pakistan, and Sri Lanka. It is classified as Least concern due to its wide range and apparent adaptability</country_occurence>
+				<measurements>The Indian flying fox (Pteropus giganteus), also known as the greater Indian fruit bat, is a species of flying fox in the family Pteropodidae. It is nocturnal and feeds mainly on ripe fruits, such as mangoes and bananas, and nectar.</measurements>
+				<other_details>Known as මා වවුලා (maa wawula) in Sinhala.</other_details>
+				<population>60</population>
 				<created>0</created>
+				<researcher_id>12</researcher_id>
 				<del_bit>0</del_bit>
+				<admin_id>0</admin_id>
 			</record>
 			<record>
-				<bat_id>473</bat_id>
-				<scientific_name>ueyet eiyew hsajhsa</scientific_name>
-				<pic>bphotos/6.jpg</pic>
-				<bat_order>kkkkkkk</bat_order>
-				<kingdom>k</kingdom>
-				<genus>k</genus>
-				<phylum>k</phylum>
-				<family>k</family>
-				<sub_family>k</sub_family>
-				<bat_class>k</bat_class>
-				<species>k</species>
-				<common_names> k</common_names>
-				<synonyms> k</synonyms>
-				<roost> k</roost>
-				<locations>Beruwala,Negombo,Trincomalee</locations>
-				<conservation_status>k</conservation_status>
-				<conservation_action>k</conservation_action>
-				<feeding>k</feeding>
-				<breeding>k</breeding>
-				<threats>k</threats>
-				<country_occurence> k</country_occurence>
-				<measurements>k</measurements>
-				<other_details>k</other_details>
+				<bat_id>36</bat_id>
+				<scientific_name>Cynopterus sphinx</scientific_name>
+				<pic>bphotos/87375005Short-nosed_Fruit_Bat_(Cynopterus_sphinx)_Photograph_By_Shantanu_Kuveskar.jpg</pic>
+				<bat_order>Chiroptera</bat_order>
+				<kingdom>Animalia</kingdom>
+				<genus>Cynopterus</genus>
+				<phylum>Chordata</phylum>
+				<family>Pteropodidae</family>
+				<sub_family>Pteropodidae</sub_family>
+				<bat_class>Mammalia</bat_class>
+				<species>C. sphinx</species>
+				<common_names>තල වවුලා (thala wawulaa),Greater short-nosed fruit bat</common_names>
+				<synonyms> Cynopterus sphinx</synonyms>
+				<roost> The greater short-nosed fruit bat or short-nosed Indian fruit bat (Cynopterus sphinx) is a species </roost>
+				<locations> kandy,galle,colombo</locations>
+				<conservation_status>These bats have a relatively long snout</conservation_status>
+				<conservation_action>The species is gregarious, and typically roosts in same sex groups of 8-9 individuals. The sexes remain separate until the mating season, when group size increases. They are polygynous and it is usual for 6-10 males and 10-15 females to share palm frond tents during the breeding season.</conservation_action>
+				<feeding>The species is gregarious, and typically roosts in same sex groups of 8-9 individuals. The sexes remain separate until the mating season, when group size increases. They are polygynous and it is usual for 6-10 males and 10-15 females to share palm fr</feeding>
+				<breeding>They can also be found in grassland and mangrove forests. They typically nest high in palm trees. The bats chew the fronds of the palms to construct fairly simple tents. These bats are also known to construct tents by closely interweaving the leaves </breeding>
+				<threats>The adult sex ratio is very female biased. Researchers attribute this to the relatively rapid maturation of females compared to males. In Central India, C. sphinx breeds twice per year. Females produce a single young at a time. Each half of the bicornate uterus functions during alternate breeding cycles. </threats>
+				<country_occurence>It is found in Pakistan, Bangladesh, Bhutan, Cambodia, China, India, Indonesia, Laos, Malaysia, Myanmar, Philippines, Sri Lanka, Thailand, and Vietnam. C. sphinx is common in tropical forests and areas where fruit crops are cultivated. They can also be found in grassland and mangrove forests.</country_occurence>
+				<measurements>The species is gregarious, and typically roosts in same sex groups of 8-9 individuals. The sexes remain separate until the mating season, when group size increases. They are polygynous and it is usual for 6-10 males and 10-15 females to share palm frond tents during the breeding season.</measurements>
+				<other_details>They can also be found in grassland and mangrove forests. They typically nest high in palm trees. The bats chew the fronds of the palms to construct fairly simple tents. These bats are also known to construct tents by closely interweaving the leaves and twigs of creeping vines which cover buildings, but such nests are constructed only when palms are not available.</other_details>
 				<population>30</population>
 				<created>0</created>
-				<del_bit>1</del_bit>
-			</record>
-			<record>
-				<bat_id>492</bat_id>
-				<scientific_name>chn jas rskjssa</scientific_name>
-				<pic>bphotos/3.jpg</pic>
-				<bat_order>gggg</bat_order>
-				<kingdom>g</kingdom>
-				<genus>g</genus>
-				<phylum>g</phylum>
-				<family>g</family>
-				<sub_family>g</sub_family>
-				<bat_class>g</bat_class>
-				<species>g</species>
-				<common_names> g</common_names>
-				<synonyms> g</synonyms>
-				<roost> g</roost>
-				<locations>Peliyagoda,Puttalam,Jaffna,Colombo </locations>
-				<conservation_status>g</conservation_status>
-				<conservation_action>g</conservation_action>
-				<feeding>g</feeding>
-				<breeding>g</breeding>
-				<threats>g</threats>
-				<country_occurence> g</country_occurence>
-				<measurements>g</measurements>
-				<other_details>g</other_details>
-				<population>20</population>
-				<created>0</created>
-				<del_bit>1</del_bit>
-			</record>
-			<record>
-				<bat_id>644</bat_id>
-				<scientific_name>welcoffme</scientific_name>
-				<pic>bphotos/4.jpg</pic>
-				<bat_order>dfd</bat_order>
-				<kingdom>gg</kingdom>
-				<genus>df</genus>
-				<phylum>d</phylum>
-				<family>d</family>
-				<sub_family>d</sub_family>
-				<bat_class>d</bat_class>
-				<species>d</species>
-				<common_names> d</common_names>
-				<synonyms> d</synonyms>
-				<roost> d</roost>
-				<locations>Mullaitivu,Matale</locations>
-				<conservation_status>d</conservation_status>
-				<conservation_action>d</conservation_action>
-				<feeding>d</feeding>
-				<breeding>d</breeding>
-				<threats>d</threats>
-				<country_occurence> d</country_occurence>
-				<measurements>d</measurements>
-				<other_details>d</other_details>
-				<population>0</population>
-				<created>0</created>
-				<del_bit>1</del_bit>
-			</record>
-			<record>
-				<bat_id>645</bat_id>
-				<scientific_name>aHJA sjhs hsh</scientific_name>
-				<pic>bphotos/5.jpg</pic>
-				<bat_order>tttt</bat_order>
-				<kingdom>t</kingdom>
-				<genus>t</genus>
-				<phylum>t</phylum>
-				<family>t</family>
-				<sub_family>t</sub_family>
-				<bat_class>t</bat_class>
-				<species>t</species>
-				<common_names> t</common_names>
-				<synonyms> t</synonyms>
-				<roost> t</roost>
-				<locations>Minuwangoda,Kadugannawa</locations>
-				<conservation_status>t</conservation_status>
-				<conservation_action>    t    </conservation_action>
-				<feeding>    t    </feeding>
-				<breeding>    t    </breeding>
-				<threats>    t    </threats>
-				<country_occurence> t</country_occurence>
-				<measurements>    t    </measurements>
-				<other_details>    t klkl jkjk lkll </other_details>
-				<population>0</population>
-				<created>0</created>
+				<researcher_id>12</researcher_id>
 				<del_bit>0</del_bit>
+				<admin_id></admin_id>
 			</record>
 		</records>
 	</table>
@@ -300,6 +272,14 @@
 				<neid>1</neid>
 				<r_id></r_id>
 			</record>
+			<record>
+				<ID>5</ID>
+				<name>test data</name>
+				<date>01-15-2017</date>
+				<comments>test data</comments>
+				<neid>4</neid>
+				<r_id></r_id>
+			</record>
 		</records>
 	</table>
 	<table name="news_before">
@@ -311,6 +291,13 @@
 			<column name="r_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="news_before" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
+			<record>
+				<nid>1</nid>
+				<title>testt</title>
+				<image>template.jpg</image>
+				<body>&lt;p&gt;hhjhjjh&lt;/p&gt;</body>
+				<r_id>12</r_id>
+			</record>
 		</records>
 	</table>
 	<table name="photos">
@@ -358,6 +345,20 @@
 &lt;p&gt;It is time for Bat Conservation International and all individuals, private and governmental organizations, corporations, and all interested parties to proactively take action for the conservation of the most endangered bats in the world. It is time for all of us to stand together and say through our words and deeds, &amp;ldquo;Not on our watch!&amp;rdquo; For many of these endangered bats it is not too late if we take action now!&lt;/p&gt;</desc>
 				<r_id></r_id>
 			</record>
+			<record>
+				<id>5</id>
+				<location>2.jpg</location>
+				<caption>Bats</caption>
+				<desc>&lt;p&gt;test data test data test data&lt;/p&gt;</desc>
+				<r_id>12</r_id>
+			</record>
+			<record>
+				<id>6</id>
+				<location>template.jpg</location>
+				<caption>testt</caption>
+				<desc>&lt;p&gt;hhjhjjh&lt;/p&gt;</desc>
+				<r_id>12</r_id>
+			</record>
 		</records>
 	</table>
 	<table name="post">
@@ -366,163 +367,91 @@
 			<column name="post_content" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="post" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="post_date" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="post" type="timestamp" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="post_topic" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="post_by" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="post_by" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="parent_post" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="post" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<post_id>31</post_id>
-				<post_content>dhsfioshvoisdhoi</post_content>
-				<post_date>2017-01-12 21:11:28</post_date>
-				<post_topic>27</post_topic>
-				<post_by>0</post_by>
+				<post_id>43</post_id>
+				<post_content>lfghsjlgrsjgrej
+</post_content>
+				<post_date>2017-01-15 18:28:59</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
 				<parent_post>-1</parent_post>
 			</record>
 			<record>
-				<post_id>32</post_id>
-				<post_content>slehgoisgvsbgl</post_content>
-				<post_date>2017-01-12 21:11:34</post_date>
-				<post_topic>27</post_topic>
-				<post_by>0</post_by>
-				<parent_post>31</parent_post>
-			</record>
-			<record>
-				<post_id>33</post_id>
-				<post_content>hdivdhfovgdofuvgudkvgd</post_content>
-				<post_date>2017-01-12 21:11:41</post_date>
-				<post_topic>27</post_topic>
-				<post_by>0</post_by>
-				<parent_post>31</parent_post>
-			</record>
-			<record>
-				<post_id>34</post_id>
-				<post_content>lkrdhgoisdbvosdudvbksu</post_content>
-				<post_date>2017-01-12 21:11:49</post_date>
-				<post_topic>27</post_topic>
-				<post_by>0</post_by>
-				<parent_post>32</parent_post>
-			</record>
-			<record>
-				<post_id>35</post_id>
-				<post_content>kkjkjk</post_content>
-				<post_date>2017-01-13 13:29:59</post_date>
-				<post_topic>27</post_topic>
-				<post_by>0</post_by>
+				<post_id>44</post_id>
+				<post_content>l;fgd;kbnk;
+</post_content>
+				<post_date>2017-01-15 18:29:30</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
 				<parent_post>-1</parent_post>
 			</record>
-		</records>
-	</table>
-	<table name="qualifications">
-		<columns>
-			<column name="researcher_id" blob="0" multiple_key="0" not_null="0" numeric="1" primary_key="0" table="qualifications" type="int" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q1name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q1ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q1year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q2name" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q2ins" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="q2year" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="other" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="qualifications" type="string" unique_key="0" unsigned="0" zerofill="0" />
-		</columns>
-		<records>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>jfl;sssa</q1name>
-				<q1ins>adaar</q1ins>
-				<q1year>616</q1year>
-				<q2name>lohu</q2name>
-				<q2ins>mm</q2ins>
-				<q2year>522</q2year>
-				<other>ppob bj</other>
+				<post_id>45</post_id>
+				<post_content>dklsgbsjgw</post_content>
+				<post_date>2017-01-15 18:30:02</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>wwwww</q1name>
-				<q1ins>wwwwwwww</q1ins>
-				<q1year>458</q1year>
-				<q2name>wwww</q2name>
-				<q2ins>wwww</q2ins>
-				<q2year>2323</q2year>
-				<other>dada</other>
+				<post_id>46</post_id>
+				<post_content>jkjkjkjkjkkkkkkkkkkkkkk</post_content>
+				<post_date>2017-01-15 23:26:53</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>lalala</q1name>
-				<q1ins>lalala</q1ins>
-				<q1year>45</q1year>
-				<q2name>lalala</q2name>
-				<q2ins>lalala</q2ins>
-				<q2year>12</q2year>
-				<other>sa</other>
+				<post_id>47</post_id>
+				<post_content>jkjjjjjjjjjjjjjjjjjjjjjj</post_content>
+				<post_date>2017-01-15 23:28:49</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>43</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>lalalalal</q1name>
-				<q1ins>lalalal</q1ins>
-				<q1year>15</q1year>
-				<q2name>lalala</q2name>
-				<q2ins>lalalala</q2ins>
-				<q2year>4</q2year>
-				<other>lalala</other>
+				<post_id>48</post_id>
+				<post_content>klkkooooooooooooooo</post_content>
+				<post_date>2017-01-15 23:29:25</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>daad</q1name>
-				<q1ins>f</q1ins>
-				<q1year>12</q1year>
-				<q2name>kmda</q2name>
-				<q2ins>pdk</q2ins>
-				<q2year>1</q2year>
-				<other>,l,jko</other>
+				<post_id>49</post_id>
+				<post_content>weda</post_content>
+				<post_date>2017-01-15 23:29:54</post_date>
+				<post_topic>108</post_topic>
+				<post_by></post_by>
+				<parent_post>45</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>jodal</q1name>
-				<q1ins>sa</q1ins>
-				<q1year>eea</q1year>
-				<q2name>dda</q2name>
-				<q2ins>sa</q2ins>
-				<q2year>5</q2year>
-				<other>jplda</other>
+				<post_id>50</post_id>
+				<post_content>where is that bat ..?Did you see ..?</post_content>
+				<post_date>2017-01-16 07:01:40</post_date>
+				<post_topic>110</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>m</q1name>
-				<q1ins>o</q1ins>
-				<q1year>b</q1year>
-				<q2name>k</q2name>
-				<q2ins>m</q2ins>
-				<q2year>m</q2year>
-				<other>m</other>
+				<post_id>51</post_id>
+				<post_content>why???</post_content>
+				<post_date>2017-01-16 11:51:11</post_date>
+				<post_topic>110</post_topic>
+				<post_by></post_by>
+				<parent_post>50</parent_post>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<q1name>sa</q1name>
-				<q1ins>sa</q1ins>
-				<q1year>2014</q1year>
-				<q2name>d</q2name>
-				<q2ins>sa</q2ins>
-				<q2year>56</q2year>
-				<other></other>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
-				<q1name>asa</q1name>
-				<q1ins>sasa</q1ins>
-				<q1year>416</q1year>
-				<q2name>sasa</q2name>
-				<q2ins>sasa</q2ins>
-				<q2year>da</q2year>
-				<other></other>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
-				<q1name>sa</q1name>
-				<q1ins>sa</q1ins>
-				<q1year>22</q1year>
-				<q2name>sa</q2name>
-				<q2ins>sa</q2ins>
-				<q2year></q2year>
-				<other></other>
+				<post_id>52</post_id>
+				<post_content>The best place to view these monsters of the air is in Viharamahadevi Park which is positioned between the National Museum and the Colombo Town Hall.</post_content>
+				<post_date>2017-01-17 06:24:50</post_date>
+				<post_topic>111</post_topic>
+				<post_by></post_by>
+				<parent_post>-1</parent_post>
 			</record>
 		</records>
 	</table>
@@ -532,117 +461,58 @@
 			<column name="paper" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="author" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="researcher_id" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="description" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="area" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="category" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="del_bit" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="research_papers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="type" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="size" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="research_papers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<paper_id>11</paper_id>
-				<paper>../../assets/research_papers/Medical_Certificate_Submission_Form_UG - Final.pdf</paper>
-				<title>fbfbf</title>
-				<author></author>
-				<researcher_id>fgn</researcher_id>
-				<description></description>
-				<area>fgnfg</area>
-				<category>gfngf</category>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<paper_id>12</paper_id>
-				<paper>../../assets/research_papers/Medical_Certificate_Submission_Form_UG - Final.pdf</paper>
-				<title>ccccccccccc</title>
-				<author>cccccccccccc</author>
-				<researcher_id>cccccccc</researcher_id>
-				<description></description>
-				<area>ccccccccc</area>
-				<category>cccccccc</category>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<paper_id>13</paper_id>
-				<paper>../../assets/research_papers/Medical_Certificate_Submission_Form_UG - Final.pdf</paper>
-				<title>xxxxxxxxxxx</title>
-				<author>xx</author>
-				<researcher_id>xx</researcher_id>
-				<description> xx</description>
-				<area>xx</area>
-				<category></category>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<paper_id>14</paper_id>
-				<paper>../../assets/research_papers/Medical_Certificate_Submission_Form_UG - Final.pdf</paper>
-				<title>xxxxxxxxxxx</title>
-				<author>xx</author>
-				<researcher_id>xx</researcher_id>
-				<description> xx</description>
-				<area>xx</area>
-				<category>saab</category>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<paper_id>15</paper_id>
-				<paper>../../assets/research_papers/DB_Security-final.pdf</paper>
-				<title>rrrrrrrrrrrrr</title>
-				<author>rrrrrrr</author>
-				<researcher_id>rrrr</researcher_id>
-				<description> rrrrrrrrrrrrr</description>
-				<area>rrrrrrrrrrrr</area>
-				<category>audi</category>
-				<del_bit>0</del_bit>
-			</record>
-			<record>
 				<paper_id>16</paper_id>
-				<paper>../../assets/research_papers/graduate_software_engineer.pdf</paper>
-				<title>g</title>
-				<author>g</author>
-				<researcher_id>g</researcher_id>
-				<description> g</description>
-				<area>g</area>
-				<category>Behaviour</category>
+				<paper>research_papers/12/15705188MunshiSouthWilkinson2010ARR.pdf</paper>
+				<title>research_paper_1</title>
+				<author>Dr.Chamath Fonseka</author>
+				<researcher_id>12</researcher_id>
+				<description>About small mamals</description>
+				<area>flying mamals</area>
+				<category>Habitats</category>
 				<del_bit>0</del_bit>
+				<type></type>
+				<size></size>
 			</record>
 			<record>
 				<paper_id>17</paper_id>
-				<paper>../../assets/research_papers/C240Lec4.pdf</paper>
-				<title>iiiiiiiiiiiii</title>
-				<author>iiiiiii</author>
-				<researcher_id>iiiiiiii</researcher_id>
-				<description> iiiiiiiii</description>
-				<area>iiiiiiiii</area>
-				<category>Behaviour</category>
+				<paper>research_papers/12/33823293SmallMammalsupdated.pdf</paper>
+				<title>research_paper_2</title>
+				<author>Dr.Saman Ellawala</author>
+				<researcher_id>12</researcher_id>
+				<description> About small mamals</description>
+				<area>conservation details</area>
+				<category>Conservation</category>
 				<del_bit>0</del_bit>
+				<type></type>
+				<size></size>
 			</record>
 			<record>
 				<paper_id>18</paper_id>
-				<paper>../../assets/research_papers/2-Descriptive statistics.pdf</paper>
-				<title>gfhgfh</title>
-				<author>gfhgf</author>
-				<researcher_id>ghnghn</researcher_id>
-				<description> gnghn</description>
-				<area>ghnhgnhgn</area>
-				<category>Anatomy</category>
+				<paper>research_papers/12/683993642012Cooper et al WIRES development of bat flight.pdf</paper>
+				<title>research_paper_3</title>
+				<author>Dr.Kamal Senavirathna</author>
+				<researcher_id>12</researcher_id>
+				<description>full area of flying mamals</description>
+				<area>full area</area>
+				<category>Others</category>
 				<del_bit>0</del_bit>
-			</record>
-			<record>
-				<paper_id>19</paper_id>
-				<paper>../../assets/research_papers/SCS2111-R_Introduction_2016.pdf</paper>
-				<title>hi</title>
-				<author>hg</author>
-				<researcher_id>hgj</researcher_id>
-				<description> hgjg</description>
-				<area>hgjgh</area>
-				<category>Anatomy</category>
-				<del_bit>0</del_bit>
+				<type></type>
+				<size></size>
 			</record>
 		</records>
 	</table>
 	<table name="researchers">
 		<columns>
-			<column name="researcher_id" blob="0" multiple_key="0" not_null="0" numeric="1" primary_key="0" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="title" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="fname" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="mname" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
@@ -656,263 +526,107 @@
 			<column name="major" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="email" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="password" blob="0" multiple_key="0" not_null="0" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="researcher_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="researchers" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q1year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2name" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2ins" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="q2year" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="other" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="researchers" type="string" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<researcher_id>0</researcher_id>
-				<title>mrs</title>
-				<fname>rushan</fname>
-				<mname>al</mname>
-				<lname>ahmed</lname>
-				<gender>m</gender>
-				<nic>0</nic>
-				<add1>sasa</add1>
-				<add2></add2>
-				<city>daa</city>
-				<country>ddf</country>
-				<major>asa</major>
-				<email>ru@gmail.com</email>
-				<password>rushan</password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>rfe</title>
-				<fname>ew</fname>
-				<mname>r</mname>
-				<lname>e</lname>
-				<gender>f</gender>
-				<nic>0</nic>
-				<add1>ew</add1>
-				<add2>frf</add2>
-				<city>e</city>
-				<country>e</country>
-				<major>dada</major>
-				<email>p@gmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>Mrs</title>
-				<fname>narthana</fname>
-				<mname>satsara</mname>
-				<lname>manamperi</lname>
-				<gender>m</gender>
-				<nic>0</nic>
-				<add1>da</add1>
-				<add2>da</add2>
-				<city>563</city>
-				<country>dada</country>
-				<major>SASA</major>
-				<email>a@g.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>s</title>
-				<fname>d</fname>
-				<mname>c</mname>
-				<lname>d</lname>
-				<gender>f</gender>
-				<nic>0</nic>
-				<add1>d</add1>
-				<add2>d</add2>
-				<city>cd</city>
-				<country>d</country>
-				<major>a</major>
-				<email>a@hmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>Mrs</title>
-				<fname>Anjalee</fname>
-				<mname>Pramuditha</mname>
-				<lname>Abeysekera</lname>
-				<gender>f</gender>
-				<nic>0</nic>
-				<add1>161</add1>
-				<add2>st</add2>
-				<city>s</city>
-				<country>gampaha</country>
-				<major>is</major>
-				<email>anji@gmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>anjalee</title>
-				<fname>anjalee</fname>
-				<mname>abey</mname>
-				<lname>sadad</lname>
-				<gender>f</gender>
-				<nic>0</nic>
-				<add1>dss</add1>
-				<add2></add2>
-				<city>dsdaf</city>
-				<country>sasa</country>
-				<major>fsfsf</major>
-				<email>anji.abeysekera@gmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>g</title>
-				<fname>e</fname>
-				<mname>f</mname>
-				<lname>e</lname>
-				<gender>f</gender>
-				<nic>0</nic>
-				<add1>d</add1>
-				<add2>f</add2>
-				<city>b</city>
-				<country>x</country>
-				<major>x</major>
-				<email>a@t.com</email>
-				<password>anjalee</password>
-			</record>
-			<record>
-				<researcher_id>0</researcher_id>
-				<title>m</title>
-				<fname>d</fname>
-				<mname>ad</mname>
-				<lname>d</lname>
-				<gender>f</gender>
-				<nic>0</nic>
-				<add1>v</add1>
-				<add2>d</add2>
-				<city>da</city>
-				<country>ad</country>
-				<major>d</major>
-				<email>a@g.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
-				<title>miss</title>
-				<fname>anjalee</fname>
-				<mname>pramuditha</mname>
-				<lname>aeysekera</lname>
-				<gender>f</gender>
-				<nic>1245783659</nic>
-				<add1>as</add1>
-				<add2>d</add2>
-				<city>s</city>
-				<country>sr</country>
-				<major>is</major>
-				<email>a@t.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
-				<title>misisisis</title>
-				<fname>m</fname>
-				<mname>s</mname>
-				<lname>s</lname>
-				<gender>f</gender>
-				<nic>145</nic>
-				<add1>sa</add1>
-				<add2>dsd</add2>
-				<city>s</city>
-				<country>sri lanka</country>
-				<major>sa</major>
-				<email>a@g.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
 				<title>miss</title>
 				<fname>Anjalee</fname>
-				<mname>Pramuditha</mname>
-				<lname>Abeysekera</lname>
+				<mname>premudi</mname>
+				<lname>Abeysekara</lname>
 				<gender>f</gender>
-				<nic>1245120125</nic>
-				<add1>sada</add1>
-				<add2>a</add2>
-				<city>x</city>
-				<country>c</country>
-				<major>x</major>
+				<nic>928300110</nic>
+				<add1>colombo</add1>
+				<add2>colombo</add2>
+				<city>colombo</city>
+				<country>Sri Lanka</country>
+				<major>Science</major>
 				<email>a@t.com</email>
 				<password></password>
+				<researcher_id>9</researcher_id>
+				<q1name></q1name>
+				<q1ins></q1ins>
+				<q1year></q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
-				<title>misi</title>
-				<fname>sewmiii</fname>
-				<mname>sa</mname>
-				<lname>rupa</lname>
-				<gender>f</gender>
-				<nic>4587</nic>
-				<add1>nsak</add1>
-				<add2>sas</add2>
-				<city>czz</city>
-				<country>sri lanka</country>
-				<major>da</major>
-				<email>amaya@gmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
-				<title>d</title>
-				<fname>s</fname>
-				<mname>s</mname>
-				<lname>s</lname>
-				<gender>f</gender>
-				<nic>662</nic>
-				<add1>t</add1>
-				<add2>u</add2>
-				<city>j</city>
-				<country>y</country>
-				<major>d</major>
-				<email>nisal@gmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
-				<title>mr</title>
-				<fname>Chamara</fname>
-				<mname></mname>
-				<lname>Munasinghe</lname>
-				<gender>m</gender>
-				<nic>4578</nic>
-				<add1>a</add1>
-				<add2></add2>
-				<city>s</city>
-				<country>sri lanka</country>
-				<major></major>
-				<email>anji@gmail.com</email>
-				<password></password>
-			</record>
-			<record>
-				<researcher_id></researcher_id>
 				<title>miss</title>
-				<fname>safsf</fname>
-				<mname>sasa</mname>
-				<lname>ddaa</lname>
+				<fname>Nadee</fname>
+				<mname>sansari</mname>
+				<lname>senavirathna</lname>
 				<gender>f</gender>
-				<nic>6526236</nic>
-				<add1>nkml</add1>
-				<add2>nlkml</add2>
-				<city>ml</city>
-				<country>nlm</country>
-				<major>ml</major>
-				<email>c@h.com</email>
+				<nic>928300110</nic>
+				<add1>galle</add1>
+				<add2>galle</add2>
+				<city>galle</city>
+				<country>Sri Lanka</country>
+				<major>bat sceince</major>
+				<email>n@gmail.com</email>
 				<password></password>
+				<researcher_id>10</researcher_id>
+				<q1name></q1name>
+				<q1ins></q1ins>
+				<q1year></q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
 			</record>
 			<record>
-				<researcher_id></researcher_id>
 				<title>miss</title>
-				<fname>Anjalee</fname>
-				<mname>d</mname>
-				<lname>d</lname>
+				<fname>naded</fname>
+				<mname>ksdkdfkfd</mname>
+				<lname>sfdksdfksk</lname>
 				<gender>m</gender>
-				<nic>1548</nic>
-				<add1>d</add1>
-				<add2>d</add2>
-				<city>dada</city>
-				<country>d</country>
-				<major>d</major>
-				<email>v@m.com</email>
-				<password></password>
+				<nic>928300110</nic>
+				<add1>uuqwiqiu</add1>
+				<add2>qwkiqiq</add2>
+				<city>wqiqwoiqi</city>
+				<country>Sri Lanka</country>
+				<major>hdsjsjdjs</major>
+				<email>n@gmail.com</email>
+				<password>123</password>
+				<researcher_id>12</researcher_id>
+				<q1name></q1name>
+				<q1ins></q1ins>
+				<q1year></q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
+			</record>
+			<record>
+				<title>miss</title>
+				<fname>t</fname>
+				<mname>dkdjks</mname>
+				<lname>sdkdjds</lname>
+				<gender>f</gender>
+				<nic>928394484</nic>
+				<add1>djdkk</add1>
+				<add2>dslkdkl</add2>
+				<city>dlkdslk</city>
+				<country>ddskj</country>
+				<major>dskjdskjs</major>
+				<email>n@gmail.com</email>
+				<password>12345</password>
+				<researcher_id>30</researcher_id>
+				<q1name>djdsjksd</q1name>
+				<q1ins>dsdsksd</q1ins>
+				<q1year>dsdsks</q1year>
+				<q2name></q2name>
+				<q2ins></q2ins>
+				<q2year></q2year>
+				<other></other>
 			</record>
 		</records>
 	</table>
@@ -922,6 +636,7 @@
 			<column name="file" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="tbl_uploads" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="type" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="tbl_uploads" type="string" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="size" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="0" table="tbl_uploads" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="title" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="tbl_uploads" type="string" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
@@ -929,48 +644,71 @@
 				<file>10671-biweeklyreport12.pdf</file>
 				<type>applicatio</type>
 				<size>149</size>
+				<title></title>
 			</record>
 			<record>
 				<id>3</id>
 				<file>54461-1.-r-lecture.pdf</file>
 				<type>applicatio</type>
 				<size>518</size>
+				<title></title>
 			</record>
 			<record>
 				<id>4</id>
 				<file>63537-os.pdf</file>
 				<type>applicatio</type>
 				<size>262</size>
+				<title></title>
 			</record>
 			<record>
 				<id>5</id>
 				<file>18360-refcard.pdf</file>
 				<type>applicatio</type>
 				<size>59</size>
+				<title></title>
 			</record>
 			<record>
 				<id>6</id>
 				<file>29143-r-intro.pdf</file>
 				<type>applicatio</type>
 				<size>608</size>
+				<title></title>
 			</record>
 		</records>
 	</table>
 	<table name="topics">
 		<columns>
 			<column name="topic_id" blob="0" multiple_key="0" not_null="1" numeric="1" primary_key="1" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="admin_by" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="topic_subject" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="topics" type="string" unique_key="1" unsigned="0" zerofill="0" />
 			<column name="topic_content" blob="1" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="topics" type="blob" unique_key="0" unsigned="0" zerofill="0" />
 			<column name="topic_date" blob="0" multiple_key="0" not_null="1" numeric="0" primary_key="0" table="topics" type="date" unique_key="0" unsigned="0" zerofill="0" />
-			<column name="topic_by" blob="0" multiple_key="1" not_null="1" numeric="1" primary_key="0" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
+			<column name="topic_by" blob="0" multiple_key="1" not_null="0" numeric="1" primary_key="0" table="topics" type="int" unique_key="0" unsigned="0" zerofill="0" />
 		</columns>
 		<records>
 			<record>
-				<topic_id>27</topic_id>
-				<topic_subject>sewmi rupasinghe</topic_subject>
-				<topic_content>ljgfeouqfguoqgfuqgfuoq[dyq9</topic_content>
-				<topic_date>2017-01-12</topic_date>
-				<topic_by>0</topic_by>
+				<topic_id>108</topic_id>
+				<admin_by></admin_by>
+				<topic_subject>testing one </topic_subject>
+				<topic_content>sadu sadu</topic_content>
+				<topic_date>2017-01-15</topic_date>
+				<topic_by>12</topic_by>
+			</record>
+			<record>
+				<topic_id>110</topic_id>
+				<admin_by></admin_by>
+				<topic_subject>new bat found</topic_subject>
+				<topic_content>there  is new bat in galle</topic_content>
+				<topic_date>2017-01-16</topic_date>
+				<topic_by>12</topic_by>
+			</record>
+			<record>
+				<topic_id>111</topic_id>
+				<admin_by></admin_by>
+				<topic_subject>Colombo Fruit Bats in Viharamahadevi park</topic_subject>
+				<topic_content>Bats, Bats and more Bats. I did not expect this. None of the travel guides I had read before my visit to Sri Lanka mentioned the giant fruit bats that you could see flying above the Colombo skyline.</topic_content>
+				<topic_date>2017-01-17</topic_date>
+				<topic_by>12</topic_by>
 			</record>
 		</records>
 	</table>

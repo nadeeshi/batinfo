@@ -1,6 +1,4 @@
-<?php
-require_once('../../database/db_backup.php');
-?>
+
 
 <html>
 <head>

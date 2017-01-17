@@ -71,7 +71,7 @@ include "../../assets/IncludedFiles/footer.php" ;
           $content=$row['content'];
           $link=$row['link'];
           echo '<ul style="list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #f1f1f1;">';
-          echo '<li>'.'<a target= "ifrm" href='. $link.'>'. $title.'</a>'.'</li>';
+          echo '<li>'.'<a target= "ifrm"  href='. $link.'>'. $title.'</a>'.'</li>';
           echo '<div class="col-md-9" id="rest">';
   
           $_SESSION['lnk']=$link;
