@@ -33,26 +33,27 @@ while($row = mysqli_fetch_assoc($result)){
     $measure=$row['measurements'];
     $count = 1;
 	
-    $output = '<div> '.'sciencetific name :  '.$fname.'</br> </br> 
-    place :  '. $lplace1.'</div></br> 
-    bat order :  '.$bat_or.'</br></br>
-    kindom :  '.$kin.'</br></br>
-    genus :  '.$gene.'</br></br>
-    family :  '.$family.'</br></br>
-    phylum :  '.$phylum.'</br></br>
-    sub family :  '.$subfamily.'</br></br>
-    bat class :  '.$bat_cl.'</br></br>
-    common names :  '.$com_name.'</br></br>
-    synonyms :  '.$syns.'</br></br>
-    roost :  '.$rst.'</br></br>
-    conservation status :  '.$conv_st.'</br></br>
-    conservation action :  '.$conv_at.'</br></br>
-    feeding :  '.$feed.'</br></br>
-    breeding :  '.$breed.'</br></br>
-    threats :  '.$threat.'</br></br>
-    country occurences :  '.$coun_occ.'</br></br>
-    measurements :  '.$measure.'</br></br>
-    discription :  '.$des.'</br></br>' ;
+    $output = '<div> '.'
+    Sciencetific name   :  '.$fname.'</br> </br> 
+    Place               :  '. $lplace1.'</div></br> 
+    Pat order           :  '.$bat_or.'</br></br>
+    Kindom              :  '.$kin.'</br></br>
+    Genus               :  '.$gene.'</br></br>
+    Family              :  '.$family.'</br></br>
+    Phylum              :  '.$phylum.'</br></br>
+    Sub family          :  '.$subfamily.'</br></br>
+    Bat class           :  '.$bat_cl.'</br></br>
+    Common names        :  '.$com_name.'</br></br>
+    Synonyms            :  '.$syns.'</br></br>
+    Roost               :  '.$rst.'</br></br>
+    Conservation status :  '.$conv_st.'</br></br>
+    Conservation action :  '.$conv_at.'</br></br>
+    Feeding             :  '.$feed.'</br></br>
+    Breeding            :  '.$breed.'</br></br>
+    Threats             :  '.$threat.'</br></br>
+    Country occurences  :  '.$coun_occ.'</br></br>
+    Measurements        :  '.$measure.'</br></br>
+    Discription         :  '.$des.'</br></br>' ;
     
 		
 }
