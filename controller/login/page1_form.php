@@ -108,7 +108,7 @@ session_start(); // Session starts here.
      </div>
      <div class="form-group">
      <label>NIC </label>
-     <input name="nic" type="text" required placeholder="123456789v" class="form-control"  maxlength="10" pattern="(?=.*[v])(?=.*[V]).{10}">
+     <input name="nic" type="text" required placeholder="123456789v" class="form-control"   pattern="(?=.*[v]).{10}">
 
     
      <!--<span class="text-danger"><?php if (isset($nic_error)) echo $nic_error; ?></span>-->
