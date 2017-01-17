@@ -30,7 +30,7 @@
 
 
             .msg{
-                font-family: 'Copse', serif !important;
+               font-family: 'Varela Round', sans-serif; !important;
                 font-size: 150%;
             }   
             .my-text{
@@ -64,8 +64,6 @@
             .height_default_edit{
                 height:  400px !important;
                 
-            }  body{
-                background-color: beige;
-            }  
+            } 
 
            

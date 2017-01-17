@@ -16,7 +16,11 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
+        <style>
+        .insert-bat {
+            margin-left: 4% !important;
+        }
+        </style>
     </head>
     <body>
         <!-- include header file-->
@@ -24,7 +28,7 @@
             <?php include '../../assets/IncludedFiles/navbarTemplate.php' ?>
         </div>
 
-        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form">
+         <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form insert-bat">
             <div class="container-form">
 
                 <div class="head-form">
