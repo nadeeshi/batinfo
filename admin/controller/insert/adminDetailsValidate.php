@@ -163,7 +163,7 @@ function validatePassword($pword){
 <div id="page-inner">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="page-head-line" style="color: #500a6f"><b>Admin Details</b></h1>
+            <h1 class="page-head-line" style="color: #500a6f">Admin Details</h1>
             <h1 class="page-subhead-line">All administrators details </h1>
         </div>
     </div>

@@ -1,4 +1,9 @@
 <?php
+require_once('../../database/db_backup.php');
+?>
+
+
+<?php
 //Start session
 session_start();
 

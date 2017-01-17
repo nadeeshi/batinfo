@@ -28,6 +28,21 @@ error_reporting(E_ALL ^ E_DEPRECATED);
             height:30em;
             border-style: outset;
         }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: none;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
     </style>
 </head>
 
@@ -38,12 +53,12 @@ error_reporting(E_ALL ^ E_DEPRECATED);
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-head-line" style="color: #500a6f"><b>Bat Details</b></h1>
+                <h1 class="page-head-line" style="color: #500a6f">Bat Details</h1>
                 <h1 class="page-subhead-line">Using Google Map </h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-11">
+            <div class="col-md-7">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         see bat details using Map
@@ -167,23 +182,100 @@ error_reporting(E_ALL ^ E_DEPRECATED);
                             }
                             ?>
 
+                                            <div style="margin-top: 20px;">
 
-                            <form action="" method="post">
-                                <!--<input type='text' name='address' placeholder='Enter any address here' />-->
-                                <select id="places" name="address">
-                                    <option value="Cynopterusbrachyotis">cn</option>
-                                    <option value="name">name</option>
-                                    <option value="opel">Opel</option>
-                                    <option value="audi">Audi</option>
-                                </select>
+                                                <?php
+                                                include('../../assets/includedFiles/connect.php');
+                                                $select=mysqli_query($bd,"SELECT * FROM bat_info order by bat_id desc");
+                                                $i=1;
+                                                ?>
+                                                <div class="display">
+                                                    <form action="" method="post">
+                                                    <table>
+                                                        <tr>
+                                                            <th>BATS  NAME : </th>
+                                                            <th>BAT ORDER : </th>
+                                                            <th>KINGDOM : </th>
 
-                                <input type='submit' value='Geocode!' />
-                            </form>
+
+
+                                                        </tr>
+                                                        <?php
+                                                        while($userrow=mysqli_fetch_array($select))
+                                                        {
+                                                            $id=$userrow['bat_id'];
+                                                            $scientificName=$userrow['scientific_name'];
+                                                            $bat_order = $userrow['bat_order'];
+                                                            $kingdom=$userrow['kingdom'];
+
+
+                                                            ?>
+                                                            <tr>
+                                                                <td><?php echo $scientificName; ?></td>
+                                                                <td><?php echo $bat_order; ?></td>
+                                                                <td><?php echo $kingdom; ?></td>
+
+
+
+                                                            </tr>
+                                                        <?php } ?>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+                            <!--<select id="places" name="address">
+                                                                                           <option value="Cynopterusbrachyotis">cn</option>
+                                                                                           <option value="name">name</option>
+                                                                                           <option value="opel">Opel</option>
+                                                                                           <option value="audi">Audi</option>
+                                                                                       </select>-->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        View details using Map
+                    </div>
+                    <div class="panel-body">
+                        <h4>Enter Bat Name :- </h4>
+                        <p>(without space)</p>
+
+                        <div style="margin-top: 20px;">
+
+
+                            <div class="display">
+                                <form>
+                                <input type='text' name='address' placeholder='Enter correct bat name here'  required/>
+
+
+                                 <input type='submit' value='Show!' />
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
     </div>
 </div>
 

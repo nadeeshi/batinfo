@@ -13,6 +13,22 @@ require_once('../../assets/includedFiles/auth.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>BatFacts.com</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: none;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+    </style>
 
 
 
@@ -28,7 +44,7 @@ require_once('../../assets/includedFiles/auth.php');
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-head-line" style="color: #500a6f"><b>Research Details</b></h1>
+                <h1 class="page-head-line" style="color: #500a6f">Research Details</h1>
                 <h1 class="page-subhead-line">All Research details </h1>
 
             </div>
@@ -100,9 +116,9 @@ require_once('../../assets/includedFiles/auth.php');
                                 <table width="100%" border="1">
 
                                     <tr>
-                                        <td>File Name</td>
-                                        <td>File Type</td>
-                                        <td>File Size(KB)</td>
+                                        <td>Paper Name</td>
+                                        <td>Paper Author</td>
+                                        <td>Paper Category</td>
                                         <td>View</td>
                                     </tr>
                                     <?php
@@ -119,9 +135,9 @@ require_once('../../assets/includedFiles/auth.php');
                                         <tr>
 
                                             <td><?php echo $row['paper'] ?></td>
-                                            <td><?php echo $row['type'] ?></td>
-                                            <td><?php echo $row['size'] ?></td>
-                                            <td><a href="../../controller/insert/uploads/<?php echo $row['paper'] ?>" target="_blank">view file</a></td>
+                                            <td><?php echo $row['author'] ?></td>
+                                            <td><?php echo $row['category'] ?></td>
+                                            <td><a href="../../../assets/<?php echo $row['paper'] ?>" target="_blank">view file</a></td>
                                         </tr>
                                     <?php
                                     }

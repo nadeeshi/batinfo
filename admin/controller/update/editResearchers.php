@@ -80,7 +80,7 @@ ob_end_flush();
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-head-line">Researcher Details</h1>
+                <h1 class="page-head-line" style="color: #500a6f">Researcher Details</h1>
                 <h1 class="page-subhead-line">All memeber Researchers details </h1>
 
             </div>

@@ -1,5 +1,5 @@
 <?php
-@session_start();
+session_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 include ('../../database/dbconnect.php');
 //if(isset($_SESSION['usr_id'])){

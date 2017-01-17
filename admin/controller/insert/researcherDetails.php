@@ -78,7 +78,7 @@ require_once('../../assets/includedFiles/auth.php');
                                         <th>LAST  NAME : </th>
                                         <th>EMAIL : </th>
                                         <th>Give_Password</th>
-                                        <th>Delete</th>
+                                        <th>Reject_Request</th>
                                     </tr>
                                     <?php
                                     while($userrow=mysqli_fetch_array($select))
@@ -95,7 +95,7 @@ require_once('../../assets/includedFiles/auth.php');
                                             <td><a href="../update/editResearchers.php?id=<?php echo $id; ?>"><span class="edit" title="Edit" style="color: #ff0084"> View </span></a></td>
                                             <td><a href="../delete/deleteResearchers.php?id=<?php echo $id; ?>"
                                                    onclick="return confirm('Are you sure you wish to delete this Record?');">
-                                                    <span class="delete" title="Delete" style="color: #ff0084"> Delete </span></a></td>
+                                                    <span class="delete" title="Delete" style="color: #ff0084"> Reject </span></a></td>
                                         </tr>
                                     <?php } ?>
                                 </table>
@@ -103,9 +103,11 @@ require_once('../../assets/includedFiles/auth.php');
                         </div>
                     </div>
                 </div>
-                <br><br>
-                <p><b>RESEARCHER DETAILS</b></p>
-                <div class="col-md-12">
+                </div>
+
+
+                <div class="col-md-9">
+                    <p><b>RESEARCHER DETAILS</b></p>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Details of Researchers of the system (have account)
