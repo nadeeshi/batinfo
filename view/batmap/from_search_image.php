@@ -33,26 +33,29 @@ while($row = mysqli_fetch_assoc($result)){
     $measure=$row['measurements'];
     $count = 1;
 	
-    $output = '<div>'.'Sciencetific Name :  '.$fname.'</br> </br>
-    Place :  '. $lplace1.'</div></br>
-    Bat Order :  '.$bat_or.'</br></br>
-    Kindom :  '.$kin.'</br></br>
-    Genus :  '.$gene.'</br></br>
-    Family :  '.$family.'</br></br>
-    Phylum :  '.$phylum.'</br></br>
-    Sub Family :  '.$subfamily.'</br></br>
-    Bat Class :  '.$bat_cl.'</br></br>
-    Common Names :  '.$com_name.'</br></br>
-    Synonyms :  '.$syns.'</br></br>
-    Roost :  '.$rst.'</br></br>
+
+    $output = '<div> '.'
+    Sciencetific Name   :  '.$fname.'</br> </br>
+    Place               :  '. $lplace1.'</div></br> 
+    Pat order           :  '.$bat_or.'</br></br>
+    Kindom              :  '.$kin.'</br></br>
+    Genus               :  '.$gene.'</br></br>
+    Family              :  '.$family.'</br></br>
+    Phylum              :  '.$phylum.'</br></br>
+    Sub family          :  '.$subfamily.'</br></br>
+    Bat class           :  '.$bat_cl.'</br></br>
+    Common names        :  '.$com_name.'</br></br>
+    Synonyms            :  '.$syns.'</br></br>
+    Roost               :  '.$rst.'</br></br>
     Conservation Status :  '.$conv_st.'</br></br>
     Conservation Action :  '.$conv_at.'</br></br>
-    Feeding :  '.$feed.'</br></br>
-    Breeding :  '.$breed.'</br></br>
-    Threats :  '.$threat.'</br></br>
-    Country Occurences :  '.$coun_occ.'</br></br>
-    Measurements :  '.$measure.'</br></br>
-    Discription :  '.$des.'</br></br>' ;
+    Feeding             :  '.$feed.'</br></br>
+    Breeding            :  '.$breed.'</br></br>
+    Threats             :  '.$threat.'</br></br>
+    Country Occurrences  :  '.$coun_occ.'</br></br>
+    Measurements        :  '.$measure.'</br></br>
+    Description         :  '.$des.'</br></br>' ;
+
     
 		
 }

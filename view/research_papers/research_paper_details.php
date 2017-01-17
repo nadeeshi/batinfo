@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>research papers view</title>
+        <title>research papers details</title>
 
         <link rel="stylesheet" href="../../assets/CSS/style_insert_del_edit.css"/>
         <link rel="stylesheet" href="../../assets/CSS/headline.css"/>
@@ -18,7 +18,14 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}</style>
+        <style>
+            .insert-bat {
+            margin-left: 4% !important;
+        }
+            .form-control[disabled], fieldset[disabled] .form-control {
+            cursor: default!important;
+        }
+        </style>
     </head>
 
     <body >
@@ -49,7 +56,7 @@
         mysqli_close($con);
         ?>
 
-        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form edit-form">
+            <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form insert-bat">
              <div class="head-form">
                     <h2>Reasearch Paper Details</h2>
                 </div>

@@ -32,7 +32,7 @@
                 <?php
                 require_once('../../database/dbconnect.php');
 
-                if (mysqli_connect_errno()) {
+                if (@mysqli_connect_errno()) {
                     echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
                     echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                 }
@@ -51,14 +51,14 @@
                 $file = $structure;
 
                 // delete the image from relavant folder/ directory
-                if (!unlink($file)) {
+                if (!@unlink($file)) {
                         echo "<p class='msg'><h3>Something Went Wrong!!!</h3></p>";
                     echo '<br><br><a href="../../view/delete_update/delete_home.php"><button class="my-button">Try Again</button></a>';
                 } else {
                     // 
                     $query = "DELETE FROM bat_info WHERE scientific_name='$scientific_name'";
 
-                    if (mysqli_query($con, $query)) {
+                    if (@mysqli_query($con, $query)) {
                         
                     } else {
                         //echo nothing here...

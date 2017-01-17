@@ -17,9 +17,13 @@
         <script src="../../assets/JS/jquary.js"></script>
         <script src="../../assets/JS/jquery.js"></script>
         <script src="../../assets/JS/bootstrap.js"></script>
-        <style>body{background-color: beige;}
+        <style>
         
             .edit{font-size: 15px;}
+            
+            .insert-bat {
+    margin-left: 5% !important;
+}
         </style>
        
     </head>
@@ -58,7 +62,7 @@
             ?>
 
 
-        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form">
+        <div class="col-sm-9 col-sm-push-2 col-xs-12 insert-form insert-bat">
             <div class="container-form">
 
                 <div class="head-form">
@@ -69,7 +73,7 @@
 
                         <a class="link" onclick="return myFunction2();" >
                             <span class="glyphicon_my glyphicon glyphicon-pencil " ><span class="edit">Edit Fields</span></span>
-                            <br><br><br><br>
+                            <br><br>
                             
 
                             <!-- button, make disabled text fields editable -->
