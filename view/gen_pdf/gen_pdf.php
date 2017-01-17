@@ -75,44 +75,44 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);
 
-$pdf->Cell(0,10,'common names : '.$com_name,0,1);
-$pdf->Cell(0,10,'scientific name : '.$fname,0,1);
+$pdf->Cell(0,10,'Common names : '.$com_name,0,1);
+$pdf->Cell(0,10,'Scientific name : '.$fname,0,1);
 
-$pdf->Cell(0,10,'synonyms : '.$syns,0,1);
+$pdf->Cell(0,10,'Synonyms : '.$syns,0,1);
 
-$pdf->Cell(0,10,'frequently found places : '.$lplace1,0,1);
+$pdf->Cell(0,10,'Frequently found places : '.$lplace1,0,1);
 
-$pdf->Cell(0,10,'bat order : '.$bat_or,0,1);
+$pdf->Cell(0,10,'Bat order : '.$bat_or,0,1);
 
-$pdf->Cell(0,10,'kingdom : '.$kin,0,1);
+$pdf->Cell(0,10,'Kingdom : '.$kin,0,1);
 
-$pdf->Cell(0,10,'genus : '.$gene,0,1);
+$pdf->Cell(0,10,'Genus : '.$gene,0,1);
 
 $pdf->Cell(0,10,'Phylum : '.$phylum,0,1);
 
-$pdf->Cell(0,10,'family : '.$family,0,1);
+$pdf->Cell(0,10,'Family : '.$family,0,1);
 
-$pdf->Cell(0,10,'sub family : '.$subfamily,0,1);
+$pdf->Cell(0,10,'Sub family : '.$subfamily,0,1);
 
-$pdf->Cell(0,10,'bat class : '.$bat_cl,0,1);
+$pdf->Cell(0,10,'Bat class : '.$bat_cl,0,1);
 
-$pdf->Cell(0,10,'roost : '.$rst,0,1);
+$pdf->Cell(0,10,'Roost : '.$rst,0,1);
 
-$pdf->Cell(0,10,'conservation status : '.$conv_st,0,1);
+$pdf->Cell(0,10,'Conservation status : '.$conv_st,0,1);
 
-$pdf->Cell(0,10,'conservation activity : '.$conv_at,0,1);
+$pdf->Cell(0,10,'Conservation activity : '.$conv_at,0,1);
 
-$pdf->Cell(0,10,'feeding : '.$feed,0,1);
+$pdf->Cell(0,10,'Feeding : '.$feed,0,1);
 
-$pdf->Cell(0,10,'breeding : '.$breed,0,1);
+$pdf->Cell(0,10,'Breeding : '.$breed,0,1);
 
-$pdf->Cell(0,10,'threats : '.$threat,0,1);
+$pdf->Cell(0,10,'Threats : '.$threat,0,1);
 
-$pdf->Cell(0,10,'country occurences : '.$coun_occ,0,1);
+$pdf->Cell(0,10,'Country occurences : '.$coun_occ,0,1);
 
-$pdf->Cell(0,10,'measurements : '.$measure,0,1);
+$pdf->Cell(0,10,'Measurements : '.$measure,0,1);
 
-$pdf->Cell(0,10,'other details : '.$des,0,1);
+$pdf->Cell(0,10,'Other details : '.$des,0,1);
 
 
 $pdf->Output();
