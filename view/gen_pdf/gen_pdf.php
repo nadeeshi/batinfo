@@ -1,10 +1,13 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
+
+//db connection
 include ('../../database/dbconnect.php');
+
+//include fpdf library
 require('../../assets/fpdf/fpdf.php');
 	
-$count = 0;
-
+//selectt query
 $query = "SELECT * FROM bat_info WHERE bat_id = '".$_GET['id']."';";
 $result = mysqli_query($con, $query);
 				

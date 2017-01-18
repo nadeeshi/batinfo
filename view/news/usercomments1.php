@@ -41,7 +41,6 @@ $f= $row['r_id'];
 
 echo "$name_field wrote: ($date_field) <br>";
 echo "$comment_field";
-echo "$f";
 echo "<br><hr><br>";
 
 }}
@@ -66,7 +65,6 @@ $f= $row['r_id'];
 
 echo "$name_field wrote: ($date_field) <br>";
 echo "$comment_field";
-echo "$f";
 echo "<br><hr><br>";
 echo "<script type='text/javascript'>alert('BVB');</script>";
 }

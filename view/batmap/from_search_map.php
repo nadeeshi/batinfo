@@ -1,12 +1,17 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
+//db connection
 include ('../../database/dbconnect.php');
-
 
 ?>
 
 
 <!DOCTYPE html>
+
+<!--
+    google map
+-->
+
 <html lang="en">
 <head>
   
@@ -18,8 +23,6 @@ include ('../../database/dbconnect.php');
      
     <style>
    
-     
-    
     input[type=submit]{
         padding:0.4em;
     }
@@ -32,47 +35,51 @@ include ('../../database/dbconnect.php');
 
     </style>
 	
- 
 </head>
 <body>
  
 <?php
-//bat_info
-		$query = "SELECT * FROM bat_info WHERE bat_id = '".$_GET['batid']."';";
-		$result = mysqli_query($con, $query);
+//query to select ones from table bat_info
+$query = "SELECT * FROM bat_info WHERE bat_id = '".$_GET['batid']."';";
+$result = mysqli_query($con, $query);
 
-		//$query = mysql_query("SELECT * FROM fulldemo WHERE id = '".$_GET['batid']."';") or die("could not search");
-		$count = mysqli_num_rows($result);
-		$kk = array();
-			if($count == 0){
-				$output = 'there is no search results!!';
-			}else{
-				while($row = mysqli_fetch_assoc($result)){
-					$fname = $row['scientific_name'];
-					$lplace1 = $row['locations'];
-					$id = $row['bat_id'];
-					
+//get the number of rows
+$count = mysqli_num_rows($result);
+//check if the query returns an result
+if($count == 0){
+	$output = 'there is no search results!!';
+}else{
+	while($row = mysqli_fetch_assoc($result)){
+		$fname = $row['scientific_name'];
+		$lplace1 = $row['locations'];
+		$id = $row['bat_id'];
+		//puting to a array by spliting them by ','			
 		$places_ar = explode(",",$lplace1);
 		$length = count($places_ar);
 	}
+//assign three new arrays	
 $ll = array();
 $ln = array();
 $fd = array();
 
-
+//loop through $places_ar array
 foreach($places_ar as $lplace){
-
-  $data_arr = geocode($lplace);
+	
+	//call geocode function and assign return values to data_arr array
+	$data_arr = geocode($lplace);
      
     if($data_arr){
-        
+        /*
+        take data from $data_arr multidimentional array and and put them 
+        in three one dimentional arrays
+        */
         $latitude = $data_arr[0];
 		array_push($ll, $latitude);
         $longitude = $data_arr[1];
 		array_push($ln, $longitude);
         $formatted_address = $data_arr[2];
 		array_push($fd, $formatted_address);
-		
+		//encode php values to jason values to use them within javascript 
 		$ljn = json_encode($ll);
 		$lgjn = json_encode($ln);
 		$fjn = json_encode($fd);
@@ -81,14 +88,16 @@ foreach($places_ar as $lplace){
         echo "No map found.";
     }
 	} 
-
-		if($length!=0){
+    //to check whether there is data in $places_ar array 
+    if($length!=0){
     ?>
  
     
     <div id="gmap_canvas">Loading map...</div>
   
- 
+    <!--
+        map
+    -->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAnFdtTApWgyi6Rv96ouN1uCTmwctBOsic"></script>    
     <script type="text/javascript">
 	
@@ -130,13 +139,14 @@ foreach($places_ar as $lplace){
 	}
 	}
 
-
+/*this function is to return latitude and longitude of 
+specific locations we provide */
 function geocode($address){
  
     
     $address = urlencode($address);
      
-    
+    //to send request to google api
     $url = "http://maps.google.com/maps/api/geocode/json?address={$address}";
  
     

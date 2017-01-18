@@ -1,23 +1,28 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
+//db connection
 include ('../../database/dbconnect.php');
 
-	
+//flag if the query is executed	
 $count = 0;
 
+//query to select from bat_info table
 $query = "SELECT * FROM bat_info WHERE bat_id = '".$_GET['batid']."' ;";
 $result = mysqli_query($con, $query);
 
+//if query is succeed assign results to $row array
 while($row = mysqli_fetch_assoc($result)){
+    
+    //assign them to variables to display them in the page
 	$fname = $row['scientific_name'];
 	$lplace1 = $row['locations'];
 	$id = $row['bat_id'];
 	$img = '../../assets/images/'.$row['pic'];
 	$des = $row['other_details'];
-     $bat_or=$row['bat_order'];
-     $kin=$row['kingdom'];
-     $gene=$row['genus'];
-     $phylum=$row['phylum'];
+    $bat_or=$row['bat_order'];
+    $kin=$row['kingdom'];
+    $gene=$row['genus'];
+    $phylum=$row['phylum'];
     $family=$row['family'];
     $subfamily=$row['sub_family'];
     $bat_cl=$row['bat_class'];

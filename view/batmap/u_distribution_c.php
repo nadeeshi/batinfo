@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--
+    bat information view page of the public user
+-->
 <html>
 <head>
 	<title>bat detail</title>
@@ -13,9 +16,11 @@
 </head>
 <body>
 	<div class="public-background">
+        <!--background picture-->
 		<img src="../../assets/images/bat.jpg" width="100%" height="100%" >
 	</div>
 	<div>
+        <!--navigation bar-->
 		<?php include ("../../assets/IncludedFiles/mainnav.php"); ?>
 	</div>
 	<div class="col-xs-12 body-content">
@@ -45,10 +50,13 @@
 									
 									<div class="row">
 										<div class="col-sm-12">
-											<p>                            
+											<p>  
+                                                <!--image-->
 												<a class="aidanews2_img1" href="">
 													<img src="<?php echo $img;?>" alt="Img" style = "float: right ;margin: 0px 15px 15px 20px; max-height: 20em ; min-height:14em; width: 20%; height:auto;"/>
 												</a>
+                                                
+                                                <!--description of the bat-->
 												<div class="des" style="color: #2D343E; font: bold 15px/30px 'Alike Angular', serif; !important;">
 												<?php echo $output;?> </br>
 												
@@ -60,6 +68,7 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-12">
+                                    <!--link to generate a pdf-->
 									<?php include ('from_search_map.php');?>
 									</div>
 								</div>
@@ -71,7 +80,7 @@
 						<div class="col-md-12">
 												
 								<p style="text-align:right">create a pdf<br>of this infomation<br>
-						
+						            <!--link to generate a pdf-->
 									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?> target="_blank">
 									<img src="../../assets/images/pdf.png" alt="pdf" />
 						

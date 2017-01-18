@@ -1,28 +1,22 @@
 
 
 <?php 
-
+//db conection
 include ('../../database/dbconnect.php');
+       
+//delete query
 
-        
-          
-    //$id =  $_GET['id'];dbconnect.php
-
-    $sql = "DELETE  FROM news_before WHERE nid = '" . $_GET['to_id'] . "';";
-    $dl=mysqli_query($con, $sql);
+$sql = "DELETE  FROM news_before WHERE nid = '" . $_GET['to_id'] . "';";
+$dl=mysqli_query($con, $sql);
 	
-	if ($dl) {
-				//echo $ns_id;
-	header('Location:../../view/news/news_insert.php');
+ //if the query is completed return to news insert page
+if ($dl) {
+				
+    header('Location:../../view/news/news_insert.php');
 	exit();
-
     
 } else {
     echo "Error: " . $ins_query . "<br>" . mysqli_error($con);
 }
 
-    
-    
-
-    
-     ?>
+?>

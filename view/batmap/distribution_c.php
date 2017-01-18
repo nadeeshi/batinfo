@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--
+    bat information view page of the researcher
+-->
 <html>
 <head>
 	<title>bat detail</title>
@@ -13,6 +16,7 @@
 </head>
 <body>
 	<div>
+        <!--navigation bar-->
 		<?php include ("../../assets/IncludedFiles/navbarTemplate.php"); ?>
 	</div>
 	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
@@ -21,7 +25,7 @@
 			
 			include ('from_search_image.php');	
 			if($count ==1){
-		//echo $id;
+		
 		?>
 		<div class="container">
             <div class="row">
@@ -41,10 +45,12 @@
 									
 									<div class="row">
 										<div class="col-sm-12">
-											<p>                            
+											<p>  
+                                                <!--image-->
 												<a class="aidanews2_img1" href="">
 													<img src="<?php echo $img;?>" alt="Img" style = "float: right ;margin: 0px 15px 15px 20px; max-height: 20em ; min-height:14em; width: 20%; height:auto;"/>
 												</a>
+                                                <!--description of the bat-->
 												<div class="des" style="color: #2D343E; font: bold 15px/30px 'Alike Angular', serif; !important;">
 												<?php echo $output;?> </br>
 												
@@ -57,6 +63,7 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-12">
+                                        <!--map include-->
 									<?php include ('from_search_map.php');?>
 									</div>
 								</div>
@@ -68,7 +75,7 @@
 						<div class="col-md-12">
 												
 								<p style="text-align:right">create a pdf<br>of this infomation<br>
-						
+						              <!--link to generate a pdf-->
 									<a href=<?php echo "'../gen_pdf/gen_pdf.php?id=".$id."'"; ?> target="_blank">
 									<img src="../../assets/images/pdf.png" alt="pdf" />
 						

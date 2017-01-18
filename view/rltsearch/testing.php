@@ -1,11 +1,13 @@
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
+
+//db conection
 include ('../../database/dbconnect.php');
 ?>
 
 <!DOCTYPE html>
 <html>
-	
+	<!--search result display interface for researchers-->
 	<head>
 	<title>bat search</title>
 	<link href="https://fonts.googleapis.com/css?family=Alike+Angular" rel="stylesheet"> 
@@ -20,15 +22,16 @@ include ('../../database/dbconnect.php');
 
 <body>
 
-	<div>
+	<div><!-- naigation bar-->
 	<?php include('../../assets/IncludedFiles/navbarTemplate.php');?>
 	</div>
 	<div class="col-sm-10 col-sm-push-2 col-xs-12 insert-form">
 		<div class="container">
 
 	<?php
-	$count = 0;
-		$count1 = 0;
+            //these variables are used as flags
+	    $count = 0;
+        $count1 = 0;
 		$count2 = 0;
 	
 	if($_POST){
@@ -39,7 +42,7 @@ include ('../../database/dbconnect.php');
 			$searchq = preg_replace("#[^0-9a-z]#i","",$searchq);		
 		
 			if(!empty($searchq)){
-				
+				//->this code segment is used to search bat_info table
                 $query = mysqli_query($con,"SELECT * FROM bat_info WHERE scientific_name LIKE '%$searchq%' 
 				OR common_names Like '%$searchq%' OR
 				synonyms LIKE '%$searchq%';") or die("could  not search");
@@ -53,15 +56,15 @@ include ('../../database/dbconnect.php');
 					$count = 1;
 		
 				}
-	
-				include ("vm.php");
+	               //->
 				
-				$query = mysqli_query($con,"SELECT * FROM photos;") or die("could  not search");
-	
+                //-->this is used to search photos table
+                //include vm.php (boyer moore algorithm)
+                include ("vm.php");
+				
+				$query = mysqli_query($con,"SELECT * FROM photos;") or die("could  not search");	
 				$num_rows = mysqli_num_rows($query);
-	
-	
-				$dat = "zi";
+		
 				$ab = array();
 				$d =array();
 				$xx =array();
@@ -73,7 +76,8 @@ include ('../../database/dbconnect.php');
 					array_push($ab,$ds);
 					array_push($d,$idn);
 					array_push($head,$cap);
-}
+                }
+				//this loop is used for desc field
 				for($i=0;$i<=$num_rows-1;$i++){
 					SearchString($ab[$i], $searchq);
 					if ($rec == 1){
@@ -85,7 +89,9 @@ include ('../../database/dbconnect.php');
 					$r = count($xx);
 		
 				}
+				//if no match found from 1st one
 				if($count1==0){
+					//this loop is used for caption field
 					for($i=0;$i<=$num_rows-1;$i++){
 						SearchString($head[$i], $searchq);
 						if ($rec == 1){
@@ -97,7 +103,8 @@ include ('../../database/dbconnect.php');
 						$r = count($xx);		
 					}		
 				}
-			}
+			//->
+            }
 		}
 	}
 ?>
@@ -106,6 +113,9 @@ include ('../../database/dbconnect.php');
 				<div  class="col-sm-1">
 				</div>
 				<div  class="col-sm-10">
+					<!--
+						check whether theere is any results
+					-->
 					<?php if(($count==1)||($count1==1) ||($count2==1)){	?><h2> search results</h2><?php } else {?><h2>no result found</h2><?php }?>
 				</div>
 				<div  class="col-sm-1">
